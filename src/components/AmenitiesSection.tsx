@@ -81,12 +81,11 @@ const AmenitiesSection = () => {
     <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl sm:text-5xl font-display font-bold text-primary mb-4">
-            Comodidades y Servicios
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-light tracking-tight text-foreground mb-6">
+            Comodidades
           </h2>
-          <div className="w-24 h-1 bg-secondary mx-auto mb-6"></div>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Todo lo que necesitas para una estancia perfecta
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto font-light">
+            Todo para una estancia perfecta
           </p>
         </div>
 
@@ -94,18 +93,18 @@ const AmenitiesSection = () => {
           {amenities.map((amenity, index) => (
             <div
               key={index}
-              className="bg-card rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:transform hover:-translate-y-1 animate-fade-in group"
+              className="bg-card rounded-lg p-5 shadow-sm border border-border hover:border-primary/30 transition-all duration-300 animate-fade-in group"
               style={{ animationDelay: `${index * 50}ms` }}
             >
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                  <amenity.icon size={24} />
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/5 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                  <amenity.icon size={20} strokeWidth={1.5} />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-semibold text-foreground text-lg mb-1">
+                  <h3 className="font-light text-foreground text-base mb-1">
                     {amenity.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-muted-foreground text-xs font-light">
                     {amenity.description}
                   </p>
                 </div>

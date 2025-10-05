@@ -27,15 +27,13 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl sm:text-5xl font-display font-bold text-primary mb-4">
-            Bienvenidos a Casa Eufemia
+      <div className="text-center mb-20 animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-light tracking-tight text-foreground mb-6">
+            Bienvenidos
           </h2>
-          <div className="w-24 h-1 bg-secondary mx-auto mb-6"></div>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Una casa rural de ensueño donde la tradición manchega se encuentra con el confort moderno. 
-            Situada en el tranquilo pueblo de Arenales de San Gregorio, Casa Eufemia ofrece 
-            el escenario perfecto para desconectar y disfrutar de la auténtica vida rural española.
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed font-light">
+            Una casa rural donde la tradición manchega se encuentra con el confort moderno. 
+            Situada en Arenales de San Gregorio, el escenario perfecto para desconectar.
           </p>
         </div>
 
@@ -46,38 +44,34 @@ const AboutSection = () => {
               className="text-center group hover:transform hover:scale-105 transition-all duration-300 animate-fade-in"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                <feature.icon size={32} />
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/5 text-primary mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                <feature.icon size={24} strokeWidth={1.5} />
               </div>
-              <h3 className="text-2xl font-display font-semibold text-foreground mb-2">
+              <h3 className="text-xl font-display font-light text-foreground mb-2">
                 {feature.title}
               </h3>
-              <p className="text-muted-foreground">{feature.description}</p>
+              <p className="text-sm text-muted-foreground font-light">{feature.description}</p>
             </div>
           ))}
         </div>
 
-        <div className="bg-card rounded-2xl shadow-xl p-8 sm:p-12 animate-scale-in">
-          <h3 className="text-3xl font-display font-bold text-primary mb-6">
+        <div className="bg-card rounded-xl shadow-sm border border-border p-8 sm:p-12 animate-scale-in">
+          <h3 className="text-2xl sm:text-3xl font-display font-light tracking-tight text-foreground mb-8">
             Arquitectura y Disposición
           </h3>
-          <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
+          <div className="space-y-6 text-muted-foreground text-base leading-relaxed font-light">
             <p>
-              Casa Eufemia combina magistralmente la arquitectura tradicional manchega con todas las 
-              comodidades modernas. Sus gruesos muros de piedra mantienen una temperatura agradable 
-              durante todo el año, mientras que las vigas de madera originales añaden un carácter 
-              único e inconfundible.
+              Casa Eufemia combina la arquitectura tradicional manchega con comodidades modernas. 
+              Sus muros de piedra mantienen una temperatura agradable durante todo el año.
             </p>
             <p>
-              La casa se distribuye en una sola planta de 250m², ofreciendo amplios espacios luminosos 
-              que incluyen un salón comedor con chimenea, una cocina totalmente equipada, cuatro 
-              dormitorios dobles y tres baños completos. Los techos altos con vigas vistas y los 
-              suelos de terracota crean una atmósfera cálida y acogedora.
+              La casa se distribuye en una sola planta de 250m², con amplios espacios luminosos 
+              que incluyen un salón comedor con chimenea, cocina equipada, cuatro dormitorios 
+              dobles y tres baños completos.
             </p>
             <p>
-              El exterior no se queda atrás: un extenso jardín con zona de piscina, áreas de descanso 
-              sombreadas bajo pérgolas de madera, y múltiples rincones para disfrutar del clima 
-              mediterráneo hacen de Casa Eufemia el lugar ideal para unas vacaciones inolvidables.
+              El exterior incluye un extenso jardín con piscina, áreas de descanso sombreadas 
+              y múltiples rincones para disfrutar del clima mediterráneo.
             </p>
           </div>
         </div>

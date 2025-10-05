@@ -44,12 +44,11 @@ const TourismSection = () => {
     <section className="py-20 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl sm:text-5xl font-display font-bold text-primary mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-light tracking-tight text-foreground mb-6">
             Explora La Mancha
           </h2>
-          <div className="w-24 h-1 bg-secondary mx-auto mb-6"></div>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Atractivos turísticos cercanos que no puedes perderte
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto font-light">
+            Atractivos cercanos
           </p>
         </div>
 
@@ -57,38 +56,37 @@ const TourismSection = () => {
           {attractions.map((attraction, index) => (
             <div
               key={index}
-              className="bg-card rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:transform hover:-translate-y-2 animate-fade-in group"
+              className="bg-card rounded-lg p-6 shadow-sm border border-border hover:border-primary/30 transition-all duration-300 animate-fade-in group"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                  <attraction.icon size={28} />
+                <div className="w-12 h-12 rounded-full bg-primary/5 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                  <attraction.icon size={22} strokeWidth={1.5} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-display font-bold text-foreground">
+                  <h3 className="text-lg font-display font-light text-foreground">
                     {attraction.name}
                   </h3>
-                  <p className="text-sm text-secondary font-medium">
+                  <p className="text-xs text-muted-foreground font-light">
                     {attraction.distance}
                   </p>
                 </div>
               </div>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground text-sm leading-relaxed font-light">
                 {attraction.description}
               </p>
             </div>
           ))}
         </div>
 
-        <div className="mt-16 bg-card rounded-2xl p-8 sm:p-12 shadow-xl text-center animate-scale-in">
-          <h3 className="text-2xl sm:text-3xl font-display font-bold text-primary mb-4">
+        <div className="mt-16 bg-card rounded-xl p-8 sm:p-12 shadow-sm border border-border text-center animate-scale-in">
+          <h3 className="text-2xl sm:text-3xl font-display font-light tracking-tight text-foreground mb-6">
             La Tierra de Don Quijote
           </h3>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed font-light">
             Casa Eufemia es el punto de partida perfecto para explorar la región que inspiró 
             a Cervantes. Desde los molinos de viento hasta las bodegas centenarias, cada rincón 
-            de La Mancha cuenta una historia. Disfruta de la gastronomía local, los paisajes 
-            únicos y la hospitalidad manchega que te harán sentir como en casa.
+            de La Mancha cuenta una historia.
           </p>
         </div>
       </div>

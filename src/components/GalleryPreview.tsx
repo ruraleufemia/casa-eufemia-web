@@ -22,12 +22,11 @@ const GalleryPreview = () => {
     <section className="py-20 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl sm:text-5xl font-display font-bold text-primary mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-light tracking-tight text-foreground mb-6">
             Galería
           </h2>
-          <div className="w-24 h-1 bg-secondary mx-auto mb-6"></div>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Descubre cada rincón de Casa Eufemia
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto font-light">
+            Descubre cada rincón
           </p>
         </div>
 
@@ -45,9 +44,9 @@ const GalleryPreview = () => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                 <div className="p-6">
-                  <h3 className="text-primary-foreground text-xl font-display font-semibold">
+                  <h3 className="text-primary-foreground text-lg font-display font-light tracking-wide">
                     {image.title}
                   </h3>
                 </div>
@@ -60,10 +59,11 @@ const GalleryPreview = () => {
           <Link to="/gallery">
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground group"
+              variant="outline"
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground group font-light"
             >
-              Ver Galería Completa
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+              Ver más
+              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} strokeWidth={1.5} />
             </Button>
           </Link>
         </div>

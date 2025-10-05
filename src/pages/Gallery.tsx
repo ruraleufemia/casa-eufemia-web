@@ -39,13 +39,13 @@ const Gallery = () => {
       
       <main className="flex-1 pt-20">
         {/* Header */}
-        <section className="bg-gradient-to-br from-primary to-secondary py-16">
+        <section className="bg-card border-b border-border py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl sm:text-5xl font-display font-bold text-primary-foreground mb-4 animate-fade-in">
-              Galería de Casa Eufemia
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-light tracking-tight text-foreground mb-6 animate-fade-in">
+              Galería
             </h1>
-            <p className="text-xl text-primary-foreground/90 max-w-2xl mx-auto animate-fade-in">
-              Explora cada detalle de tu próximo refugio en La Mancha
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in font-light">
+              Cada detalle de tu próximo refugio
             </p>
           </div>
         </section>
@@ -68,9 +68,9 @@ const Gallery = () => {
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                     <div className="p-4">
-                      <p className="text-primary-foreground font-medium">
+                      <p className="text-primary-foreground text-sm font-light">
                         {image.alt}
                       </p>
                     </div>

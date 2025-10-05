@@ -7,18 +7,17 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-display font-bold text-primary mb-4">
+            <h3 className="text-xl font-display font-light tracking-tight text-foreground mb-4">
               Casa Eufemia
             </h3>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              Tu casa rural en el corazón de La Mancha. Tradición, confort y 
-              hospitalidad manchega te esperan.
+            <p className="text-muted-foreground text-sm leading-relaxed mb-4 font-light">
+              Tu casa rural en el corazón de La Mancha.
             </p>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="text-lg font-semibold text-foreground mb-4">
+            <h4 className="text-base font-light text-foreground mb-4">
               Contacto
             </h4>
             <div className="space-y-3">
@@ -48,7 +47,7 @@ const Footer = () => {
 
           {/* Social & Info */}
           <div>
-            <h4 className="text-lg font-semibold text-foreground mb-4">
+            <h4 className="text-base font-light text-foreground mb-4">
               Síguenos
             </h4>
             <div className="flex gap-4 mb-6">
