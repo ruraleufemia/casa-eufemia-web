@@ -8,54 +8,54 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Mediterranean warm palette */
-    --background: 35 30% 96%;
-    --foreground: 25 25% 20%;
+    /* Fresh green and white palette */
+    --background: 0 0% 100%;
+    --foreground: 150 25% 20%;
 
-    --card: 35 40% 98%;
-    --card-foreground: 25 25% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 150 25% 20%;
 
-    --popover: 35 40% 98%;
-    --popover-foreground: 25 25% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 25% 20%;
 
-    /* Terracotta primary */
-    --primary: 12 65% 55%;
-    --primary-foreground: 35 40% 98%;
+    /* Fresh green primary */
+    --primary: 145 65% 45%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Warm ochre secondary */
-    --secondary: 40 55% 50%;
-    --secondary-foreground: 35 40% 98%;
+    /* Soft green secondary */
+    --secondary: 140 40% 55%;
+    --secondary-foreground: 0 0% 100%;
 
-    /* Soft earth tones */
-    --muted: 35 25% 88%;
-    --muted-foreground: 25 20% 45%;
+    /* Light green muted */
+    --muted: 140 20% 92%;
+    --muted-foreground: 150 15% 40%;
 
-    /* Warm accent */
-    --accent: 30 60% 60%;
-    --accent-foreground: 35 40% 98%;
+    /* Bright green accent */
+    --accent: 150 70% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 35 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 35 20% 85%;
-    --input: 35 20% 85%;
-    --ring: 12 65% 55%;
+    --border: 140 20% 88%;
+    --input: 140 20% 88%;
+    --ring: 145 65% 45%;
 
     --radius: 0.75rem;
     
     /* Custom design tokens */
-    --warm-beige: 35 35% 90%;
-    --earth-brown: 25 30% 45%;
-    --terracotta-light: 12 60% 65%;
-    --ochre-gold: 40 65% 55%;
+    --light-green: 140 30% 90%;
+    --forest-green: 150 50% 35%;
+    --fresh-green: 145 60% 50%;
+    --sage-green: 140 25% 65%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(12 65% 55% / 0.95), hsl(25 60% 40% / 0.95));
-    --gradient-card: linear-gradient(180deg, hsl(35 40% 98%), hsl(35 30% 94%));
+    --gradient-hero: linear-gradient(135deg, hsl(145 65% 45% / 0.9), hsl(150 50% 35% / 0.9));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(140 20% 96%));
     
     /* Shadows */
-    --shadow-warm: 0 10px 40px -10px hsl(12 65% 55% / 0.25);
-    --shadow-soft: 0 4px 20px -2px hsl(25 25% 20% / 0.08);
+    --shadow-green: 0 10px 40px -10px hsl(145 65% 45% / 0.25);
+    --shadow-soft: 0 4px 20px -2px hsl(150 25% 20% / 0.08);
     
     /* Transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -80,33 +80,33 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 25 25% 12%;
-    --foreground: 35 30% 95%;
+    --background: 150 20% 10%;
+    --foreground: 140 20% 95%;
 
-    --card: 25 25% 15%;
-    --card-foreground: 35 30% 95%;
+    --card: 150 20% 12%;
+    --card-foreground: 140 20% 95%;
 
-    --popover: 25 25% 15%;
-    --popover-foreground: 35 30% 95%;
+    --popover: 150 20% 12%;
+    --popover-foreground: 140 20% 95%;
 
-    --primary: 12 65% 55%;
-    --primary-foreground: 35 40% 98%;
+    --primary: 145 65% 45%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 25 25% 25%;
-    --secondary-foreground: 35 30% 95%;
+    --secondary: 150 25% 25%;
+    --secondary-foreground: 140 20% 95%;
 
-    --muted: 25 20% 20%;
-    --muted-foreground: 35 20% 65%;
+    --muted: 150 15% 20%;
+    --muted-foreground: 140 15% 65%;
 
-    --accent: 30 60% 60%;
-    --accent-foreground: 35 40% 98%;
+    --accent: 150 70% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 50%;
-    --destructive-foreground: 35 30% 95%;
+    --destructive-foreground: 140 20% 95%;
 
-    --border: 25 20% 25%;
-    --input: 25 20% 25%;
-    --ring: 12 65% 55%;
+    --border: 150 15% 25%;
+    --input: 150 15% 25%;
+    --ring: 145 65% 45%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
