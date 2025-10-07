@@ -25,36 +25,44 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-card/95 backdrop-blur-md shadow-lg"
+          ? "bg-white/98 backdrop-blur-lg shadow-sm border-b border-border/50"
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="flex items-center justify-between h-24">
           <Link
             to="/"
-            className="text-2xl sm:text-3xl font-display font-bold text-primary hover:text-primary/80 transition-colors"
+            className={`text-2xl sm:text-3xl font-display font-light tracking-wide transition-all duration-300 ${
+              isScrolled ? "text-foreground" : "text-white drop-shadow-lg"
+            } hover:opacity-70`}
           >
             Casa Eufemia
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-12">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-lg font-medium transition-colors relative group ${
-                  isActive(link.path)
-                    ? "text-primary"
-                    : "text-foreground hover:text-primary"
+                className={`text-sm font-light tracking-widest uppercase transition-all duration-300 relative group ${
+                  isScrolled
+                    ? isActive(link.path)
+                      ? "text-primary"
+                      : "text-foreground hover:text-primary"
+                    : isActive(link.path)
+                    ? "text-white"
+                    : "text-white/90 hover:text-white"
                 }`}
               >
                 {link.name}
                 <span
-                  className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${
+                  className={`absolute -bottom-1 left-0 h-[1px] transition-all duration-300 ${
+                    isScrolled ? "bg-primary" : "bg-white"
+                  } ${
                     isActive(link.path) ? "w-full" : "w-0 group-hover:w-full"
                   }`}
                 />
@@ -65,23 +73,25 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-foreground hover:text-primary transition-colors"
+            className={`md:hidden transition-all duration-300 ${
+              isScrolled ? "text-foreground" : "text-white"
+            } hover:opacity-70`}
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            {isMobileMenuOpen ? <X size={24} strokeWidth={1.5} /> : <Menu size={24} strokeWidth={1.5} />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden pb-6 animate-fade-in">
-            <div className="flex flex-col gap-4">
+          <div className="md:hidden pb-6 animate-fade-in border-t border-border/50 mt-2 pt-6">
+            <div className="flex flex-col gap-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`text-lg font-medium transition-colors py-2 ${
+                  className={`text-sm font-light tracking-widest uppercase transition-colors ${
                     isActive(link.path)
                       ? "text-primary"
                       : "text-foreground hover:text-primary"

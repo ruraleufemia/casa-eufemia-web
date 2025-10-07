@@ -14,29 +14,29 @@ const Hero = () => {
         <img
           src={heroImage}
           alt="Casa Eufemia - Casa Rural en Arenales de San Gregorio"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-foreground/50 via-foreground/30 to-foreground/50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto animate-fade-in">
-        <h1 className="text-6xl sm:text-7xl lg:text-8xl font-display font-light tracking-tight text-primary-foreground mb-8 drop-shadow-2xl">
+      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto animate-fade-in">
+        <h1 className="text-7xl sm:text-8xl lg:text-9xl font-display font-extralight tracking-wider text-white mb-6 drop-shadow-2xl leading-none">
           Casa Eufemia
         </h1>
-        <div className="w-16 h-px bg-primary-foreground/60 mx-auto mb-8"></div>
-        <p className="text-lg sm:text-xl lg:text-2xl text-primary-foreground/90 font-light tracking-wide drop-shadow-lg">
-          Arenales de San Gregorio, Ciudad Real
+        <div className="w-24 h-[1px] bg-white/40 mx-auto mb-6"></div>
+        <p className="text-xl sm:text-2xl lg:text-3xl text-white/95 font-light tracking-widest drop-shadow-lg uppercase text-sm">
+          Arenales de San Gregorio
         </p>
       </div>
 
       {/* Scroll Indicator */}
       <button
         onClick={scrollToAbout}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-primary-foreground/60 hover:text-primary-foreground transition-colors animate-bounce"
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 text-white/50 hover:text-white transition-all duration-300 animate-bounce"
         aria-label="Scroll down"
       >
-        <ChevronDown size={32} strokeWidth={1.5} />
+        <ChevronDown size={40} strokeWidth={1} />
       </button>
     </section>
   );
