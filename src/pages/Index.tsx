@@ -8,8 +8,8 @@ import TourismSection from "@/components/TourismSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
-  // Video de ejemplo - puedes reemplazarlo con tu propio video
-  const videoUrl = "https://videos.pexels.com/video-files/5752729/5752729-uhd_2560_1440_25fps.mp4";
+  // Video de ejemplo de una casa rural
+  const videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";
   
   return (
     <div className="min-h-screen">
