@@ -8,15 +8,15 @@ import TourismSection from "@/components/TourismSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
-  // Para activar el video, descomentar y proporcionar la URL del video
-  // const videoUrl = "/path-to-your-video.mp4";
+  // Video de ejemplo - puedes reemplazarlo con tu propio video
+  const videoUrl = "https://videos.pexels.com/video-files/5752729/5752729-uhd_2560_1440_25fps.mp4";
   
   return (
     <div className="min-h-screen">
       <Navbar />
       <Hero 
-        // useVideo={true}
-        // videoUrl={videoUrl}
+        useVideo={true}
+        videoUrl={videoUrl}
       />
       <AboutSection />
       <GalleryPreview />

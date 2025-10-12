@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Home, ImageIcon, Compass } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,9 +17,9 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: "Inicio", path: "/" },
-    { name: "Galería", path: "/gallery" },
-    { name: "Experiencias", path: "/blog" },
+    { name: "Inicio", path: "/", icon: Home },
+    { name: "Galería", path: "/gallery", icon: ImageIcon },
+    { name: "Experiencias", path: "/blog", icon: Compass },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -32,11 +32,11 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="flex items-center justify-between h-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="flex items-center justify-between h-20 md:h-24">
           <Link
             to="/"
-            className={`text-2xl sm:text-3xl font-display font-light tracking-wide transition-all duration-300 ${
+            className={`text-xl sm:text-2xl md:text-3xl font-display font-light tracking-wide transition-all duration-300 ${
               isScrolled ? "text-foreground" : "text-white drop-shadow-lg"
             } hover:opacity-70`}
           >
@@ -44,38 +44,42 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-12">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`text-sm font-light tracking-widest uppercase transition-all duration-300 relative group ${
-                  isScrolled
-                    ? isActive(link.path)
-                      ? "text-primary"
-                      : "text-foreground hover:text-primary"
-                    : isActive(link.path)
-                    ? "text-white"
-                    : "text-white/90 hover:text-white"
-                }`}
-              >
-                {link.name}
-                <span
-                  className={`absolute -bottom-1 left-0 h-[1px] transition-all duration-300 ${
-                    isScrolled ? "bg-primary" : "bg-white"
-                  } ${
-                    isActive(link.path) ? "w-full" : "w-0 group-hover:w-full"
+          <div className="hidden md:flex items-center gap-10 lg:gap-12">
+            {navLinks.map((link) => {
+              const Icon = link.icon;
+              return (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`flex items-center gap-2 text-sm font-light tracking-widest uppercase transition-all duration-300 relative group ${
+                    isScrolled
+                      ? isActive(link.path)
+                        ? "text-primary"
+                        : "text-foreground hover:text-primary"
+                      : isActive(link.path)
+                      ? "text-white"
+                      : "text-white/90 hover:text-white"
                   }`}
-                />
-              </Link>
-            ))}
+                >
+                  <Icon size={18} strokeWidth={1.5} />
+                  <span>{link.name}</span>
+                  <span
+                    className={`absolute -bottom-1 left-0 h-[1px] transition-all duration-300 ${
+                      isScrolled ? "bg-primary" : "bg-white"
+                    } ${
+                      isActive(link.path) ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
+                  />
+                </Link>
+              );
+            })}
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden transition-all duration-300 ${
-              isScrolled ? "text-foreground" : "text-white"
+            className={`md:hidden transition-all duration-300 p-2 ${
+              isScrolled ? "text-foreground" : "text-white drop-shadow-lg"
             } hover:opacity-70`}
             aria-label="Toggle menu"
           >
@@ -85,22 +89,32 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden pb-6 animate-fade-in border-t border-border/50 mt-2 pt-6">
+          <div className={`md:hidden pb-6 animate-fade-in border-t mt-2 pt-6 ${
+            isScrolled ? "border-border/50" : "border-white/20"
+          }`}>
             <div className="flex flex-col gap-6">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`text-sm font-light tracking-widest uppercase transition-colors ${
-                    isActive(link.path)
-                      ? "text-primary"
-                      : "text-foreground hover:text-primary"
-                  }`}
-                >
-                  {link.name}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const Icon = link.icon;
+                return (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`flex items-center gap-3 text-sm font-light tracking-widest uppercase transition-colors ${
+                      isScrolled
+                        ? isActive(link.path)
+                          ? "text-primary"
+                          : "text-foreground hover:text-primary"
+                        : isActive(link.path)
+                        ? "text-white"
+                        : "text-white/90 hover:text-white"
+                    }`}
+                  >
+                    <Icon size={18} strokeWidth={1.5} />
+                    <span>{link.name}</span>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         )}
