@@ -1,7 +1,12 @@
 import heroImage from "@/assets/hero-house.jpg";
 import { ChevronDown } from "lucide-react";
 
-const Hero = () => {
+interface HeroProps {
+  videoUrl?: string;
+  useVideo?: boolean;
+}
+
+const Hero = ({ videoUrl, useVideo = false }: HeroProps) => {
   const scrollToAbout = () => {
     const aboutSection = document.getElementById("about");
     aboutSection?.scrollIntoView({ behavior: "smooth" });
@@ -9,13 +14,31 @@ const Hero = () => {
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Background Media with Overlay */}
       <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Casa Eufemia - Casa Rural en Arenales de San Gregorio"
-          className="w-full h-full object-cover scale-105"
-        />
+        {useVideo && videoUrl ? (
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover scale-105"
+            poster={heroImage}
+          >
+            <source src={videoUrl} type="video/mp4" />
+            <img
+              src={heroImage}
+              alt="Casa Eufemia - Casa Rural en Arenales de San Gregorio"
+              className="w-full h-full object-cover"
+            />
+          </video>
+        ) : (
+          <img
+            src={heroImage}
+            alt="Casa Eufemia - Casa Rural en Arenales de San Gregorio"
+            className="w-full h-full object-cover scale-105"
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50" />
       </div>
 
