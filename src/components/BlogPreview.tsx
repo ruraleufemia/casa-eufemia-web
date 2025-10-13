@@ -1,36 +1,7 @@
 import { Link } from "react-router-dom";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
-
-const blogPosts = [
-  {
-    id: 1,
-    title: "Ruta de Vinos por La Mancha",
-    excerpt: "Descubre las mejores bodegas de la región y degusta vinos con denominación de origen manchega.",
-    image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&auto=format&fit=crop",
-    date: "2024-03-15",
-    readTime: "5 min",
-    category: "Gastronomía"
-  },
-  {
-    id: 2,
-    title: "Molinos de Viento: Tras los Pasos de Don Quijote",
-    excerpt: "Visita los emblemáticos molinos de viento de Campo de Criptana y Consuegra al amanecer.",
-    image: "https://images.unsplash.com/photo-1583468323330-9032ad490fed?w=800&auto=format&fit=crop",
-    date: "2024-03-10",
-    readTime: "6 min",
-    category: "Cultural"
-  },
-  {
-    id: 3,
-    title: "Desayuno Manchego Tradicional",
-    excerpt: "Experimenta un auténtico desayuno manchego con productos locales y recetas centenarias.",
-    image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=800&auto=format&fit=crop",
-    date: "2024-03-05",
-    readTime: "4 min",
-    category: "Gastronomía"
-  }
-];
+import { blogPosts } from "@/data/blogPosts";
 
 const BlogPreview = () => {
   return (
@@ -46,7 +17,7 @@ const BlogPreview = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {blogPosts.map((post) => (
+          {blogPosts.slice(0, 3).map((post) => (
             <Link
               key={post.id}
               to={`/blog/${post.id}`}

@@ -2,70 +2,7 @@ import { Link } from "react-router-dom";
 import { Calendar, Clock, ArrowLeft } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-
-const blogPosts = [
-  {
-    id: 1,
-    title: "Ruta de Vinos por La Mancha",
-    excerpt: "Descubre las mejores bodegas de la región y degusta vinos con denominación de origen manchega.",
-    content: "La Mancha es conocida por su tradición vinícola centenaria. Comienza tu mañana visitando bodegas familiares donde aprenderás sobre el proceso de elaboración del vino. Disfruta de catas guiadas y maridajes con quesos manchegos artesanales.",
-    image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1200&auto=format&fit=crop",
-    date: "2024-03-15",
-    readTime: "5 min",
-    category: "Gastronomía"
-  },
-  {
-    id: 2,
-    title: "Molinos de Viento: Tras los Pasos de Don Quijote",
-    excerpt: "Visita los emblemáticos molinos de viento de Campo de Criptana y Consuegra al amanecer.",
-    content: "Experimenta la magia de los molinos de viento al amanecer. Estos gigantes blancos fueron inmortalizados por Cervantes en Don Quijote. La luz matinal crea un ambiente único para fotografías y reflexión.",
-    image: "https://images.unsplash.com/photo-1583468323330-9032ad490fed?w=1200&auto=format&fit=crop",
-    date: "2024-03-10",
-    readTime: "6 min",
-    category: "Cultural"
-  },
-  {
-    id: 3,
-    title: "Desayuno Manchego Tradicional",
-    excerpt: "Experimenta un auténtico desayuno manchego con productos locales y recetas centenarias.",
-    content: "Un desayuno manchego tradicional incluye migas, gachas, tortas cenceñas con aceite de oliva virgen extra local. Visita los mercados matinales para descubrir productos frescos y conocer a los productores locales.",
-    image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=1200&auto=format&fit=crop",
-    date: "2024-03-05",
-    readTime: "4 min",
-    category: "Gastronomía"
-  },
-  {
-    id: 4,
-    title: "Artesanía Manchega: Talleres Matutinos",
-    excerpt: "Aprende técnicas tradicionales de cerámica y encaje de bolillos con artesanos locales.",
-    content: "Participa en talleres de artesanía tradicional manchega. Aprende a trabajar el barro, crear encajes de bolillos o forjar cuchillos artesanales. Una experiencia auténtica con maestros artesanos.",
-    image: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=1200&auto=format&fit=crop",
-    date: "2024-03-01",
-    readTime: "7 min",
-    category: "Cultural"
-  },
-  {
-    id: 5,
-    title: "Ruta del Queso Manchego",
-    excerpt: "Visita queserías tradicionales y aprende el proceso de elaboración del queso más famoso de España.",
-    content: "El queso manchego es uno de los tesoros gastronómicos de la región. Visita queserías familiares, conoce el proceso de curación y disfruta de catas comparativas de distintas maduraciones.",
-    image: "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=1200&auto=format&fit=crop",
-    date: "2024-02-25",
-    readTime: "5 min",
-    category: "Gastronomía"
-  },
-  {
-    id: 6,
-    title: "Parque Natural de las Lagunas de Ruidera",
-    excerpt: "Descubre un paraíso natural con cascadas y lagunas de aguas cristalinas a primera hora de la mañana.",
-    content: "Las Lagunas de Ruidera ofrecen un espectáculo natural único. Recorre los senderos que conectan las 15 lagunas, disfruta de las cascadas y observa la rica fauna local en su momento más activo.",
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&auto=format&fit=crop",
-    date: "2024-02-20",
-    readTime: "8 min",
-    category: "Cultural"
-  }
-];
+import { blogPosts } from "@/data/blogPosts";
 
 const Blog = () => {
   return (
@@ -94,9 +31,10 @@ const Blog = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
-              <article
+              <Link
                 key={post.id}
-                className="group bg-card rounded-lg overflow-hidden border border-border hover:shadow-lg transition-all duration-300"
+                to={`/blog/${post.id}`}
+                className="group bg-card rounded-lg overflow-hidden border border-border hover:shadow-lg transition-all duration-300 block"
               >
                 <div className="relative h-64 overflow-hidden">
                   <img
@@ -139,7 +77,7 @@ const Blog = () => {
                     {post.content}
                   </p>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>

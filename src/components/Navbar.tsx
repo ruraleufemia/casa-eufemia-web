@@ -87,12 +87,10 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation - Full Screen */}
         {isMobileMenuOpen && (
-          <div className={`md:hidden pb-6 animate-fade-in border-t mt-2 pt-6 ${
-            isScrolled ? "border-border/50" : "border-white/20"
-          }`}>
-            <div className="flex flex-col gap-6">
+          <div className="fixed inset-0 top-20 md:hidden bg-white/98 dark:bg-background/98 backdrop-blur-lg z-40 animate-fade-in">
+            <div className="flex flex-col items-center justify-center h-full gap-8 px-6">
               {navLinks.map((link) => {
                 const Icon = link.icon;
                 return (
@@ -100,17 +98,13 @@ const Navbar = () => {
                     key={link.path}
                     to={link.path}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className={`flex items-center gap-3 text-sm font-light tracking-widest uppercase transition-colors ${
-                      isScrolled
-                        ? isActive(link.path)
-                          ? "text-primary"
-                          : "text-foreground hover:text-primary"
-                        : isActive(link.path)
-                        ? "text-white"
-                        : "text-white/90 hover:text-white"
+                    className={`flex flex-col items-center gap-3 text-base font-light tracking-widest uppercase transition-all duration-300 ${
+                      isActive(link.path)
+                        ? "text-primary scale-110"
+                        : "text-foreground hover:text-primary hover:scale-105"
                     }`}
                   >
-                    <Icon size={18} strokeWidth={1.5} />
+                    <Icon size={32} strokeWidth={1.5} />
                     <span>{link.name}</span>
                   </Link>
                 );
