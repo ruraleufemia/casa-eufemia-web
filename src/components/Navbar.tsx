@@ -28,7 +28,7 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-white/98 backdrop-blur-lg shadow-sm border-b border-border/50"
+          ? "bg-white backdrop-blur-lg shadow-sm border-b border-border/50"
           : "bg-transparent"
       }`}
     >
@@ -89,7 +89,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation - Full Screen */}
         {isMobileMenuOpen && (
-          <div className="fixed inset-0 top-20 md:hidden bg-white/98 dark:bg-background/98 backdrop-blur-lg z-40 animate-fade-in">
+          <div className="fixed inset-0 top-20 md:hidden bg-white dark:bg-background backdrop-blur-lg z-40 animate-fade-in">
             <div className="flex flex-col items-center justify-center h-full gap-8 px-6">
               {navLinks.map((link) => {
                 const Icon = link.icon;
