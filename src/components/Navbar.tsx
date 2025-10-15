@@ -16,6 +16,35 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Lock background scroll when mobile menu is open
+  useEffect(() => {
+    const root = document.documentElement;
+    if (isMobileMenuOpen) {
+      const originalOverflow = root.style.overflow;
+      root.style.overflow = "hidden";
+      return () => {
+        root.style.overflow = originalOverflow;
+      };
+    }
+  }, [isMobileMenuOpen]);
+
+  // Close menu on route change
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(false);
+    }
+  }, [location.pathname]);
+
+  // Close on Escape key
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsMobileMenuOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [isMobileMenuOpen]);
+
   const navLinks = [
     { name: "Inicio", path: "/", icon: Home },
     { name: "Galería", path: "/gallery", icon: ImageIcon },
@@ -27,7 +56,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
+        isMobileMenuOpen || isScrolled
           ? "bg-white backdrop-blur-lg shadow-sm border-b border-border/50"
           : "bg-transparent"
       }`}
@@ -82,6 +111,9 @@ const Navbar = () => {
               isScrolled ? "text-foreground" : "text-white drop-shadow-lg"
             } hover:opacity-70`}
             aria-label="Toggle menu"
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
+            aria-haspopup="menu"
           >
             {isMobileMenuOpen ? <X size={24} strokeWidth={1.5} /> : <Menu size={24} strokeWidth={1.5} />}
           </button>
@@ -89,7 +121,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation - Full Screen */}
         {isMobileMenuOpen && (
-          <div className="fixed inset-0 top-20 md:hidden bg-white dark:bg-background backdrop-blur-lg z-40 animate-fade-in">
+          <div id="mobile-menu" className="fixed inset-0 md:hidden bg-white dark:bg-background z-40 animate-fade-in overflow-y-auto">
             <div className="flex flex-col items-center justify-center h-full gap-8 px-6">
               {navLinks.map((link) => {
                 const Icon = link.icon;
