@@ -121,8 +121,8 @@ const Navbar = () => {
 
         {/* Mobile Navigation - Full Screen */}
         {isMobileMenuOpen && (
-          <div id="mobile-menu" className="fixed inset-0 md:hidden bg-white dark:bg-background z-40 animate-fade-in overflow-y-auto">
-            <div className="flex flex-col items-center justify-center h-full gap-8 px-6">
+          <div id="mobile-menu" className="fixed inset-x-0 top-20 bottom-0 md:hidden bg-white dark:bg-background z-40 animate-fade-in overflow-y-auto">
+            <div className="flex flex-col items-center justify-center min-h-full gap-8 px-6 py-12">
               {navLinks.map((link) => {
                 const Icon = link.icon;
                 return (
