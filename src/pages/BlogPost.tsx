@@ -2,6 +2,7 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { blogPosts } from "@/data/blogPosts";
 
 
@@ -58,8 +59,23 @@ const BlogPost = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
+    <>
+      <SEO 
+        title={post.title}
+        description={post.excerpt}
+        url={`/blog/${post.id}`}
+        image={post.image}
+        type="article"
+        keywords={`${post.category}, casa eufemia, turismo Ciudad Real, experiencias rurales, ${post.title}`}
+        article={{
+          publishedTime: post.date,
+          author: "Casa Eufemia",
+          section: post.category,
+          tags: [post.category, "turismo rural", "Ciudad Real", "La Mancha"]
+        }}
+      />
+      <div className="min-h-screen bg-background">
+        <Navbar />
       
       {/* Hero Image */}
       <div className="relative h-[60vh] min-h-[400px] mt-20 md:mt-24">
@@ -164,8 +180,9 @@ const BlogPost = () => {
         </div>
       </section>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 

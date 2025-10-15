@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Lightbox from "@/components/Lightbox";
+import SEO from "@/components/SEO";
 import heroImage from "@/assets/hero-house.jpg";
 import livingRoom from "@/assets/living-room.jpg";
 import bedroom from "@/assets/bedroom.jpg";
@@ -34,8 +35,15 @@ const Gallery = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
+    <>
+      <SEO 
+        title="Galería - Fotos de Casa Eufemia"
+        description="Explora la galería de Casa Eufemia. Ve fotos de nuestras habitaciones, piscina, jardines y todas las instalaciones de nuestra casa rural en Ciudad Real."
+        url="/gallery"
+        keywords="fotos casa rural, galería casa eufemia, imágenes alojamiento rural, piscina casa rural, jardín casa rural Ciudad Real"
+      />
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
       
       <main className="flex-1 pt-20">
         {/* Header */}
@@ -93,7 +101,8 @@ const Gallery = () => {
           onNavigate={setCurrentImageIndex}
         />
       )}
-    </div>
+      </div>
+    </>
   );
 };
 
