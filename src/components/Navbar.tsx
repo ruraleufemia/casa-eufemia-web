@@ -53,11 +53,15 @@ const Navbar = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  // Check if we're on a page with white background
+  const isWhiteBackgroundPage = location.pathname !== "/";
+  const shouldShowSolidBackground = isMobileMenuOpen || isScrolled || isWhiteBackgroundPage;
+
   return (
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isMobileMenuOpen || isScrolled
+          shouldShowSolidBackground
             ? "bg-white backdrop-blur-lg shadow-sm border-b border-border/50"
             : "bg-transparent"
         }`}
@@ -67,7 +71,7 @@ const Navbar = () => {
           <Link
             to="/"
             className={`text-xl sm:text-2xl md:text-3xl font-display font-light tracking-wide transition-all duration-300 ${
-              isScrolled ? "text-foreground" : "text-white drop-shadow-lg"
+              shouldShowSolidBackground ? "text-foreground" : "text-white drop-shadow-lg"
             } hover:opacity-70`}
           >
             Casa Eufemia
@@ -82,7 +86,7 @@ const Navbar = () => {
                   key={link.path}
                   to={link.path}
                   className={`flex items-center gap-2 text-sm font-light tracking-widest uppercase transition-all duration-300 relative group ${
-                    isScrolled
+                    shouldShowSolidBackground
                       ? isActive(link.path)
                         ? "text-primary"
                         : "text-foreground hover:text-primary"
@@ -95,7 +99,7 @@ const Navbar = () => {
                   <span>{link.name}</span>
                   <span
                     className={`absolute -bottom-1 left-0 h-[1px] transition-all duration-300 ${
-                      isScrolled ? "bg-primary" : "bg-white"
+                      shouldShowSolidBackground ? "bg-primary" : "bg-white"
                     } ${
                       isActive(link.path) ? "w-full" : "w-0 group-hover:w-full"
                     }`}
@@ -109,7 +113,7 @@ const Navbar = () => {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`md:hidden transition-all duration-300 p-2 ${
-              isScrolled ? "text-foreground" : "text-white drop-shadow-lg"
+              shouldShowSolidBackground ? "text-foreground" : "text-white drop-shadow-lg"
             } hover:opacity-70`}
             aria-label="Toggle menu"
             aria-expanded={isMobileMenuOpen}
