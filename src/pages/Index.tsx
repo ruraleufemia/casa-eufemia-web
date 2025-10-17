@@ -5,6 +5,7 @@ import GalleryPreview from "@/components/GalleryPreview";
 import AmenitiesSection from "@/components/AmenitiesSection";
 import BlogPreview from "@/components/BlogPreview";
 import TourismSection from "@/components/TourismSection";
+import ReviewsSection from "@/components/ReviewsSection";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 
@@ -29,6 +30,7 @@ const Index = () => {
         <AmenitiesSection />
         <BlogPreview />
         <TourismSection />
+        <ReviewsSection />
         <Footer />
       </div>
     </>
