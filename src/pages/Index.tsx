@@ -6,6 +6,7 @@ import AmenitiesSection from "@/components/AmenitiesSection";
 import BlogPreview from "@/components/BlogPreview";
 import TourismSection from "@/components/TourismSection";
 import ReviewsSection from "@/components/ReviewsSection";
+import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 
@@ -31,6 +32,7 @@ const Index = () => {
         <BlogPreview />
         <TourismSection />
         <ReviewsSection />
+        <ContactForm />
         <Footer />
       </div>
     </>
