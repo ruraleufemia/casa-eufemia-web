@@ -1,73 +1,112 @@
-# Welcome to your Lovable project
+# Casa Eufemia - Casa Rural
 
-## Project info
+Web oficial de Casa Eufemia, una casa rural situada en el corazón de La Mancha, en Arenales de San Gregorio, Ciudad Real.
 
-**URL**: https://lovable.dev/projects/9113758b-2176-46ae-a435-3834e52b1a56
+## 🏡 Características
 
-## How can I edit this code?
+- **Diseño Responsive**: Optimizado para todos los dispositivos
+- **Rendimiento**: Lazy loading de imágenes y optimización de assets
+- **SEO Optimizado**: Meta tags, Open Graph y Schema.org
+- **Galería de Fotos**: Lightbox para visualización de imágenes
+- **Blog de Experiencias**: Artículos sobre turismo local y gastronomía
+- **Diseño Moderno**: Interfaz limpia y elegante con animaciones suaves
 
-There are several ways of editing your application.
+## 🛠 Tecnologías
 
-**Use Lovable**
+- **React 18** - Framework frontend
+- **TypeScript** - Tipado estático
+- **Vite** - Build tool
+- **Tailwind CSS** - Estilos y diseño
+- **React Router** - Navegación
+- **Lucide React** - Iconos
+- **Shadcn/ui** - Componentes UI
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9113758b-2176-46ae-a435-3834e52b1a56) and start prompting.
+## 📁 Estructura del Proyecto
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+├── components/         # Componentes reutilizables
+│   ├── ui/            # Componentes UI base
+│   ├── Hero.tsx       # Hero section con video
+│   ├── Navbar.tsx     # Navegación principal
+│   ├── Footer.tsx     # Pie de página
+│   └── ...
+├── pages/             # Páginas de la aplicación
+├── data/              # Datos estáticos
+└── assets/            # Imágenes y recursos
 ```
 
-**Edit a file directly in GitHub**
+## 🚀 Desarrollo
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+# Instalar dependencias
+npm install
 
-**Use GitHub Codespaces**
+# Iniciar servidor de desarrollo
+npm run dev
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Build para producción
+npm run build
 
-## What technologies are used for this project?
+# Preview de producción
+npm run preview
+```
 
-This project is built with:
+## 📝 Personalización de Contenido
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Blog Posts
+Edita `/src/data/blogPosts.ts` para actualizar los artículos del blog con tu propio contenido.
 
-## How can I deploy this project?
+### Imágenes
+- Galería principal (página de inicio): `/public/1-6.jpg`
+- Galería completa: todos los archivos en `/public/`
+- Hero video: URL de YouTube configurada en `/src/pages/Index.tsx`
 
-Simply open [Lovable](https://lovable.dev/projects/9113758b-2176-46ae-a435-3834e52b1a56) and click on Share -> Publish.
+### Información de Contacto
+Actualiza `/src/components/Footer.tsx` con tus datos reales:
+- Email
+- Teléfono
+- Dirección
+- Redes sociales
+- Número de registro turístico
 
-## Can I connect a custom domain to my Lovable project?
+## 🎨 Sistema de Diseño
 
-Yes, you can!
+El proyecto utiliza un sistema de diseño basado en tokens CSS definidos en `/src/index.css`:
+- Colores semánticos (primary, secondary, muted, etc.)
+- Espaciado consistente
+- Animaciones predefinidas
+- Modo claro/oscuro
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📱 Optimizaciones Implementadas
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- ✅ Lazy loading de imágenes
+- ✅ Optimización de fuentes
+- ✅ Minificación de assets
+- ✅ Code splitting automático
+- ✅ SEO optimizado con meta tags completos
+- ✅ YouTube video optimizado para hero
+- ✅ Componentes modulares y reutilizables
+- ✅ Diseño responsive mobile-first
+
+## 🔍 SEO
+
+El proyecto incluye:
+- Meta tags completos (title, description, keywords)
+- Open Graph para redes sociales
+- Twitter Cards
+- Tags de geolocalización
+- Canonical URLs
+- Schema.org structured data ready
+
+## 🚀 Despliegue
+
+**Proyecto Lovable**: https://lovable.dev/projects/9113758b-2176-46ae-a435-3834e52b1a56
+
+**Desplegar**: Abre el proyecto en Lovable y haz clic en Share → Publish
+
+**Custom Domain**: Navega a Project > Settings > Domains para conectar tu dominio
+
+## 📄 Licencia
+
+Todos los derechos reservados © Casa Eufemia
