@@ -11,8 +11,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 
 const Index = () => {
-  // Reemplaza con tu URL de YouTube embed (ej: https://www.youtube.com/embed/TU_VIDEO_ID?autoplay=1&mute=1&loop=1&playlist=TU_VIDEO_ID&controls=0)
-  const videoUrl = "https://www.youtube.com/embed/TU_VIDEO_ID?autoplay=1&mute=1&loop=1&playlist=TU_VIDEO_ID&controls=0";
+  const videoUrl = "https://www.youtube.com/embed/pYzKQ961XBA?autoplay=1&mute=1&loop=1&playlist=pYzKQ961XBA&controls=0";
   
   return (
     <>
