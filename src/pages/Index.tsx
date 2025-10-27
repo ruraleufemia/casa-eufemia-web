@@ -11,8 +11,8 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 
 const Index = () => {
-  // Video de ejemplo de una casa rural
-  const videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";
+  // Reemplaza con tu URL de YouTube embed (ej: https://www.youtube.com/embed/TU_VIDEO_ID?autoplay=1&mute=1&loop=1&playlist=TU_VIDEO_ID&controls=0)
+  const videoUrl = "https://www.youtube.com/embed/TU_VIDEO_ID?autoplay=1&mute=1&loop=1&playlist=TU_VIDEO_ID&controls=0";
   
   return (
     <>
@@ -24,6 +24,7 @@ const Index = () => {
         <Navbar />
         <Hero 
           useVideo={true}
+          isYouTube={true}
           videoUrl={videoUrl}
         />
         <AboutSection />

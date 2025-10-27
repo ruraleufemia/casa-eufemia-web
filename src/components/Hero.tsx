@@ -4,9 +4,10 @@ import { ChevronDown } from "lucide-react";
 interface HeroProps {
   videoUrl?: string;
   useVideo?: boolean;
+  isYouTube?: boolean;
 }
 
-const Hero = ({ videoUrl, useVideo = false }: HeroProps) => {
+const Hero = ({ videoUrl, useVideo = false, isYouTube = false }: HeroProps) => {
   const scrollToAbout = () => {
     const aboutSection = document.getElementById("about");
     aboutSection?.scrollIntoView({ behavior: "smooth" });
@@ -17,21 +18,31 @@ const Hero = ({ videoUrl, useVideo = false }: HeroProps) => {
       {/* Background Media with Overlay */}
       <div className="absolute inset-0">
         {useVideo && videoUrl ? (
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover scale-105"
-            poster={heroImage}
-          >
-            <source src={videoUrl} type="video/mp4" />
-            <img
-              src={heroImage}
-              alt="Casa Eufemia - Casa Rural en Arenales de San Gregorio"
-              className="w-full h-full object-cover"
+          isYouTube ? (
+            <iframe
+              src={videoUrl}
+              className="w-full h-full object-cover scale-105"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{ border: 'none', pointerEvents: 'none' }}
             />
-          </video>
+          ) : (
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover scale-105"
+              poster={heroImage}
+            >
+              <source src={videoUrl} type="video/mp4" />
+              <img
+                src={heroImage}
+                alt="Casa Eufemia - Casa Rural en Arenales de San Gregorio"
+                className="w-full h-full object-cover"
+              />
+            </video>
+          )
         ) : (
           <img
             src={heroImage}
