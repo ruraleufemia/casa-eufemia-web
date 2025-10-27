@@ -1,21 +1,15 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import livingRoom from "@/assets/living-room.jpg";
-import bedroom from "@/assets/bedroom.jpg";
-import kitchen from "@/assets/kitchen.jpg";
-import pool from "@/assets/pool.jpg";
-import patio from "@/assets/patio.jpg";
-import garden from "@/assets/garden.jpg";
 
 const GalleryPreview = () => {
   const images = [
-    { src: livingRoom, alt: "Salón con chimenea", title: "Salón Acogedor" },
-    { src: bedroom, alt: "Dormitorio principal", title: "Dormitorios Confortables" },
-    { src: kitchen, alt: "Cocina rústica", title: "Cocina Equipada" },
-    { src: pool, alt: "Piscina exterior", title: "Piscina Privada" },
-    { src: patio, alt: "Patio con pérgola", title: "Patio Mediterráneo" },
-    { src: garden, alt: "Jardín con olivos", title: "Jardín Encantador" },
+    { src: "/1. Fachada.jpg", alt: "Fachada de Casa Eufemia", title: "Fachada" },
+    { src: "/2. Barbacoa.jpg", alt: "Zona de barbacoa", title: "Barbacoa" },
+    { src: "/3. Salon.jpg", alt: "Salón principal", title: "Salón" },
+    { src: "/4. Cuarto 2.jpg", alt: "Dormitorio 2", title: "Dormitorio" },
+    { src: "/5. Picoteo.jpg", alt: "Mesa de picoteo", title: "Picoteo" },
+    { src: "/6. Piscina.jpg", alt: "Piscina exterior", title: "Piscina" },
   ];
 
   return (

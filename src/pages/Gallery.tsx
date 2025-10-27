@@ -3,30 +3,26 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Lightbox from "@/components/Lightbox";
 import SEO from "@/components/SEO";
-import heroImage from "@/assets/hero-house.jpg";
-import livingRoom from "@/assets/living-room.jpg";
-import bedroom from "@/assets/bedroom.jpg";
-import kitchen from "@/assets/kitchen.jpg";
-import pool from "@/assets/pool.jpg";
-import patio from "@/assets/patio.jpg";
-import garden from "@/assets/garden.jpg";
-import exteriorFacade from "@/assets/exterior-facade.jpg";
-import terrace from "@/assets/terrace.jpg";
 
 const Gallery = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const images = [
-    { src: heroImage, alt: "Casa Eufemia - Exterior principal" },
-    { src: exteriorFacade, alt: "Fachada de la casa" },
-    { src: livingRoom, alt: "Salón con chimenea" },
-    { src: bedroom, alt: "Dormitorio principal" },
-    { src: kitchen, alt: "Cocina rústica moderna" },
-    { src: pool, alt: "Piscina exterior" },
-    { src: patio, alt: "Patio con pérgola" },
-    { src: garden, alt: "Jardín con olivos" },
-    { src: terrace, alt: "Terraza exterior" },
+    { src: "/1. Fachada.jpg", alt: "Fachada de Casa Eufemia" },
+    { src: "/2. Barbacoa.jpg", alt: "Zona de barbacoa" },
+    { src: "/3. Salon.jpg", alt: "Salón principal" },
+    { src: "/4. Cuarto 2.jpg", alt: "Dormitorio 2" },
+    { src: "/5. Picoteo.jpg", alt: "Mesa de picoteo" },
+    { src: "/6. Piscina.jpg", alt: "Piscina exterior" },
+    { src: "/Bano 1.jpg", alt: "Baño completo" },
+    { src: "/Cocina.jpg", alt: "Cocina equipada" },
+    { src: "/Cuarto 3.jpg", alt: "Dormitorio 3" },
+    { src: "/Cuarto principal.jpg", alt: "Dormitorio principal" },
+    { src: "/Detalle botellas.jpg", alt: "Detalle bodega" },
+    { src: "/Juegos de mesa.jpg", alt: "Zona de juegos de mesa" },
+    { src: "/Pet friendly.jpg", alt: "Casa pet friendly" },
+    { src: "/Picoteo 2.jpg", alt: "Zona de aperitivos" },
   ];
 
   const openLightbox = (index: number) => {
