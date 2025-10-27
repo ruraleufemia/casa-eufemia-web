@@ -15,24 +15,26 @@ const Hero = ({ videoUrl, useVideo = false, isYouTube = false }: HeroProps) => {
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Media with Overlay */}
+      {/* Background Media */}
       <div className="absolute inset-0">
         {useVideo && videoUrl ? (
           isYouTube ? (
-            <iframe
-              src={videoUrl}
-              className="w-full h-full object-cover scale-105"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              style={{ border: 'none', pointerEvents: 'none' }}
-            />
+            <div className="absolute inset-0 w-full h-full">
+              <iframe
+                src={videoUrl}
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh]"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{ border: 'none', pointerEvents: 'none' }}
+              />
+            </div>
           ) : (
             <video
               autoPlay
               loop
               muted
               playsInline
-              className="w-full h-full object-cover scale-105"
+              className="w-full h-full object-cover"
               poster={heroImage}
             >
               <source src={videoUrl} type="video/mp4" />
@@ -47,27 +49,16 @@ const Hero = ({ videoUrl, useVideo = false, isYouTube = false }: HeroProps) => {
           <img
             src={heroImage}
             alt="Casa Eufemia - Casa Rural en Arenales de San Gregorio"
-            className="w-full h-full object-cover scale-105"
+            className="w-full h-full object-cover"
           />
         )}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50" />
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto animate-fade-in">
-        <h1 className="text-7xl sm:text-8xl lg:text-9xl font-display font-extralight tracking-wider text-white mb-6 drop-shadow-2xl leading-none">
-          Casa Eufemia
-        </h1>
-        <div className="w-24 h-[1px] bg-white/40 mx-auto mb-6"></div>
-        <p className="text-xl sm:text-2xl lg:text-3xl text-white/95 font-light tracking-widest drop-shadow-lg uppercase text-sm">
-          Arenales de San Gregorio
-        </p>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30" />
       </div>
 
       {/* Scroll Indicator */}
       <button
         onClick={scrollToAbout}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 text-white/50 hover:text-white transition-all duration-300 animate-bounce"
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 text-white/70 hover:text-white transition-all duration-300 animate-bounce z-10"
         aria-label="Scroll down"
       >
         <ChevronDown size={40} strokeWidth={1} />
