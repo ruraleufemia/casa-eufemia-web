@@ -16,14 +16,9 @@ import {
 const AmenitiesSection = () => {
   const amenities = [
     {
-      icon: ParkingCircle,
-      title: "Parking privado",
-      description: "Amplio aparcamiento para varios vehículos",
-    },
-    {
       icon: Trees,
       title: "Jardín extenso",
-      description: "Espacios verdes con olivos y plantas autóctonas",
+      description: "Espacios verdes con plantas autóctonas",
     },
     {
       icon: Flame,
@@ -33,7 +28,7 @@ const AmenitiesSection = () => {
     {
       icon: Snowflake,
       title: "Aire acondicionado",
-      description: "Climatización en todas las habitaciones",
+      description: "Climatización en el salon comedor.",
     },
     {
       icon: Waves,
@@ -58,22 +53,12 @@ const AmenitiesSection = () => {
     {
       icon: Tv,
       title: "TV y entretenimiento",
-      description: "Smart TV en salón",
-    },
-    {
-      icon: WashingMachine,
-      title: "Lavadora",
-      description: "Zona de lavandería equipada",
-    },
-    {
-      icon: Bath,
-      title: "3 baños completos",
-      description: "Baños modernos y bien equipados",
+      description: "TV en salón y juegos de mesa",
     },
     {
       icon: Coffee,
       title: "Zona exterior",
-      description: "Pérgola, barbacoa y mobiliario de jardín",
+      description: "Merendero, barbacoa y mobiliario de jardín",
     },
   ];
 
