@@ -137,6 +137,22 @@ const BlogPost = () => {
               <div className="space-y-6">
                 {formatContent(post.content)}
               </div>
+
+              {/* Additional Images */}
+              {post.images && post.images.length > 0 && (
+                <div className="grid md:grid-cols-2 gap-6 mt-12">
+                  {post.images.map((img, idx) => (
+                    <div key={idx} className="rounded-lg overflow-hidden">
+                      <img
+                        src={img}
+                        alt={`${post.title} - Imagen ${idx + 2}`}
+                        loading="lazy"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>

@@ -4,6 +4,7 @@ export interface BlogPost {
   excerpt: string;
   content: string;
   image: string;
+  images?: string[]; // Imágenes adicionales para mostrar en el artículo
   date: string;
   readTime: string;
   category: string;
@@ -44,7 +45,7 @@ Y si vienes, entenderás perfectamente por qué sus atardeceres se quedan guarda
 
 Más contenido...`,
     image: "/IMG_4765.JPG",
-    image: "/IMG_4770.JPG",
+    images: ["/IMG_4770.JPG"],
     date: "2024-03-15",
     readTime: "5 min",
     category: "Gastronomía"
