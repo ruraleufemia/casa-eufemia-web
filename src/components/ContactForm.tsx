@@ -86,7 +86,7 @@ Mensaje: ${values.message}`;
     const encodedMessage = encodeURIComponent(message);
     
     // Número de WhatsApp (reemplaza con el número real de Casa Eufemia)
-    const whatsappNumber = "34600000000"; // Actualizar con el número real
+    const whatsappNumber = "34638014458"; // Actualizar con el número real
     
     // Abrir WhatsApp con el mensaje pre-rellenado
     window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, "_blank");
