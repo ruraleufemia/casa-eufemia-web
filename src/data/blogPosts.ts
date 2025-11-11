@@ -50,10 +50,6 @@ Y si vienes, entenderás perfectamente por qué sus atardeceres se quedan guarda
     excerpt: "Este rincón histórico combina cultura y serenidad en un espacio sencillo pero lleno de significado. Una visita breve, cercana y perfecta para disfrutar de una tarde tranquila con un toque de historia.",
     content: `## Introducción
 
-Contenido del artículo aquí...
-
-## Sección 1
-
 A pocos minutos en coche desde nuestro alojamiento en Arenales de San Gregorio se encuentra Argamasilla de Alba, un pueblo que guarda uno de los lugares más curiosos y especiales de La Mancha: la Casa Medrano, conocida por ser la supuesta cárcel de Cervantes y el lugar donde pudo comenzar a escribirse Don Quijote de la Mancha.
 
 Este edificio, sencillo por fuera, esconde una historia que llama la atención nada más conocerla. Se dice que Miguel de Cervantes estuvo preso aquí en el siglo XVI, y que durante ese tiempo pudo empezar a dar forma a la obra que, con los años, se convertiría en una de las novelas más importantes de la literatura universal.
@@ -68,25 +64,38 @@ Cerca de casa y fácil de visitar
 
 Es una salida corta, cómoda y con ese toque histórico que hace el viaje más especial.
 
-Más contenido...`,
+`,
     image: "/IMG_4586.JPG"
   },
   {
     id: 3,
-    title: "Título del artículo 3",
-    excerpt: "Breve descripción del artículo que aparecerá en la vista previa.",
+    title: "Lagunas de Ruidera",
+    excerpt: "Sus aguas enlazadas por cascadas y saltos crean un paisaje único, ideal para pasear, relajarse o disfrutar de actividades como kayak, paddle surf, ciclismo o rutas de senderismo.",
     content: `## Introducción
 
-Contenido del artículo aquí...
+Descubre las Lagunas de Ruidera: un paraíso natural cerca de nuestro alojamiento en Arenales de San Gregorio
+Si hay un lugar que siempre recomendamos a quienes se alojan en nuestra casa en Arenales de San Gregorio es, sin duda, las Lagunas de Ruidera. A tan solo unos kilómetros, se encuentra uno de los espacios naturales más bonitos y sorprendentes de Castilla La Mancha, perfecto para desconectar y disfrutar de la naturaleza en estado puro.
 
-## Sección 1
+Lo más especial de este paraje es cómo el agua se va enlazando entre lagunas mediante pequeñas cascadas y saltos naturales, creando un paisaje que, sinceramente, no te esperas encontrar aquí. No hace falta ser un amante del senderismo para disfrutarlo; simplemente pasear, sentarte frente al agua o hacer una ruta sencilla ya te reconecta con todo.
 
-Tu contenido aquí...
+## Un lugar para hacer lo que te apetezca: relax o aventura
 
-## Sección 2
+Las Lagunas de Ruidera son muy versátiles. Puedes ir a pasar el día en plan tranquilo, llevarte algo de comer, una bebida fresca y buscar una sombra junto al agua.
+Pero, si eres más de moverte, tienes muchas opciones:
+-Rutas de senderismo y miradores con vistas impresionantes
+-Kayak y paddle surf para disfrutar del agua de una forma diferente
+-Zonas de baño en verano, ideales para refrescarse
+-Ciclismo por caminos accesibles y bien señalizados
 
-Más contenido...`,
-    image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=1200&auto=format&fit=crop"
+Y si vas con niños, es un plan perfecto: agua clara, zonas seguras, naturaleza y espacio para jugar sin prisas.
+## La comodidad de alojarte en Arenales de San Gregorio
+
+Una de las ventajas de nuestro alojamiento es precisamente la tranquilidad del entorno. Arenales es un pueblo pequeño, acogedor, donde se está en calma. Y lo mejor es que desde aquí puedes ir a las Lagunas de Ruidera en poco tiempo, sin tener que alojarte en zonas más saturadas o turísticas.
+
+Si buscas naturaleza, aire limpio y un sitio bonito donde pasar unos días, las Lagunas de Ruidera son un acierto seguro. Y desde nuestro alojamiento tendrás la combinación perfecta: escapada, descanso y aventura, todo a tu ritmo
+
+`,
+    image: "/pexels-emilio-sanchez-hernandez-285921208-34476076.jpg"
   },
   {
     id: 4,
