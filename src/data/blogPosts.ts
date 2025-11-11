@@ -43,31 +43,37 @@ Una de las ventajas de alojarse en Arenales de San Gregorio es precisamente esa 
 Campo de Criptana no solo se visita, se siente.
 Y si vienes, entenderás perfectamente por qué sus atardeceres se quedan guardados dentro.
 
-Más contenido...`,
+`,
     image: "/IMG_4765.JPG",
     images: ["/IMG_4770.JPG"],
-    date: "2024-03-15",
-    readTime: "5 min",
-    category: "Gastronomía"
+    category: "Cultural"
   },
   {
     id: 2,
-    title: "Título del artículo 2",
-    excerpt: "Breve descripción del artículo que aparecerá en la vista previa.",
+    title: "Casa Medrano",
+    excerpt: "Este rincón histórico combina cultura y serenidad en un espacio sencillo pero lleno de significado. Una visita breve, cercana y perfecta para disfrutar de una tarde tranquila con un toque de historia.",
     content: `## Introducción
 
 Contenido del artículo aquí...
 
 ## Sección 1
 
-Tu contenido aquí...
+A pocos minutos en coche desde nuestro alojamiento en Arenales de San Gregorio se encuentra Argamasilla de Alba, un pueblo que guarda uno de los lugares más curiosos y especiales de La Mancha: la Casa Medrano, conocida por ser la supuesta cárcel de Cervantes y el lugar donde pudo comenzar a escribirse Don Quijote de la Mancha.
 
-## Sección 2
+Este edificio, sencillo por fuera, esconde una historia que llama la atención nada más conocerla. Se dice que Miguel de Cervantes estuvo preso aquí en el siglo XVI, y que durante ese tiempo pudo empezar a dar forma a la obra que, con los años, se convertiría en una de las novelas más importantes de la literatura universal.
+Estar allí, en la misma sala donde se cree que escribió parte del Quijote, tiene algo especial. Es uno de esos sitios donde la historia se siente cercana, casi real.
+
+## Un lugar que mezcla cultura y tranquilidad
+
+La Casa Medrano no es un museo grande ni recargado. Y precisamente por eso resulta agradable.
+No necesitas ser un amante profundo de la literatura para disfrutarlo. Es un plan ligero, interesante y perfecto para una mañana o tarde tranquila.
+
+Cerca de casa y fácil de visitar
+
+Es una salida corta, cómoda y con ese toque histórico que hace el viaje más especial.
 
 Más contenido...`,
-    image: "https://images.unsplash.com/photo-1583468323330-9032ad490fed?w=1200&auto=format&fit=crop",
-    date: "2024-03-10",
-    readTime: "6 min",
+    image: "/IMG_4586.JPG",
     category: "Cultural"
   },
   {
