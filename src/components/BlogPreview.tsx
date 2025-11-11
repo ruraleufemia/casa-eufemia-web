@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { blogPosts } from "@/data/blogPosts";
 
@@ -30,29 +30,9 @@ const BlogPreview = () => {
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute top-4 left-4">
-                  <span className="bg-primary/90 text-primary-foreground px-3 py-1 rounded-full text-sm font-light">
-                    {post.category}
-                  </span>
-                </div>
               </div>
               
               <div className="p-6">
-                <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
-                  <span className="flex items-center gap-1">
-                    <Calendar size={14} strokeWidth={1.5} />
-                    {new Date(post.date).toLocaleDateString('es-ES', { 
-                      day: 'numeric', 
-                      month: 'long', 
-                      year: 'numeric' 
-                    })}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Clock size={14} strokeWidth={1.5} />
-                    {post.readTime}
-                  </span>
-                </div>
-                
                 <h3 className="text-xl font-light text-foreground mb-2 group-hover:text-primary transition-colors">
                   {post.title}
                 </h3>

@@ -5,9 +5,6 @@ export interface BlogPost {
   content: string;
   image: string;
   images?: string[]; // Imágenes adicionales para mostrar en el artículo
-  date: string;
-  readTime: string;
-  category: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -45,8 +42,7 @@ Y si vienes, entenderás perfectamente por qué sus atardeceres se quedan guarda
 
 `,
     image: "/IMG_4765.JPG",
-    images: ["/IMG_4770.JPG"],
-    category: "Cultural"
+    images: ["/IMG_4770.JPG"]
   },
   {
     id: 2,
@@ -73,8 +69,7 @@ Cerca de casa y fácil de visitar
 Es una salida corta, cómoda y con ese toque histórico que hace el viaje más especial.
 
 Más contenido...`,
-    image: "/IMG_4586.JPG",
-    category: "Cultural"
+    image: "/IMG_4586.JPG"
   },
   {
     id: 3,
@@ -91,10 +86,7 @@ Tu contenido aquí...
 ## Sección 2
 
 Más contenido...`,
-    image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=1200&auto=format&fit=crop",
-    date: "2024-03-05",
-    readTime: "4 min",
-    category: "Gastronomía"
+    image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=1200&auto=format&fit=crop"
   },
   {
     id: 4,
@@ -111,10 +103,7 @@ Tu contenido aquí...
 ## Sección 2
 
 Más contenido...`,
-    image: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=1200&auto=format&fit=crop",
-    date: "2024-03-01",
-    readTime: "7 min",
-    category: "Cultural"
+    image: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=1200&auto=format&fit=crop"
   },
   {
     id: 5,
@@ -131,10 +120,7 @@ Tu contenido aquí...
 ## Sección 2
 
 Más contenido...`,
-    image: "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=1200&auto=format&fit=crop",
-    date: "2024-02-25",
-    readTime: "5 min",
-    category: "Gastronomía"
+    image: "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=1200&auto=format&fit=crop"
   },
   {
     id: 6,
@@ -151,9 +137,6 @@ Tu contenido aquí...
 ## Sección 2
 
 Más contenido...`,
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&auto=format&fit=crop",
-    date: "2024-02-20",
-    readTime: "8 min",
-    category: "Cultural"
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&auto=format&fit=crop"
   }
 ];

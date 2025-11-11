@@ -1,5 +1,5 @@
 import { useParams, Link, Navigate } from "react-router-dom";
-import { ArrowLeft, Calendar, Clock } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
@@ -66,13 +66,7 @@ const BlogPost = () => {
         url={`/blog/${post.id}`}
         image={post.image}
         type="article"
-        keywords={`${post.category}, casa eufemia, turismo Ciudad Real, experiencias rurales, ${post.title}`}
-        article={{
-          publishedTime: post.date,
-          author: "Casa Eufemia",
-          section: post.category,
-          tags: [post.category, "turismo rural", "Ciudad Real", "La Mancha"]
-        }}
+        keywords={`casa eufemia, turismo Ciudad Real, experiencias rurales, ${post.title}`}
       />
       <div className="min-h-screen bg-background">
         <Navbar />
@@ -98,28 +92,9 @@ const BlogPost = () => {
             </Link>
             
             <div className="max-w-4xl">
-              <span className="inline-block bg-primary/90 text-primary-foreground px-4 py-1.5 rounded-full text-sm font-light mb-4">
-                {post.category}
-              </span>
-              
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white mb-4 drop-shadow-lg">
                 {post.title}
               </h1>
-              
-              <div className="flex items-center gap-6 text-white/90 text-sm font-light">
-                <span className="flex items-center gap-2">
-                  <Calendar size={16} strokeWidth={1.5} />
-                  {new Date(post.date).toLocaleDateString('es-ES', { 
-                    day: 'numeric', 
-                    month: 'long', 
-                    year: 'numeric' 
-                  })}
-                </span>
-                <span className="flex items-center gap-2">
-                  <Clock size={16} strokeWidth={1.5} />
-                  {post.readTime} de lectura
-                </span>
-              </div>
             </div>
           </div>
         </div>
