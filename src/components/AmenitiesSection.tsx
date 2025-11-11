@@ -21,11 +21,6 @@ const AmenitiesSection = () => {
       description: "Espacios verdes con plantas autóctonas",
     },
     {
-      icon: Flame,
-      title: "Calefacción",
-      description: "Sistema de calefacción en toda la casa",
-    },
-    {
       icon: Snowflake,
       title: "Aire acondicionado",
       description: "Climatización en el salon comedor.",
