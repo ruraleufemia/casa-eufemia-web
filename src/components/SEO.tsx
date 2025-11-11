@@ -20,12 +20,12 @@ const SEO = ({
   description = "Descubre Casa Eufemia, tu casa rural de lujo en Arenales de San Gregorio, Ciudad Real. Alojamiento acogedor con piscina, jardín y todas las comodidades para unas vacaciones perfectas en La Mancha. Reserva ahora tu escapada rural.",
   keywords = "casa rural Ciudad Real, casaeufemia, casa eufemia, alojamiento rural La Mancha, casa con piscina Ciudad Real, turismo rural Arenales de San Gregorio, vacaciones rurales España, casa rural lujo, alquiler casa rural",
   image = "/hero-house.jpg",
-  url = "https://casaeufemia.lovable.app",
+  url = "https://www.casaeufemia.com/",
   type = "website",
   article,
 }: SEOProps) => {
   const fullTitle = title.includes("Casa Eufemia") ? title : `${title} | Casa Eufemia`;
-  const fullUrl = url.startsWith("http") ? url : `https://casaeufemia.lovable.app${url}`;
+  const fullUrl = url.startsWith("http") ? url : `https://www.casaeufemia.com/${url}`;
 
   return (
     <Helmet>
