@@ -20,14 +20,14 @@ A pocos kilómetros de nuestro alojamiento en Arenales de San Gregorio se encuen
 
 Subir hasta los molinos y ver cómo se extiende el paisaje a tu alrededor es algo que transmite tranquilidad. No es solo un punto turístico, es un espacio abierto, silencioso, donde parece que todo va más despacio.
 
-El atardecer, el mejor momento
+## El atardecer, el mejor momento
 
 Si hay un momento especial para visitar Campo de Criptana es la caída de la tarde.
 Cuando el sol empieza a bajar, el cielo se llena de colores cálidos: naranjas, rosas, violetas… y los molinos se recortan en el horizonte creando una imagen difícil de olvidar. Es uno de esos atardeceres que te invitan a quedarte quieto, a mirar y a dejar pasar el tiempo.
 
 Puedes estar charlando con alguien, haciendo fotos o simplemente sentado, pero al final todos acabamos igual: mirando en silencio.
 
-Paseo, historia y calma
+## Paseo, historia y calma
 
 Pasear por el barrio del Albaicín con sus casas blancas es muy agradable.
 
@@ -35,18 +35,12 @@ Si te gusta la fotografía, te encontrarás buscando ángulos una y otra vez.
 
 Y si simplemente necesitas desconectar, aquí es fácil respirar profundo y relajar la mente.
 
-Muy cerca de nuestro alojamiento
+## Muy cerca de nuestro alojamiento
 
 Una de las ventajas de alojarse en Arenales de San Gregorio es precisamente esa tranquilidad y la cercanía a lugares con tanta magia como este. Puedes ir por la tarde, ver el atardecer y volver sin prisas, disfrutando del camino.
 
 Campo de Criptana no solo se visita, se siente.
 Y si vienes, entenderás perfectamente por qué sus atardeceres se quedan guardados dentro.
-
-## Sección 1
-
-Tu contenido aquí...
-
-## Sección 2
 
 Más contenido...`,
     image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1200&auto=format&fit=crop",
