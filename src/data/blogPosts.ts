@@ -112,7 +112,9 @@ Tu contenido aquí...
 ## Sección 2
 
 Más contenido...`,
-    image: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=1200&auto=format&fit=crop"
+    image: "/IMG_4389.JPG",
+    images: ["/IMG_4398.JPG","IMG_4469.JPG"]
+
   },
   {
     id: 5,
