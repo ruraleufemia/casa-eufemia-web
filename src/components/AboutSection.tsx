@@ -14,7 +14,7 @@ const AboutSection = () => {
     },
     {
       icon: Bed,
-      title: "4 dormitorios",
+      title: "3 dormitorios",
       description: "Cómodas habitaciones",
     },
     {
@@ -66,8 +66,8 @@ const AboutSection = () => {
             </p>
             <p>
               La casa se distribuye en una sola planta de 250m², con amplios espacios luminosos 
-              que incluyen un salón comedor con chimenea, cocina equipada, cuatro dormitorios 
-              dobles y tres baños completos.
+              que incluyen un salón comedor con chimenea, cocina equipada, tres dormitorios 
+              dobles y un baño completo.
             </p>
             <p>
               El exterior incluye un extenso jardín con piscina, áreas de descanso sombreadas 
