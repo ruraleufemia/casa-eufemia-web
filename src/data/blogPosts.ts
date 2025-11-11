@@ -43,7 +43,8 @@ Campo de Criptana no solo se visita, se siente.
 Y si vienes, entenderás perfectamente por qué sus atardeceres se quedan guardados dentro.
 
 Más contenido...`,
-    image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1200&auto=format&fit=crop",
+    image: "/IMG_4765.JPG",
+    image: "/IMG_4770.JPG",
     date: "2024-03-15",
     readTime: "5 min",
     category: "Gastronomía"
