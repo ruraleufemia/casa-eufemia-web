@@ -22,18 +22,18 @@ const Footer = () => {
             </h4>
             <div className="space-y-3">
               <a
-                href="mailto:info@casaeufemia.com"
+                href="mailto:ruraleufemia@gmail.com"
                 className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail size={18} />
-                <span>info@casaeufemia.com</span>
+                <span>ruraleufemia@gmail.com</span>
               </a>
               <a
-                href="tel:+34600000000"
+                href="tel:+34638014458"
                 className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Phone size={18} />
-                <span>+34 600 000 000</span>
+                <span>+34 638 014 458</span>
               </a>
               <div className="flex items-start gap-2 text-muted-foreground">
                 <MapPin size={18} className="flex-shrink-0 mt-1" />
