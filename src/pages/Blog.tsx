@@ -58,12 +58,8 @@ const Blog = () => {
                     {post.title}
                   </h2>
                   
-                  <p className="text-muted-foreground font-light text-sm mb-4">
-                    {post.excerpt}
-                  </p>
-                  
                   <p className="text-muted-foreground font-light text-sm line-clamp-3">
-                    {post.content}
+                    {post.excerpt}
                   </p>
                 </div>
               </Link>
