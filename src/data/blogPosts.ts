@@ -99,55 +99,38 @@ Si buscas naturaleza, aire limpio y un sitio bonito donde pasar unos días, las 
   },
   {
     id: 4,
-    title: "Título del artículo 4",
-    excerpt: "Breve descripción del artículo que aparecerá en la vista previa.",
+    title: "Cooperativa Virgen de las Viñas",
+    excerpt: "Durante la visita puedes descubrir el proceso del vino paso a paso y disfrutar del Museo Infanta Elena, con exposiciones de arte contemporáneo que complementan la experiencia.",
     content: `## Introducción
 
-Contenido del artículo aquí...
+A muy pocos minutos de nuestro alojamiento en Arenales de San Gregorio tienes la oportunidad de conocer uno de los lugares más representativos de la cultura vitivinícola de la zona: la Cooperativa Virgen de las Viñas en Tomelloso.
+No es solo una bodega, es parte de la identidad de La Mancha y una de las cooperativas más grandes y reconocidas de Europa.
+Nada más llegar, impresiona el tamaño de las instalaciones y el ambiente tranquilo en el que todo parece girar alrededor de la elaboración del vino. Si te interesa saber cómo se transforma la uva en vino, aquí lo explican de forma clara y cercana.
+Durante la visita vas recorriendo distintas salas y depósitos, conociendo el proceso paso a paso. Es una experiencia muy amena, tanto si ya te gusta el vino como si simplemente tienes curiosidad.
 
-## Sección 1
 
-Tu contenido aquí...
+## El Museo Infanta Elena: arte entre vinos
 
-## Sección 2
+Dentro del mismo complejo se encuentra el Museo Infanta Elena, un espacio que sorprende por su calidad y por lo bien cuidado que está.
+Es un museo moderno, luminoso, con exposiciones de pintura, escultura y arte contemporáneo que cambian con frecuencia. La mezcla entre tradición vinícola y expresión artística crea una visita muy especial, diferente y agradable.
 
-Más contenido...`,
+Es uno de esos lugares que hacen que el viaje sea más completo: no solo visitas un sitio, sino que vives una experiencia.
+
+
+## Una visita perfecta desde nuestro alojamiento
+
+Lo mejor de todo es que está muy cerca de nuestra casa en Arenales de San Gregorio, por lo que puedes ir sin prisas, dedicar el tiempo que quieras y volver tranquilamente después.
+Ideas para aprovechar la visita:
+- Visita guiada a la cooperativa
+- Recorrido por el museo
+- Degustación o compra de vino local para disfrutar luego en nuestra casa rural.
+
+Ya sea que vengas en pareja, en familia o con amigos, es un plan sencillo, interesante y muy fácil de organizar.
+Si buscas conocer un poco más la esencia de esta tierra, la Cooperativa Virgen de las Viñas y el Museo Infanta Elena son una parada que merece la pena.
+
+,
     image: "/IMG_4389.JPG",
     images: ["/IMG_4398.JPG","IMG_4469.JPG"]
 
-  },
-  {
-    id: 5,
-    title: "Título del artículo 5",
-    excerpt: "Breve descripción del artículo que aparecerá en la vista previa.",
-    content: `## Introducción
-
-Contenido del artículo aquí...
-
-## Sección 1
-
-Tu contenido aquí...
-
-## Sección 2
-
-Más contenido...`,
-    image: "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=1200&auto=format&fit=crop"
-  },
-  {
-    id: 6,
-    title: "Título del artículo 6",
-    excerpt: "Breve descripción del artículo que aparecerá en la vista previa.",
-    content: `## Introducción
-
-Contenido del artículo aquí...
-
-## Sección 1
-
-Tu contenido aquí...
-
-## Sección 2
-
-Más contenido...`,
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&auto=format&fit=crop"
   }
 ];
