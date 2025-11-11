@@ -128,7 +128,7 @@ Ideas para aprovechar la visita:
 Ya sea que vengas en pareja, en familia o con amigos, es un plan sencillo, interesante y muy fácil de organizar.
 Si buscas conocer un poco más la esencia de esta tierra, la Cooperativa Virgen de las Viñas y el Museo Infanta Elena son una parada que merece la pena.
 
-,
+`,
     image: "/IMG_4389.JPG",
     images: ["/IMG_4398.JPG","IMG_4469.JPG"]
 
