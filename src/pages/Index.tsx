@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 
 const Index = () => {
-  const videoUrl = "https://www.youtube.com/embed/kcpwKMlJ9yA?autoplay=1&mute=1&loop=1&playlist=kcpwKMlJ9yA&controls=0&vq=hd1080&hd=1";
+  const videoUrl = "https://www.youtube.com/embed/kcpwKMlJ9yA?autoplay=1&mute=1&loop=1&playlist=kcpwKMlJ9yA&controls=0&modestbranding=1&rel=0&showinfo=0&vq=hd1080&quality=hd1080";
   
   return (
     <>
