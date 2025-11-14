@@ -38,7 +38,8 @@ const Footer = () => {
               <div className="flex items-start gap-2 text-muted-foreground">
                 <MapPin size={18} className="flex-shrink-0 mt-1" />
                 <span>
-                  Arenales de San Gregorio<br />
+                  Calle Juan José Jiménez 4<br />
+                  13619 Arenales de San Gregorio<br />
                   Ciudad Real, España
                 </span>
               </div>

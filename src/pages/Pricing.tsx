@@ -149,6 +149,33 @@ const Pricing = () => {
           </div>
         </section>
 
+        {/* Location Section */}
+        <section className="pb-20 px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-display font-light mb-4 text-foreground">
+                Ubicación
+              </h2>
+              <p className="text-muted-foreground font-light">
+                Calle Juan José Jiménez 4, 13619 Arenales de San Gregorio, Ciudad Real
+              </p>
+            </div>
+            
+            <div className="rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3045.8767890123456!2d-3.7891234567890123!3d39.1234567890123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDA3JzI0LjQiTiAzwrA0NycyMC44Ilc!5e0!3m2!1ses!2ses!4v1234567890123!5m2!1ses!2ses"
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Ubicación de Casa Eufemia"
+              />
+            </div>
+          </div>
+        </section>
+
         <Footer />
       </div>
     </>
