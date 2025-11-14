@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Home, ImageIcon, Compass } from "lucide-react";
+import { Menu, X, Home, ImageIcon, Compass, Euro } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -49,6 +49,7 @@ const Navbar = () => {
     { name: "Inicio", path: "/", icon: Home },
     { name: "Galería", path: "/gallery", icon: ImageIcon },
     { name: "Experiencias", path: "/blog", icon: Compass },
+    { name: "Precios", path: "/pricing", icon: Euro },
   ];
 
   const isActive = (path: string) => location.pathname === path;
