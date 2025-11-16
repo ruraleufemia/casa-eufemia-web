@@ -26,6 +26,7 @@ const SEO = ({
 }: SEOProps) => {
   const fullTitle = title.includes("Casa Eufemia") ? title : `${title} | Casa Eufemia`;
   const fullUrl = url.startsWith("http") ? url : `https://www.casaeufemia.com/${url}`;
+  const fullImage = image.startsWith("http") ? image : `https://www.casaeufemia.com${image}`;
 
   return (
     <Helmet>
@@ -41,7 +42,7 @@ const SEO = ({
       <meta property="og:url" content={fullUrl} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
+      <meta property="og:image" content={fullImage} />
       <meta property="og:site_name" content="Casa Eufemia" />
       <meta property="og:locale" content="es_ES" />
 
@@ -50,7 +51,7 @@ const SEO = ({
       <meta name="twitter:url" content={fullUrl} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:image" content={fullImage} />
 
       {/* Article specific tags */}
       {article && type === "article" && (
