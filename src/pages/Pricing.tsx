@@ -111,7 +111,7 @@ const Pricing = () => {
                   <span className="text-foreground font-light">Temporada Alta</span>
                   <div className="flex items-center gap-1 text-primary font-medium text-xl">
                     <Euro className="w-5 h-5" />
-                    <span>300</span>
+                    <span>250</span>
                   </div>
                 </div>
               </div>
