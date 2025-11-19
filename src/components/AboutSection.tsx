@@ -4,7 +4,7 @@ const AboutSection = () => {
   const features = [
     {
       icon: Home,
-      title: "250m²",
+      title: "290m²",
       description: "De espacio acogedor",
     },
     {
@@ -62,10 +62,10 @@ const AboutSection = () => {
           <div className="space-y-6 text-muted-foreground text-base leading-relaxed font-light">
             <p>
               Casa Eufemia combina la arquitectura tradicional manchega con comodidades modernas. 
-              Sus muros de piedra mantienen una temperatura agradable durante todo el año.
+              Sus muros de adobe mantienen una temperatura agradable durante todo el año.
             </p>
             <p>
-              La casa se distribuye en una sola planta de 250m², con amplios espacios luminosos 
+              La casa se distribuye en una sola planta de 290m², con amplios espacios luminosos 
               que incluyen un salón comedor con chimenea, cocina equipada, tres dormitorios 
               dobles y un baño completo.
             </p>
