@@ -58,7 +58,9 @@ const Footer = () => {
                 <Facebook size={20} />
               </a>
               <a
-                href="#"
+                href="https://instagram.com/eufemiacasarural"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors"
                 aria-label="Instagram"
               >
