@@ -38,9 +38,7 @@ const Footer = () => {
               <div className="flex items-start gap-2 text-muted-foreground">
                 <MapPin size={18} className="flex-shrink-0 mt-1" />
                 <span>
-                  Calle Juan José Jiménez 4<br />
-                  13619 Arenales de San Gregorio<br />
-                  Ciudad Real, España
+                  Arenales de San Gregorio
                 </span>
               </div>
             </div>
@@ -51,7 +49,7 @@ const Footer = () => {
             <h4 className="text-base font-light text-foreground mb-4">
               Síguenos
             </h4>
-            <div className="flex gap-4 mb-6">
+            <div className="flex gap-4">
               <a
                 href="#"
                 className="w-10 h-10 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors"
@@ -67,10 +65,6 @@ const Footer = () => {
                 <Instagram size={20} />
               </a>
             </div>
-            <p className="text-sm text-muted-foreground">
-              Número de Registro Turístico:<br />
-              <span className="font-medium">CR-XXXXX-XX</span>
-            </p>
           </div>
         </div>
 
