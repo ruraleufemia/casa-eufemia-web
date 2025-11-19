@@ -105,14 +105,18 @@ Si buscas naturaleza, aire limpio y un sitio bonito donde pasar unos días, las 
     content: `## Introducción
 
 A muy pocos minutos de nuestro alojamiento en Arenales de San Gregorio tienes la oportunidad de conocer uno de los lugares más representativos de la cultura vitivinícola de la zona: la Cooperativa Virgen de las Viñas en Tomelloso.
+
 No es solo una bodega, es parte de la identidad de La Mancha y una de las cooperativas más grandes y reconocidas de Europa.
+
 Nada más llegar, impresiona el tamaño de las instalaciones y el ambiente tranquilo en el que todo parece girar alrededor de la elaboración del vino. Si te interesa saber cómo se transforma la uva en vino, aquí lo explican de forma clara y cercana.
+
 Durante la visita vas recorriendo distintas salas y depósitos, conociendo el proceso paso a paso. Es una experiencia muy amena, tanto si ya te gusta el vino como si simplemente tienes curiosidad.
 
 
 ## El Museo Infanta Elena: arte entre vinos
 
 Dentro del mismo complejo se encuentra el Museo Infanta Elena, un espacio que sorprende por su calidad y por lo bien cuidado que está.
+
 Es un museo moderno, luminoso, con exposiciones de pintura, escultura y arte contemporáneo que cambian con frecuencia. La mezcla entre tradición vinícola y expresión artística crea una visita muy especial, diferente y agradable.
 
 Es uno de esos lugares que hacen que el viaje sea más completo: no solo visitas un sitio, sino que vives una experiencia.
@@ -131,7 +135,7 @@ Si buscas conocer un poco más la esencia de esta tierra, la Cooperativa Virgen 
 
 `,
     image: "/IMG_4389.JPG",
-    images: ["/IMG_4398.JPG","IMG_4469.JPG"]
+    images: ["/IMG_4398.JPG", "/IMG_4469.JPG"]
 
   }
 ];

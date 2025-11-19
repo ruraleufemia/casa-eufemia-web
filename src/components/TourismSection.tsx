@@ -5,19 +5,19 @@ const TourismSection = () => {
     {
       icon: Castle,
       name: "Almagro",
-      distance: "45 km",
+      distance: "50 km",
       description: "Ciudad histórica con el famoso Corral de Comedias, teatro del siglo XVII perfectamente conservado.",
     },
     {
       icon: Landmark,
       name: "Campo de Criptana",
-      distance: "35 km",
+      distance: "20 km",
       description: "Los icónicos molinos de viento inmortalizados por Cervantes en Don Quijote de la Mancha.",
     },
     {
       icon: Mountain,
       name: "Parque Nacional de las Tablas de Daimiel",
-      distance: "40 km",
+      distance: "55 km",
       description: "Humedal único en Europa, ideal para observación de aves y naturaleza.",
     },
     {
@@ -29,13 +29,13 @@ const TourismSection = () => {
     {
       icon: Church,
       name: "Ciudad Real Capital",
-      distance: "25 km",
+      distance: "30 km",
       description: "Centro histórico con la Puerta de Toledo, museos y amplia oferta gastronómica.",
     },
     {
       icon: MapPin,
       name: "Parque Natural Lagunas de Ruidera",
-      distance: "90 km",
+      distance: "100 km",
       description: "Impresionante sistema de 15 lagunas de agua turquesa, ideal para senderismo y deportes acuáticos.",
     },
   ];
