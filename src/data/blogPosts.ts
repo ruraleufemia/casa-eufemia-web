@@ -95,7 +95,8 @@ Una de las ventajas de nuestro alojamiento es precisamente la tranquilidad del e
 Si buscas naturaleza, aire limpio y un sitio bonito donde pasar unos días, las Lagunas de Ruidera son un acierto seguro. Y desde nuestro alojamiento tendrás la combinación perfecta: escapada, descanso y aventura, todo a tu ritmo
 
 `,
-    image: "/pexels-emilio-sanchez-hernandez-285921208-34476076.jpg"
+    image: "/Ruidera1.jpg",
+    images: ["/Ruidera2.jpg", "/Ruidera3.jpg", "/Ruidera4.jpg", "/Ruidera5.jpg"]
   },
   {
     id: 4,
