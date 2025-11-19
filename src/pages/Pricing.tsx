@@ -138,7 +138,19 @@ const Pricing = () => {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary mt-1">•</span>
-                  <span>Temporada alta: julio, agosto, Semana Santa, puentes y festivos</span>
+                  <span>Temporada alta: del 21 de junio al 21 de septiembre</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-primary mt-1">•</span>
+                  <span>Check-in: 14:00h • Check-out: 11:00h</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-primary mt-1">•</span>
+                  <span><strong>Reserva directa:</strong> Detalle de bienvenida y salida tardía incluidos</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-primary mt-1">•</span>
+                  <span><strong>Oferta de larga estancia:</strong> Consulta descuentos especiales para estancias prolongadas</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary mt-1">•</span>
