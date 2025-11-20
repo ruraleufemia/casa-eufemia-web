@@ -17,7 +17,7 @@ const Pricing = () => {
         <Navbar />
         
         {/* Hero Section */}
-        <section className="pt-32 pb-16 px-4">
+        <section className="pt-32 pb-12 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-light mb-6 text-foreground">
               Tarifas y Precios
@@ -25,6 +25,59 @@ const Pricing = () => {
             <p className="text-lg md:text-xl text-muted-foreground font-light max-w-2xl mx-auto">
               Consulta nuestras tarifas para disfrutar de una estancia inolvidable en Casa Eufemia
             </p>
+          </div>
+        </section>
+
+        {/* Destacados Section */}
+        <section className="pb-12 px-4">
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+            {/* Detalle de Bienvenida */}
+            <Card className="p-8 bg-gradient-to-br from-primary/10 to-primary/5 border-primary/20 hover:shadow-2xl transition-all duration-300">
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/20 mb-4">
+                  <span className="text-3xl">🎁</span>
+                </div>
+                <h3 className="text-2xl md:text-3xl font-display font-light mb-4 text-foreground">
+                  Detalle de Bienvenida
+                </h3>
+                <p className="text-lg text-muted-foreground font-light mb-6">
+                  Reserva directa con nosotros y disfruta de:
+                </p>
+                <div className="space-y-3 text-left">
+                  <div className="flex items-center gap-3 text-foreground">
+                    <span className="text-primary text-xl">✓</span>
+                    <span className="font-medium">Detalle de bienvenida especial</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-foreground">
+                    <span className="text-primary text-xl">✓</span>
+                    <span className="font-medium">Salida tardía incluida</span>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            {/* Oferta Larga Estancia */}
+            <Card className="p-8 bg-gradient-to-br from-secondary/10 to-secondary/5 border-secondary/20 hover:shadow-2xl transition-all duration-300">
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary/20 mb-4">
+                  <span className="text-3xl">💰</span>
+                </div>
+                <h3 className="text-2xl md:text-3xl font-display font-light mb-4 text-foreground">
+                  Oferta Larga Estancia
+                </h3>
+                <p className="text-lg text-muted-foreground font-light mb-6">
+                  ¿Planeas quedarte más tiempo?
+                </p>
+                <div className="space-y-3 text-center">
+                  <p className="text-foreground font-medium text-lg">
+                    Descuentos especiales para estancias prolongadas
+                  </p>
+                  <p className="text-muted-foreground font-light">
+                    Contáctanos para conocer nuestras ofertas exclusivas
+                  </p>
+                </div>
+              </div>
+            </Card>
           </div>
         </section>
 
@@ -143,14 +196,6 @@ const Pricing = () => {
                 <li className="flex items-start gap-3">
                   <span className="text-primary mt-1">•</span>
                   <span>Check-in: 14:00h • Check-out: 11:00h</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-primary mt-1">•</span>
-                  <span><strong>Reserva directa:</strong> Detalle de bienvenida y salida tardía incluidos</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-primary mt-1">•</span>
-                  <span><strong>Oferta de larga estancia:</strong> Consulta descuentos especiales para estancias prolongadas</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary mt-1">•</span>
