@@ -2,17 +2,19 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { blogPosts } from "@/data/blogPosts";
+import { useTranslation } from "react-i18next";
 
 const BlogPreview = () => {
+  const { t } = useTranslation();
   return (
     <section className="py-24 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light tracking-tight text-foreground mb-4">
-            Experiencias Locales
+            {t('blog.title')}
           </h2>
           <p className="text-lg text-muted-foreground font-light max-w-2xl mx-auto">
-            Actividades gastronómicas y culturales para disfrutar durante tu estancia
+            {t('blog.subtitle')}
           </p>
         </div>
 
@@ -42,7 +44,7 @@ const BlogPreview = () => {
                 </p>
                 
                 <div className="mt-4 flex items-center text-primary text-sm font-light group-hover:gap-2 transition-all">
-                  Leer más
+                  {t('blog.readMore')}
                   <ArrowRight size={16} strokeWidth={1.5} className="ml-1" />
                 </div>
               </div>
@@ -53,7 +55,7 @@ const BlogPreview = () => {
         <div className="text-center">
           <Link to="/blog">
             <Button variant="outline" size="lg" className="font-light">
-              Ver Todas las Experiencias
+              {t('blog.viewAll')}
             </Button>
           </Link>
         </div>

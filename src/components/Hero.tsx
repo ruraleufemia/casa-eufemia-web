@@ -1,6 +1,7 @@
 import heroImage from "@/assets/hero-house.jpg";
 import { ChevronDown } from "lucide-react";
 import { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 interface HeroProps {
   videoUrl?: string;
@@ -16,6 +17,7 @@ declare global {
 }
 
 const Hero = ({ videoUrl, useVideo = false, isYouTube = false }: HeroProps) => {
+  const { t } = useTranslation();
   const playerRef = useRef<any>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -115,7 +117,7 @@ const Hero = ({ videoUrl, useVideo = false, isYouTube = false }: HeroProps) => {
       <button
         onClick={scrollToAbout}
         className="absolute bottom-12 left-1/2 -translate-x-1/2 text-white/70 hover:text-white transition-all duration-300 animate-bounce z-10"
-        aria-label="Scroll down"
+        aria-label={t('hero.scrollDown')}
       >
         <ChevronDown size={40} strokeWidth={1} />
       </button>
