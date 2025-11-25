@@ -51,7 +51,9 @@ const Footer = () => {
             </h4>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://m.facebook.com/61581893110228/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors"
                 aria-label="Facebook"
               >
