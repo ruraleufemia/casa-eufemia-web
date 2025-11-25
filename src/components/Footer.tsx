@@ -1,6 +1,8 @@
 import { Mail, Phone, MapPin, Facebook, Instagram } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="bg-card border-t border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -11,14 +13,14 @@ const Footer = () => {
               Casa Eufemia
             </h3>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4 font-light">
-              Tu casa rural en el corazón de La Mancha.
+              {t('footer.tagline')}
             </p>
           </div>
 
           {/* Contact */}
           <div>
             <h4 className="text-base font-light text-foreground mb-4">
-              Contacto
+              {t('footer.contact')}
             </h4>
             <div className="space-y-3">
               <a
@@ -47,7 +49,7 @@ const Footer = () => {
           {/* Social & Info */}
           <div>
             <h4 className="text-base font-light text-foreground mb-4">
-              Síguenos
+              {t('footer.followUs')}
             </h4>
             <div className="flex gap-4">
               <a
@@ -74,7 +76,7 @@ const Footer = () => {
 
         <div className="border-t border-border pt-8">
           <p className="text-center text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Casa Eufemia. Todos los derechos reservados.
+            © {new Date().getFullYear()} Casa Eufemia. {t('footer.rights')}
           </p>
         </div>
       </div>

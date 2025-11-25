@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const GalleryPreview = () => {
+  const { t } = useTranslation();
   const images = [
     { src: "/1. Fachada.jpg", alt: "Fachada de Casa Eufemia", title: "Fachada" },
     { src: "/2. Barbacoa.jpg", alt: "Zona de barbacoa", title: "Barbacoa" },
@@ -17,10 +19,10 @@ const GalleryPreview = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-light tracking-tight text-foreground mb-6">
-            Galería
+            {t('gallery.title')}
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto font-light">
-            Descubre cada rincón
+            {t('gallery.subtitle')}
           </p>
         </div>
 
@@ -57,7 +59,7 @@ const GalleryPreview = () => {
               variant="outline"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground group font-light"
             >
-              Ver más
+              {t('gallery.viewMore')}
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} strokeWidth={1.5} />
             </Button>
           </Link>

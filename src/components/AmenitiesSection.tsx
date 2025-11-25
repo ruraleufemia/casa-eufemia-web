@@ -12,48 +12,50 @@ import {
   Bath,
   Coffee
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const AmenitiesSection = () => {
+  const { t } = useTranslation();
   const amenities = [
     {
       icon: Trees,
-      title: "Jardín extenso",
-      description: "Espacios verdes con plantas autóctonas",
+      title: t('amenities.garden'),
+      description: t('amenities.gardenDesc'),
     },
     {
       icon: Snowflake,
-      title: "Aire acondicionado",
-      description: "Climatización en el salon comedor.",
+      title: t('amenities.ac'),
+      description: t('amenities.acDesc'),
     },
     {
       icon: Waves,
-      title: "Piscina privada",
-      description: "Piscina exterior para uso exclusivo",
+      title: t('amenities.pool'),
+      description: t('amenities.poolDesc'),
     },
     {
       icon: MapPin,
-      title: "Ubicación tranquila",
-      description: "Entorno rural y pacífico",
+      title: t('amenities.location'),
+      description: t('amenities.locationDesc'),
     },
     {
       icon: Wifi,
-      title: "WiFi gratuito",
-      description: "Internet de alta velocidad",
+      title: t('amenities.wifi'),
+      description: t('amenities.wifiDesc'),
     },
     {
       icon: UtensilsCrossed,
-      title: "Cocina equipada",
-      description: "Completamente equipada con electrodomésticos",
+      title: t('amenities.kitchen'),
+      description: t('amenities.kitchenDesc'),
     },
     {
       icon: Tv,
-      title: "TV y entretenimiento",
-      description: "TV en salón y juegos de mesa",
+      title: t('amenities.entertainment'),
+      description: t('amenities.entertainmentDesc'),
     },
     {
       icon: Coffee,
-      title: "Zona exterior",
-      description: "Merendero, barbacoa y mobiliario de jardín",
+      title: t('amenities.outdoor'),
+      description: t('amenities.outdoorDesc'),
     },
   ];
 
@@ -62,10 +64,10 @@ const AmenitiesSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-light tracking-tight text-foreground mb-6">
-            Comodidades
+            {t('amenities.title')}
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto font-light">
-            Todo para una estancia perfecta
+            {t('amenities.subtitle')}
           </p>
         </div>
 
