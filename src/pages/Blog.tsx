@@ -1,16 +1,19 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { blogPosts } from "@/data/blogPosts";
 
 const Blog = () => {
+  const { t } = useTranslation();
+  
   return (
     <>
       <SEO 
-        title="Experiencias Locales - Blog de Casa Eufemia"
-        description="Descubre las mejores experiencias gastronómicas y culturales cerca de Casa Eufemia. Guía de turismo local, rutas, restaurantes y actividades en Ciudad Real."
+        title={t('blogPage.seoTitle')}
+        description={t('blogPage.seoDescription')}
         url="/blog"
         keywords="turismo Ciudad Real, experiencias rurales, gastronomía La Mancha, que hacer en Ciudad Real, rutas turísticas, actividades rurales España"
       />
@@ -22,14 +25,14 @@ const Blog = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8 font-light">
             <ArrowLeft size={20} strokeWidth={1.5} />
-            Volver al inicio
+            {t('blogPage.backToHome')}
           </Link>
           
           <h1 className="text-5xl md:text-6xl font-light tracking-tight text-foreground mb-6">
-            Experiencias Locales
+            {t('blogPage.title')}
           </h1>
           <p className="text-xl text-muted-foreground font-light max-w-3xl">
-            Descubre las mejores actividades gastronómicas y culturales que puedes disfrutar durante tu estancia en Casa Eufemia
+            {t('blogPage.subtitle')}
           </p>
         </div>
       </section>

@@ -72,17 +72,14 @@ const Navbar = () => {
       >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <div className="flex items-center justify-between h-20 md:h-24">
-          <div className="flex items-center gap-4">
-            <LanguageSwitcher />
-            <Link
+          <Link
             to="/"
             className={`text-xl sm:text-2xl md:text-3xl font-display font-light tracking-wide transition-all duration-300 ${
               shouldShowSolidBackground ? "text-foreground" : "text-white drop-shadow-lg"
             } hover:opacity-70`}
           >
             Casa Eufemia
-            </Link>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-10 lg:gap-12">
@@ -114,6 +111,7 @@ const Navbar = () => {
                 </Link>
               );
             })}
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile Menu Button */}
