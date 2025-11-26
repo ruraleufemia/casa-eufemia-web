@@ -1,5 +1,6 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
@@ -7,6 +8,7 @@ import { blogPosts } from "@/data/blogPosts";
 
 
 const BlogPost = () => {
+  const { t } = useTranslation();
   const { id } = useParams();
   const post = blogPosts.find(p => p.id === Number(id));
 
@@ -88,7 +90,7 @@ const BlogPost = () => {
               className="inline-flex items-center gap-2 text-white/90 hover:text-white transition-colors mb-6 font-light"
             >
               <ArrowLeft size={20} strokeWidth={1.5} />
-              Volver a experiencias
+              {t('blogPost.backToExperiences')}
             </Link>
             
             <div className="max-w-4xl">
@@ -120,7 +122,7 @@ const BlogPost = () => {
                     <div key={idx} className="rounded-lg overflow-hidden">
                       <img
                         src={img}
-                        alt={`${post.title} - Imagen ${idx + 2}`}
+                        alt={`${post.title} - ${t('blogPost.imageAlt')} ${idx + 2}`}
                         loading="lazy"
                         className="w-full h-full object-cover"
                       />
@@ -137,7 +139,7 @@ const BlogPost = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-light tracking-tight text-foreground mb-12 text-center">
-            Más Experiencias
+            {t('blogPost.moreExperiences')}
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">

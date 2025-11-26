@@ -131,5 +131,39 @@
     "title": "404",
     "message": "¡Ups! Página no encontrada",
     "returnHome": "Volver al inicio"
+  },
+  "blogPage": {
+    "seoTitle": "Experiencias Locales - Blog de Casa Eufemia",
+    "seoDescription": "Descubre las mejores experiencias gastronómicas y culturales cerca de Casa Eufemia. Guía de turismo local, rutas, restaurantes y actividades en Ciudad Real.",
+    "backToHome": "Volver al inicio",
+    "title": "Experiencias Locales",
+    "subtitle": "Descubre las mejores actividades gastronómicas y culturales que puedes disfrutar durante tu estancia en Casa Eufemia"
+  },
+  "blogPost": {
+    "backToExperiences": "Volver a experiencias",
+    "moreExperiences": "Más Experiencias",
+    "imageAlt": "Imagen"
+  },
+  "galleryPage": {
+    "seoTitle": "Galería - Fotos de Casa Eufemia",
+    "seoDescription": "Explora la galería de Casa Eufemia. Ve fotos de nuestras habitaciones, piscina, jardines y todas las instalaciones de nuestra casa rural en Ciudad Real.",
+    "title": "Galería",
+    "subtitle": "Cada detalle de tu próximo refugio",
+    "images": {
+      "facade": "Fachada de Casa Eufemia",
+      "barbecue": "Zona de barbacoa",
+      "livingRoom": "Salón principal",
+      "bedroom2": "Dormitorio 2",
+      "snackTable": "Mesa de picoteo",
+      "pool": "Piscina exterior",
+      "bathroom": "Baño completo",
+      "kitchen": "Cocina equipada",
+      "bedroom3": "Dormitorio 3",
+      "masterBedroom": "Dormitorio principal",
+      "wineDetail": "Detalle bodega",
+      "boardGames": "Zona de juegos de mesa",
+      "petFriendly": "Casa pet friendly",
+      "snackArea": "Zona de aperitivos"
+    }
   }
 }

@@ -131,5 +131,39 @@
     "title": "404",
     "message": "Oops! Page not found",
     "returnHome": "Return to Home"
+  },
+  "blogPage": {
+    "seoTitle": "Local Experiences - Casa Eufemia Blog",
+    "seoDescription": "Discover the best gastronomic and cultural experiences near Casa Eufemia. Local tourism guide, routes, restaurants and activities in Ciudad Real.",
+    "backToHome": "Back to home",
+    "title": "Local Experiences",
+    "subtitle": "Discover the best gastronomic and cultural activities you can enjoy during your stay at Casa Eufemia"
+  },
+  "blogPost": {
+    "backToExperiences": "Back to experiences",
+    "moreExperiences": "More Experiences",
+    "imageAlt": "Image"
+  },
+  "galleryPage": {
+    "seoTitle": "Gallery - Photos of Casa Eufemia",
+    "seoDescription": "Explore the gallery of Casa Eufemia. See photos of our bedrooms, pool, gardens and all the facilities of our rural house in Ciudad Real.",
+    "title": "Gallery",
+    "subtitle": "Every detail of your next retreat",
+    "images": {
+      "facade": "Casa Eufemia Facade",
+      "barbecue": "Barbecue area",
+      "livingRoom": "Main living room",
+      "bedroom2": "Bedroom 2",
+      "snackTable": "Snack table",
+      "pool": "Outdoor pool",
+      "bathroom": "Full bathroom",
+      "kitchen": "Equipped kitchen",
+      "bedroom3": "Bedroom 3",
+      "masterBedroom": "Master bedroom",
+      "wineDetail": "Wine cellar detail",
+      "boardGames": "Board games area",
+      "petFriendly": "Pet friendly house",
+      "snackArea": "Snacks area"
+    }
   }
 }
