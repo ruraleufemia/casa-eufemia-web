@@ -19,7 +19,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Lock background scroll when mobile menu is open
   useEffect(() => {
     const root = document.documentElement;
     if (isMobileMenuOpen) {
@@ -31,14 +30,12 @@ const Navbar = () => {
     }
   }, [isMobileMenuOpen]);
 
-  // Close menu on route change
   useEffect(() => {
     if (isMobileMenuOpen) {
       setIsMobileMenuOpen(false);
     }
   }, [location.pathname]);
 
-  // Close on Escape key
   useEffect(() => {
     if (!isMobileMenuOpen) return;
     const onKeyDown = (e: KeyboardEvent) => {
@@ -57,7 +54,6 @@ const Navbar = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
-  // Check if we're on a page with white background
   const isWhiteBackgroundPage = location.pathname !== "/";
   const shouldShowSolidBackground = isMobileMenuOpen || isScrolled || isWhiteBackgroundPage;
 
@@ -70,65 +66,68 @@ const Navbar = () => {
             : "bg-transparent"
         }`}
       >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-        <div className="flex items-center justify-between h-20 md:h-24">
-          <Link
-            to="/"
-            className={`text-xl sm:text-2xl md:text-3xl font-display font-light tracking-wide transition-all duration-300 ${
-              shouldShowSolidBackground ? "text-foreground" : "text-white drop-shadow-lg"
-            } hover:opacity-70`}
-          >
-            Casa Eufemia
-          </Link>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="flex items-center justify-between h-20 md:h-24">
+            <Link
+              to="/"
+              className={`text-xl sm:text-2xl md:text-3xl font-display font-light tracking-wide transition-all duration-300 ${
+                shouldShowSolidBackground ? "text-foreground" : "text-white drop-shadow-lg"
+              } hover:opacity-70`}
+            >
+              Casa Eufemia
+            </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-10 lg:gap-12">
-            {navLinks.map((link) => {
-              const Icon = link.icon;
-              return (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={`flex items-center gap-2 text-sm font-light tracking-widest uppercase transition-all duration-300 relative group ${
-                    shouldShowSolidBackground
-                      ? isActive(link.path)
-                        ? "text-primary"
-                        : "text-foreground hover:text-primary"
-                      : isActive(link.path)
-                      ? "text-white"
-                      : "text-white/90 hover:text-white"
-                  }`}
-                >
-                  <Icon size={18} strokeWidth={1.5} />
-                  <span>{link.name}</span>
-                  <span
-                    className={`absolute -bottom-1 left-0 h-[1px] transition-all duration-300 ${
-                      shouldShowSolidBackground ? "bg-primary" : "bg-white"
-                    } ${
-                      isActive(link.path) ? "w-full" : "w-0 group-hover:w-full"
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-10 lg:gap-12">
+              {navLinks.map((link) => {
+                const Icon = link.icon;
+                return (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    className={`flex items-center gap-2 text-sm font-light tracking-widest uppercase transition-all duration-300 relative group ${
+                      shouldShowSolidBackground
+                        ? isActive(link.path)
+                          ? "text-primary"
+                          : "text-foreground hover:text-primary"
+                        : isActive(link.path)
+                        ? "text-white"
+                        : "text-white/90 hover:text-white"
                     }`}
-                  />
-                </Link>
-              );
-            })}
-            <LanguageSwitcher />
-          </div>
+                  >
+                    <Icon size={18} strokeWidth={1.5} />
+                    <span>{link.name}</span>
+                    <span
+                      className={`absolute -bottom-1 left-0 h-[1px] transition-all duration-300 ${
+                        shouldShowSolidBackground ? "bg-primary" : "bg-white"
+                      } ${
+                        isActive(link.path) ? "w-full" : "w-0 group-hover:w-full"
+                      }`}
+                    />
+                  </Link>
+                );
+              })}
+              <LanguageSwitcher />
+            </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden transition-all duration-300 p-2 ${
-              shouldShowSolidBackground ? "text-foreground" : "text-white drop-shadow-lg"
-            } hover:opacity-70`}
-            aria-label="Toggle menu"
-            aria-expanded={isMobileMenuOpen}
-            aria-controls="mobile-menu"
-            aria-haspopup="menu"
-          >
-            {isMobileMenuOpen ? <X size={24} strokeWidth={1.5} /> : <Menu size={24} strokeWidth={1.5} />}
-          </button>
+            {/* Mobile: Language Switcher + Menu Button */}
+            <div className="flex md:hidden items-center gap-2">
+              <LanguageSwitcher isTransparent={!shouldShowSolidBackground} />
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className={`transition-all duration-300 p-2 ${
+                  shouldShowSolidBackground ? "text-foreground" : "text-white drop-shadow-lg"
+                } hover:opacity-70`}
+                aria-label="Toggle menu"
+                aria-expanded={isMobileMenuOpen}
+                aria-controls="mobile-menu"
+                aria-haspopup="menu"
+              >
+                {isMobileMenuOpen ? <X size={24} strokeWidth={1.5} /> : <Menu size={24} strokeWidth={1.5} />}
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
       </nav>
 
       {/* Mobile Navigation - Full Screen Overlay */}

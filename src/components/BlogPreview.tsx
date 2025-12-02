@@ -28,7 +28,7 @@ const BlogPreview = () => {
               <div className="relative h-64 overflow-hidden">
                 <img
                   src={post.image}
-                  alt={post.title}
+                  alt={t(post.titleKey)}
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -36,11 +36,11 @@ const BlogPreview = () => {
               
               <div className="p-6">
                 <h3 className="text-xl font-light text-foreground mb-2 group-hover:text-primary transition-colors">
-                  {post.title}
+                  {t(post.titleKey)}
                 </h3>
                 
                 <p className="text-muted-foreground font-light text-sm line-clamp-2">
-                  {post.excerpt}
+                  {t(post.excerptKey)}
                 </p>
                 
                 <div className="mt-4 flex items-center text-primary text-sm font-light group-hover:gap-2 transition-all">
