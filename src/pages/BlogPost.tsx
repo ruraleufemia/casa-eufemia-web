@@ -16,8 +16,12 @@ const BlogPost = () => {
     return <Navigate to="/blog" replace />;
   }
 
-  const formatContent = (content: string) => {
-    return content.split('\n\n').map((paragraph, index) => {
+  const title = t(post.titleKey);
+  const excerpt = t(post.excerptKey);
+  const content = t(post.contentKey);
+
+  const formatContent = (text: string) => {
+    return text.split('\n\n').map((paragraph, index) => {
       // Headers
       if (paragraph.startsWith('## ')) {
         return (
@@ -41,11 +45,7 @@ const BlogPost = () => {
             {items.map((item, i) => (
               <li key={i} className="text-muted-foreground font-light leading-relaxed flex items-start gap-3">
                 <span className="text-primary mt-1.5">•</span>
-                <span>{item.replace(/^\*\*(.*?)\*\*:/, '<strong>$1</strong>:').split('<strong>').map((part, idx) => {
-                  if (idx === 0) return part;
-                  const [strong, rest] = part.split('</strong>');
-                  return <span key={idx}><strong className="font-medium text-foreground">{strong}</strong>{rest}</span>;
-                })}</span>
+                <span>{item}</span>
               </li>
             ))}
           </ul>
@@ -63,12 +63,12 @@ const BlogPost = () => {
   return (
     <>
       <SEO 
-        title={post.title}
-        description={post.excerpt}
+        title={title}
+        description={excerpt}
         url={`/blog/${post.id}`}
         image={post.image}
         type="article"
-        keywords={`casa eufemia, turismo Ciudad Real, experiencias rurales, ${post.title}`}
+        keywords={`casa eufemia, turismo Ciudad Real, experiencias rurales, ${title}`}
       />
       <div className="min-h-screen bg-background">
         <Navbar />
@@ -77,7 +77,7 @@ const BlogPost = () => {
       <div className="relative h-[60vh] min-h-[400px] mt-20 md:mt-24">
         <img
           src={post.image}
-          alt={post.title}
+          alt={title}
           loading="eager"
           className="w-full h-full object-cover"
         />
@@ -95,7 +95,7 @@ const BlogPost = () => {
             
             <div className="max-w-4xl">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white mb-4 drop-shadow-lg">
-                {post.title}
+                {title}
               </h1>
             </div>
           </div>
@@ -108,11 +108,11 @@ const BlogPost = () => {
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
               <p className="text-xl text-muted-foreground font-light leading-relaxed mb-12 border-l-2 border-primary pl-6">
-                {post.excerpt}
+                {excerpt}
               </p>
               
               <div className="space-y-6">
-                {formatContent(post.content)}
+                {formatContent(content)}
               </div>
 
               {/* Additional Images */}
@@ -122,7 +122,7 @@ const BlogPost = () => {
                     <div key={idx} className="rounded-lg overflow-hidden">
                       <img
                         src={img}
-                        alt={`${post.title} - ${t('blogPost.imageAlt')} ${idx + 2}`}
+                        alt={`${title} - ${t('blogPost.imageAlt')} ${idx + 2}`}
                         loading="lazy"
                         className="w-full h-full object-cover"
                       />
@@ -155,7 +155,7 @@ const BlogPost = () => {
                   <div className="relative h-48 overflow-hidden">
                     <img
                       src={relatedPost.image}
-                      alt={relatedPost.title}
+                      alt={t(relatedPost.titleKey)}
                       loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
@@ -163,10 +163,10 @@ const BlogPost = () => {
                   
                   <div className="p-6">
                     <h3 className="text-lg font-light text-foreground mb-2 group-hover:text-primary transition-colors">
-                      {relatedPost.title}
+                      {t(relatedPost.titleKey)}
                     </h3>
                     <p className="text-muted-foreground font-light text-sm line-clamp-2">
-                      {relatedPost.excerpt}
+                      {t(relatedPost.excerptKey)}
                     </p>
                   </div>
                 </Link>
