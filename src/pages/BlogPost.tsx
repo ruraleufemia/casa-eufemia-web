@@ -27,17 +27,35 @@ const BlogPost = () => {
         return <hr key={index} className="my-12 border-border" />;
       }
       
-      // Image
+      // Image (QR code or other)
       if (paragraph.startsWith('![')) {
         const match = paragraph.match(/!\[(.*?)\]\((.*?)\)/);
         if (match) {
+          const isQR = match[2].toLowerCase().includes('qr');
           return (
-            <div key={index} className="my-8 flex justify-center">
-              <img 
-                src={match[2]} 
-                alt={match[1]} 
-                className="w-40 h-40 object-contain"
-              />
+            <div key={index} className="my-10 flex justify-center">
+              <div className={isQR 
+                ? "bg-card border-2 border-primary/20 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300" 
+                : ""
+              }>
+                {isQR && (
+                  <p className="text-sm text-muted-foreground text-center mb-4 font-medium tracking-wide uppercase">
+                    Escanea para reservar
+                  </p>
+                )}
+                <div className={isQR ? "bg-white p-4 rounded-xl" : ""}>
+                  <img 
+                    src={match[2]} 
+                    alt={match[1]} 
+                    className={isQR ? "w-52 h-52 object-contain" : "w-40 h-40 object-contain"}
+                  />
+                </div>
+                {isQR && (
+                  <p className="text-xs text-muted-foreground text-center mt-4">
+                    Virgen de las Viñas
+                  </p>
+                )}
+              </div>
             </div>
           );
         }
