@@ -22,6 +22,45 @@ const BlogPost = () => {
 
   const formatContent = (text: string) => {
     return text.split('\n\n').map((paragraph, index) => {
+      // Horizontal rule
+      if (paragraph.trim() === '---') {
+        return <hr key={index} className="my-12 border-border" />;
+      }
+      
+      // Image
+      if (paragraph.startsWith('![')) {
+        const match = paragraph.match(/!\[(.*?)\]\((.*?)\)/);
+        if (match) {
+          return (
+            <div key={index} className="my-8 flex justify-center">
+              <img 
+                src={match[2]} 
+                alt={match[1]} 
+                className="w-40 h-40 object-contain"
+              />
+            </div>
+          );
+        }
+      }
+      
+      // Link button
+      if (paragraph.startsWith('[') && paragraph.includes('](')) {
+        const match = paragraph.match(/\[(.*?)\]\((.*?)\)/);
+        if (match) {
+          return (
+            <a 
+              key={index}
+              href={match[2]} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors"
+            >
+              {match[1]}
+            </a>
+          );
+        }
+      }
+      
       // Headers
       if (paragraph.startsWith('## ')) {
         return (
@@ -37,6 +76,7 @@ const BlogPost = () => {
           </h3>
         );
       }
+      
       // Lists
       if (paragraph.includes('\n- ')) {
         const items = paragraph.split('\n- ').filter(item => item.trim());
@@ -51,10 +91,22 @@ const BlogPost = () => {
           </ul>
         );
       }
+      
+      // Bold text handling
+      const renderWithBold = (text: string) => {
+        const parts = text.split(/(\*\*.*?\*\*)/g);
+        return parts.map((part, i) => {
+          if (part.startsWith('**') && part.endsWith('**')) {
+            return <strong key={i} className="font-semibold text-foreground">{part.slice(2, -2)}</strong>;
+          }
+          return part;
+        });
+      };
+      
       // Regular paragraphs
       return (
         <p key={index} className="text-muted-foreground font-light leading-relaxed mb-6">
-          {paragraph}
+          {renderWithBold(paragraph)}
         </p>
       );
     });
