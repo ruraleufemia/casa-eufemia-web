@@ -9,6 +9,14 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 4,
+    titleKey: "posts.cooperativaVinas.title",
+    excerptKey: "posts.cooperativaVinas.excerpt",
+    contentKey: "posts.cooperativaVinas.content",
+    image: "/IMG_4389.JPG",
+    images: ["/IMG_4398.JPG", "/IMG_4469.JPG"]
+  },
+  {
     id: 1,
     titleKey: "posts.campoCriptana.title",
     excerptKey: "posts.campoCriptana.excerpt",
@@ -30,13 +38,5 @@ export const blogPosts: BlogPost[] = [
     contentKey: "posts.lagunasRuidera.content",
     image: "/Ruidera1.jpg",
     images: ["/Ruidera2.jpg", "/Ruidera3.jpg", "/Ruidera4.jpg", "/Ruidera5.jpg"]
-  },
-  {
-    id: 4,
-    titleKey: "posts.cooperativaVinas.title",
-    excerptKey: "posts.cooperativaVinas.excerpt",
-    contentKey: "posts.cooperativaVinas.content",
-    image: "/IMG_4389.JPG",
-    images: ["/IMG_4398.JPG", "/IMG_4469.JPG"]
   }
 ];
