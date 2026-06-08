@@ -28,13 +28,9 @@ const Hero = ({ videoUrl, useVideo = false, isYouTube = false }: HeroProps) => {
     const videoId = videoUrl.split('/embed/')[1]?.split('?')[0];
     if (!videoId) return;
 
-    // Load YouTube Iframe API
-    const tag = document.createElement('script');
-    tag.src = 'https://www.youtube.com/iframe_api';
-    const firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag);
-
-    window.onYouTubeIframeAPIReady = () => {
+    const createPlayer = () => {
+      const el = document.getElementById('youtube-player');
+      if (!el || !window.YT || !window.YT.Player) return;
       playerRef.current = new window.YT.Player('youtube-player', {
         videoId: videoId,
         playerVars: {
@@ -51,6 +47,7 @@ const Hero = ({ videoUrl, useVideo = false, isYouTube = false }: HeroProps) => {
         events: {
           onReady: (event: any) => {
             event.target.setPlaybackQuality('hd1080');
+            event.target.mute();
             event.target.playVideo();
           },
           onStateChange: (event: any) => {
@@ -62,9 +59,26 @@ const Hero = ({ videoUrl, useVideo = false, isYouTube = false }: HeroProps) => {
       });
     };
 
+    if (window.YT && window.YT.Player) {
+      createPlayer();
+    } else {
+      // Load API only once
+      if (!document.querySelector('script[src="https://www.youtube.com/iframe_api"]')) {
+        const tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        document.head.appendChild(tag);
+      }
+      const prev = window.onYouTubeIframeAPIReady;
+      window.onYouTubeIframeAPIReady = () => {
+        if (typeof prev === 'function') prev();
+        createPlayer();
+      };
+    }
+
     return () => {
-      if (playerRef.current) {
-        playerRef.current.destroy();
+      if (playerRef.current && typeof playerRef.current.destroy === 'function') {
+        try { playerRef.current.destroy(); } catch (_) {}
+        playerRef.current = null;
       }
     };
   }, [isYouTube, videoUrl]);
