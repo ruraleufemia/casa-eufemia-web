@@ -36,8 +36,6 @@ const Hero = ({ videoUrl, useVideo = false, isYouTube = false }: HeroProps) => {
         playerVars: {
           autoplay: 1,
           mute: 1,
-          loop: 1,
-          playlist: videoId,
           controls: 0,
           modestbranding: 1,
           rel: 0,
@@ -49,11 +47,6 @@ const Hero = ({ videoUrl, useVideo = false, isYouTube = false }: HeroProps) => {
             event.target.setPlaybackQuality('hd1080');
             event.target.mute();
             event.target.playVideo();
-          },
-          onStateChange: (event: any) => {
-            if (event.data === window.YT.PlayerState.ENDED) {
-              event.target.playVideo();
-            }
           },
         },
       });
