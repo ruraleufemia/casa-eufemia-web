@@ -1,24 +1,32 @@
 import { useParams, Link, Navigate } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Loader2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { blogPosts } from "@/data/blogPosts";
+import { useBlogPosts } from "@/hooks/useBlogPosts";
 
 
 const BlogPost = () => {
   const { t } = useTranslation();
   const { id } = useParams();
-  const post = blogPosts.find(p => p.id === Number(id));
+  const { posts, loading } = useBlogPosts();
+  const post = posts.find((p) => p.id === String(id));
+
+  if (loading && !post) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
+      </div>
+    );
+  }
 
   if (!post) {
     return <Navigate to="/blog" replace />;
   }
 
-  const title = t(post.titleKey);
-  const excerpt = t(post.excerptKey);
-  const content = t(post.contentKey);
+  const { title, excerpt, content } = post;
+
 
   const formatContent = (text: string) => {
     return text.split('\n\n').map((paragraph, index) => {
