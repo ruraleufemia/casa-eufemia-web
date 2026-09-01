@@ -173,5 +173,27 @@
       "excerpt": "Arte, Tradición y Vino representa la filosofía de Virgen de las Viñas, el reflejo de la experiencia que traslada su esencia a los vinos que elaboramos.",
       "content": "## Arte, Tradición y Vino\n\nArte, Tradición y Vino representa la filosofía de Virgen de las Viñas, el reflejo de la experiencia que traslada su esencia a los vinos que elaboramos.\n\nDisfruta de las tres estancias que combinan nuestra filosofía.\n\n## El Lagar - Museo Etnológico\n\nLa tradición presente en el Lagar, el corazón de la bodega que no ha dejado de latir desde sus orígenes. Un edificio emblemático que actualmente acoge el Museo Etnológico. Una colección de herramientas y útiles que ayudan a recordar cómo trabajaban en los viñedos los primeros pobladores de Tomelloso.\n\n## Las Cuevas Centenarias\n\nDescubre nuestras cuevas excavadas en una placa de piedra caliza recientemente rehabilitadas y abiertas al público para conocer de primera mano cómo se utilizaban hace 100 años para elaborar y almacenar el vino.\n\n## Museo de Arte Contemporáneo Infanta Elena\n\nLa visita al Museo de Arte contemporáneo \"Infanta Elena\" le brindará la oportunidad de conocer de primera mano el arte que se respira en el interior de Virgen de las Viñas Bodega y Almazara. Un espacio que despierta el interés de los amantes del arte con diferentes técnicas de artistas nacionales e internacionales.\n\n---\n\n**Más información y reservas:**\n\n[Reservar visita](https://mrplan.io/dst/HJ-36341)\n\n![QR para reservas](/qr-virgen-vinas.png)"
     }
+  },
+  "seo": {
+    "home": {
+      "title": "Casa Eufemia - Casa Rural de Lujo en Arenales de San Gregorio, Ciudad Real",
+      "description": "Descubre Casa Eufemia, tu casa rural de lujo en Arenales de San Gregorio, Ciudad Real. Alojamiento completo con piscina privada, barbacoa, jardín y hasta 9 plazas. Pet friendly y cerca de las Lagunas de Ruidera.",
+      "keywords": "casa rural Ciudad Real, casaeufemia, casa eufemia, alojamiento rural La Mancha, casa con piscina Ciudad Real, turismo rural Arenales de San Gregorio, vacaciones rurales España, casa rural lujo, alquiler casa rural, escapada rural Ciudad Real"
+    },
+    "gallery": {
+      "title": "Galería - Fotos de Casa Eufemia",
+      "description": "Explora la galería de Casa Eufemia. Mira fotos de nuestras habitaciones, piscina, jardines y todas las instalaciones de nuestra casa rural en Ciudad Real.",
+      "keywords": "fotos casa rural, galería casa eufemia, imágenes alojamiento rural, piscina casa rural, jardín casa rural Ciudad Real"
+    },
+    "blog": {
+      "title": "Experiencias Locales - Blog de Casa Eufemia",
+      "description": "Descubre las mejores experiencias gastronómicas y culturales cerca de Casa Eufemia. Guía de turismo local, rutas, restaurantes y actividades en Ciudad Real.",
+      "keywords": "turismo Ciudad Real, experiencias rurales, gastronomía La Mancha, que hacer en Ciudad Real, rutas turísticas, actividades rurales España"
+    },
+    "pricing": {
+      "title": "Precios y Disponibilidad - Casa Eufemia",
+      "description": "Consulta precio y disponibilidad de Casa Eufemia por WhatsApp. Mejoramos precios y condiciones en reservas directas.",
+      "keywords": "precios casa rural, tarifas alquiler, alojamiento Ciudad Real, casa rural económica, reservar casa rural"
+    }
   }
 }
