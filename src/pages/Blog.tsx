@@ -4,10 +4,12 @@ import { useTranslation } from "react-i18next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { blogPosts } from "@/data/blogPosts";
+import { useBlogPosts } from "@/hooks/useBlogPosts";
 
 const Blog = () => {
   const { t } = useTranslation();
+  const { posts } = useBlogPosts();
+
   
   return (
     <>
@@ -39,7 +41,7 @@ const Blog = () => {
         <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.map((post) => (
+              {posts.map((post) => (
                 <Link
                   key={post.id}
                   to={`/blog/${post.id}`}
@@ -48,7 +50,7 @@ const Blog = () => {
                   <div className="relative h-64 overflow-hidden">
                     <img
                       src={post.image}
-                      alt={t(post.titleKey)}
+                      alt={post.title}
                       loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
@@ -56,13 +58,14 @@ const Blog = () => {
                   
                   <div className="p-6">
                     <h2 className="text-xl font-light text-foreground mb-2 group-hover:text-primary transition-colors">
-                      {t(post.titleKey)}
+                      {post.title}
                     </h2>
                     
                     <p className="text-muted-foreground font-light text-sm line-clamp-3">
-                      {t(post.excerptKey)}
+                      {post.excerpt}
                     </p>
                   </div>
+
                 </Link>
               ))}
             </div>

@@ -4,13 +4,16 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Lightbox from "@/components/Lightbox";
 import SEO from "@/components/SEO";
+import { useGalleryImages } from "@/hooks/useGalleryImages";
 
 const Gallery = () => {
   const { t } = useTranslation();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const dbImages = useGalleryImages();
 
-  const images = [
+  const baseImages = [
+
     { src: "/1. Fachada.jpg", altKey: "facade" },
     { src: "/2. Barbacoa.jpg", altKey: "barbecue" },
     { src: "/3. Salon.jpg", altKey: "livingRoom" },
@@ -82,10 +85,16 @@ const Gallery = () => {
       { src: "/nuevasfotoscasa/IMG-20260530-WA0061.jpg", altKey: "newPhoto" },
   ];
 
+  const images = [
+    ...baseImages.map((img) => ({ src: img.src, alt: t(`galleryPage.images.${img.altKey}`) })),
+    ...dbImages,
+  ];
+
   const openLightbox = (index: number) => {
     setCurrentImageIndex(index);
     setLightboxOpen(true);
   };
+
 
   return (
     <>
@@ -125,7 +134,7 @@ const Gallery = () => {
                   <div className="aspect-[4/3] overflow-hidden">
                     <img
                       src={image.src}
-                      alt={t(`galleryPage.images.${image.altKey}`)}
+                      alt={image.alt}
                       loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
@@ -133,7 +142,7 @@ const Gallery = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                     <div className="p-4">
                       <p className="text-primary-foreground text-sm font-light">
-                        {t(`galleryPage.images.${image.altKey}`)}
+                        {image.alt}
                       </p>
                     </div>
                   </div>
@@ -149,7 +158,7 @@ const Gallery = () => {
       {/* Lightbox */}
       {lightboxOpen && (
         <Lightbox
-          images={images.map(img => ({ src: img.src, alt: t(`galleryPage.images.${img.altKey}`) }))}
+          images={images}
           currentIndex={currentImageIndex}
           onClose={() => setLightboxOpen(false)}
           onNavigate={setCurrentImageIndex}
