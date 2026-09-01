@@ -134,7 +134,7 @@ const Gallery = () => {
                   <div className="aspect-[4/3] overflow-hidden">
                     <img
                       src={image.src}
-                      alt={t(`galleryPage.images.${image.altKey}`)}
+                      alt={image.alt}
                       loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
@@ -142,7 +142,7 @@ const Gallery = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                     <div className="p-4">
                       <p className="text-primary-foreground text-sm font-light">
-                        {t(`galleryPage.images.${image.altKey}`)}
+                        {image.alt}
                       </p>
                     </div>
                   </div>
@@ -158,7 +158,7 @@ const Gallery = () => {
       {/* Lightbox */}
       {lightboxOpen && (
         <Lightbox
-          images={images.map(img => ({ src: img.src, alt: t(`galleryPage.images.${img.altKey}`) }))}
+          images={images}
           currentIndex={currentImageIndex}
           onClose={() => setLightboxOpen(false)}
           onNavigate={setCurrentImageIndex}
