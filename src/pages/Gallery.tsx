@@ -85,10 +85,16 @@ const Gallery = () => {
       { src: "/nuevasfotoscasa/IMG-20260530-WA0061.jpg", altKey: "newPhoto" },
   ];
 
+  const images = [
+    ...baseImages.map((img) => ({ src: img.src, alt: t(`galleryPage.images.${img.altKey}`) })),
+    ...dbImages,
+  ];
+
   const openLightbox = (index: number) => {
     setCurrentImageIndex(index);
     setLightboxOpen(true);
   };
+
 
   return (
     <>
