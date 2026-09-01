@@ -4,13 +4,16 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Lightbox from "@/components/Lightbox";
 import SEO from "@/components/SEO";
+import { useGalleryImages } from "@/hooks/useGalleryImages";
 
 const Gallery = () => {
   const { t } = useTranslation();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const dbImages = useGalleryImages();
 
-  const images = [
+  const baseImages = [
+
     { src: "/1. Fachada.jpg", altKey: "facade" },
     { src: "/2. Barbacoa.jpg", altKey: "barbecue" },
     { src: "/3. Salon.jpg", altKey: "livingRoom" },

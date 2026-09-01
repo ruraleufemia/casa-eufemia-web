@@ -221,7 +221,7 @@ const BlogPost = () => {
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {blogPosts
+            {posts
               .filter(p => p.id !== post.id)
               .slice(0, 3)
               .map((relatedPost) => (
@@ -233,7 +233,7 @@ const BlogPost = () => {
                   <div className="relative h-48 overflow-hidden">
                     <img
                       src={relatedPost.image}
-                      alt={t(relatedPost.titleKey)}
+                      alt={relatedPost.title}
                       loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
@@ -241,12 +241,13 @@ const BlogPost = () => {
                   
                   <div className="p-6">
                     <h3 className="text-lg font-light text-foreground mb-2 group-hover:text-primary transition-colors">
-                      {t(relatedPost.titleKey)}
+                      {relatedPost.title}
                     </h3>
                     <p className="text-muted-foreground font-light text-sm line-clamp-2">
-                      {t(relatedPost.excerptKey)}
+                      {relatedPost.excerpt}
                     </p>
                   </div>
+
                 </Link>
               ))}
           </div>
