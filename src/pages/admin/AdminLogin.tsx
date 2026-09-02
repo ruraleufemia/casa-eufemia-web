@@ -71,6 +71,23 @@ const AdminLogin = () => {
     navigate("/admin", { replace: true });
   };
 
+  const handleResetPassword = async () => {
+    if (!email) {
+      toast.error("Escribe tu correo electrónico para restablecer la contraseña");
+      return;
+    }
+    setBusy(true);
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `${window.location.origin}/admin/reset-password`,
+    });
+    setBusy(false);
+    if (error) {
+      toast.error(error.message);
+      return;
+    }
+    toast.success("Te hemos enviado un correo para restablecer la contraseña");
+  };
+
   const creating = hasAdmin === false;
 
   return (
@@ -115,6 +132,16 @@ const AdminLogin = () => {
               {busy && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
               {creating ? "Crear cuenta de administrador" : "Entrar"}
             </Button>
+            {!creating && (
+              <button
+                type="button"
+                onClick={handleResetPassword}
+                disabled={busy}
+                className="w-full text-center text-sm text-muted-foreground hover:text-foreground transition-colors font-light"
+              >
+                ¿Olvidaste tu contraseña?
+              </button>
+            )}
           </form>
         </CardContent>
       </Card>
