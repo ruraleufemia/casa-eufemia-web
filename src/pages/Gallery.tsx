@@ -5,9 +5,11 @@ import Footer from "@/components/Footer";
 import Lightbox from "@/components/Lightbox";
 import SEO from "@/components/SEO";
 import { useGalleryImages } from "@/hooks/useGalleryImages";
+import { usePageSeo } from "@/hooks/usePageSeo";
 
 const Gallery = () => {
   const { t } = useTranslation();
+  const seo = usePageSeo("gallery");
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const dbImages = useGalleryImages();
@@ -99,10 +101,10 @@ const Gallery = () => {
   return (
     <>
       <SEO 
-        title={t('galleryPage.seoTitle')}
-        description={t('galleryPage.seoDescription')}
+        title={seo.title}
+        description={seo.description}
         url="/gallery"
-        keywords="fotos casa rural, galería casa eufemia, imágenes alojamiento rural, piscina casa rural, jardín casa rural Ciudad Real"
+        keywords={seo.keywords}
       />
       <div className="min-h-screen flex flex-col">
         <Navbar />

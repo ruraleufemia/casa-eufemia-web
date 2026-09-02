@@ -5,19 +5,21 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { useBlogPosts } from "@/hooks/useBlogPosts";
+import { usePageSeo } from "@/hooks/usePageSeo";
 
 const Blog = () => {
   const { t } = useTranslation();
   const { posts } = useBlogPosts();
+  const seo = usePageSeo("blog");
 
   
   return (
     <>
       <SEO 
-        title={t('blogPage.seoTitle')}
-        description={t('blogPage.seoDescription')}
+        title={seo.title}
+        description={seo.description}
         url="/blog"
-        keywords="turismo Ciudad Real, experiencias rurales, gastronomía La Mancha, que hacer en Ciudad Real, rutas turísticas, actividades rurales España"
+        keywords={seo.keywords}
       />
       <div className="min-h-screen bg-background">
         <Navbar />
