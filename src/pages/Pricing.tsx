@@ -4,9 +4,11 @@ import SEO from "@/components/SEO";
 import { Card } from "@/components/ui/card";
 import { MessageCircle, Sparkles } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { usePageSeo } from "@/hooks/usePageSeo";
 
 const Pricing = () => {
   const { t } = useTranslation();
+  const seo = usePageSeo("pricing");
 
   const whatsappNumber = "34638014458";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(t('pricing.whatsappMessage'))}`;
@@ -14,10 +16,10 @@ const Pricing = () => {
   return (
     <>
       <SEO
-        title={t('pricing.title')}
-        description={t('pricing.subtitle')}
+        title={seo.title}
+        description={seo.description}
         url="/pricing"
-        keywords="precios casa rural, tarifas alquiler, alojamiento Ciudad Real, casa rural económica, reservar casa rural"
+        keywords={seo.keywords}
       />
       <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">
         <Navbar />

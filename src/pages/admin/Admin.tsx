@@ -8,6 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import AdminPosts from "./AdminPosts";
 import AdminTexts from "./AdminTexts";
 import AdminGallery from "./AdminGallery";
+import AdminSeo from "./AdminSeo";
 
 const Admin = () => {
   const navigate = useNavigate();
@@ -57,6 +58,7 @@ const Admin = () => {
             <TabsTrigger value="posts">Blog</TabsTrigger>
             <TabsTrigger value="texts">Textos</TabsTrigger>
             <TabsTrigger value="gallery">Galería</TabsTrigger>
+            <TabsTrigger value="seo">SEO</TabsTrigger>
           </TabsList>
           <TabsContent value="posts">
             <AdminPosts />
@@ -66,6 +68,9 @@ const Admin = () => {
           </TabsContent>
           <TabsContent value="gallery">
             <AdminGallery />
+          </TabsContent>
+          <TabsContent value="seo">
+            <AdminSeo />
           </TabsContent>
         </Tabs>
       </main>

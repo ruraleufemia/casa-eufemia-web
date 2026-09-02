@@ -9,15 +9,19 @@ import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { usePageSeo } from "@/hooks/usePageSeo";
 
 const Index = () => {
+  const seo = usePageSeo("home");
   const videoUrl = "https://www.youtube.com/embed/iUC5-n8IP-Q?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0&vq=hd1080&quality=hd1080";
   
   return (
     <>
-      <SEO 
+      <SEO
+        title={seo.title}
+        description={seo.description}
         url="/"
-        keywords="casa rural Ciudad Real, casaeufemia, casa eufemia, alojamiento rural La Mancha, casa con piscina Ciudad Real, turismo rural Arenales de San Gregorio, vacaciones rurales España, casa rural lujo, alquiler casa rural, escapada rural Ciudad Real"
+        keywords={seo.keywords}
       />
       <div className="min-h-screen">
         <Navbar />
