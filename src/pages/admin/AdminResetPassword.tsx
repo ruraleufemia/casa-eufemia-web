@@ -16,17 +16,41 @@ const AdminResetPassword = () => {
   const [busy, setBusy] = useState(false);
 
   useEffect(() => {
-    // Supabase redirects here with the recovery token in the URL hash.
+    let active = true;
+
+    // Newer recovery links arrive with a PKCE ?code= param; older ones with #type=recovery.
     const hash = window.location.hash;
+    const code = new URLSearchParams(window.location.search).get("code");
+
     if (hash.includes("type=recovery")) {
       setReady(true);
       return;
     }
+
+    if (code) {
+      supabase.auth
+        .exchangeCodeForSession(code)
+        .then(({ error }) => {
+          if (!active) return;
+          if (error) {
+            toast.error("El enlace ha caducado o ya se ha usado. Solicita uno nuevo.");
+            return;
+          }
+          setReady(true);
+          // Clean the code from the URL.
+          window.history.replaceState(null, "", window.location.pathname);
+        });
+      return;
+    }
+
     // Also handle the event in case the session arrives after mount.
     const { data: sub } = supabase.auth.onAuthStateChange((event) => {
-      if (event === "PASSWORD_RECOVERY") setReady(true);
+      if (event === "PASSWORD_RECOVERY" && active) setReady(true);
     });
-    return () => sub.subscription.unsubscribe();
+    return () => {
+      active = false;
+      sub.subscription.unsubscribe();
+    };
   }, []);
 
   const handleUpdate = async (e: React.FormEvent) => {
