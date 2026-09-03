@@ -9,6 +9,8 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
 
+const PUBLIC_SITE_URL = "https://www.casaeufemia.com";
+
 const AdminLogin = () => {
   const navigate = useNavigate();
   const { session, isAdmin, loading } = useAdminAuth();
@@ -78,7 +80,7 @@ const AdminLogin = () => {
     }
     setBusy(true);
     const { error } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: `${window.location.origin}/admin/reset-password`,
+      redirectTo: `${PUBLIC_SITE_URL}/admin/reset-password`,
     });
     setBusy(false);
     if (error) {
