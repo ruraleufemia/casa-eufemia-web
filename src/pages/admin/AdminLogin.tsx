@@ -133,14 +133,15 @@ const AdminLogin = () => {
               {creating ? "Crear cuenta de administrador" : "Entrar"}
             </Button>
             {!creating && (
-              <button
+              <Button
                 type="button"
+                variant="ghost"
                 onClick={handleResetPassword}
                 disabled={busy}
-                className="w-full text-center text-sm text-muted-foreground hover:text-foreground transition-colors font-light"
+                className="w-full text-muted-foreground font-light"
               >
                 ¿Olvidaste tu contraseña?
-              </button>
+              </Button>
             )}
           </form>
         </CardContent>

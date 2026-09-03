@@ -11,6 +11,8 @@ import { toast } from "sonner";
 const AdminResetPassword = () => {
   const navigate = useNavigate();
   const [ready, setReady] = useState(false);
+  const [checking, setChecking] = useState(true);
+  const [linkError, setLinkError] = useState(false);
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
   const [busy, setBusy] = useState(false);
@@ -18,35 +20,62 @@ const AdminResetPassword = () => {
   useEffect(() => {
     let active = true;
 
-    // Newer recovery links arrive with a PKCE ?code= param; older ones with #type=recovery.
-    const hash = window.location.hash;
-    const code = new URLSearchParams(window.location.search).get("code");
-
-    if (hash.includes("type=recovery")) {
+    const markReady = () => {
+      if (!active) return;
       setReady(true);
-      return;
-    }
+      setChecking(false);
+      setLinkError(false);
+      window.history.replaceState(null, "", window.location.pathname);
+    };
 
-    if (code) {
-      supabase.auth
-        .exchangeCodeForSession(code)
-        .then(({ error }) => {
-          if (!active) return;
-          if (error) {
-            toast.error("El enlace ha caducado o ya se ha usado. Solicita uno nuevo.");
-            return;
-          }
-          setReady(true);
-          // Clean the code from the URL.
-          window.history.replaceState(null, "", window.location.pathname);
-        });
-      return;
-    }
+    const markInvalid = () => {
+      if (!active) return;
+      setChecking(false);
+      setLinkError(true);
+    };
 
-    // Also handle the event in case the session arrives after mount.
-    const { data: sub } = supabase.auth.onAuthStateChange((event) => {
-      if (event === "PASSWORD_RECOVERY" && active) setReady(true);
+    const { data: sub } = supabase.auth.onAuthStateChange((event, session) => {
+      if (active && session && (event === "PASSWORD_RECOVERY" || event === "SIGNED_IN")) {
+        markReady();
+      }
     });
+
+    const prepareRecovery = async () => {
+      const search = new URLSearchParams(window.location.search);
+      const hash = new URLSearchParams(window.location.hash.replace(/^#/, ""));
+      const urlError = search.get("error_description") ?? hash.get("error_description");
+      const code = search.get("code");
+      const tokenHash = search.get("token_hash");
+      const type = search.get("type") ?? hash.get("type");
+
+      if (urlError) {
+        markInvalid();
+        return;
+      }
+
+      if (code) {
+        const { error } = await supabase.auth.exchangeCodeForSession(code);
+        if (error) markInvalid();
+        else markReady();
+        return;
+      }
+
+      if (tokenHash && type === "recovery") {
+        const { error } = await supabase.auth.verifyOtp({ token_hash: tokenHash, type: "recovery" });
+        if (error) markInvalid();
+        else markReady();
+        return;
+      }
+
+      // For links containing #access_token, the auth client restores the session
+      // asynchronously. getSession waits until that URL processing has finished.
+      const { data, error } = await supabase.auth.getSession();
+      if (error || !data.session) markInvalid();
+      else markReady();
+    };
+
+    void prepareRecovery();
+
     return () => {
       active = false;
       sub.subscription.unsubscribe();
@@ -60,6 +89,14 @@ const AdminResetPassword = () => {
       return;
     }
     setBusy(true);
+    const { data: sessionData } = await supabase.auth.getSession();
+    if (!sessionData.session) {
+      setBusy(false);
+      setReady(false);
+      setLinkError(true);
+      toast.error("La sesión de recuperación ha caducado. Solicita un enlace nuevo.");
+      return;
+    }
     const { error } = await supabase.auth.updateUser({ password });
     setBusy(false);
     if (error) {
@@ -78,9 +115,26 @@ const AdminResetPassword = () => {
           <CardDescription>
             {ready
               ? "Introduce tu nueva contraseña de administrador."
-              : "Abre esta página desde el enlace del correo de recuperación."}
+              : checking
+                ? "Validando el enlace de recuperación…"
+                : "Abre esta página desde un enlace de recuperación válido."}
           </CardDescription>
         </CardHeader>
+        {checking && (
+          <CardContent className="flex justify-center py-8">
+            <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" aria-label="Validando enlace" />
+          </CardContent>
+        )}
+        {linkError && !checking && (
+          <CardContent className="space-y-4">
+            <p className="text-sm text-destructive">
+              Este enlace ha caducado, ya se ha utilizado o no es válido. Solicita uno nuevo desde el acceso privado.
+            </p>
+            <Button type="button" variant="outline" className="w-full" onClick={() => navigate("/admin/login")}>
+              Volver al acceso privado
+            </Button>
+          </CardContent>
+        )}
         {ready && (
           <CardContent>
             <form onSubmit={handleUpdate} className="space-y-4">
