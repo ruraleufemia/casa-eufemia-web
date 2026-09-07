@@ -1,5 +1,12 @@
+import { useEffect, useState } from "react";
+
 const WhatsAppButton = () => {
-  const shareUrl = window.location.href;
+  const [shareUrl, setShareUrl] = useState("https://www.casaeufemia.com/");
+
+  useEffect(() => {
+    setShareUrl(window.location.href);
+  }, []);
+
   const message = encodeURIComponent(`¡Mira esta increíble casa rural! Casa Eufemia - ${shareUrl}`);
   const whatsappUrl = `https://api.whatsapp.com/send?text=${message}`;
 

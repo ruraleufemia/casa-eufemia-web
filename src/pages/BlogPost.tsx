@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { useBlogPosts } from "@/hooks/useBlogPosts";
+import NotFound from "@/pages/NotFound";
 
 
 const BlogPost = () => {
@@ -28,7 +29,7 @@ const BlogPost = () => {
   }
 
   if (!post) {
-    return <Navigate to="/blog" replace />;
+    return <NotFound />;
   }
 
   const { title, excerpt, content } = post;
