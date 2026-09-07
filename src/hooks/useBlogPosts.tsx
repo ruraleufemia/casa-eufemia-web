@@ -6,6 +6,7 @@ import { resolveMediaUrls } from "@/lib/media";
 
 export interface ResolvedPost {
   id: string;
+  legacyId?: string;
   title: string;
   excerpt: string;
   content: string;
