@@ -60,6 +60,13 @@
     "readMore": "Leer más",
     "viewAll": "Ver Todas las Experiencias"
   },
+  "reviews": {
+    "title": "Lo que dicen nuestros huéspedes",
+    "subtitle": "Lee las opiniones de quienes ya han disfrutado de Casa Eufemia",
+    "ctaText": "¿Ya te has alojado con nosotros?",
+    "ctaLink": "Déjanos tu reseña en Google",
+    "iframeTitle": "Casa Eufemia en Google Maps"
+  },
   "contact": {
     "title": "Reserva tu estancia",
     "subtitle": "Completa el formulario y te contactaremos lo antes posible para confirmar tu reserva",
@@ -101,6 +108,7 @@
     "tagline": "Tu casa rural en el corazón de La Mancha.",
     "contact": "Contacto",
     "followUs": "Síguenos",
+    "reviewUs": "Valóranos",
     "rights": "Todos los derechos reservados."
   },
   "pricing": {

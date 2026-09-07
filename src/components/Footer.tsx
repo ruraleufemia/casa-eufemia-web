@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Facebook, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram, Star } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const Footer = () => {
@@ -51,7 +51,7 @@ const Footer = () => {
             <h4 className="text-base font-light text-foreground mb-4">
               {t('footer.followUs')}
             </h4>
-            <div className="flex gap-4">
+            <div className="flex gap-4 mb-6">
               <a
                 href="https://www.facebook.com/profile.php?id=61579453261697"
                 target="_blank"
@@ -71,6 +71,15 @@ const Footer = () => {
                 <Instagram size={20} />
               </a>
             </div>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Casa+Eufemia,+Calle+Juan+José+Jiménez+4,+13619+Arenales+de+San+Gregorio,+Ciudad+Real,+España"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
+              <Star size={18} className="fill-primary text-primary" />
+              <span>{t('footer.reviewUs')}</span>
+            </a>
           </div>
         </div>
 

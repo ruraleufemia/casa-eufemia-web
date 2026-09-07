@@ -60,6 +60,13 @@
     "readMore": "Read more",
     "viewAll": "View All Experiences"
   },
+  "reviews": {
+    "title": "What our guests say",
+    "subtitle": "Read reviews from those who have already enjoyed Casa Eufemia",
+    "ctaText": "Have you already stayed with us?",
+    "ctaLink": "Leave us a review on Google",
+    "iframeTitle": "Casa Eufemia on Google Maps"
+  },
   "contact": {
     "title": "Book your stay",
     "subtitle": "Complete the form and we will contact you as soon as possible to confirm your reservation",
@@ -101,6 +108,7 @@
     "tagline": "Your rural house in the heart of La Mancha.",
     "contact": "Contact",
     "followUs": "Follow Us",
+    "reviewUs": "Rate us",
     "rights": "All rights reserved."
   },
   "pricing": {
