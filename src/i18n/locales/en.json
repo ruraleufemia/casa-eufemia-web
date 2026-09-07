@@ -144,15 +144,18 @@
     "readGuide": "Read local guide",
     "tomelloso": {
       "title": "A rural house near Tomelloso",
-      "description": "Use your stay to discover the wine tradition, gastronomy and cultural plans of Tomelloso and its surroundings."
+      "description": "Use your stay to discover the wine tradition, gastronomy and cultural plans of Tomelloso and its surroundings.",
+      "imageAlt": "Entrance to the Virgen de las Viñas winery in Tomelloso"
     },
     "quijote": {
       "title": "Don Quixote Route and Campo de Criptana",
-      "description": "Windmills, La Mancha landscapes and Cervantes references make the area a good base for a route at your own pace."
+      "description": "Windmills, La Mancha landscapes and Cervantes references make the area a good base for a route at your own pace.",
+      "imageAlt": "Campo de Criptana windmills at sunset"
     },
     "ruidera": {
       "title": "Nature near the Lagunas de Ruidera",
-      "description": "Plan a day in nature and return to the peace of a rural house with a private pool in Ciudad Real."
+      "description": "Plan a day in nature and return to the peace of a rural house with a private pool in Ciudad Real.",
+      "imageAlt": "Landscape of the Lagunas de Ruidera"
     },
     "groups": {
       "title": "A rural house for families and groups",

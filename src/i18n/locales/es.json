@@ -144,15 +144,18 @@
     "readGuide": "Ver guía local",
     "tomelloso": {
       "title": "Una casa rural cerca de Tomelloso",
-      "description": "Aprovecha la estancia para conocer la tradición vinícola, la gastronomía y los planes culturales de Tomelloso y su entorno."
+      "description": "Aprovecha la estancia para conocer la tradición vinícola, la gastronomía y los planes culturales de Tomelloso y su entorno.",
+      "imageAlt": "Entrada de la bodega Virgen de las Viñas en Tomelloso"
     },
     "quijote": {
       "title": "Ruta del Quijote y Campo de Criptana",
-      "description": "Los molinos, los paisajes manchegos y las referencias cervantinas convierten la zona en una buena base para una ruta a tu ritmo."
+      "description": "Los molinos, los paisajes manchegos y las referencias cervantinas convierten la zona en una buena base para una ruta a tu ritmo.",
+      "imageAlt": "Molinos de viento de Campo de Criptana al atardecer"
     },
     "ruidera": {
       "title": "Naturaleza cerca de las Lagunas de Ruidera",
-      "description": "Planifica una jornada de naturaleza y vuelve a la tranquilidad de una casa rural con piscina privada en Ciudad Real."
+      "description": "Planifica una jornada de naturaleza y vuelve a la tranquilidad de una casa rural con piscina privada en Ciudad Real.",
+      "imageAlt": "Paisaje de las Lagunas de Ruidera"
     },
     "groups": {
       "title": "Una casa rural para familias y grupos",
