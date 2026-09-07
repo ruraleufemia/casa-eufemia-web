@@ -1,5 +1,6 @@
 export interface BlogPost {
   id: number;
+  slug: string;
   titleKey: string;
   excerptKey: string;
   contentKey: string;
@@ -10,6 +11,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: 4,
+    slug: "cooperativa-virgen-de-las-vinas",
     titleKey: "posts.cooperativaVinas.title",
     excerptKey: "posts.cooperativaVinas.excerpt",
     contentKey: "posts.cooperativaVinas.content",
@@ -18,6 +20,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 1,
+    slug: "campo-de-criptana-molinos-de-viento",
     titleKey: "posts.campoCriptana.title",
     excerptKey: "posts.campoCriptana.excerpt",
     contentKey: "posts.campoCriptana.content",
@@ -26,6 +29,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 2,
+    slug: "casa-de-medrano-argamasilla-de-alba",
     titleKey: "posts.casaMedrano.title",
     excerptKey: "posts.casaMedrano.excerpt",
     contentKey: "posts.casaMedrano.content",
@@ -33,6 +37,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 3,
+    slug: "lagunas-de-ruidera",
     titleKey: "posts.lagunasRuidera.title",
     excerptKey: "posts.lagunasRuidera.excerpt",
     contentKey: "posts.lagunasRuidera.content",
