@@ -57,7 +57,8 @@ export const useBlogPosts = () => {
   }, [lang]);
 
   const builtIn: ResolvedPost[] = staticPosts.map((p) => ({
-    id: String(p.id),
+    id: p.slug,
+    legacyId: String(p.id),
     title: t(p.titleKey),
     excerpt: t(p.excerptKey),
     content: t(p.contentKey),

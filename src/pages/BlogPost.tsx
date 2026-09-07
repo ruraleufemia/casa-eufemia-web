@@ -12,6 +12,12 @@ const BlogPost = () => {
   const { id } = useParams();
   const { posts, loading } = useBlogPosts();
   const post = posts.find((p) => p.id === String(id));
+  // Compatibilidad con las URLs antiguas basadas en número: redirigimos al nombre
+  const legacyPost = !post ? posts.find((p) => p.legacyId === String(id)) : undefined;
+
+  if (legacyPost) {
+    return <Navigate to={`/blog/${legacyPost.id}`} replace />;
+  }
 
   if (loading && !post) {
     return (
