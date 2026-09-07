@@ -7,6 +7,7 @@ interface SEOProps {
   image?: string;
   url?: string;
   type?: string;
+  noindex?: boolean;
   article?: {
     publishedTime?: string;
     author?: string;
@@ -16,19 +17,22 @@ interface SEOProps {
 }
 
 const SEO = ({
-  title = "Casa Eufemia - Casa Rural de Lujo en Arenales de San Gregorio, Ciudad Real",
-  description = "Descubre Casa Eufemia, tu casa rural de lujo en Arenales de San Gregorio, Ciudad Real. Alojamiento completo con piscina privada, barbacoa, jardín y hasta 9 plazas. Pet friendly y cerca de las Lagunas de Ruidera. Escapada rural perfecta en La Mancha.",
-  keywords = "casa rural Ciudad Real, casaeufemia, casa eufemia, alojamiento rural La Mancha, casa con piscina Ciudad Real, turismo rural Arenales de San Gregorio, vacaciones rurales España, casa rural lujo, alquiler casa rural, casa pet friendly Ciudad Real, Lagunas de Ruidera, Campo de Criptana, casa rural 9 personas",
+  title = "Casa rural en Arenales de San Gregorio | Casa Eufemia",
+  description = "Casa rural con piscina privada en Ciudad Real para 8 personas, en Arenales de San Gregorio, cerca de Tomelloso, con jardín y barbacoa.",
+  keywords = "casa rural en Ciudad Real, casa rural en Arenales de San Gregorio, casa rural cerca de Tomelloso, casa rural para 8 personas, casa rural con piscina privada en Ciudad Real, alojamiento rural en La Mancha",
   image = "/6. Piscina.jpg",
   url = "https://www.casaeufemia.com/",
   type = "website",
+  noindex = false,
   article,
 }: SEOProps) => {
   const fullTitle = title.includes("Casa Eufemia") ? title : `${title} | Casa Eufemia`;
-  const fullUrl = url.startsWith("http")
-    ? url
-    : `https://www.casaeufemia.com/${url.replace(/^\/+/, "")}`;
-  const fullImage = image.startsWith("http") ? image : `https://www.casaeufemia.com${encodeURI(image)}`;
+  const siteUrl = "https://www.casaeufemia.com";
+  const fullUrl = new URL(url, siteUrl).toString();
+  const fullImage = new URL(image, siteUrl).toString();
+  const robots = noindex
+    ? "noindex, nofollow"
+    : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
 
   return (
     <Helmet>
@@ -76,10 +80,9 @@ const SEO = ({
       <meta name="ICBM" content="39.3598, -3.7321" />
 
       {/* Additional SEO */}
-      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-      <meta name="googlebot" content="index, follow" />
+      <meta name="robots" content={robots} />
+      <meta name="googlebot" content={robots} />
       <meta name="language" content="Spanish" />
-      <meta name="revisit-after" content="7 days" />
       <meta name="author" content="Casa Eufemia" />
     </Helmet>
   );
