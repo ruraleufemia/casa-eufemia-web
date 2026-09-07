@@ -9,11 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Structured Data for Local Business -->
+    <!-- Structured Data for the lodging business and accommodation -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LodgingBusiness",
+      "@type": ["LodgingBusiness", "Accommodation"],
       "@id": "https://www.casaeufemia.com/#lodging",
       "name": "Casa Eufemia",
       "url": "https://www.casaeufemia.com/",
@@ -22,6 +22,15 @@
         "https://www.casaeufemia.com/6.%20Piscina.jpg"
       ],
       "description": "Casa rural en Arenales de San Gregorio, Ciudad Real, con piscina privada, jardín y barbacoa.",
+      "numberOfBedrooms": 3,
+      "numberOfBathroomsTotal": 1,
+      "numberOfFullBathrooms": 1,
+      "occupancy": {
+        "@type": "QuantitativeValue",
+        "value": 8,
+        "unitCode": "C62",
+        "unitText": "personas"
+      },
       "telephone": "+34638014458",
       "email": "ruraleufemia@gmail.com",
       "priceRange": "€€",

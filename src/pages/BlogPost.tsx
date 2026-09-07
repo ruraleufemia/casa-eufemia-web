@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { useBlogPosts } from "@/hooks/useBlogPosts";
+import NotFound from "@/pages/NotFound";
 
 
 const BlogPost = () => {
@@ -28,7 +29,7 @@ const BlogPost = () => {
   }
 
   if (!post) {
-    return <Navigate to="/blog" replace />;
+    return <NotFound />;
   }
 
   const { title, excerpt, content } = post;
@@ -152,7 +153,7 @@ const BlogPost = () => {
         url={`/blog/${post.id}`}
         image={post.image}
         type="article"
-        keywords={`casa eufemia, turismo Ciudad Real, experiencias rurales, ${title}`}
+        keywords={`casa rural en Ciudad Real, casa rural en Arenales de San Gregorio, alojamiento rural en La Mancha, ${title}`}
       />
       <div className="min-h-screen bg-background">
         <Navbar />

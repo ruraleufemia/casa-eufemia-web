@@ -137,6 +137,29 @@
     "moreExperiences": "Más Experiencias",
     "imageAlt": "Imagen"
   },
+  "localSeo": {
+    "eyebrow": "Escapadas en La Mancha",
+    "title": "Casa rural en Ciudad Real para descubrir La Mancha",
+    "intro": "Casa Eufemia es una casa rural para 8 personas en Arenales de San Gregorio, Ciudad Real. Combina piscina privada, jardín y barbacoa con una ubicación cómoda para crear una escapada de descanso, naturaleza y cultura manchega.",
+    "readGuide": "Ver guía local",
+    "tomelloso": {
+      "title": "Una casa rural cerca de Tomelloso",
+      "description": "Aprovecha la estancia para conocer la tradición vinícola, la gastronomía y los planes culturales de Tomelloso y su entorno."
+    },
+    "quijote": {
+      "title": "Ruta del Quijote y Campo de Criptana",
+      "description": "Los molinos, los paisajes manchegos y las referencias cervantinas convierten la zona en una buena base para una ruta a tu ritmo."
+    },
+    "ruidera": {
+      "title": "Naturaleza cerca de las Lagunas de Ruidera",
+      "description": "Planifica una jornada de naturaleza y vuelve a la tranquilidad de una casa rural con piscina privada en Ciudad Real."
+    },
+    "groups": {
+      "title": "Una casa rural para familias y grupos",
+      "description": "Si buscas una casa rural con jardín y barbacoa para compartir tiempo juntos, Casa Eufemia ofrece espacio para reunirse, descansar y disfrutar de La Mancha en grupo.",
+      "cta": "Consultar disponibilidad"
+    }
+  },
   "galleryPage": {
     "seoTitle": "Galería - Fotos de Casa Eufemia",
     "seoDescription": "Explora la galería de Casa Eufemia. Ve fotos de nuestras habitaciones, piscina, jardines y todas las instalaciones de nuestra casa rural en Ciudad Real.",
@@ -162,23 +185,23 @@
   },
   "posts": {
     "campoCriptana": {
-      "title": "Campo de Criptana",
-      "excerpt": "A pocos kilómetros de Arenales de San Gregorio, Campo de Criptana ofrece una experiencia que va más allá de sus famosos molinos.",
+      "title": "Casa rural cerca de Campo de Criptana: molinos y escapada manchega",
+      "excerpt": "Desde Casa Eufemia puedes planificar una escapada cultural a Campo de Criptana, entre molinos, paisaje manchego y referencias quijotescas.",
       "content": "## Introducción\n\nA pocos kilómetros de nuestro alojamiento en Arenales de San Gregorio se encuentra Campo de Criptana, uno de esos lugares que, aunque lo hayas visto en fotos, te sorprende cuando estás ahí. Sus molinos dominando la llanura forman parte de la historia de La Mancha y de la imagen que todos tenemos de Don Quijote. Pero más allá de la postal, lo que realmente te atrapa es la sensación del lugar.\n\nSubir hasta los molinos y ver cómo el paisaje se extiende a tu alrededor es algo que transmite tranquilidad. No es solo un punto turístico, es un espacio abierto, silencioso, donde todo parece ir más despacio.\n\n## El atardecer, el mejor momento\n\nSi hay un momento especial para visitar Campo de Criptana, es al atardecer.\nCuando el sol empieza a caer, el cielo se llena de colores cálidos: naranjas, rosas, violetas... y los molinos se recortan contra el horizonte creando una imagen inolvidable. Es uno de esos atardeceres que invitan a quedarse quieto, a mirar y dejar pasar el tiempo.\n\nPuedes estar charlando con alguien, sacando fotos o simplemente sentado, pero al final todos acabamos igual: mirando en silencio.\n\n## Paseo, historia y calma\n\nRecorrer el barrio del Albaicín con sus casas blancas es muy agradable.\n\nSi te gusta la fotografía, te encontrarás buscando ángulos una y otra vez.\n\nY si simplemente necesitas desconectar, aquí es fácil respirar hondo y despejar la mente.\n\n## Muy cerca de nuestro alojamiento\n\nUna de las ventajas de alojarte en Arenales de San Gregorio es precisamente esa tranquilidad y cercanía a lugares con tanta magia como este. Puedes ir por la tarde, ver el atardecer y volver sin prisas, disfrutando del trayecto.\n\nCampo de Criptana no solo se visita, se siente.\nY si vienes, entenderás perfectamente por qué sus atardeceres se quedan guardados dentro."
     },
     "casaMedrano": {
-      "title": "Casa Medrano",
-      "excerpt": "Este rincón histórico combina cultura y serenidad en un espacio sencillo pero con significado. Una visita breve e íntima perfecta para disfrutar de una tarde tranquila con un toque de historia.",
+      "title": "Ruta del Quijote: Casa Medrano en Argamasilla de Alba",
+      "excerpt": "Una salida cultural desde Arenales de San Gregorio para descubrir un lugar ligado a la tradición cervantina de La Mancha.",
       "content": "## Introducción\n\nA pocos minutos en coche desde nuestro alojamiento en Arenales de San Gregorio se encuentra Argamasilla de Alba, un pueblo que guarda uno de los rincones más curiosos y especiales de La Mancha: la Casa Medrano, conocida como la supuesta prisión de Cervantes y el lugar donde pudo empezar a escribirse el Quijote de la Mancha.\n\nEste edificio, sencillo por fuera, esconde una historia que atrapa en cuanto la conoces. Dicen que Miguel de Cervantes estuvo preso aquí en el siglo XVI, y que durante ese tiempo pudo empezar a dar forma a la obra que, con los años, se convertiría en una de las novelas más importantes de la literatura universal.\nEstar ahí, en la misma sala donde se cree que escribió parte del Quijote, tiene algo especial. Es de esos sitios donde la historia se siente cerca, casi real.\n\n## Un lugar que mezcla cultura y tranquilidad\n\nLa Casa Medrano no es un museo grande ni abrumador. Y precisamente por eso, es agradable.\nNo hace falta ser un amante profundo de la literatura para disfrutarlo. Es un plan ligero, interesante, perfecto para una mañana o una tarde tranquila.\n\nCerca de casa y fácil de visitar\n\nEs una salida corta, cómoda y con ese toque histórico que hace el viaje más especial."
     },
     "lagunasRuidera": {
-      "title": "Lagunas de Ruidera",
-      "excerpt": "Sus aguas enlazadas por cascadas y saltos crean un paisaje único, ideal para pasear, descansar o disfrutar de actividades como kayak, paddle surf, rutas en bici o senderismo.",
+      "title": "Casa rural cerca de las Lagunas de Ruidera",
+      "excerpt": "Una escapada de naturaleza desde Casa Eufemia para pasear, descansar y conocer el paisaje de las Lagunas de Ruidera.",
       "content": "## Introducción\n\nDescubre las Lagunas de Ruidera: un paraíso natural cerca de nuestro alojamiento en Arenales de San Gregorio\nSi hay un lugar que siempre recomendamos a quienes se alojan en nuestra casa de Arenales de San Gregorio, es sin duda las Lagunas de Ruidera. A pocos kilómetros se encuentra uno de los espacios naturales más bonitos y sorprendentes de Castilla La Mancha, perfecto para desconectar y disfrutar de la naturaleza en estado puro.\n\nLo más especial de este lugar es cómo el agua se enlaza entre lagunas a través de pequeñas cascadas y saltos naturales, creando un paisaje que, sinceramente, no esperas encontrar aquí. No hace falta ser un entusiasta del senderismo para disfrutarlo; simplemente pasear, sentarte junto al agua o hacer una ruta fácil ya te reconecta con todo.\n\n## Un lugar para hacer lo que te apetezca: relax o aventura\n\nLas Lagunas de Ruidera son muy versátiles. Puedes ir a pasar el día de forma relajada, llevar algo de comer, una bebida fresca y buscar una sombra junto al agua.\nPero, si eres más de moverte, tienes muchas opciones:\n- Rutas de senderismo y miradores con vistas impresionantes\n- Kayak y paddle surf para disfrutar del agua de otra forma\n- Zonas de baño en verano, ideales para refrescarse\n- Bicicleta por caminos accesibles y bien señalizados\n\nY si vas con niños, es un plan perfecto: agua cristalina, zonas seguras, naturaleza y espacio para jugar sin prisas.\n\n## La comodidad de alojarte en Arenales de San Gregorio\n\nUna de las ventajas de nuestro alojamiento es precisamente la tranquilidad del entorno. Arenales es un pueblo pequeño, acogedor, donde puedes estar en paz. Y lo mejor es que desde aquí puedes ir a las Lagunas de Ruidera en poco tiempo, sin tener que quedarte en zonas más concurridas o turísticas.\n\nSi buscas naturaleza, aire limpio y un lugar bonito para pasar unos días, las Lagunas de Ruidera son un acierto seguro. Y desde nuestro alojamiento tendrás la combinación perfecta: escapada, descanso y aventura, todo a tu ritmo"
     },
     "cooperativaVinas": {
-      "title": "Virgen de las Viñas: Arte, Tradición y Vino",
-      "excerpt": "Arte, Tradición y Vino representa la filosofía de Virgen de las Viñas, el reflejo de la experiencia que traslada su esencia a los vinos que elaboramos.",
+      "title": "Casa rural cerca de Tomelloso: vino, arte y tradición",
+      "excerpt": "Completa tu escapada en Casa Eufemia con una visita cultural y enológica a Tomelloso y la experiencia de Virgen de las Viñas.",
       "content": "## Arte, Tradición y Vino\n\nArte, Tradición y Vino representa la filosofía de Virgen de las Viñas, el reflejo de la experiencia que traslada su esencia a los vinos que elaboramos.\n\nDisfruta de las tres estancias que combinan nuestra filosofía.\n\n## El Lagar - Museo Etnológico\n\nLa tradición presente en el Lagar, el corazón de la bodega que no ha dejado de latir desde sus orígenes. Un edificio emblemático que actualmente acoge el Museo Etnológico. Una colección de herramientas y útiles que ayudan a recordar cómo trabajaban en los viñedos los primeros pobladores de Tomelloso.\n\n## Las Cuevas Centenarias\n\nDescubre nuestras cuevas excavadas en una placa de piedra caliza recientemente rehabilitadas y abiertas al público para conocer de primera mano cómo se utilizaban hace 100 años para elaborar y almacenar el vino.\n\n## Museo de Arte Contemporáneo Infanta Elena\n\nLa visita al Museo de Arte contemporáneo \"Infanta Elena\" le brindará la oportunidad de conocer de primera mano el arte que se respira en el interior de Virgen de las Viñas Bodega y Almazara. Un espacio que despierta el interés de los amantes del arte con diferentes técnicas de artistas nacionales e internacionales.\n\n---\n\n**Más información y reservas:**\n\n[Reservar visita](https://mrplan.io/dst/HJ-36341)\n\n![QR para reservas](/qr-virgen-vinas.png)"
     }
   },

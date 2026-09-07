@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import AboutSection from "@/components/AboutSection";
+import LocalSeoSection from "@/components/LocalSeoSection";
 import GalleryPreview from "@/components/GalleryPreview";
 import AmenitiesSection from "@/components/AmenitiesSection";
 import BlogPreview from "@/components/BlogPreview";
@@ -31,6 +32,7 @@ const Index = () => {
           videoUrl={videoUrl}
         />
         <AboutSection />
+        <LocalSeoSection />
         <GalleryPreview />
         <AmenitiesSection />
         <BlogPreview />

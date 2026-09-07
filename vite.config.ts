@@ -15,4 +15,9 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  ssr: {
+    // react-helmet-async is published as CommonJS. Bundling it in the server
+    // entry keeps Node's ESM loader from rejecting its named imports.
+    noExternal: ["react-helmet-async"],
+  },
 }));
