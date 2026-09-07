@@ -120,6 +120,10 @@ const Hero = ({ videoUrl, useVideo = false, isYouTube = false }: HeroProps) => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30" />
       </div>
 
+      <h1 className="sr-only">
+        Casa Eufemia — Casa rural con piscina en Arenales de San Gregorio, Ciudad Real
+      </h1>
+
       {/* Scroll Indicator */}
       <button
         onClick={scrollToAbout}

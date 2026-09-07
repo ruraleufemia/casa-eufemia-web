@@ -25,7 +25,9 @@ const SEO = ({
   article,
 }: SEOProps) => {
   const fullTitle = title.includes("Casa Eufemia") ? title : `${title} | Casa Eufemia`;
-  const fullUrl = url.startsWith("http") ? url : `https://www.casaeufemia.com/${url}`;
+  const fullUrl = url.startsWith("http")
+    ? url
+    : `https://www.casaeufemia.com/${url.replace(/^\/+/, "")}`;
   const fullImage = image.startsWith("http") ? image : `https://www.casaeufemia.com${encodeURI(image)}`;
 
   return (
