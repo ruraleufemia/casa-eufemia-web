@@ -4,7 +4,6 @@ import AboutSection from "@/components/AboutSection";
 import LocalSeoSection from "@/components/LocalSeoSection";
 import GalleryPreview from "@/components/GalleryPreview";
 import AmenitiesSection from "@/components/AmenitiesSection";
-import BlogPreview from "@/components/BlogPreview";
 import FaqSection from "@/components/FaqSection";
 import ReviewsSection from "@/components/ReviewsSection";
 import ContactForm from "@/components/ContactForm";
@@ -36,7 +35,6 @@ const Index = () => {
         <LocalSeoSection />
         <GalleryPreview />
         <AmenitiesSection />
-        <BlogPreview />
         <FaqSection />
         <ReviewsSection />
         <ContactForm />
