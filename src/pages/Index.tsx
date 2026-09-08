@@ -14,7 +14,7 @@ import { usePageSeo } from "@/hooks/usePageSeo";
 
 const Index = () => {
   const seo = usePageSeo("home");
-  const videoUrl = "https://www.youtube.com/embed/iUC5-n8IP-Q?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0&vq=hd1080&quality=hd1080";
+  const videoUrl = "https://www.youtube.com/embed/iUC5-n8IP-Q?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&playsinline=1&loop=1&playlist=iUC5-n8IP-Q";
   
   return (
     <>

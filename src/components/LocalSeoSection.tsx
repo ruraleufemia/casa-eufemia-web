@@ -10,16 +10,22 @@ const LocalSeoSection = () => {
     {
       title: t("localSeo.tomelloso.title"),
       description: t("localSeo.tomelloso.description"),
+      image: "/IMG_4389.JPG",
+      imageAlt: t("localSeo.tomelloso.imageAlt"),
       href: "/blog/cooperativa-virgen-de-las-vinas",
     },
     {
       title: t("localSeo.quijote.title"),
       description: t("localSeo.quijote.description"),
+      image: "/IMG_4765.JPG",
+      imageAlt: t("localSeo.quijote.imageAlt"),
       href: "/blog/campo-de-criptana-molinos-de-viento",
     },
     {
       title: t("localSeo.ruidera.title"),
       description: t("localSeo.ruidera.description"),
+      image: "/Ruidera1.jpg",
+      imageAlt: t("localSeo.ruidera.imageAlt"),
       href: "/blog/lagunas-de-ruidera",
     },
   ];
@@ -41,19 +47,37 @@ const LocalSeoSection = () => {
 
         <div className="grid gap-6 md:grid-cols-3 mb-10">
           {guides.map((guide) => (
-            <article key={guide.href} className="bg-card border border-border rounded-xl p-7 flex flex-col">
-              <MapPin className="h-6 w-6 text-primary mb-5" strokeWidth={1.5} />
-              <h3 className="text-xl font-display font-light text-foreground mb-3">{guide.title}</h3>
-              <p className="text-sm text-muted-foreground font-light leading-relaxed mb-6 flex-1">
-                {guide.description}
-              </p>
-              <Link
-                to={guide.href}
-                className="inline-flex items-center gap-2 text-sm text-primary hover:underline underline-offset-4"
-              >
-                {t("localSeo.readGuide")}
-                <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
+            <article
+              key={guide.href}
+              className="group overflow-hidden bg-card border border-border rounded-xl flex flex-col transition-shadow duration-300 hover:shadow-lg"
+            >
+              <Link to={guide.href} className="relative block overflow-hidden" aria-label={guide.title}>
+                <img
+                  src={guide.image}
+                  alt={guide.imageAlt}
+                  width={1600}
+                  height={1066}
+                  loading="lazy"
+                  decoding="async"
+                  className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <span className="absolute left-5 bottom-5 inline-flex h-10 w-10 items-center justify-center rounded-full bg-background/95 text-primary shadow-sm">
+                  <MapPin className="h-5 w-5" strokeWidth={1.75} />
+                </span>
               </Link>
+              <div className="p-6 sm:p-7 flex flex-1 flex-col">
+                <h3 className="text-xl font-display font-light text-foreground mb-3">{guide.title}</h3>
+                <p className="text-sm text-muted-foreground font-light leading-relaxed mb-6 flex-1">
+                  {guide.description}
+                </p>
+                <Link
+                  to={guide.href}
+                  className="inline-flex items-center gap-2 text-sm text-primary hover:underline underline-offset-4"
+                >
+                  {t("localSeo.readGuide")}
+                  <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
+                </Link>
+              </div>
             </article>
           ))}
         </div>
