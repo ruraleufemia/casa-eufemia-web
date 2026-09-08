@@ -2,6 +2,33 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/blog/1",
+      "destination": "/blog/campo-de-criptana-molinos-de-viento",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2",
+      "destination": "/blog/casa-de-medrano-argamasilla-de-alba",
+      "permanent": true
+    },
+    {
+      "source": "/blog/3",
+      "destination": "/blog/lagunas-de-ruidera",
+      "permanent": true
+    },
+    {
+      "source": "/blog/4",
+      "destination": "/blog/cooperativa-virgen-de-las-vinas",
+      "permanent": true
+    },
+    {
+      "source": "/reservas",
+      "destination": "/pricing",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/galeria/casa-rural-arenales-san-gregorio-fachada-principal.jpg",

@@ -70,6 +70,16 @@ Actualiza `/src/components/Footer.tsx` con tus datos reales:
 - Redes sociales
 - Número de registro turístico
 
+### Reseñas de Google
+La sección de opiniones consulta Google Places desde `/api/google-reviews`, sin exponer la clave al navegador. Para activarla en Vercel, añade estas variables en **Project Settings → Environment Variables**:
+
+```bash
+GOOGLE_MAPS_API_KEY=tu_clave_restringida
+GOOGLE_PLACE_ID=el_place_id_de_casa_rural_eufemia
+```
+
+Activa **Places API (New)** en Google Maps Platform y restringe la clave a esa API. Al usarse desde una función de servidor, no configures una restricción HTTP-referrer; guarda la clave solo como variable de entorno de producción en Vercel. Sin estas variables, la sección mantiene un enlace seguro a la ficha de Google Maps, pero no muestra comentarios en la web.
+
 ## 🎨 Sistema de Diseño
 
 El proyecto utiliza un sistema de diseño basado en tokens CSS definidos en `/src/index.css`:
