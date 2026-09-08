@@ -19,7 +19,24 @@ const WHATSAPP_URL =
   "https://wa.me/34638014458?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20disponibilidad%20en%20Casa%20Eufemia.";
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const copy = i18n.language?.startsWith("en")
+    ? {
+        eyebrow: "Arenales de San Gregorio · Ciudad Real",
+        description: "A rural house for up to 8 guests with a private pool, garden and barbecue to relax in La Mancha.",
+        locationText: "A peaceful getaway near Tomelloso, Campo de Criptana and the Lagunas de Ruidera.",
+        explore: "Explore the house",
+        whatsapp: "Book on WhatsApp",
+        availability: "View pricing",
+      }
+    : {
+        eyebrow: "Arenales de San Gregorio · Ciudad Real",
+        description: "Una casa rural para hasta 8 personas con piscina privada, jardín y barbacoa para desconectar en La Mancha.",
+        locationText: "Una escapada tranquila cerca de Tomelloso, Campo de Criptana y las Lagunas de Ruidera.",
+        explore: "Explora la casa",
+        whatsapp: "Reservar por WhatsApp",
+        availability: "Ver precios",
+      };
 
   const quickLinks = [
     { to: "/", label: t("nav.home") },
@@ -34,16 +51,16 @@ const Footer = () => {
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-4">
             <p className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-primary-foreground/70">
-              {t("footer.eyebrow")}
+              {copy.eyebrow}
             </p>
             <h2 className="mb-5 font-display text-4xl font-light tracking-tight text-background sm:text-5xl">
               Casa Eufemia
             </h2>
             <p className="max-w-sm text-sm font-light leading-relaxed text-background/75">
-              {t("footer.description")}
+              {copy.description}
             </p>
             <p className="mt-4 max-w-sm text-sm font-light leading-relaxed text-background/65">
-              {t("footer.locationText")}
+              {copy.locationText}
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <a
@@ -53,23 +70,23 @@ const Footer = () => {
                 className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
               >
                 <MessageCircle className="h-4 w-4" />
-                {t("footer.whatsapp")}
+                {copy.whatsapp}
               </a>
               <Link
                 to="/pricing"
                 className="inline-flex items-center gap-2 rounded-full border border-background/25 px-5 py-3 text-sm font-medium text-background transition-colors hover:border-background/50 hover:bg-background/10"
               >
                 <CalendarCheck2 className="h-4 w-4" />
-                {t("footer.availability")}
+                {copy.availability}
               </Link>
             </div>
           </div>
 
           <div className="lg:col-span-2">
             <h3 className="mb-5 text-sm font-medium uppercase tracking-[0.16em] text-background/70">
-              {t("footer.explore")}
+              {copy.explore}
             </h3>
-            <nav aria-label={t("footer.explore")}>
+            <nav aria-label={copy.explore}>
               <ul className="space-y-3">
                 {quickLinks.map(({ to, label, icon: Icon }) => (
                   <li key={to}>
