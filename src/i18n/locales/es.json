@@ -166,8 +166,20 @@
   "galleryPage": {
     "seoTitle": "Galería - Fotos de Casa Eufemia",
     "seoDescription": "Explora la galería de Casa Eufemia. Ve fotos de nuestras habitaciones, piscina, jardines y todas las instalaciones de nuestra casa rural en Ciudad Real.",
-    "title": "Galería",
-    "subtitle": "Cada detalle de tu próximo refugio",
+    "title": "Galería de Casa Eufemia",
+    "subtitle": "Fotos de la casa rural, la piscina privada, el jardín y los planes de La Mancha.",
+    "filterLabel": "Filtrar fotografías de la galería",
+    "filters": {
+      "all": "Todas",
+      "exterior": "Exterior y jardín",
+      "pool": "Piscina",
+      "interior": "Interiores",
+      "rooms": "Dormitorios",
+      "experiences": "Entorno y planes",
+      "details": "Detalles"
+    },
+    "photoCount": "{{count}} fotografías",
+    "openImage": "Abrir imagen: {{description}}",
     "images": {
       "facade": "Fachada de Casa Eufemia",
       "barbecue": "Zona de barbacoa",
@@ -215,9 +227,9 @@
       "keywords": "casa rural en Ciudad Real, casa rural en Arenales de San Gregorio, casa rural cerca de Tomelloso, casa rural para 8 personas, casa rural con piscina privada en Ciudad Real, alojamiento rural en La Mancha, casa rural en La Mancha, casa rural para familias, casa rural para grupos, casa rural con jardín y barbacoa"
     },
     "gallery": {
-      "title": "Galería - Fotos de Casa Eufemia",
-      "description": "Explora la galería de Casa Eufemia. Mira fotos de nuestras habitaciones, piscina, jardines y todas las instalaciones de nuestra casa rural en Ciudad Real.",
-      "keywords": "fotos casa rural, galería casa eufemia, imágenes alojamiento rural, piscina casa rural, jardín casa rural Ciudad Real"
+      "title": "Galería de Casa Eufemia | Casa rural en Arenales de San Gregorio",
+      "description": "Fotos de Casa Eufemia: casa rural en Arenales de San Gregorio con piscina privada, jardín, barbacoa y dormitorios para hasta 8 personas.",
+      "keywords": "galería casa rural Arenales de San Gregorio, fotos casa rural Ciudad Real, piscina privada casa rural, jardín y barbacoa, casa rural para 8 personas"
     },
     "blog": {
       "title": "Experiencias Locales - Blog de Casa Eufemia",

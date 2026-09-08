@@ -2,17 +2,11 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { galleryImages } from "@/data/galleryImages";
 
 const GalleryPreview = () => {
   const { t } = useTranslation();
-  const images = [
-    { src: "/1. Fachada.jpg", alt: "Fachada de Casa Eufemia", title: "Fachada" },
-    { src: "/2. Barbacoa.jpg", alt: "Zona de barbacoa", title: "Barbacoa" },
-    { src: "/3. Salon.jpg", alt: "Salón principal", title: "Salón" },
-    { src: "/4. Cuarto 2.jpg", alt: "Dormitorio 2", title: "Dormitorio" },
-    { src: "/5. Picoteo.jpg", alt: "Mesa de picoteo", title: "Picoteo" },
-    { src: "/6. Piscina.jpg", alt: "Piscina exterior", title: "Piscina" },
-  ];
+  const images = galleryImages.slice(0, 6);
 
   return (
     <section className="py-20 bg-muted/30">
@@ -29,7 +23,7 @@ const GalleryPreview = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {images.map((image, index) => (
             <div
-              key={index}
+              key={image.src}
               className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 animate-fade-in cursor-pointer"
               style={{ animationDelay: `${index * 100}ms` }}
             >
@@ -38,13 +32,15 @@ const GalleryPreview = () => {
                   src={image.src}
                   alt={image.alt}
                   loading="lazy"
+                  decoding="async"
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                 <div className="p-6">
                   <h3 className="text-primary-foreground text-lg font-display font-light tracking-wide">
-                    {image.title}
+                    {image.alt}
                   </h3>
                 </div>
               </div>

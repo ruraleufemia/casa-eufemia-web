@@ -4,168 +4,134 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Lightbox from "@/components/Lightbox";
 import SEO from "@/components/SEO";
+import { galleryImages, type GalleryCategory } from "@/data/galleryImages";
 import { useGalleryImages } from "@/hooks/useGalleryImages";
 import { usePageSeo } from "@/hooks/usePageSeo";
+
+type GalleryFilter = "all" | GalleryCategory;
+
+const galleryFilters: { translationKey: string; value: GalleryFilter }[] = [
+  { value: "all", translationKey: "all" },
+  { value: "exterior", translationKey: "exterior" },
+  { value: "pool", translationKey: "pool" },
+  { value: "interior", translationKey: "interior" },
+  { value: "rooms", translationKey: "rooms" },
+  { value: "experiences", translationKey: "experiences" },
+  { value: "details", translationKey: "details" },
+];
 
 const Gallery = () => {
   const { t } = useTranslation();
   const seo = usePageSeo("gallery");
+  const [activeFilter, setActiveFilter] = useState<GalleryFilter>("all");
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const dbImages = useGalleryImages();
 
-  const baseImages = [
-
-    { src: "/1. Fachada.jpg", altKey: "facade" },
-    { src: "/2. Barbacoa.jpg", altKey: "barbecue" },
-    { src: "/3. Salon.jpg", altKey: "livingRoom" },
-    { src: "/4. Cuarto 2.jpg", altKey: "bedroom2" },
-    { src: "/5. Picoteo.jpg", altKey: "snackTable" },
-    { src: "/6. Piscina.jpg", altKey: "pool" },
-    { src: "/Bano 1.jpg", altKey: "bathroom" },
-    { src: "/Cocina.jpg", altKey: "kitchen" },
-    { src: "/Cuarto 3.jpg", altKey: "bedroom3" },
-    { src: "/Cuarto principal.jpg", altKey: "masterBedroom" },
-    { src: "/Detalle botellas.jpg", altKey: "wineDetail" },
-    { src: "/Juegos de mesa.jpg", altKey: "boardGames" },
-    { src: "/Pet friendly.jpg", altKey: "petFriendly" },
-    { src: "/Picoteo 2.jpg", altKey: "snackArea" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0001.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0003.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0005.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0006.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0007.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0008.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0009.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0010.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0011.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0012.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0013.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0014.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0015.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0016.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0017.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0018.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0019.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0020.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0021.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0022.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0024.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0025.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0027.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0029.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0030.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0031.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0032.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0033.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0034.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0035.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0036.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0037.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0038.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0039.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0040.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0041.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0042.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0043.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0044.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0045.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0046.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0047.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0048.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0050.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0051.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0052.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0053.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0054.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0055.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0056.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0057.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0058.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0059.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0060.jpg", altKey: "newPhoto" },
-      { src: "/nuevasfotoscasa/IMG-20260530-WA0061.jpg", altKey: "newPhoto" },
-  ];
-
-  const images = [
-    ...baseImages.map((img) => ({ src: img.src, alt: t(`galleryPage.images.${img.altKey}`) })),
-    ...dbImages,
-  ];
+  const images = activeFilter === "all"
+    ? [...galleryImages, ...dbImages]
+    : galleryImages.filter((image) => image.category === activeFilter);
 
   const openLightbox = (index: number) => {
     setCurrentImageIndex(index);
     setLightboxOpen(true);
   };
 
-
   return (
     <>
-      <SEO 
+      <SEO
         title={seo.title}
         description={seo.description}
         url="/gallery"
         keywords={seo.keywords}
+        image="/galeria/casa-rural-piscina-privada-ciudad-real.jpg"
       />
       <div className="min-h-screen flex flex-col">
         <Navbar />
-      
-      <main className="flex-1 pt-20">
-        {/* Header */}
-        <section className="bg-card border-b border-border py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-light tracking-tight text-foreground mb-6 animate-fade-in">
-              {t('galleryPage.title')}
-            </h1>
-            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in font-light">
-              {t('galleryPage.subtitle')}
-            </p>
-          </div>
-        </section>
 
-        {/* Gallery Grid */}
-        <section className="py-16 bg-background">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {images.map((image, index) => (
+        <main className="flex-1 pt-20">
+          <section className="bg-card border-b border-border py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-light tracking-tight text-foreground mb-6 animate-fade-in">
+                {t("galleryPage.title")}
+              </h1>
+              <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in font-light">
+                {t("galleryPage.subtitle")}
+              </p>
+            </div>
+          </section>
+
+          <section className="py-12 sm:py-16 bg-background">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="mb-10 flex flex-col items-center gap-4">
                 <div
-                  key={index}
-                  onClick={() => openLightbox(index)}
-                  className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer animate-fade-in"
-                  style={{ animationDelay: `${index * 50}ms` }}
+                  aria-label={t("galleryPage.filterLabel")}
+                  className="flex max-w-full flex-wrap justify-center gap-2"
+                  role="group"
                 >
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      loading="lazy"
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                    <div className="p-4">
-                      <p className="text-primary-foreground text-sm font-light">
+                  {galleryFilters.map((filter) => (
+                    <button
+                      aria-pressed={activeFilter === filter.value}
+                      className={[
+                        "rounded-full border px-4 py-2 text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
+                        activeFilter === filter.value
+                          ? "border-primary bg-primary text-primary-foreground"
+                          : "border-border bg-card text-foreground hover:border-primary hover:text-primary",
+                      ].join(" ")}
+                      key={filter.value}
+                      onClick={() => setActiveFilter(filter.value)}
+                      type="button"
+                    >
+                      {t("galleryPage.filters." + filter.translationKey)}
+                    </button>
+                  ))}
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  {t("galleryPage.photoCount", { count: images.length })}
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {images.map((image, index) => (
+                  <button
+                    aria-label={t("galleryPage.openImage", { description: image.alt })}
+                    className="group relative overflow-hidden rounded-xl text-left shadow-lg transition-all duration-300 hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                    key={image.src}
+                    onClick={() => openLightbox(index)}
+                    type="button"
+                  >
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <img
+                        alt={image.alt}
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        decoding="async"
+                        loading="lazy"
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                        src={image.src}
+                      />
+                    </div>
+                    <div className="absolute inset-0 flex items-end bg-gradient-to-t from-foreground/60 via-foreground/10 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
+                      <p className="p-4 text-sm font-light text-primary-foreground">
                         {image.alt}
                       </p>
                     </div>
-                  </div>
-                </div>
-              ))}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
-      </main>
+          </section>
+        </main>
 
-      <Footer />
+        <Footer />
 
-      {/* Lightbox */}
-      {lightboxOpen && (
-        <Lightbox
-          images={images}
-          currentIndex={currentImageIndex}
-          onClose={() => setLightboxOpen(false)}
-          onNavigate={setCurrentImageIndex}
-        />
-      )}
+        {lightboxOpen && (
+          <Lightbox
+            currentIndex={currentImageIndex}
+            images={images}
+            onClose={() => setLightboxOpen(false)}
+            onNavigate={setCurrentImageIndex}
+          />
+        )}
       </div>
     </>
   );

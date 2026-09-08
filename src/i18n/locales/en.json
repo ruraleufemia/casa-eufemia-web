@@ -166,8 +166,20 @@
   "galleryPage": {
     "seoTitle": "Gallery - Photos of Casa Eufemia",
     "seoDescription": "Explore the gallery of Casa Eufemia. See photos of our bedrooms, pool, gardens and all the facilities of our rural house in Ciudad Real.",
-    "title": "Gallery",
-    "subtitle": "Every detail of your next retreat",
+    "title": "Casa Eufemia gallery",
+    "subtitle": "Photos of the rural house, private pool, garden and experiences in La Mancha.",
+    "filterLabel": "Filter gallery photographs",
+    "filters": {
+      "all": "All",
+      "exterior": "Outdoor areas",
+      "pool": "Pool",
+      "interior": "Indoors",
+      "rooms": "Bedrooms",
+      "experiences": "Surroundings",
+      "details": "Details"
+    },
+    "photoCount": "{{count}} photographs",
+    "openImage": "Open image: {{description}}",
     "images": {
       "facade": "Casa Eufemia Facade",
       "barbecue": "Barbecue area",
@@ -210,14 +222,14 @@
   },
   "seo": {
     "home": {
-      "title": "Casa Eufemia - Luxury Rural House in Arenales de San Gregorio, Ciudad Real",
-      "description": "Discover Casa Eufemia, your luxury rural house in Arenales de San Gregorio, Ciudad Real. Private pool, barbecue, garden and up to 9 guests. Pet friendly, near Lagunas de Ruidera.",
-      "keywords": "rural house Ciudad Real, casa eufemia, La Mancha accommodation, house with pool Spain, rural tourism Arenales de San Gregorio, pet friendly rural house"
+      "title": "Rural house in Arenales de San Gregorio | Casa Eufemia",
+      "description": "Rural house with a private pool in Ciudad Real for up to 8 people, in Arenales de San Gregorio, near Tomelloso, with a garden and barbecue.",
+      "keywords": "rural house Ciudad Real, rural house Arenales de San Gregorio, rural house near Tomelloso, rural house for 8 people, private pool rural house Ciudad Real"
     },
     "gallery": {
-      "title": "Gallery - Photos of Casa Eufemia",
-      "description": "Explore the gallery of Casa Eufemia. See photos of our bedrooms, pool, gardens and all the facilities of our rural house in Ciudad Real.",
-      "keywords": "rural house photos, casa eufemia gallery, accommodation images, rural house pool, garden rural house Ciudad Real"
+      "title": "Casa Eufemia gallery | Rural house in Arenales de San Gregorio",
+      "description": "Photos of Casa Eufemia: a rural house in Arenales de San Gregorio with a private pool, garden, barbecue and bedrooms for up to 8 people.",
+      "keywords": "rural house gallery Arenales de San Gregorio, rural house photos Ciudad Real, private pool rural house, garden and barbecue"
     },
     "blog": {
       "title": "Local Experiences - Casa Eufemia Blog",

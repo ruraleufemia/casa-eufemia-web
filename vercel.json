@@ -4,6 +4,354 @@
   "trailingSlash": false,
   "rewrites": [
     {
+      "source": "/galeria/casa-rural-arenales-san-gregorio-fachada-principal.jpg",
+      "destination": "/1.%20Fachada.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-barbacoa-patio.jpg",
+      "destination": "/2.%20Barbacoa.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-salon-rustico.jpg",
+      "destination": "/3.%20Salon.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-dormitorio-dos-camas.jpg",
+      "destination": "/4.%20Cuarto%202.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-mesa-exterior-piscina.jpg",
+      "destination": "/5.%20Picoteo.jpg"
+    },
+    {
+      "source": "/galeria/casa-rural-piscina-privada-ciudad-real.jpg",
+      "destination": "/6.%20Piscina.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-bano-completo.jpg",
+      "destination": "/Bano%201.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-cocina-equipada.jpg",
+      "destination": "/Cocina.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-dormitorio-doble.jpg",
+      "destination": "/Cuarto%203.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-dormitorio-principal.jpg",
+      "destination": "/Cuarto%20principal.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-rincon-vinos-manchegos.jpg",
+      "destination": "/Detalle%20botellas.jpg"
+    },
+    {
+      "source": "/galeria/enoturismo-tomelloso-virgen-vinas-fachada.jpg",
+      "destination": "/IMG_4389.JPG"
+    },
+    {
+      "source": "/galeria/enoturismo-tomelloso-museo-arte.jpg",
+      "destination": "/IMG_4398.JPG"
+    },
+    {
+      "source": "/galeria/enoturismo-tomelloso-bodega-vinos.jpg",
+      "destination": "/IMG_4469.JPG"
+    },
+    {
+      "source": "/galeria/ruta-quijote-casa-medrano-argamasilla-alba.jpg",
+      "destination": "/IMG_4586.JPG"
+    },
+    {
+      "source": "/galeria/campo-criptana-molinos-atardecer.jpg",
+      "destination": "/IMG_4765.JPG"
+    },
+    {
+      "source": "/galeria/campo-criptana-molinos-puesta-sol.jpg",
+      "destination": "/IMG_4770.JPG"
+    },
+    {
+      "source": "/galeria/casa-eufemia-mascota-patio.jpg",
+      "destination": "/Pet%20friendly.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-piscina-mesa-exterior.jpg",
+      "destination": "/Picoteo%202.jpg"
+    },
+    {
+      "source": "/galeria/lagunas-ruidera-paisaje-01.jpg",
+      "destination": "/Ruidera1.jpg"
+    },
+    {
+      "source": "/galeria/lagunas-ruidera-paisaje-02.jpg",
+      "destination": "/Ruidera2.jpg"
+    },
+    {
+      "source": "/galeria/lagunas-ruidera-paisaje-03.jpg",
+      "destination": "/Ruidera3.jpg"
+    },
+    {
+      "source": "/galeria/lagunas-ruidera-paisaje-04.jpg",
+      "destination": "/Ruidera4.jpg"
+    },
+    {
+      "source": "/galeria/lagunas-ruidera-paisaje-05.jpg",
+      "destination": "/Ruidera5.jpg"
+    },
+    {
+      "source": "/galeria/lagunas-ruidera-vista-panoramica.jpg",
+      "destination": "/pexels-emilio-sanchez-hernandez-285921208-34476076.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-jardin-camino-flores-01.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0001.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-patio-barbacoa-cubierta-01.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0003.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-patio-manchego-01.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0005.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-piscina-privada-cascada-01.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0006.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-patio-nocturno.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0007.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-jardin-mascota-01.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0008.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-piscina-privada-noche.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0009.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-jardin-rosales-01.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0010.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-barbacoa-cubierta-02.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0011.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-jardin-mascota-02.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0012.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-jardin-nocturno.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0013.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-ducha-exterior-01.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0014.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-ducha-exterior-02.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0015.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-jardin-mascota-03.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0016.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-piscina-mesa-exterior-mascota.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0017.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-jardin-rosales-02.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0018.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-piscina-mascota-descanso.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0019.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-jardin-plantas-manchegas.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0020.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-jardin-piscina-01.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0021.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-jardin-rosales-03.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0022.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-ducha-exterior-03.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0023.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-recibidor-01.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0024.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-bano-completo-02.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0025.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-recibidor-02.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0026.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-cocina-auxiliar.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0027.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-bano-completo-03.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0028.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-dormitorio-doble-cabecero.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0029.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-azulejos-artesanos.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0030.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-patio-piscina-privada-dia.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0031.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-cocina-equipada-02.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0032.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-jardin-flores-01.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0034.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-jardin-rosales-04.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0035.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-comedor-rustico-flores.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0036.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-patio-parra-manchega.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0037.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-jardin-piscina-flores.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0038.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-patio-jardin-entrada.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0039.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-jardin-piscina-02.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0040.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-dormitorio-principal-02.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0041.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-jardin-rosales-05.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0042.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-jardin-piscina-03.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0043.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-jardin-plantas-01.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0044.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-mascota-descanso.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0045.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-decoracion-manchega-01.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0046.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-decoracion-manchega-rueda-carro.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0047.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-entorno-pinares-01.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0048.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-piscina-privada-mascota.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0049.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-recibidor-03.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0050.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-recibidor-04.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0051.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-entorno-pinares-02.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0052.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-salon-rustico-bar.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0053.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-cartel-casa.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0054.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-salon-chimenea.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0055.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-bodega-vinos.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0056.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-piscina-privada-cascada-02.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0057.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-barbacoa-ladrillo.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0058.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-mascota-perro-02.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0059.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-patio-barbacoa-03.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0060.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-salon-chimenea-manchega.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0061.jpg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-piscina-privada-tumbona.jpg",
+      "destination": "/nuevasfotoscasa/WhatsApp%20Image%202026-09-03%20at%2012.31.22.jpeg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-cocina-rustica-auxiliar.jpg",
+      "destination": "/nuevasfotoscasa/WhatsApp%20Image%202026-09-03%20at%2012.31.59%20(1).jpeg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-bodega-vinos-cartel.jpg",
+      "destination": "/nuevasfotoscasa/WhatsApp%20Image%202026-09-03%20at%2012.31.59.jpeg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-salon-rustico-tradicion-manchega.jpg",
+      "destination": "/nuevasfotoscasa/WhatsApp%20Image%202026-09-03%20at%2012.33.15.jpeg"
+    },
+    {
       "source": "/admin",
       "destination": "/index"
     },
