@@ -119,6 +119,12 @@ export const galleryImages: GalleryImage[] = [
     category: "experiences",
   },
   {
+    src: "/galeria/casa-eufemia-juegos-mesa-familia.jpg",
+    legacySrc: "/Juegos de mesa.jpg",
+    alt: "Juegos de mesa en el salón de Casa Eufemia",
+    category: "details",
+  },
+  {
     src: "/galeria/casa-eufemia-mascota-patio.jpg",
     legacySrc: "/Pet friendly.jpg",
     alt: "Mascota descansando en el patio de Casa Eufemia",
@@ -347,6 +353,12 @@ export const galleryImages: GalleryImage[] = [
     category: "interior",
   },
   {
+    src: "/galeria/casa-eufemia-piscina-privada-ambiente-01.jpg",
+    legacySrc: "/nuevasfotoscasa/IMG-20260530-WA0033.jpg",
+    alt: "Piscina privada de Casa Eufemia en Arenales de San Gregorio",
+    category: "pool",
+  },
+  {
     src: "/galeria/casa-eufemia-jardin-flores-01.jpg",
     legacySrc: "/nuevasfotoscasa/IMG-20260530-WA0034.jpg",
     alt: "Flores del jardín de Casa Eufemia",
@@ -537,5 +549,17 @@ export const galleryImages: GalleryImage[] = [
     legacySrc: "/nuevasfotoscasa/WhatsApp Image 2026-09-03 at 12.33.15.jpeg",
     alt: "Salón rústico con decoración tradicional manchega",
     category: "interior",
+  },
+  {
+    src: "/galeria/casa-eufemia-piscina-privada-ambiente-02.jpg",
+    legacySrc: "/nuevasfotoscasa/WhatsApp Image 2026-09-03 at 12.33.51 (1).jpeg",
+    alt: "Momento de baño en la piscina privada de Casa Eufemia",
+    category: "pool",
+  },
+  {
+    src: "/galeria/casa-eufemia-piscina-privada-ambiente-03.jpg",
+    legacySrc: "/nuevasfotoscasa/WhatsApp Image 2026-09-03 at 12.33.51.jpeg",
+    alt: "Piscina privada de Casa Eufemia junto al jardín",
+    category: "pool",
   },
 ];

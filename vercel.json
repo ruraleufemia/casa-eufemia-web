@@ -72,6 +72,10 @@
       "destination": "/IMG_4770.JPG"
     },
     {
+      "source": "/galeria/casa-eufemia-juegos-mesa-familia.jpg",
+      "destination": "/Juegos%20de%20mesa.jpg"
+    },
+    {
       "source": "/galeria/casa-eufemia-mascota-patio.jpg",
       "destination": "/Pet%20friendly.jpg"
     },
@@ -224,6 +228,10 @@
       "destination": "/nuevasfotoscasa/IMG-20260530-WA0032.jpg"
     },
     {
+      "source": "/galeria/casa-eufemia-piscina-privada-ambiente-01.jpg",
+      "destination": "/nuevasfotoscasa/IMG-20260530-WA0033.jpg"
+    },
+    {
       "source": "/galeria/casa-eufemia-jardin-flores-01.jpg",
       "destination": "/nuevasfotoscasa/IMG-20260530-WA0034.jpg"
     },
@@ -350,6 +358,14 @@
     {
       "source": "/galeria/casa-eufemia-salon-rustico-tradicion-manchega.jpg",
       "destination": "/nuevasfotoscasa/WhatsApp%20Image%202026-09-03%20at%2012.33.15.jpeg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-piscina-privada-ambiente-02.jpg",
+      "destination": "/nuevasfotoscasa/WhatsApp%20Image%202026-09-03%20at%2012.33.51%20(1).jpeg"
+    },
+    {
+      "source": "/galeria/casa-eufemia-piscina-privada-ambiente-03.jpg",
+      "destination": "/nuevasfotoscasa/WhatsApp%20Image%202026-09-03%20at%2012.33.51.jpeg"
     },
     {
       "source": "/admin",
