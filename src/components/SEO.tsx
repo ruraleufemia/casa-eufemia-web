@@ -17,16 +17,23 @@ interface SEOProps {
 }
 
 const SEO = ({
-  title = "Casa rural en Arenales de San Gregorio | Casa Eufemia",
-  description = "Casa rural con piscina privada en Ciudad Real para 8 personas, en Arenales de San Gregorio, cerca de Tomelloso, con jardín y barbacoa.",
-  keywords = "casa rural en Ciudad Real, casa rural en Arenales de San Gregorio, casa rural cerca de Tomelloso, casa rural para 8 personas, casa rural con piscina privada en Ciudad Real, alojamiento rural en La Mancha",
+  title = "Casa Rural Eufemia | Arenales de San Gregorio",
+  description = "Casa Rural Eufemia en Arenales de San Gregorio, Ciudad Real: hasta 8 personas, piscina privada, jardín, barbacoa, dos baños y mascotas bajo consulta.",
+  keywords = "casa rural eufemia, casa rural en Ciudad Real, casa rural en Arenales de San Gregorio, casa rural cerca de Tomelloso, casa rural para 8 personas, casa rural con piscina privada en Ciudad Real, casa rural pet friendly, casa rural con dos baños",
   image = "/galeria/casa-rural-piscina-privada-ciudad-real.jpg",
   url = "https://www.casaeufemia.com/",
   type = "website",
   noindex = false,
   article,
 }: SEOProps) => {
-  const fullTitle = title.includes("Casa Eufemia") ? title : `${title} | Casa Eufemia`;
+  const brandName = "Casa Rural Eufemia";
+  const brandKeyword = "casa rural eufemia";
+  const brandTitle = title.replace(/Casa Eufemia/gi, brandName);
+  const fullTitle = brandTitle.includes(brandName) ? brandTitle : `${brandTitle} | ${brandName}`;
+  const fullDescription = description.replace(/Casa Eufemia/gi, brandName);
+  const fullKeywords = keywords.toLowerCase().includes(brandKeyword)
+    ? keywords
+    : `${brandKeyword}, ${keywords}`;
   const siteUrl = "https://www.casaeufemia.com";
   const fullUrl = new URL(url, siteUrl).toString();
   const fullImage = new URL(image, siteUrl).toString();
@@ -39,24 +46,24 @@ const SEO = ({
       {/* Primary Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="title" content={fullTitle} />
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
+      <meta name="description" content={fullDescription} />
+      <meta name="keywords" content={fullKeywords} />
       <link rel="canonical" href={fullUrl} />
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
       <meta property="og:url" content={fullUrl} />
       <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
+      <meta property="og:description" content={fullDescription} />
       <meta property="og:image" content={fullImage} />
-      <meta property="og:site_name" content="Casa Eufemia" />
+      <meta property="og:site_name" content={brandName} />
       <meta property="og:locale" content="es_ES" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={fullUrl} />
       <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
+      <meta name="twitter:description" content={fullDescription} />
       <meta name="twitter:image" content={fullImage} />
 
       {/* Article specific tags */}
@@ -83,7 +90,7 @@ const SEO = ({
       <meta name="robots" content={robots} />
       <meta name="googlebot" content={robots} />
       <meta name="language" content="Spanish" />
-      <meta name="author" content="Casa Eufemia" />
+      <meta name="author" content={brandName} />
     </Helmet>
   );
 };
