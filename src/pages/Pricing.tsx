@@ -12,7 +12,11 @@ const Pricing = () => {
   const seo = usePageSeo("pricing");
 
   const whatsappNumber = "34638014458";
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(t('pricing.whatsappMessage'))}`;
+  const whatsappMessage = t("pricing.whatsappMessage").replace(
+    "Casa Eufemia",
+    "Casa Rural Eufemia",
+  );
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <>
