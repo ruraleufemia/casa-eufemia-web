@@ -15,7 +15,7 @@ const NotFound = () => {
     <>
       <SEO
         title="Página no encontrada"
-        description="La página solicitada no existe en Casa Eufemia."
+        description="La página solicitada no existe en Casa Rural Eufemia."
         url={location.pathname}
         noindex
       />
