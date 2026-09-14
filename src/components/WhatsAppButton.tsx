@@ -7,7 +7,7 @@ const WhatsAppButton = () => {
     setShareUrl(window.location.href);
   }, []);
 
-  const message = encodeURIComponent(`¡Mira esta increíble casa rural! Casa Eufemia - ${shareUrl}`);
+  const message = encodeURIComponent(`¡Mira esta increíble casa rural! Casa Rural Eufemia - ${shareUrl}`);
   const whatsappUrl = `https://api.whatsapp.com/send?text=${message}`;
 
   return (
