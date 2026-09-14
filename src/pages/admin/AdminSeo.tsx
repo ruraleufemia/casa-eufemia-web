@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import { Loader2, Search } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import es from "@/i18n/locales/es.json";
-import en from "@/i18n/locales/en.json";
-import { SEO_PAGES, type SeoPage } from "@/hooks/usePageSeo";
+import {
+  getSeoDefault,
+  SEO_PAGES,
+  type SeoField,
+  type SeoPage,
+} from "@/hooks/usePageSeo";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -12,7 +15,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { toast } from "sonner";
 
-type Field = "title" | "description" | "keywords";
+type Field = SeoField;
 type Lang = "es" | "en";
 type Values = Record<string, string>; // `${page}.${field}.${lang}`
 
@@ -26,7 +29,6 @@ const LIMITS: Record<Field, { max: number; hint: string }> = {
 };
 
 const key = (page: SeoPage, field: Field) => `seo.${page}.${field}`;
-
 const AdminSeo = () => {
   const [values, setValues] = useState<Values>({});
   const [loading, setLoading] = useState(true);
@@ -37,8 +39,8 @@ const AdminSeo = () => {
       const base: Values = {};
       SEO_PAGES.forEach(({ page }) => {
         (["title", "description", "keywords"] as Field[]).forEach((field) => {
-          base[`${page}.${field}.es`] = (es as any).seo?.[page]?.[field] ?? "";
-          base[`${page}.${field}.en`] = (en as any).seo?.[page]?.[field] ?? "";
+          base[`${page}.${field}.es`] = getSeoDefault("es", page, field);
+          base[`${page}.${field}.en`] = getSeoDefault("en", page, field);
         });
       });
 
@@ -109,7 +111,7 @@ const AdminSeo = () => {
                     casaeufemia.com{path === "/" ? "" : path}
                   </p>
                   <p className="text-[#1a0dab] text-lg leading-snug truncate">
-                    {values[`${page}.title.es`] || `Casa Eufemia — ${label}`}
+                    {values[`${page}.title.es`] || `Casa Rural Eufemia — ${label}`}
                   </p>
                   <p className="text-sm text-muted-foreground line-clamp-2">
                     {values[`${page}.description.es`]}

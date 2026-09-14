@@ -31,9 +31,7 @@ const Navbar = () => {
   }, [isMobileMenuOpen]);
 
   useEffect(() => {
-    if (isMobileMenuOpen) {
-      setIsMobileMenuOpen(false);
-    }
+    setIsMobileMenuOpen(false);
   }, [location.pathname]);
 
   useEffect(() => {
@@ -74,7 +72,7 @@ const Navbar = () => {
                 shouldShowSolidBackground ? "text-foreground" : "text-white drop-shadow-lg"
               } hover:opacity-70`}
             >
-              Casa Eufemia
+              Casa Rural Eufemia
             </Link>
 
             {/* Desktop Navigation */}

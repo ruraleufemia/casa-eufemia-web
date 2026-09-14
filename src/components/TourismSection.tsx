@@ -78,8 +78,8 @@ const TourismSection = () => {
             La Tierra de Don Quijote
           </h3>
           <p className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed font-light">
-            Casa Eufemia es el punto de partida perfecto para explorar la región que inspiró 
-            a Cervantes. Desde los molinos de viento hasta las bodegas centenarias, cada rincón 
+            Casa Rural Eufemia es el punto de partida perfecto para explorar la región que inspiró
+            a Cervantes. Desde los molinos de viento hasta las bodegas centenarias, cada rincón
             de La Mancha cuenta una historia.
           </p>
         </div>

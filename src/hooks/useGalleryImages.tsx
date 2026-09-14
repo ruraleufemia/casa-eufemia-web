@@ -31,7 +31,7 @@ export const useGalleryImages = () => {
       setItems(
         data.map((r) => ({
           src: media[r.url] ?? r.url,
-          alt: (lang === "en" ? r.alt_en || r.alt_es : r.alt_es || r.alt_en) || "Casa Eufemia",
+          alt: (lang === "en" ? r.alt_en || r.alt_es : r.alt_es || r.alt_en) || "Casa Rural Eufemia",
         })),
       );
     })();

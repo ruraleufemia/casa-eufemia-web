@@ -41,7 +41,7 @@ const ReviewsSection = () => {
         ratingAria: (rating: number) => `Rating of ${rating} out of 5`,
         ratingCount: (count: number) => `${count} Google reviews`,
         fallbackTitle: "Read the reviews on Google",
-        fallbackText: "Verified reviews are displayed directly from Google Maps. While they are being updated, you can read them all on Casa Eufemia's listing.",
+        fallbackText: "Verified reviews are displayed directly from Google Maps. While they are being updated, you can read them all on Casa Rural Eufemia's listing.",
         googleAttribution: "Reviews and ratings provided by Google Maps.",
         viewAll: "View all reviews",
       }
@@ -50,12 +50,13 @@ const ReviewsSection = () => {
         ratingAria: (rating: number) => `Valoración de ${rating} sobre 5`,
         ratingCount: (count: number) => `${count} reseñas en Google`,
         fallbackTitle: "Consulta las opiniones en Google",
-        fallbackText: "Las reseñas verificadas se muestran directamente desde Google Maps. Mientras se actualizan, puedes leerlas todas desde la ficha de Casa Eufemia.",
+        fallbackText: "Las reseñas verificadas se muestran directamente desde Google Maps. Mientras se actualizan, puedes leerlas todas desde la ficha de Casa Rural Eufemia.",
         googleAttribution: "Opiniones y valoraciones proporcionadas por Google Maps.",
         viewAll: "Ver todas las reseñas",
       };
   const [reviewsData, setReviewsData] = useState<ReviewsResponse | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const reviewsSubtitle = t("reviews.subtitle").replace("Casa Eufemia", "Casa Rural Eufemia");
 
   useEffect(() => {
     const controller = new AbortController();
@@ -93,7 +94,7 @@ const ReviewsSection = () => {
             {t("reviews.title")}
           </h2>
           <p className="mx-auto max-w-2xl text-muted-foreground">
-            {t("reviews.subtitle")}
+            {reviewsSubtitle}
           </p>
           {hasRating && (
             <div className="mt-5 flex items-center justify-center gap-3">

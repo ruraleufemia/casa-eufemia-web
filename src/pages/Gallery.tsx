@@ -27,6 +27,7 @@ const Gallery = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const dbImages = useGalleryImages();
+  const galleryTitle = t("galleryPage.title").replace("Casa Eufemia", "Casa Rural Eufemia");
 
   const images = activeFilter === "all"
     ? [...galleryImages, ...dbImages]
@@ -53,7 +54,7 @@ const Gallery = () => {
           <section className="bg-card border-b border-border py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-light tracking-tight text-foreground mb-6 animate-fade-in">
-                {t("galleryPage.title")}
+                {galleryTitle}
               </h1>
               <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in font-light">
                 {t("galleryPage.subtitle")}

@@ -24,7 +24,7 @@ const Hero = ({ videoUrl, useVideo = false, isYouTube = false }: HeroProps) => {
           isYouTube ? (
             <iframe
               src={videoUrl}
-              title="Vídeo de Casa Eufemia"
+              title="Vídeo de Casa Rural Eufemia"
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] border-0"
               allow="autoplay; encrypted-media; picture-in-picture"
               referrerPolicy="strict-origin-when-cross-origin"
@@ -42,7 +42,7 @@ const Hero = ({ videoUrl, useVideo = false, isYouTube = false }: HeroProps) => {
               <source src={videoUrl} type="video/mp4" />
               <img
                 src={heroImage}
-                alt="Casa Eufemia - Casa Rural en Arenales de San Gregorio"
+                alt="Casa Rural Eufemia en Arenales de San Gregorio"
                 className="w-full h-full object-cover"
               />
             </video>
@@ -50,7 +50,7 @@ const Hero = ({ videoUrl, useVideo = false, isYouTube = false }: HeroProps) => {
         ) : (
           <img
             src={heroImage}
-            alt="Casa Eufemia - Casa Rural en Arenales de San Gregorio"
+            alt="Casa Rural Eufemia en Arenales de San Gregorio"
             className="w-full h-full object-cover"
             loading="eager"
             decoding="async"
@@ -60,7 +60,7 @@ const Hero = ({ videoUrl, useVideo = false, isYouTube = false }: HeroProps) => {
       </div>
 
       <h1 className="sr-only">
-        Casa Eufemia — Casa rural con piscina en Arenales de San Gregorio, Ciudad Real
+        Casa Rural Eufemia — Casa rural con piscina en Arenales de San Gregorio, Ciudad Real
       </h1>
 
       {/* Scroll Indicator */}

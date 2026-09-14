@@ -13,20 +13,20 @@ const FaqSection = () => {
   const copy = isEnglish
     ? {
         eyebrow: "Before booking",
-        title: "Frequently asked questions about Casa Eufemia",
+        title: "Frequently asked questions about Casa Rural Eufemia",
         subtitle: "Practical information for planning a rural getaway in Arenales de San Gregorio, Ciudad Real.",
         questions: [
           {
-            question: "Where is Casa Eufemia?",
-            answer: "Casa Eufemia is in Arenales de San Gregorio, Ciudad Real, in the heart of La Mancha. It is a good base for visiting Tomelloso, Campo de Criptana, the Don Quixote Route and the Lagunas de Ruidera.",
+            question: "Where is Casa Rural Eufemia?",
+            answer: "Casa Rural Eufemia is in Arenales de San Gregorio, Ciudad Real, in the heart of La Mancha. It is a good base for visiting Tomelloso, Campo de Criptana, the Don Quixote Route and the Lagunas de Ruidera.",
           },
           {
             question: "How many people can stay at the rural house?",
-            answer: "The house can accommodate up to 8 people. It has three bedrooms and one full bathroom, with shared areas designed for families and friends to enjoy their stay together.",
+            answer: "The house can accommodate up to 8 people. It has three bedrooms and two bathrooms: one full indoor bathroom and an additional outdoor bathroom in the patio.",
           },
           {
             question: "Does the rural house have a private pool?",
-            answer: "Yes. Casa Eufemia has a private outdoor pool for the exclusive use of guests staying at the property.",
+            answer: "Yes. Casa Rural Eufemia has a private outdoor pool for the exclusive use of guests staying at the property.",
           },
           {
             question: "Is it suitable for families and groups?",
@@ -34,7 +34,11 @@ const FaqSection = () => {
           },
           {
             question: "Is there a garden and barbecue?",
-            answer: "Yes. Casa Eufemia's outdoor area includes a garden, dining area, outdoor furniture and a barbecue area.",
+            answer: "Yes. Casa Rural Eufemia's outdoor area includes a garden, dining area, outdoor furniture and a barbecue area.",
+          },
+          {
+            question: "Is Casa Rural Eufemia pet friendly?",
+            answer: "Yes. Pets are accepted by prior arrangement. An additional supplement may apply, so please let us know before booking.",
           },
           {
             question: "What can I visit near Arenales de San Gregorio?",
@@ -48,20 +52,20 @@ const FaqSection = () => {
       }
     : {
         eyebrow: "Antes de reservar",
-        title: "Preguntas frecuentes sobre Casa Eufemia",
+        title: "Preguntas frecuentes sobre Casa Rural Eufemia",
         subtitle: "Información práctica para organizar una escapada rural en Arenales de San Gregorio, Ciudad Real.",
         questions: [
           {
-            question: "¿Dónde está Casa Eufemia?",
-            answer: "Casa Eufemia está en Arenales de San Gregorio, Ciudad Real, en el corazón de La Mancha. Es una buena base para conocer Tomelloso, Campo de Criptana, la Ruta del Quijote y las Lagunas de Ruidera.",
+            question: "¿Dónde está Casa Rural Eufemia?",
+            answer: "Casa Rural Eufemia está en Arenales de San Gregorio, Ciudad Real, en el corazón de La Mancha. Es una buena base para conocer Tomelloso, Campo de Criptana, la Ruta del Quijote y las Lagunas de Ruidera.",
           },
           {
             question: "¿Para cuántas personas es la casa rural?",
-            answer: "La casa tiene capacidad para hasta 8 personas. Dispone de tres dormitorios y un baño completo, con espacios comunes pensados para compartir la estancia en familia o con amigos.",
+            answer: "La casa tiene capacidad para hasta 8 personas. Dispone de tres dormitorios y dos baños: uno completo interior y otro baño exterior en el patio.",
           },
           {
             question: "¿La casa rural tiene piscina privada?",
-            answer: "Sí. Casa Eufemia cuenta con una piscina exterior privada de uso exclusivo para quienes se alojan en la vivienda.",
+            answer: "Sí. Casa Rural Eufemia cuenta con una piscina exterior privada de uso exclusivo para quienes se alojan en la vivienda.",
           },
           {
             question: "¿Es una casa rural adecuada para familias y grupos?",
@@ -69,7 +73,11 @@ const FaqSection = () => {
           },
           {
             question: "¿Hay jardín y barbacoa?",
-            answer: "Sí. El exterior de Casa Eufemia incluye jardín, merendero, mobiliario para disfrutar al aire libre y zona de barbacoa.",
+            answer: "Sí. El exterior de Casa Rural Eufemia incluye jardín, merendero, mobiliario para disfrutar al aire libre y zona de barbacoa.",
+          },
+          {
+            question: "¿Casa Rural Eufemia admite mascotas?",
+            answer: "Sí. Se aceptan mascotas bajo consulta previa. Puede aplicarse un suplemento adicional, por lo que conviene indicarlo antes de reservar.",
           },
           {
             question: "¿Qué se puede visitar cerca de Arenales de San Gregorio?",

@@ -1,21 +1,20 @@
 import { 
   Wifi, 
-  ParkingCircle, 
   Trees, 
-  Flame, 
   Snowflake, 
   MapPin,
   Waves,
   UtensilsCrossed,
   Tv,
-  WashingMachine,
   Bath,
-  Coffee
+  Coffee,
+  PawPrint,
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const AmenitiesSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isEnglish = i18n.language?.startsWith("en");
   const amenities = [
     {
       icon: Trees,
@@ -56,6 +55,20 @@ const AmenitiesSection = () => {
       icon: Coffee,
       title: t('amenities.outdoor'),
       description: t('amenities.outdoorDesc'),
+    },
+    {
+      icon: Bath,
+      title: isEnglish ? "Two bathrooms" : "Dos baños",
+      description: isEnglish
+        ? "One full indoor bathroom and an additional outdoor bathroom in the patio."
+        : "Un baño completo interior y un baño exterior adicional en el patio.",
+    },
+    {
+      icon: PawPrint,
+      title: "Pet friendly",
+      description: isEnglish
+        ? "Pets are welcome by prior arrangement; an additional supplement may apply."
+        : "Se aceptan mascotas bajo consulta; puede aplicarse un suplemento adicional.",
     },
   ];
 

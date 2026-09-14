@@ -16,14 +16,14 @@ import { useTranslation } from "react-i18next";
 const GOOGLE_MAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=Casa+Rural+Eufemia,+Calle+Juan+Jos%C3%A9+Jim%C3%A9nez+4,+13619+Arenales+de+San+Gregorio,+Ciudad+Real,+Espa%C3%B1a";
 const WHATSAPP_URL =
-  "https://wa.me/34638014458?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20disponibilidad%20en%20Casa%20Eufemia.";
+  "https://wa.me/34638014458?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20disponibilidad%20en%20Casa%20Rural%20Eufemia.";
 
 const Footer = () => {
   const { t, i18n } = useTranslation();
   const copy = i18n.language?.startsWith("en")
     ? {
         eyebrow: "Arenales de San Gregorio · Ciudad Real",
-        description: "A rural house for up to 8 guests with a private pool, garden and barbecue to relax in La Mancha.",
+        description: "A pet-friendly rural house for up to 8 guests with a private pool, garden, barbecue and two bathrooms.",
         locationText: "A peaceful getaway near Tomelloso, Campo de Criptana and the Lagunas de Ruidera.",
         explore: "Explore the house",
         whatsapp: "Book on WhatsApp",
@@ -31,7 +31,7 @@ const Footer = () => {
       }
     : {
         eyebrow: "Arenales de San Gregorio · Ciudad Real",
-        description: "Una casa rural para hasta 8 personas con piscina privada, jardín y barbacoa para desconectar en La Mancha.",
+        description: "Una casa rural pet friendly para hasta 8 personas con piscina privada, jardín, barbacoa y dos baños.",
         locationText: "Una escapada tranquila cerca de Tomelloso, Campo de Criptana y las Lagunas de Ruidera.",
         explore: "Explora la casa",
         whatsapp: "Reservar por WhatsApp",
@@ -54,7 +54,7 @@ const Footer = () => {
               {copy.eyebrow}
             </p>
             <h2 className="mb-5 font-display text-4xl font-light tracking-tight text-background sm:text-5xl">
-              Casa Eufemia
+              Casa Rural Eufemia
             </h2>
             <p className="max-w-sm text-sm font-light leading-relaxed text-background/75">
               {copy.description}
@@ -173,7 +173,7 @@ const Footer = () => {
 
         <div className="mt-12 flex flex-col gap-3 border-t border-background/15 pt-6 text-xs text-background/55 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} Casa Eufemia. {t("footer.rights")}
+            © {new Date().getFullYear()} Casa Rural Eufemia. {t("footer.rights")}
           </p>
           <p>{t("footer.tagline")}</p>
         </div>
