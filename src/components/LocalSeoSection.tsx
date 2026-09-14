@@ -4,7 +4,17 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 
 const LocalSeoSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isEnglish = i18n.language?.startsWith("en");
+  const copy = isEnglish
+    ? {
+        intro: "Casa Rural Eufemia is a rural house for up to 8 guests in Arenales de San Gregorio, Ciudad Real. It combines a private pool, garden, barbecue, two bathrooms and a pet-friendly stay with a convenient setting for a restful break, nature and La Mancha culture.",
+        groupsDescription: "If you are looking for a rural house with a garden and barbecue to share time together, Casa Rural Eufemia offers space to get together, relax and enjoy La Mancha as a group.",
+      }
+    : {
+        intro: "Casa Rural Eufemia es una casa rural para 8 personas en Arenales de San Gregorio, Ciudad Real. Combina piscina privada, jardín, barbacoa, dos baños y una estancia pet friendly con una ubicación cómoda para crear una escapada de descanso, naturaleza y cultura manchega.",
+        groupsDescription: "Si buscas una casa rural con jardín y barbacoa para compartir tiempo juntos, Casa Rural Eufemia ofrece espacio para reunirse, descansar y disfrutar de La Mancha en grupo.",
+      };
 
   const guides = [
     {
@@ -41,7 +51,7 @@ const LocalSeoSection = () => {
             {t("localSeo.title")}
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground font-light leading-relaxed">
-            {t("localSeo.intro")}
+            {copy.intro}
           </p>
         </div>
 
@@ -89,7 +99,7 @@ const LocalSeoSection = () => {
               {t("localSeo.groups.title")}
             </h3>
             <p className="text-muted-foreground font-light leading-relaxed">
-              {t("localSeo.groups.description")}
+              {copy.groupsDescription}
             </p>
           </div>
           <Link to="/pricing" className="shrink-0">
