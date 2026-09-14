@@ -2,7 +2,19 @@ import { Home, Users, Bed, MapPin } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const AboutSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isEnglish = i18n.language?.startsWith("en");
+  const copy = isEnglish
+    ? {
+        subtitle: "Casa Rural Eufemia is a rural house where La Mancha tradition meets modern comfort. Located in Arenales de San Gregorio, it is the perfect setting to disconnect.",
+        architectureP1: "Casa Rural Eufemia combines traditional La Mancha architecture with modern amenities. Its adobe walls maintain a pleasant temperature throughout the year.",
+        architectureP2: "The house is distributed on a single floor of 290m², with large bright spaces including a living-dining room with fireplace, equipped kitchen, three double bedrooms, a full indoor bathroom and an additional outdoor bathroom in the patio.",
+      }
+    : {
+        subtitle: "Casa Rural Eufemia es una casa rural donde la tradición manchega se encuentra con el confort moderno. Situada en Arenales de San Gregorio, es el escenario perfecto para desconectar.",
+        architectureP1: "Casa Rural Eufemia combina la arquitectura tradicional manchega con comodidades modernas. Sus muros de adobe mantienen una temperatura agradable durante todo el año.",
+        architectureP2: "La casa se distribuye en una sola planta de 290m², con amplios espacios luminosos que incluyen un salón comedor con chimenea, cocina equipada, tres dormitorios dobles, un baño completo interior y un baño exterior en el patio.",
+      };
   const features = [
     {
       icon: Home,
@@ -34,7 +46,7 @@ const AboutSection = () => {
             {t('about.title')}
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed font-light">
-            {t('about.subtitle')}
+            {copy.subtitle}
           </p>
         </div>
 
@@ -62,10 +74,10 @@ const AboutSection = () => {
           </h3>
           <div className="space-y-6 text-muted-foreground text-base leading-relaxed font-light">
             <p>
-              {t('about.architectureP1')}
+              {copy.architectureP1}
             </p>
             <p>
-              {t('about.architectureP2')}
+              {copy.architectureP2}
             </p>
             <p>
               {t('about.architectureP3')}
