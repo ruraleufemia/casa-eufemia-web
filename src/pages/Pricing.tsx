@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import AvailabilityCalendar from "@/components/AvailabilityCalendar";
 import { Card } from "@/components/ui/card";
 import { MessageCircle, Sparkles } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -57,8 +56,6 @@ const Pricing = () => {
             </Card>
           </div>
         </section>
-
-        <AvailabilityCalendar />
 
         {/* Location Section */}
         <section className="pb-20 px-4">
