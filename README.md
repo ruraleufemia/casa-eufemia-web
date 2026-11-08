@@ -57,6 +57,8 @@ npm run preview
 ### Panel de edición para la propiedad
 Entra en `https://www.casaeufemia.com/admin/login` con la cuenta administradora. El panel permite editar los textos habituales por secciones, sustituir la foto de bienvenida, añadir fotos a la galería, crear entradas del blog y publicar tarifas orientativas. Se guardan en Supabase sin cambiar el código. Las tarifas permanecen ocultas hasta que se introduzca un precio por noche y se active «Mostrar tarifas en la web».
 
+El acceso usa Supabase Auth y comprueba el rol `admin` en `user_roles` antes de mostrar el panel. No crea cuentas desde la pantalla pública. Si se olvida la contraseña, la recuperación envía un enlace al correo registrado y la nueva contraseña se establece en `/admin/reset-password`. Las contraseñas existentes no son recuperables desde el repositorio ni desde Vercel. Para dar a Silvia un acceso separado, un administrador de Supabase debe invitarla y asignar el rol `admin` a su usuario; la clave secreta de Supabase nunca debe añadirse al cliente ni al repositorio.
+
 Las fotos originales de la galería y los artículos iniciales siguen en el repositorio; el panel añade fotos y artículos nuevos. Las nuevas entradas del panel se cargan en el navegador y todavía no se prerenderizan ni se añaden al sitemap estático. Si se van a usar como páginas SEO, hay que resolver esa publicación del HTML y el sitemap antes de depender de ellas para indexación. Los metadatos editados desde el panel también se aplican tras cargar JavaScript; la versión prerenderizada conserva los valores del código hasta un nuevo despliegue.
 
 ### Artículos originales
