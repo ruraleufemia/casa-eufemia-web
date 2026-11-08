@@ -78,7 +78,7 @@ GOOGLE_MAPS_API_KEY=tu_clave_restringida
 GOOGLE_PLACE_ID=el_place_id_de_casa_rural_eufemia
 ```
 
-Activa **Places API (New)** en Google Maps Platform y restringe la clave a esa API. Al usarse desde una función de servidor, no configures una restricción HTTP-referrer; guarda la clave solo como variable de entorno de producción en Vercel. Sin estas variables, la sección mantiene un enlace seguro a la ficha de Google Maps, pero no muestra comentarios en la web.
+Activa **Places API (New)** y la facturación en Google Maps Platform; verifica que el Place ID corresponde exactamente a la ficha de Casa Rural Eufemia. Restringe la clave a esa API y a la IP de salida solo si dispones de una IP fija. Al usarse desde una función de servidor, no configures una restricción HTTP-referrer; guarda la clave solo como variable de entorno de producción en Vercel. Fija una cuota/presupuesto en Google Cloud antes de activarla: la consulta de reseñas usa el nivel **Place Details Enterprise + Atmosphere**, devuelve hasta cinco opiniones seleccionadas por relevancia y se consulta en cada carga de la sección para no almacenar el contenido de Google Maps. Después de añadir las variables, vuelve a desplegar el proyecto y comprueba que `/api/google-reviews` devuelve `configured: true` con opiniones de la ficha correcta. Sin estas variables, la sección enlaza a Google Maps, pero no muestra comentarios en la web.
 
 ## 🎨 Sistema de Diseño
 

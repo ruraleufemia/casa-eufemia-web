@@ -24,7 +24,7 @@ export default async function handler(request, response) {
 
   try {
     const placeResponse = await fetch(
-      `https://places.googleapis.com/v1/places/${encodeURIComponent(placeId)}`,
+      `https://places.googleapis.com/v1/places/${encodeURIComponent(placeId)}?languageCode=es`,
       {
         headers: {
           "X-Goog-Api-Key": apiKey,
@@ -41,13 +41,17 @@ export default async function handler(request, response) {
     const reviews = (place.reviews ?? [])
       .map((review) => ({
         author: review.authorAttribution?.displayName || "Huésped de Google",
+        authorUri: review.authorAttribution?.uri || null,
+        authorPhotoUri: review.authorAttribution?.photoUri || null,
         rating: Number(review.rating) || 0,
         text: review.text?.text || "",
         relativeTime: review.relativePublishTimeDescription || "",
+        googleMapsUri: review.googleMapsUri || null,
       }))
-      .filter((review) => review.text);
+      .filter((review) => review.text && review.googleMapsUri);
 
-    response.setHeader("Cache-Control", "public, s-maxage=86400, stale-while-revalidate=604800");
+    // Google Maps content must not be stored in a CDN cache outside the API terms.
+    response.setHeader("Cache-Control", "no-store");
     return response.status(200).json({
       configured: true,
       rating: typeof place.rating === "number" ? place.rating : null,
