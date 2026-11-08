@@ -54,8 +54,13 @@ npm run preview
 
 ## 📝 Personalización de Contenido
 
-### Blog Posts
-Edita `/src/data/blogPosts.ts` para actualizar los artículos del blog con tu propio contenido.
+### Panel de edición para la propiedad
+Entra en `https://www.casaeufemia.com/admin/login` con la cuenta administradora. El panel permite editar los textos habituales por secciones, sustituir la foto de bienvenida, añadir fotos a la galería, crear entradas del blog y publicar tarifas orientativas. Se guardan en Supabase sin cambiar el código. Las tarifas permanecen ocultas hasta que se introduzca un precio por noche y se active «Mostrar tarifas en la web».
+
+Las fotos originales de la galería y los artículos iniciales siguen en el repositorio; el panel añade fotos y artículos nuevos. Las nuevas entradas del panel se cargan en el navegador y todavía no se prerenderizan ni se añaden al sitemap estático. Si se van a usar como páginas SEO, hay que resolver esa publicación del HTML y el sitemap antes de depender de ellas para indexación. Los metadatos editados desde el panel también se aplican tras cargar JavaScript; la versión prerenderizada conserva los valores del código hasta un nuevo despliegue.
+
+### Artículos originales
+Edita `/src/data/blogPosts.ts` y los textos de `/src/i18n/locales/` para actualizar los artículos originales.
 
 ### Imágenes
 - Galería principal (página de inicio): `/public/1-6.jpg`
@@ -110,11 +115,7 @@ El proyecto incluye:
 
 ## 🚀 Despliegue
 
-**Proyecto Lovable**: https://lovable.dev/projects/9113758b-2176-46ae-a435-3834e52b1a56
-
-**Desplegar**: Abre el proyecto en Lovable y haz clic en Share → Publish
-
-**Custom Domain**: Navega a Project > Settings > Domains para conectar tu dominio
+El repositorio `ruraleufemia/casa-eufemia-web` se despliega en Vercel. Las ediciones de textos, fotos nuevas, entradas y tarifas hechas desde el panel se guardan en Supabase y no requieren un nuevo despliegue. Los cambios de código se publican mediante el despliegue de la rama principal.
 
 ## 📄 Licencia
 

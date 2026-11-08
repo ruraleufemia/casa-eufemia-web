@@ -10,6 +10,14 @@
   },
   "about": {
     "title": "Welcome",
+    "welcomeHeading": "A home in La Mancha to enjoy together",
+    "welcomeP1": "At Casa Rural Eufemia, you have the whole house to yourselves: unhurried breakfasts, meals outdoors and time together in a peaceful corner of La Mancha.",
+    "welcomeP2": "The house is all on one floor, with three bedrooms, a La Mancha-style living and dining room, and an equipped kitchen. Outside, the patio, garden, barbecue and private pool invite you to enjoy each moment at your own pace.",
+    "welcomeP3": "We are in Arenales de San Gregorio, Ciudad Real, near Tomelloso and Campo de Criptana. I'm Silvia, your host, and I'll be delighted to help you plan your getaway.",
+    "welcomeSignoff": "Casa Rural Eufemia. Where memories begin.",
+    "welcomeImage": "/silvia-maya-bienvenida-casa-rural-eufemia.jpg",
+    "welcomeImageAlt": "Silvia, host of Casa Rural Eufemia, holding her dog Maya in the patio",
+    "welcomeImageCaption": "Silvia and Maya welcome you",
     "subtitle": "A rural house where La Mancha tradition meets modern comfort. Located in Arenales de San Gregorio, the perfect setting to disconnect.",
     "space": "Of cozy space",
     "capacity": "Up to 8 people",
@@ -41,7 +49,11 @@
     "entertainment": "TV and entertainment",
     "entertainmentDesc": "TV in living room and board games",
     "outdoor": "Outdoor area",
-    "outdoorDesc": "Picnic area, barbecue and garden furniture"
+    "outdoorDesc": "Picnic area, barbecue and garden furniture",
+    "bathroomsTitle": "Two bathrooms",
+    "bathroomsDesc": "One full indoor bathroom and an additional outdoor bathroom in the patio.",
+    "petsTitle": "Pet friendly",
+    "petsDesc": "Pets are welcome by prior arrangement; an additional supplement may apply."
   },
   "gallery": {
     "title": "Gallery",
@@ -140,7 +152,7 @@
   "localSeo": {
     "eyebrow": "Getaways in La Mancha",
     "title": "A rural house in Ciudad Real to discover La Mancha",
-    "intro": "Casa Eufemia is a rural house for up to 8 guests in Arenales de San Gregorio, Ciudad Real. It combines a private pool, garden and barbecue with a convenient setting for a restful break, nature and La Mancha culture.",
+    "intro": "Casa Rural Eufemia is a rural house for up to 8 guests in Arenales de San Gregorio, Ciudad Real. It combines a private pool, garden, barbecue, two bathrooms and a pet-friendly stay with a convenient setting for a restful break, nature and La Mancha culture.",
     "readGuide": "Read local guide",
     "tomelloso": {
       "title": "A rural house near Tomelloso",
@@ -159,7 +171,7 @@
     },
     "groups": {
       "title": "A rural house for families and groups",
-      "description": "If you are looking for a rural house with a garden and barbecue to share time together, Casa Eufemia offers space to get together, relax and enjoy La Mancha as a group.",
+      "description": "If you are looking for a rural house with a garden and barbecue to share time together, Casa Rural Eufemia offers space to get together, relax and enjoy La Mancha as a group.",
       "cta": "Check availability"
     }
   },

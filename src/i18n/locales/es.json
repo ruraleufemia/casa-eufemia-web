@@ -10,6 +10,14 @@
   },
   "about": {
     "title": "Bienvenidos",
+    "welcomeHeading": "Un hogar manchego para disfrutar juntos",
+    "welcomeP1": "En Casa Rural Eufemia tienes la casa completa para ti y los tuyos: desayunos sin prisas, comidas al aire libre y tiempo para compartir en un entorno tranquilo de La Mancha.",
+    "welcomeP2": "La vivienda se distribuye en una sola planta, con tres dormitorios, salón comedor de estilo manchego y cocina equipada. En el exterior, el patio, el jardín, la barbacoa y la piscina privada invitan a disfrutar de cada momento a vuestro ritmo.",
+    "welcomeP3": "Estamos en Arenales de San Gregorio, Ciudad Real, cerca de Tomelloso y Campo de Criptana. Soy Silvia, tu anfitriona, y estaré encantada de ayudarte a preparar la escapada.",
+    "welcomeSignoff": "Casa Eufemia. Donde nacen los recuerdos.",
+    "welcomeImage": "/silvia-maya-bienvenida-casa-rural-eufemia.jpg",
+    "welcomeImageAlt": "Silvia, anfitriona de Casa Rural Eufemia, con su perra Maya en el patio",
+    "welcomeImageCaption": "Silvia y Maya te dan la bienvenida",
     "subtitle": "Una casa rural donde la tradición manchega se encuentra con el confort moderno. Situada en Arenales de San Gregorio, el escenario perfecto para desconectar.",
     "space": "De espacio acogedor",
     "capacity": "Hasta 8 personas",
@@ -41,7 +49,11 @@
     "entertainment": "TV y entretenimiento",
     "entertainmentDesc": "TV en salón y juegos de mesa",
     "outdoor": "Zona exterior",
-    "outdoorDesc": "Merendero, barbacoa y mobiliario de jardín"
+    "outdoorDesc": "Merendero, barbacoa y mobiliario de jardín",
+    "bathroomsTitle": "Dos baños",
+    "bathroomsDesc": "Un baño completo interior y un baño exterior adicional en el patio.",
+    "petsTitle": "Pet friendly",
+    "petsDesc": "Se aceptan mascotas bajo consulta; puede aplicarse un suplemento adicional."
   },
   "gallery": {
     "title": "Galería",
@@ -140,7 +152,7 @@
   "localSeo": {
     "eyebrow": "Escapadas en La Mancha",
     "title": "Casa rural en Ciudad Real para descubrir La Mancha",
-    "intro": "Casa Eufemia es una casa rural para 8 personas en Arenales de San Gregorio, Ciudad Real. Combina piscina privada, jardín y barbacoa con una ubicación cómoda para crear una escapada de descanso, naturaleza y cultura manchega.",
+    "intro": "Casa Rural Eufemia es una casa rural para 8 personas en Arenales de San Gregorio, Ciudad Real. Combina piscina privada, jardín, barbacoa, dos baños y una estancia pet friendly con una ubicación cómoda para crear una escapada de descanso, naturaleza y cultura manchega.",
     "readGuide": "Ver guía local",
     "tomelloso": {
       "title": "Una casa rural cerca de Tomelloso",
@@ -159,7 +171,7 @@
     },
     "groups": {
       "title": "Una casa rural para familias y grupos",
-      "description": "Si buscas una casa rural con jardín y barbacoa para compartir tiempo juntos, Casa Eufemia ofrece espacio para reunirse, descansar y disfrutar de La Mancha en grupo.",
+      "description": "Si buscas una casa rural con jardín y barbacoa para compartir tiempo juntos, Casa Rural Eufemia ofrece espacio para reunirse, descansar y disfrutar de La Mancha en grupo.",
       "cta": "Consultar disponibilidad"
     }
   },

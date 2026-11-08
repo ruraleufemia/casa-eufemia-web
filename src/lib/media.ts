@@ -45,7 +45,13 @@ export async function resolveMediaUrl(value: string): Promise<string> {
 }
 
 export async function uploadMedia(file: File, folder = "uploads"): Promise<string> {
-  const ext = file.name.split(".").pop()?.toLowerCase() ?? "jpg";
+  const extensions: Record<string, string> = {
+    "image/jpeg": "jpg", "image/png": "png", "image/webp": "webp", "image/avif": "avif",
+  };
+  const ext = extensions[file.type];
+  if (!ext || file.size > 8 * 1024 * 1024) {
+    throw new Error("Usa una foto JPG, PNG, WebP o AVIF de hasta 8 MB");
+  }
   const path = `${folder}/${crypto.randomUUID()}.${ext}`;
   const { error } = await supabase.storage.from(MEDIA_BUCKET).upload(path, file, {
     cacheControl: "3600",

@@ -4,17 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 
 const LocalSeoSection = () => {
-  const { t, i18n } = useTranslation();
-  const isEnglish = i18n.language?.startsWith("en");
-  const copy = isEnglish
-    ? {
-        intro: "Casa Rural Eufemia is a rural house for up to 8 guests in Arenales de San Gregorio, Ciudad Real. It combines a private pool, garden, barbecue, two bathrooms and a pet-friendly stay with a convenient setting for a restful break, nature and La Mancha culture.",
-        groupsDescription: "If you are looking for a rural house with a garden and barbecue to share time together, Casa Rural Eufemia offers space to get together, relax and enjoy La Mancha as a group.",
-      }
-    : {
-        intro: "Casa Rural Eufemia es una casa rural para 8 personas en Arenales de San Gregorio, Ciudad Real. Combina piscina privada, jardín, barbacoa, dos baños y una estancia pet friendly con una ubicación cómoda para crear una escapada de descanso, naturaleza y cultura manchega.",
-        groupsDescription: "Si buscas una casa rural con jardín y barbacoa para compartir tiempo juntos, Casa Rural Eufemia ofrece espacio para reunirse, descansar y disfrutar de La Mancha en grupo.",
-      };
+  const { t } = useTranslation();
 
   const guides = [
     {
@@ -41,7 +31,7 @@ const LocalSeoSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-muted/30" aria-labelledby="local-seo-title">
+    <section id="entorno" className="py-20 bg-muted/30" aria-labelledby="local-seo-title">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">
@@ -51,7 +41,7 @@ const LocalSeoSection = () => {
             {t("localSeo.title")}
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground font-light leading-relaxed">
-            {copy.intro}
+            {t("localSeo.intro")}
           </p>
         </div>
 
@@ -99,7 +89,7 @@ const LocalSeoSection = () => {
               {t("localSeo.groups.title")}
             </h3>
             <p className="text-muted-foreground font-light leading-relaxed">
-              {copy.groupsDescription}
+              {t("localSeo.groups.description")}
             </p>
           </div>
           <Link to="/pricing" className="shrink-0">
