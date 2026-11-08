@@ -8,9 +8,12 @@ const GOOGLE_MAPS_REVIEW_URL =
 
 type GoogleReview = {
   author: string;
+  authorUri?: string | null;
+  authorPhotoUri?: string | null;
   rating: number;
   text: string;
   relativeTime?: string;
+  googleMapsUri: string;
 };
 
 type ReviewsResponse = {
@@ -37,21 +40,25 @@ const ReviewsSection = () => {
   const { t, i18n } = useTranslation();
   const copy = i18n.language?.startsWith("en")
     ? {
-        eyebrow: "Verified reviews",
+        eyebrow: "Google Maps reviews",
         ratingAria: (rating: number) => `Rating of ${rating} out of 5`,
         ratingCount: (count: number) => `${count} Google reviews`,
         fallbackTitle: "Read the reviews on Google",
-        fallbackText: "Verified reviews are displayed directly from Google Maps. While they are being updated, you can read them all on Casa Rural Eufemia's listing.",
-        googleAttribution: "Reviews and ratings provided by Google Maps.",
+        fallbackText: "You can read guests' reviews on Casa Rural Eufemia's Google Maps listing.",
+        googleAttribution: "Reviews and ratings from Google Maps.",
+        ordering: "Google Maps selects up to five reviews by relevance. Only reviews with text are shown here.",
+        reviewLink: "Read this review on Google Maps",
         viewAll: "View all reviews",
       }
     : {
-        eyebrow: "Opiniones verificadas",
+        eyebrow: "Reseñas de Google Maps",
         ratingAria: (rating: number) => `Valoración de ${rating} sobre 5`,
         ratingCount: (count: number) => `${count} reseñas en Google`,
         fallbackTitle: "Consulta las opiniones en Google",
-        fallbackText: "Las reseñas verificadas se muestran directamente desde Google Maps. Mientras se actualizan, puedes leerlas todas desde la ficha de Casa Rural Eufemia.",
-        googleAttribution: "Opiniones y valoraciones proporcionadas por Google Maps.",
+        fallbackText: "Puedes leer las reseñas de los huéspedes en la ficha de Casa Rural Eufemia en Google Maps.",
+        googleAttribution: "Reseñas y valoraciones de Google Maps.",
+        ordering: "Google Maps selecciona hasta cinco reseñas por relevancia. Aquí se muestran las que tienen texto.",
+        reviewLink: "Leer esta reseña en Google Maps",
         viewAll: "Ver todas las reseñas",
       };
   const [reviewsData, setReviewsData] = useState<ReviewsResponse | null>(null);
@@ -140,12 +147,24 @@ const ReviewsSection = () => {
                   <blockquote className="mt-5 flex-1 text-sm font-light leading-relaxed text-muted-foreground">
                     “{review.text}”
                   </blockquote>
-                  <div className="mt-6 border-t border-border pt-4">
-                    <p className="font-medium text-foreground">{review.author}</p>
-                    {review.relativeTime && (
-                      <p className="mt-1 text-xs text-muted-foreground">{review.relativeTime}</p>
+                  <div className="mt-6 flex items-center gap-3 border-t border-border pt-4">
+                    {review.authorPhotoUri && (
+                      <img src={review.authorPhotoUri} alt="" className="h-9 w-9 rounded-full object-cover" loading="lazy" referrerPolicy="no-referrer" />
                     )}
+                    <div>
+                      {review.authorUri ? (
+                        <a href={review.authorUri} target="_blank" rel="noopener noreferrer" className="font-medium text-foreground underline-offset-2 hover:underline">{review.author}</a>
+                      ) : (
+                        <p className="font-medium text-foreground">{review.author}</p>
+                      )}
+                      {review.relativeTime && (
+                        <p className="mt-1 text-xs text-muted-foreground">{review.relativeTime}</p>
+                      )}
+                    </div>
                   </div>
+                  <a href={review.googleMapsUri} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs text-primary underline-offset-2 hover:underline">
+                    {copy.reviewLink} <ExternalLink className="h-3 w-3" aria-hidden="true" />
+                  </a>
                 </CardContent>
               </Card>
             ))}
@@ -165,7 +184,8 @@ const ReviewsSection = () => {
         )}
 
         <div className="mt-9 text-center">
-          <p className="mb-4 text-sm text-muted-foreground">{copy.googleAttribution}</p>
+          {hasLiveReviews && <p className="mb-2 text-xs text-muted-foreground">{copy.ordering}</p>}
+          {hasLiveReviews && <p className="mb-4 text-sm text-muted-foreground">{copy.googleAttribution}</p>}
           <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
               href={googleMapsUrl}
