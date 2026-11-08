@@ -2,49 +2,58 @@ import { useEffect, useState } from "react";
 import type { Session, User } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
 
-export const useAdminAuth = () => {
-  const [session, setSession] = useState<Session | null>(null);
-  const [user, setUser] = useState<User | null>(null);
-  const [isAdmin, setIsAdmin] = useState(false);
-  const [loading, setLoading] = useState(true);
+type AdminAuthState = {
+  session: Session | null;
+  user: User | null;
+  isAdmin: boolean;
+  loading: boolean;
+};
+
+export const useAdminAuth = (): AdminAuthState => {
+  const [state, setState] = useState<AdminAuthState>({
+    session: null, user: null, isAdmin: false, loading: true,
+  });
 
   useEffect(() => {
     let active = true;
+    let request = 0;
+    const timers = new Set<ReturnType<typeof setTimeout>>();
 
-    const checkRole = async (userId: string | undefined) => {
-      if (!userId) {
-        if (active) setIsAdmin(false);
+    const check = async (session: Session | null) => {
+      const current = ++request;
+      if (!session) {
+        if (active) setState({ session: null, user: null, isAdmin: false, loading: false });
         return;
       }
-      const { data } = await supabase
-        .from("user_roles")
+
+      // Keep the protected screen closed until the database role is known.
+      if (active) setState({ session, user: session.user, isAdmin: false, loading: true });
+      const { data, error } = await supabase.from("user_roles")
         .select("role")
-        .eq("user_id", userId)
+        .eq("user_id", session.user.id)
         .eq("role", "admin")
         .maybeSingle();
-      if (active) setIsAdmin(!!data);
+      if (active && current === request) {
+        setState({ session, user: session.user, isAdmin: !error && !!data, loading: false });
+      }
     };
 
-    const { data: sub } = supabase.auth.onAuthStateChange((_event, nextSession) => {
-      if (!active) return;
-      setSession(nextSession);
-      setUser(nextSession?.user ?? null);
-      setTimeout(() => checkRole(nextSession?.user?.id), 0);
-    });
-
-    supabase.auth.getSession().then(async ({ data }) => {
-      if (!active) return;
-      setSession(data.session);
-      setUser(data.session?.user ?? null);
-      await checkRole(data.session?.user?.id);
-      if (active) setLoading(false);
+    // Supabase emits INITIAL_SESSION. Defer the role query outside its auth callback.
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      const timer = setTimeout(() => {
+        timers.delete(timer);
+        if (active) void check(session);
+      }, 0);
+      timers.add(timer);
     });
 
     return () => {
       active = false;
-      sub.subscription.unsubscribe();
+      request++;
+      timers.forEach(clearTimeout);
+      subscription.unsubscribe();
     };
   }, []);
 
-  return { session, user, isAdmin, loading };
+  return state;
 };
