@@ -11,12 +11,15 @@ import {
 } from "@/hooks/useBookingAvailability";
 
 const hasUnavailableDateInRange = (range: DateRange, ranges: { start: string; end: string }[]) => {
-  if (!range.from || !range.to) return false;
+  if (!range.from) return false;
+  if (isDateUnavailable(range.from, ranges)) return true;
+  if (!range.to) return false;
 
   const date = new Date(range.from);
   const end = new Date(range.to);
 
-  while (date <= end) {
+  // The departure date is not a booked night: another guest may arrive that day.
+  while (date < end) {
     if (isDateUnavailable(date, ranges)) return true;
     date.setDate(date.getDate() + 1);
   }
@@ -76,7 +79,8 @@ const AvailabilityCalendar = () => {
   today.setHours(0, 0, 0, 0);
   const canShowCalendar = Boolean(data?.configured && !isError);
   const calendarLocale = isEnglish ? enUS : es;
-  const selectedStay = Boolean(selectedRange?.from && selectedRange.to);
+  const rangeIsUnavailable = selectedRange && hasUnavailableDateInRange(selectedRange, ranges);
+  const selectedStay = Boolean(selectedRange?.from && selectedRange.to && !rangeIsUnavailable);
   const formattedDate = (date: Date) =>
     format(date, isEnglish ? "MMM d, yyyy" : "d 'de' MMMM 'de' yyyy", {
       locale: calendarLocale,
@@ -89,7 +93,7 @@ const AvailabilityCalendar = () => {
   const whatsappUrl = `https://wa.me/34638014458?text=${encodeURIComponent(whatsappMessage)}`;
 
   const handleSelect = (range: DateRange | undefined) => {
-    if (range?.from && range.to && hasUnavailableDateInRange(range, ranges)) {
+    if (range && hasUnavailableDateInRange(range, ranges)) {
       setSelectedRange(undefined);
       setSelectionError(true);
       return;
@@ -126,10 +130,9 @@ const AvailabilityCalendar = () => {
                 numberOfMonths={2}
                 fromDate={today}
                 mode="range"
-                min={2}
                 selected={selectedRange}
                 onSelect={handleSelect}
-                disabled={(date) => date < today || isDateUnavailable(date, ranges)}
+                disabled={(date) => date < today}
                 modifiers={{
                   available: (date) => date >= today && !isDateUnavailable(date, ranges),
                   booked: (date) => isDateUnavailable(date, ranges),
@@ -145,7 +148,7 @@ const AvailabilityCalendar = () => {
             </div>
 
             <div className="mx-auto mt-6 max-w-2xl text-center" aria-live="polite">
-              {selectionError ? (
+              {selectionError || rangeIsUnavailable ? (
                 <p className="rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-3 text-sm text-destructive">
                   {copy.unavailableRange}
                 </p>

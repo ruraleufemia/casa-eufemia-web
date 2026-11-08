@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { MessageCircle, Sparkles } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { usePageSeo } from "@/hooks/usePageSeo";
+import AvailabilityCalendar from "@/components/AvailabilityCalendar";
 
 const Pricing = () => {
   const { t } = useTranslation();
@@ -56,6 +57,8 @@ const Pricing = () => {
             </Card>
           </div>
         </section>
+
+        <AvailabilityCalendar />
 
         {/* Location Section */}
         <section className="pb-20 px-4">
