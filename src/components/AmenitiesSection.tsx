@@ -13,8 +13,7 @@ import {
 import { useTranslation } from "react-i18next";
 
 const AmenitiesSection = () => {
-  const { t, i18n } = useTranslation();
-  const isEnglish = i18n.language?.startsWith("en");
+  const { t } = useTranslation();
   const amenities = [
     {
       icon: Trees,
@@ -58,22 +57,18 @@ const AmenitiesSection = () => {
     },
     {
       icon: Bath,
-      title: isEnglish ? "Two bathrooms" : "Dos baños",
-      description: isEnglish
-        ? "One full indoor bathroom and an additional outdoor bathroom in the patio."
-        : "Un baño completo interior y un baño exterior adicional en el patio.",
+      title: t('amenities.bathroomsTitle'),
+      description: t('amenities.bathroomsDesc'),
     },
     {
       icon: PawPrint,
-      title: "Pet friendly",
-      description: isEnglish
-        ? "Pets are welcome by prior arrangement; an additional supplement may apply."
-        : "Se aceptan mascotas bajo consulta; puede aplicarse un suplemento adicional.",
+      title: t('amenities.petsTitle'),
+      description: t('amenities.petsDesc'),
     },
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section id="amenities" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-light tracking-tight text-foreground mb-6">

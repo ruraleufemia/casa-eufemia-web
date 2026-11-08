@@ -74,7 +74,7 @@ const AdminSeo = () => {
     const { error } = await supabase.from("site_content").upsert(rows, { onConflict: "key" });
     setSavingPage(null);
     if (error) return toast.error(error.message);
-    toast.success("SEO guardado. Se aplicará al recargar la web.");
+    toast.success("SEO guardado en la web. Comprueba el resultado antes de pedir una nueva indexación.");
   };
 
   if (loading) return <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />;
@@ -82,9 +82,10 @@ const AdminSeo = () => {
   return (
     <div className="space-y-6">
       <p className="text-sm text-muted-foreground font-light max-w-2xl">
-        Edita cómo se ve cada página en Google y al compartirla en redes sociales. Escribe textos
-        claros que incluyan lo que buscarían tus huéspedes (por ejemplo: “casa rural con piscina en
-        Ciudad Real”).
+        Edita los títulos y descripciones que muestra la web al cargar. Google puede tardar en
+        reflejar los cambios y las páginas prerenderizadas aún conservan los textos originales
+        hasta el siguiente despliegue. Para cambios SEO importantes, pide revisar también la
+        versión inicial que recibe el buscador.
       </p>
 
       <Tabs defaultValue={SEO_PAGES[0].page}>
