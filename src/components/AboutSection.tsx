@@ -6,83 +6,81 @@ const AboutSection = () => {
   const isEnglish = i18n.language?.startsWith("en");
   const copy = isEnglish
     ? {
-        subtitle: "Casa Rural Eufemia is a rural house where La Mancha tradition meets modern comfort. Located in Arenales de San Gregorio, it is the perfect setting to disconnect.",
-        architectureP1: "Casa Rural Eufemia combines traditional La Mancha architecture with modern amenities. Its adobe walls maintain a pleasant temperature throughout the year.",
-        architectureP2: "The house is distributed on a single floor of 290m², with large bright spaces including a living-dining room with fireplace, equipped kitchen, three double bedrooms, a full indoor bathroom and an additional outdoor bathroom in the patio.",
+        heading: "A home in La Mancha to enjoy together",
+        paragraphs: [
+          "At Casa Rural Eufemia, you have the whole house to yourselves: unhurried breakfasts, meals outdoors and time together in a peaceful corner of La Mancha.",
+          "The house is all on one floor, with three bedrooms, a La Mancha-style living and dining room, and an equipped kitchen. Outside, the patio, garden, barbecue and private pool invite you to enjoy each moment at your own pace.",
+          "We are in Arenales de San Gregorio, Ciudad Real, near Tomelloso and Campo de Criptana. I'm Silvia, your host, and I'll be delighted to help you plan your getaway.",
+        ],
+        signoff: "Casa Rural Eufemia. Where memories begin.",
+        photoAlt: "Silvia, host of Casa Rural Eufemia, holding her dog Maya in the patio",
+        photoCaption: "Silvia and Maya welcome you",
       }
     : {
-        subtitle: "Casa Rural Eufemia es una casa rural donde la tradición manchega se encuentra con el confort moderno. Situada en Arenales de San Gregorio, es el escenario perfecto para desconectar.",
-        architectureP1: "Casa Rural Eufemia combina la arquitectura tradicional manchega con comodidades modernas. Sus muros de adobe mantienen una temperatura agradable durante todo el año.",
-        architectureP2: "La casa se distribuye en una sola planta de 290m², con amplios espacios luminosos que incluyen un salón comedor con chimenea, cocina equipada, tres dormitorios dobles, un baño completo interior y un baño exterior en el patio.",
+        heading: "Un hogar manchego para disfrutar juntos",
+        paragraphs: [
+          "En Casa Rural Eufemia tienes la casa completa para ti y los tuyos: desayunos sin prisas, comidas al aire libre y tiempo para compartir en un entorno tranquilo de La Mancha.",
+          "La vivienda se distribuye en una sola planta, con tres dormitorios, salón comedor de estilo manchego y cocina equipada. En el exterior, el patio, el jardín, la barbacoa y la piscina privada invitan a disfrutar de cada momento a vuestro ritmo.",
+          "Estamos en Arenales de San Gregorio, Ciudad Real, cerca de Tomelloso y Campo de Criptana. Soy Silvia, tu anfitriona, y estaré encantada de ayudarte a preparar la escapada.",
+        ],
+        signoff: "Casa Eufemia. Donde nacen los recuerdos.",
+        photoAlt: "Silvia, anfitriona de Casa Rural Eufemia, con su perra Maya en el patio",
+        photoCaption: "Silvia y Maya te dan la bienvenida",
       };
+
   const features = [
-    {
-      icon: Home,
-      title: "290m²",
-      description: t('about.space'),
-    },
-    {
-      icon: Users,
-      title: t('about.capacity'),
-      description: t('about.maxCapacity'),
-    },
-    {
-      icon: Bed,
-      title: t('about.bedrooms'),
-      description: t('about.comfortableBedrooms'),
-    },
-    {
-      icon: MapPin,
-      title: t('about.location'),
-      description: t('about.inTheHeart'),
-    },
+    { icon: Home, title: "290m²", description: t("about.space") },
+    { icon: Users, title: t("about.capacity"), description: t("about.maxCapacity") },
+    { icon: Bed, title: t("about.bedrooms"), description: t("about.comfortableBedrooms") },
+    { icon: MapPin, title: t("about.location"), description: t("about.inTheHeart") },
   ];
 
   return (
     <section id="about" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-20 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-light tracking-tight text-foreground mb-6">
-            {t('about.title')}
-          </h2>
-          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed font-light">
-            {copy.subtitle}
-          </p>
+        <h2 className="text-center text-3xl sm:text-4xl lg:text-5xl font-display font-light tracking-tight text-foreground mb-12">
+          {t("about.title")}
+        </h2>
+
+        <div className="grid lg:grid-cols-2 items-center gap-10 lg:gap-16 mb-16">
+          <div className="order-last lg:order-first animate-fade-in">
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-display font-light tracking-tight text-foreground mb-7">
+              {copy.heading}
+            </h3>
+            <div className="space-y-5 text-base sm:text-lg leading-relaxed text-muted-foreground font-light">
+              {copy.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+            </div>
+            <p className="mt-7 text-lg font-display text-foreground">{copy.signoff}</p>
+          </div>
+
+          <figure className="order-first lg:order-last overflow-hidden rounded-xl bg-muted shadow-sm border border-border animate-fade-in">
+            <img
+              src="/silvia-maya-bienvenida-casa-rural-eufemia.jpg"
+              alt={copy.photoAlt}
+              width={1016}
+              height={1548}
+              loading="lazy"
+              decoding="async"
+              className="w-full h-[420px] sm:h-[540px] lg:h-[640px] object-cover object-center"
+            />
+            <figcaption className="px-5 py-3 text-sm text-muted-foreground">{copy.photoCaption}</figcaption>
+          </figure>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <div
-              key={index}
+              key={feature.title}
               className="text-center group hover:transform hover:scale-105 transition-all duration-300 animate-fade-in"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/5 text-primary mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
                 <feature.icon size={24} strokeWidth={1.5} />
               </div>
-              <h3 className="text-xl font-display font-light text-foreground mb-2">
-                {feature.title}
-              </h3>
+              <h3 className="text-xl font-display font-light text-foreground mb-2">{feature.title}</h3>
               <p className="text-sm text-muted-foreground font-light">{feature.description}</p>
             </div>
           ))}
-        </div>
-
-        <div className="bg-card rounded-xl shadow-sm border border-border p-8 sm:p-12 animate-scale-in">
-          <h3 className="text-2xl sm:text-3xl font-display font-light tracking-tight text-foreground mb-8">
-            {t('about.architectureTitle')}
-          </h3>
-          <div className="space-y-6 text-muted-foreground text-base leading-relaxed font-light">
-            <p>
-              {copy.architectureP1}
-            </p>
-            <p>
-              {copy.architectureP2}
-            </p>
-            <p>
-              {t('about.architectureP3')}
-            </p>
-          </div>
         </div>
       </div>
     </section>
