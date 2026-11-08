@@ -1,9 +1,10 @@
+const CASA_EUFEMIA_PLACE_ID = "ChIJbSYSx-1VaA0RKuoR6Iyw8fI";
 const GOOGLE_MAPS_FALLBACK_URL =
-  "https://www.google.com/maps/search/?api=1&query=Casa+Rural+Eufemia,+Calle+Juan+Jos%C3%A9+Jim%C3%A9nez+4,+13619+Arenales+de+San+Gregorio,+Ciudad+Real,+Espa%C3%B1a";
+  `https://www.google.com/maps/search/?api=1&query=Casa+Rural+Eufemia,+Calle+Juan+Jos%C3%A9+Jim%C3%A9nez+4,+13619+Arenales+de+San+Gregorio,+Ciudad+Real,+Espa%C3%B1a&query_place_id=${CASA_EUFEMIA_PLACE_ID}`;
 
 /**
  * Vercel serverless function. The Google Maps key never reaches the browser.
- * Configure GOOGLE_MAPS_API_KEY and GOOGLE_PLACE_ID in the Vercel project.
+ * Configure GOOGLE_MAPS_API_KEY in Vercel; GOOGLE_PLACE_ID may override the known ID.
  */
 export default async function handler(request, response) {
   if (request.method && request.method !== "GET") {
@@ -12,9 +13,9 @@ export default async function handler(request, response) {
   }
 
   const apiKey = process.env.GOOGLE_MAPS_API_KEY;
-  const placeId = process.env.GOOGLE_PLACE_ID;
+  const placeId = process.env.GOOGLE_PLACE_ID || CASA_EUFEMIA_PLACE_ID;
 
-  if (!apiKey || !placeId) {
+  if (!apiKey) {
     return response.status(200).json({
       configured: false,
       reviews: [],
