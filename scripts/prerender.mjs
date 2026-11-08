@@ -10,6 +10,14 @@ const serverEntryPath = path.join(projectRoot, "dist-ssr", "entry-server.js");
 const template = await readFile(templatePath, "utf8");
 const { prerenderRoutes, render } = await import(pathToFileURL(serverEntryPath).href);
 
+// Admin routes need the client app without the prerendered public homepage.
+// Keep the existing JS/CSS entry points, but remove public lodging markup.
+const adminTemplate = template
+  .replace(/<title>[\s\S]*?<\/title>/, "<title>Acceso | Casa Rural Eufemia</title>")
+  .replace(/\s*<!-- Structured Data for the lodging business and accommodation -->\s*<script type="application\/ld\+json">[\s\S]*?<\/script>/, "")
+  .replace("</head>", '    <meta name="robots" content="noindex, nofollow, noarchive" />\n  </head>');
+await writeFile(path.join(outputDirectory, "admin-shell.html"), adminTemplate, "utf8");
+
 const injectRender = ({ appHtml, head }) => {
   const withoutTemplateTitle = template.replace(/\s*<title>[\s\S]*?<\/title>/, "");
   const withRenderedHead = withoutTemplateTitle.replace("</head>", `${head}\n  </head>`);

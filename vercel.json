@@ -396,11 +396,11 @@
     },
     {
       "source": "/admin",
-      "destination": "/index"
+      "destination": "/admin-shell"
     },
     {
       "source": "/admin/:path*",
-      "destination": "/index"
+      "destination": "/admin-shell"
     },
     {
       "source": "/blog/:path*",
