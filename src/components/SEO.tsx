@@ -29,7 +29,14 @@ const SEO = ({
   const brandName = "Casa Rural Eufemia";
   const brandKeyword = "casa rural eufemia";
   const brandTitle = title.replace(/Casa Eufemia/gi, brandName);
-  const fullTitle = brandTitle.includes(brandName) ? brandTitle : `${brandTitle} | ${brandName}`;
+  // La marca solo se añade si el título sigue cabiendo en Google (unos 60
+  // caracteres). Si no, vale más el título que la firma.
+  const withBrand = `${brandTitle} | ${brandName}`;
+  const fullTitle = brandTitle.includes(brandName)
+    ? brandTitle
+    : withBrand.length <= 62
+      ? withBrand
+      : brandTitle;
   const fullDescription = description.replace(/Casa Eufemia/gi, brandName);
   const fullKeywords = keywords.toLowerCase().includes(brandKeyword)
     ? keywords
