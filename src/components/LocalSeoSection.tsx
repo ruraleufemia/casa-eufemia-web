@@ -6,13 +6,21 @@ import { Button } from "@/components/ui/button";
 const LocalSeoSection = () => {
   const { t } = useTranslation();
 
-  const guides = [
+  const guides: {
+    title: string;
+    description: string;
+    image: string;
+    imageAlt: string;
+    href: string;
+    nearbyHref?: string;
+  }[] = [
     {
       title: t("localSeo.tomelloso.title"),
       description: t("localSeo.tomelloso.description"),
       image: "/IMG_4389.JPG",
       imageAlt: t("localSeo.tomelloso.imageAlt"),
       href: "/blog/cooperativa-virgen-de-las-vinas",
+      nearbyHref: "/casa-rural-cerca-de-tomelloso",
     },
     {
       title: t("localSeo.quijote.title"),
@@ -20,6 +28,7 @@ const LocalSeoSection = () => {
       image: "/IMG_4765.JPG",
       imageAlt: t("localSeo.quijote.imageAlt"),
       href: "/blog/campo-de-criptana-molinos-de-viento",
+      nearbyHref: "/casa-rural-cerca-de-campo-de-criptana",
     },
     {
       title: t("localSeo.ruidera.title"),
@@ -70,13 +79,24 @@ const LocalSeoSection = () => {
                 <p className="text-sm text-muted-foreground font-light leading-relaxed mb-6 flex-1">
                   {guide.description}
                 </p>
-                <Link
-                  to={guide.href}
-                  className="inline-flex items-center gap-2 text-sm text-primary hover:underline underline-offset-4"
-                >
-                  {t("localSeo.readGuide")}
-                  <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
-                </Link>
+                <div className="flex flex-col gap-2">
+                  <Link
+                    to={guide.href}
+                    className="inline-flex items-center gap-2 text-sm text-primary hover:underline underline-offset-4"
+                  >
+                    {t("localSeo.readGuide")}
+                    <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
+                  </Link>
+                  {guide.nearbyHref && (
+                    <Link
+                      to={guide.nearbyHref}
+                      className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary hover:underline underline-offset-4"
+                    >
+                      {t("localSeo.stayNearby")}
+                      <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
+                    </Link>
+                  )}
+                </div>
               </div>
             </article>
           ))}

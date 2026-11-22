@@ -6,19 +6,23 @@
     "pricing": "Pricing"
   },
   "hero": {
-    "scrollDown": "Scroll down"
+    "scrollDown": "Scroll down",
+    "title": "My country house with a pool, ten minutes from Campo de Criptana",
+    "lead": "I'm Silvia. I rent out my grandmother Eufemia's house whole, in Arenales de San Gregorio: three bedrooms, up to eight guests, a courtyard, a barbecue and a pool you will not be sharing with anyone. Tomelloso is fifteen minutes away.",
+    "ctaAvailability": "See availability",
+    "ctaGallery": "See the house"
   },
   "about": {
     "title": "Welcome",
-    "welcomeHeading": "A home in La Mancha to enjoy together",
-    "welcomeP1": "At Casa Rural Eufemia, you have the whole house to yourselves: unhurried breakfasts, meals outdoors and time together in a peaceful corner of La Mancha.",
-    "welcomeP2": "The house is all on one floor, with three bedrooms, a La Mancha-style living and dining room, and an equipped kitchen. Outside, the patio, garden, barbecue and private pool invite you to enjoy each moment at your own pace.",
-    "welcomeP3": "We are in Arenales de San Gregorio, Ciudad Real, near Tomelloso and Campo de Criptana. I'm Silvia, your host, and I'll be delighted to help you plan your getaway.",
+    "welcomeHeading": "My grandmother's house, for you to enjoy",
+    "welcomeP1": "This was my grandmother Eufemia's house, and I spent every summer of my childhood here. Now I rent it out whole: for a few days it is yours, with no sharing the pool or the courtyard table with anyone.",
+    "welcomeP2": "Everything is on one floor: three bedrooms, two bathrooms, a La Mancha sitting room and a kitchen you can really cook in. Outside there is the courtyard with its stone tables, the garden, the barbecue with a wood oven, and the pool.",
+    "welcomeP3": "We are in Arenales de San Gregorio, ten minutes from Campo de Criptana and fifteen from Tomelloso. Message me on WhatsApp and I will help you settle the dates and work out what is worth seeing depending on when you come.",
     "welcomeSignoff": "Casa Rural Eufemia. Where memories begin.",
     "welcomeImage": "/silvia-maya-bienvenida-casa-rural-eufemia.jpg",
     "welcomeImageAlt": "Silvia, host of Casa Rural Eufemia, holding her dog Maya in the patio",
     "welcomeImageCaption": "Silvia and Maya welcome you",
-    "subtitle": "A rural house where La Mancha tradition meets modern comfort. Located in Arenales de San Gregorio, the perfect setting to disconnect.",
+    "subtitle": "A whole house for your group in the heart of La Mancha, with a private pool and room enough to take your time.",
     "space": "Of cozy space",
     "capacity": "Up to 8 people",
     "maxCapacity": "Maximum capacity",
@@ -155,7 +159,7 @@
     "intro": "Casa Rural Eufemia is a rural house for up to 8 guests in Arenales de San Gregorio, Ciudad Real. It combines a private pool, garden, barbecue, two bathrooms and a pet-friendly stay with a convenient setting for a restful break, nature and La Mancha culture.",
     "readGuide": "Read local guide",
     "tomelloso": {
-      "title": "A rural house near Tomelloso",
+      "title": "What to see in Tomelloso",
       "description": "Use your stay to discover the wine tradition, gastronomy and cultural plans of Tomelloso and its surroundings.",
       "imageAlt": "Entrance to the Virgen de las Viñas winery in Tomelloso"
     },
@@ -173,7 +177,8 @@
       "title": "A rural house for families and groups",
       "description": "If you are looking for a rural house with a garden and barbecue to share time together, Casa Rural Eufemia offers space to get together, relax and enjoy La Mancha as a group.",
       "cta": "Check availability"
-    }
+    },
+    "stayNearby": "Stay nearby"
   },
   "galleryPage": {
     "seoTitle": "Gallery - Photos of Casa Eufemia",
@@ -212,7 +217,7 @@
   },
   "posts": {
     "campoCriptana": {
-      "title": "Rural house near Campo de Criptana: windmills and a La Mancha getaway",
+      "title": "What to see in Campo de Criptana: windmills and sunset",
       "excerpt": "From Casa Eufemia, plan a cultural getaway to Campo de Criptana, among windmills, La Mancha landscapes and Don Quixote references.",
       "content": "## Introduction\n\nJust a few kilometers from our accommodation in Arenales de San Gregorio lies Campo de Criptana, one of those places that, even if you've seen it in photos, surprises you when you're there. Its windmills dominating the plain are part of La Mancha's history and the image we all have of Don Quixote. But beyond the postcard, what really captivates you is the feeling of the place.\n\nClimbing up to the windmills and seeing how the landscape stretches out around you is something that transmits tranquility. It's not just a tourist spot, it's an open, silent space where everything seems to slow down.\n\n## Sunset, the best moment\n\nIf there's a special time to visit Campo de Criptana, it's at dusk.\nWhen the sun begins to set, the sky fills with warm colors: oranges, pinks, violets... and the windmills are silhouetted against the horizon creating an unforgettable image. It's one of those sunsets that invite you to stand still, to watch and let time pass.\n\nYou can be chatting with someone, taking photos or just sitting, but in the end we all end up the same: watching in silence.\n\n## Walk, history and calm\n\nWalking through the Albaicín neighborhood with its white houses is very pleasant.\n\nIf you like photography, you'll find yourself looking for angles over and over again.\n\nAnd if you simply need to disconnect, here it's easy to take a deep breath and relax your mind.\n\n## Very close to our accommodation\n\nOne of the advantages of staying in Arenales de San Gregorio is precisely that tranquility and proximity to places with so much magic like this one. You can go in the afternoon, watch the sunset and return without rushing, enjoying the journey.\n\nCampo de Criptana is not just visited, it's felt.\nAnd if you come, you'll understand perfectly why its sunsets stay stored inside."
     },
@@ -227,7 +232,7 @@
       "content": "## Introduction\n\nDiscover the Lagunas de Ruidera: a natural paradise near our accommodation in Arenales de San Gregorio\nIf there's one place we always recommend to those staying at our house in Arenales de San Gregorio, it's undoubtedly the Lagunas de Ruidera. Just a few kilometers away lies one of the most beautiful and surprising natural spaces in Castilla La Mancha, perfect for disconnecting and enjoying nature in its purest form.\n\nThe most special thing about this place is how the water links between lagoons through small waterfalls and natural cascades, creating a landscape that, honestly, you don't expect to find here. You don't need to be a hiking enthusiast to enjoy it; simply walking, sitting by the water or doing an easy trail already reconnects you with everything.\n\n## A place to do whatever you feel like: relaxation or adventure\n\nThe Lagunas de Ruidera are very versatile. You can go to spend the day in a relaxed way, bring something to eat, a fresh drink and find some shade by the water.\nBut, if you're more into moving around, you have many options:\n- Hiking trails and viewpoints with impressive views\n- Kayak and paddle surf to enjoy the water in a different way\n- Swimming areas in summer, ideal for cooling off\n- Cycling on accessible and well-marked paths\n\nAnd if you go with children, it's a perfect plan: clear water, safe areas, nature and space to play without rushing.\n\n## The comfort of staying in Arenales de San Gregorio\n\nOne of the advantages of our accommodation is precisely the tranquility of the surroundings. Arenales is a small, cozy town where you can be at peace. And the best thing is that from here you can go to the Lagunas de Ruidera in a short time, without having to stay in more crowded or touristy areas.\n\nIf you're looking for nature, clean air and a beautiful place to spend a few days, the Lagunas de Ruidera are a sure hit. And from our accommodation you'll have the perfect combination: getaway, rest and adventure, all at your own pace"
     },
     "cooperativaVinas": {
-      "title": "Rural house near Tomelloso: wine, art and tradition",
+      "title": "What to see in Tomelloso: wineries, caves and La Mancha wine",
       "excerpt": "Complete your Casa Eufemia getaway with a cultural and wine visit to Tomelloso and the Virgen de las Viñas experience.",
       "content": "## Art, Tradition and Wine\n\nArt, Tradition and Wine represents the philosophy of Virgen de las Viñas, the reflection of the experience that transfers its essence to the wines we produce.\n\nEnjoy the three spaces that combine our philosophy.\n\n## The Wine Press - Ethnological Museum\n\nTradition is present in the Wine Press, the heart of the winery that has not stopped beating since its origins. An emblematic building that currently houses the Ethnological Museum. A collection of tools and utensils that help remember how the first settlers of Tomelloso worked in the vineyards.\n\n## The Centenary Caves\n\nDiscover our caves carved in a limestone slab, recently restored and open to the public to learn firsthand how they were used 100 years ago to produce and store wine.\n\n## Infanta Elena Contemporary Art Museum\n\nThe visit to the \"Infanta Elena\" Contemporary Art Museum will give you the opportunity to experience firsthand the art that breathes inside Virgen de las Viñas Winery and Oil Mill. A space that awakens the interest of art lovers with different techniques from national and international artists.\n\n---\n\n**More information and reservations:**\n\n[Book a visit](https://mrplan.io/dst/HJ-36341)\n\n![QR for reservations](/qr-virgen-vinas.png)"
     }
@@ -252,6 +257,99 @@
       "title": "Rates and Availability - Casa Eufemia",
       "description": "Check price and availability of Casa Eufemia via WhatsApp. We improve prices and conditions for direct bookings.",
       "keywords": "rural house rates, rental prices, Ciudad Real accommodation, book rural house"
+    }
+  },
+  "nearby": {
+    "readGuide": "Read the full guide",
+    "tipTitle": "Silvia's tip",
+    "checkAvailability": "Check availability",
+    "seeHouse": "See the house",
+    "faqTitle": "Frequently asked questions",
+    "campoDeCriptana": {
+      "breadcrumb": "Country house near Campo de Criptana",
+      "seoTitle": "Country house near Campo de Criptana with pool",
+      "seoDescription": "Whole house for 8 guests with a private pool, about 10 minutes from the Campo de Criptana windmills. Garden, barbecue, two bathrooms and pets by prior arrangement.",
+      "seoKeywords": "country house near Campo de Criptana, accommodation Campo de Criptana, windmills rural house, rural house private pool Ciudad Real, rural house for 8 people La Mancha",
+      "h1": "Country house near Campo de Criptana, with pool and barbecue",
+      "lead": "About 10 minutes from Don Quixote's windmills. Whole house for 8 guests with a private pool, in Arenales de San Gregorio.",
+      "intro": "We are in Arenales de San Gregorio, about a 10-minute drive from Campo de Criptana. It is a good base if you want to see the windmills and come back to a whole house, with a private pool, a barbecue and parking at the door. No shared walls, no hotel corridors: the house is yours alone.",
+      "whyTitle": "Why stay here instead of in town",
+      "bullets": [
+        "The whole house for your group: 290 m² on one floor, 3 bedrooms, 2 bathrooms and up to 8 guests.",
+        "Private pool for your group only, garden and courtyard with stone tables.",
+        "Barbecue and wood oven under a covered porch, for eating outdoors.",
+        "Free parking right at the door, so no hunting for a space after the windmills.",
+        "Village quiet, with the windmills still a short drive away.",
+        "Pets by prior arrangement, with no surcharge when you book directly with us."
+      ],
+      "whatToSeeTitle": "What to see in Campo de Criptana",
+      "whatToSee": "The windmills on the ridge and their sunset are the main draw, but the whitewashed Albaicín quarter is worth a walk, and El Toboso is very close. From the house you can also reach Tomelloso, with its wine caves and wineries, and the Lagunas de Ruidera.",
+      "tip": "Go up to the windmills at sunset and come back for dinner in the courtyard, with the barbecue lit. And if you stay 5 nights or more booking directly, we give you a La Mancha experience of your choice.",
+      "faqs": [
+        {
+          "question": "How far is the house from Campo de Criptana?",
+          "answer": "About a 10-minute drive on an easy road, and you can park near the windmills."
+        },
+        {
+          "question": "Do you rent the whole house or single rooms?",
+          "answer": "Always the whole house. It is 290 m² on one floor, with 3 bedrooms and 2 bathrooms, for one group of up to 8 guests."
+        },
+        {
+          "question": "Can I bring my dog?",
+          "answer": "Yes, by prior arrangement. If you book directly with us there is no pet surcharge; just let me know beforehand."
+        },
+        {
+          "question": "What is the minimum stay?",
+          "answer": "Two nights. In winter we take longer stays on special terms: message me on WhatsApp and we will sort it out."
+        },
+        {
+          "question": "Is the pool shared?",
+          "answer": "No. The pool is private and used only by the group staying in the house."
+        }
+      ]
+    },
+    "tomelloso": {
+      "breadcrumb": "Country house near Tomelloso",
+      "seoTitle": "Country house near Tomelloso with private pool",
+      "seoDescription": "Whole house for 8 guests with a private pool, 15-20 minutes from Tomelloso. Ideal for wine tourism: wineries, caves and La Mancha food. Pets by prior arrangement.",
+      "seoKeywords": "country house near Tomelloso, accommodation Tomelloso, wine tourism Tomelloso, rural house wineries La Mancha, rural house private pool Ciudad Real, rural house for 8 people",
+      "h1": "Country house near Tomelloso, for a wine and table escape",
+      "lead": "15-20 minutes from Tomelloso. Whole house for 8 guests, with a private pool and barbecue, in Arenales de San Gregorio.",
+      "intro": "Arenales de San Gregorio is a 15-20 minute drive from Tomelloso, so you can spend the day among wineries and caves and come back to a whole house: quiet, with a private pool and parking at the door. If you come as a group, all eight of you fit comfortably, with two bathrooms.",
+      "whyTitle": "Why it will suit you",
+      "bullets": [
+        "The whole house for one group: 290 m² on one floor, 3 bedrooms, 2 bathrooms and up to 8 guests.",
+        "Private pool, garden and a La Mancha courtyard with stone tables.",
+        "Barbecue and wood oven under the porch, where the long lunches always end up.",
+        "A properly equipped kitchen, in case you come back loaded from the winery.",
+        "Free parking at the door and a quiet village to sleep in.",
+        "Pets by prior arrangement, with no surcharge on direct bookings."
+      ],
+      "whatToSeeTitle": "What to see in Tomelloso",
+      "whatToSee": "Tomelloso is wine country: wineries you can visit, the cellars dug beneath the houses and the stone bombos out in the fields. Add the Carriage Museum and La Mancha cooking and the weekend sorts itself out. From the house you can also reach Campo de Criptana and the Lagunas de Ruidera.",
+      "tip": "Book the winery visit ahead, especially during the harvest, and keep the afternoon free for the pool. If you stay 5 nights or more booking directly, I will give you a La Mancha experience of your choice.",
+      "faqs": [
+        {
+          "question": "How far is the house from Tomelloso?",
+          "answer": "Between 15 and 20 minutes by car, on an easy road."
+        },
+        {
+          "question": "Is it a good base for wine tourism?",
+          "answer": "Yes. There are wineries in Tomelloso and the villages around it, and the house is quiet when you get back, with a pool and barbecue to round off the day."
+        },
+        {
+          "question": "How many people does it sleep?",
+          "answer": "Up to 8 guests, in 3 bedrooms and with 2 bathrooms. It is always rented whole, to a single group."
+        },
+        {
+          "question": "Is it suitable for children?",
+          "answer": "Yes. The house is all on one floor and we have a free cot. Tell me when you book and I will have it ready."
+        },
+        {
+          "question": "What does booking directly include?",
+          "answer": "Better terms than the booking portals: no pet surcharge and, from 5 nights, a La Mancha experience as a gift."
+        }
+      ]
     }
   }
 }

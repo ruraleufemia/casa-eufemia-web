@@ -14,8 +14,10 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Playfair Display', 'serif'],
-        sans: ['Inter', 'sans-serif'],
+        // Petrona: serif cálida, menos de revista y más de casa
+        display: ['Petrona', 'Georgia', 'serif'],
+        // Karla: sans de formas amables, legible en móvil
+        sans: ['Karla', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

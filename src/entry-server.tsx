@@ -4,6 +4,7 @@ import type { HelmetServerState } from "react-helmet-async";
 import { AppProviders, AppRoutes } from "./App";
 import ScrollToTop from "./components/ScrollToTop";
 import { blogPosts } from "./data/blogPosts";
+import { nearbyTowns } from "./data/nearbyTowns";
 import "./index.css";
 import "./i18n/config";
 
@@ -13,6 +14,7 @@ export const prerenderRoutes = [
   "/blog",
   "/pricing",
   ...blogPosts.map((post) => `/blog/${post.slug}`),
+  ...nearbyTowns.map((town) => `/${town.slug}`),
 ];
 
 export const render = (url: string) => {

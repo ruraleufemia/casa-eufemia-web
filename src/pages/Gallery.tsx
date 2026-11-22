@@ -5,7 +5,6 @@ import Footer from "@/components/Footer";
 import Lightbox from "@/components/Lightbox";
 import SEO from "@/components/SEO";
 import { galleryImages, type GalleryCategory } from "@/data/galleryImages";
-import { useGalleryImages } from "@/hooks/useGalleryImages";
 import { usePageSeo } from "@/hooks/usePageSeo";
 
 type GalleryFilter = "all" | GalleryCategory;
@@ -26,11 +25,10 @@ const Gallery = () => {
   const [activeFilter, setActiveFilter] = useState<GalleryFilter>("all");
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const dbImages = useGalleryImages();
   const galleryTitle = t("galleryPage.title").replace("Casa Eufemia", "Casa Rural Eufemia");
 
   const images = activeFilter === "all"
-    ? [...galleryImages, ...dbImages]
+    ? galleryImages
     : galleryImages.filter((image) => image.category === activeFilter);
 
   const openLightbox = (index: number) => {

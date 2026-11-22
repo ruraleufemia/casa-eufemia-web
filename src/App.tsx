@@ -1,4 +1,4 @@
-import { lazy, Suspense, type ReactNode } from "react";
+import { Suspense, type ReactNode } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -6,17 +6,14 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider, type HelmetServerState } from "react-helmet-async";
 import ScrollToTop from "@/components/ScrollToTop";
-import { useSiteContentOverrides } from "@/hooks/useSiteContent";
 import Index from "./pages/Index";
 import Gallery from "./pages/Gallery";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Pricing from "./pages/Pricing";
 import NotFound from "./pages/NotFound";
-
-const Admin = lazy(() => import("./pages/admin/Admin"));
-const AdminLogin = lazy(() => import("./pages/admin/AdminLogin"));
-const AdminResetPassword = lazy(() => import("./pages/admin/AdminResetPassword"));
+import NearbyTown from "./pages/NearbyTown";
+import { nearbyTowns } from "@/data/nearbyTowns";
 
 const queryClient = new QueryClient();
 
@@ -27,7 +24,6 @@ const RouteLoading = () => (
 );
 
 export const AppRoutes = () => {
-  useSiteContentOverrides();
   return (
     <Suspense fallback={<RouteLoading />}>
       <Routes>
@@ -36,9 +32,9 @@ export const AppRoutes = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogPost />} />
         <Route path="/pricing" element={<Pricing />} />
-        <Route path="/admin" element={<Admin />} />
-        <Route path="/admin/login" element={<AdminLogin />} />
-        <Route path="/admin/reset-password" element={<AdminResetPassword />} />
+        {nearbyTowns.map((town) => (
+          <Route key={town.slug} path={`/${town.slug}`} element={<NearbyTown town={town} />} />
+        ))}
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

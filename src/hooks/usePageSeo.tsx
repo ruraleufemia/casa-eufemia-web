@@ -9,9 +9,9 @@ type SeoDefaults = Record<SeoPage, SeoValues>;
 const SEO_DEFAULTS: Record<"es" | "en", SeoDefaults> = {
   es: {
     home: {
-      title: "Casa Rural Eufemia | Arenales de San Gregorio",
-      description: "Casa Rural Eufemia en Arenales de San Gregorio, Ciudad Real: hasta 8 personas, piscina privada, jardín, barbacoa, dos baños y mascotas bajo consulta.",
-      keywords: "casa rural eufemia, casa rural en Ciudad Real, casa rural en Arenales de San Gregorio, casa rural cerca de Tomelloso, casa rural para 8 personas, casa rural con piscina privada en Ciudad Real, casa rural pet friendly, casa rural con dos baños, casa rural con baño exterior, alojamiento rural en La Mancha, casa rural en La Mancha, casa rural para familias, casa rural para grupos, casa rural con jardín y barbacoa",
+      title: "Casa rural con piscina cerca de Campo de Criptana y Tomelloso",
+      description: "Casa rural entera para 8 personas con piscina privada en Arenales de San Gregorio, a 10 minutos de Campo de Criptana y 15-20 de Tomelloso. Jardín, barbacoa y mascotas bajo consulta.",
+      keywords: "casa rural eufemia, casa rural cerca de Campo de Criptana, casa rural cerca de Tomelloso, casa rural en Ciudad Real, casa rural en Arenales de San Gregorio, casa rural para 8 personas, casa rural con piscina privada en Ciudad Real, casa rural pet friendly, casa rural con dos baños, casa rural con baño exterior, alojamiento rural en La Mancha, casa rural en La Mancha, casa rural para familias, casa rural para grupos, casa rural con jardín y barbacoa",
     },
     gallery: {
       title: "Galería Casa Rural Eufemia | Arenales de San Gregorio",
@@ -31,9 +31,9 @@ const SEO_DEFAULTS: Record<"es" | "en", SeoDefaults> = {
   },
   en: {
     home: {
-      title: "Casa Rural Eufemia | Arenales de San Gregorio",
-      description: "Casa Rural Eufemia in Arenales de San Gregorio, Ciudad Real: up to 8 guests, private pool, garden, barbecue, two bathrooms and pets by prior arrangement.",
-      keywords: "Casa Rural Eufemia, rural house Ciudad Real, rural house Arenales de San Gregorio, rural house near Tomelloso, rural house for 8 people, private pool rural house Ciudad Real, pet friendly rural house, rural house two bathrooms",
+      title: "Country house with pool near Campo de Criptana and Tomelloso",
+      description: "Whole country house for 8 guests with a private pool in Arenales de San Gregorio, 10 minutes from Campo de Criptana and 15-20 from Tomelloso. Garden, barbecue and pets by prior arrangement.",
+      keywords: "Casa Rural Eufemia, country house near Campo de Criptana, country house near Tomelloso, rural house Ciudad Real, rural house Arenales de San Gregorio, rural house for 8 people, private pool rural house Ciudad Real, pet friendly rural house, rural house two bathrooms",
     },
     gallery: {
       title: "Casa Rural Eufemia gallery | Arenales de San Gregorio",
@@ -104,14 +104,6 @@ const getLanguage = (language?: string) => (language?.startsWith("en") ? "en" : 
 
 export const getSeoDefault = (language: string | undefined, page: SeoPage, field: SeoField) =>
   SEO_DEFAULTS[getLanguage(language)][page][field];
-
-/** SEO page keys editable from the admin panel (site_content overrides i18n). */
-export const SEO_PAGES: { page: SeoPage; label: string; path: string }[] = [
-  { page: "home", label: "Inicio", path: "/" },
-  { page: "gallery", label: "Galería", path: "/gallery" },
-  { page: "blog", label: "Blog / Experiencias", path: "/blog" },
-  { page: "pricing", label: "Precios", path: "/pricing" },
-];
 
 export const usePageSeo = (page: SeoPage) => {
   const { t, i18n } = useTranslation();

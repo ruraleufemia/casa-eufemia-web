@@ -1,20 +1,9 @@
-import { useEffect, useState } from "react";
 import { Home, Users, Bed, MapPin } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { resolveMediaUrl } from "@/lib/media";
 
 const AboutSection = () => {
   const { t } = useTranslation();
-  const imagePath = t("about.welcomeImage");
-  const [imageUrl, setImageUrl] = useState(imagePath);
-
-  useEffect(() => {
-    let active = true;
-    resolveMediaUrl(imagePath).then((url) => {
-      if (active) setImageUrl(url);
-    });
-    return () => { active = false; };
-  }, [imagePath]);
+  const imageUrl = t("about.welcomeImage");
 
   const features = [
     { icon: Home, title: "290m²", description: t("about.space") },
