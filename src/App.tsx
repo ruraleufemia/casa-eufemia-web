@@ -13,6 +13,7 @@ import BlogPost from "./pages/BlogPost";
 import Pricing from "./pages/Pricing";
 import NotFound from "./pages/NotFound";
 import NearbyTown from "./pages/NearbyTown";
+import PoolAndBarbecue, { POOL_BBQ_SLUG } from "./pages/PoolAndBarbecue";
 import { nearbyTowns } from "@/data/nearbyTowns";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ export const AppRoutes = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogPost />} />
         <Route path="/pricing" element={<Pricing />} />
+        <Route path={`/${POOL_BBQ_SLUG}`} element={<PoolAndBarbecue />} />
         {nearbyTowns.map((town) => (
           <Route key={town.slug} path={`/${town.slug}`} element={<NearbyTown town={town} />} />
         ))}

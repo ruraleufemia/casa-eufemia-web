@@ -57,7 +57,8 @@
     "bathroomsTitle": "Dos baños",
     "bathroomsDesc": "Un baño completo interior y un baño exterior adicional en el patio.",
     "petsTitle": "Pet friendly",
-    "petsDesc": "Se aceptan mascotas bajo consulta; puede aplicarse un suplemento adicional."
+    "petsDesc": "Se aceptan mascotas bajo consulta; puede aplicarse un suplemento adicional.",
+    "poolBbqLink": "Ver la piscina, la barbacoa y el horno de leña"
   },
   "gallery": {
     "title": "Galería",
@@ -351,5 +352,49 @@
         }
       ]
     }
+  },
+  "poolBbq": {
+    "breadcrumb": "Casa rural con piscina y barbacoa",
+    "seoTitle": "Casa rural con piscina y barbacoa en Ciudad Real",
+    "seoDescription": "Casa entera con piscina privada, barbacoa y horno de leña en un porche cubierto. Hasta 8 personas, en La Mancha. Patio, jardín y cocina equipada.",
+    "seoKeywords": "casa rural con piscina y barbacoa, casa rural con barbacoa Ciudad Real, casa rural con piscina privada La Mancha, casa rural con horno de leña, casa rural para 8 personas con piscina",
+    "h1": "Casa rural con piscina privada y barbacoa, para comer fuera todo el día",
+    "lead": "La piscina es solo para tu grupo y la barbacoa está bajo porche, así que se puede usar llueva o pegue el sol. En Arenales de San Gregorio, en el corazón de La Mancha.",
+    "intro": "Te cuento cómo es esto por fuera, que es donde al final se pasa el día. La casa tiene patio manchego con mesas de piedra, jardín, un porche cubierto con barbacoa y horno de leña, y la piscina, que no comparte nadie más que tu grupo. Mucha gente nos reserva justo por esto: por poder comer fuera sin recoger a mediodía.",
+    "poolTitle": "La piscina",
+    "pool": "Es privada y de uso exclusivo de quien tiene la casa. Está en el jardín, a la vista desde el porche, así que puedes estar con los niños en el agua sin levantarte de la mesa. Está operativa en temporada de baño; si vienes en invierno, dímelo y te cuento cómo lo tenemos.",
+    "bbqTitle": "La barbacoa y el horno de leña",
+    "bbq": "La barbacoa está bajo el porche, no a la intemperie, y al lado tiene el horno de leña. Eso cambia mucho las cosas: se puede encender con viento o con lluvia, y la mesa está al lado, cubierta. Hay leña, utensilios y sitio de sobra para preparar. Si queréis venir a hacer una comida larga, este es el sitio.",
+    "bullets": [
+      "Piscina privada, sin compartir con otros huéspedes.",
+      "Barbacoa y horno de leña bajo porche cubierto.",
+      "Patio manchego con mesas de piedra y jardín alrededor.",
+      "Cocina equipada dentro, para lo que no se haga a la brasa.",
+      "Casa entera para un solo grupo, hasta 8 personas, todo en una planta.",
+      "Aparcamiento gratis en la puerta y pueblo tranquilo."
+    ],
+    "tip": "Si venís a hacer barbacoa, traed la carne de Tomelloso o de Campo de Criptana, que está a diez minutos, y dejad la tarde libre para la piscina. Yo dejo la leña preparada; avisadme al reservar.",
+    "faqs": [
+      {
+        "question": "¿La piscina es privada o se comparte?",
+        "answer": "Privada y de uso exclusivo. Se alquila la casa entera a un solo grupo, así que la piscina es solo vuestra."
+      },
+      {
+        "question": "¿Se puede usar la barbacoa si llueve?",
+        "answer": "Sí. Está bajo un porche cubierto, junto al horno de leña, y la mesa de comer también está a cubierto."
+      },
+      {
+        "question": "¿Hay horno de leña además de la barbacoa?",
+        "answer": "Sí, los dos están en el porche. Si no lo has usado nunca, te explico cómo va al llegar."
+      },
+      {
+        "question": "¿Hasta cuántas personas caben?",
+        "answer": "Hasta 8, en tres dormitorios y con dos baños. La casa está toda en una sola planta."
+      },
+      {
+        "question": "¿La piscina está abierta todo el año?",
+        "answer": "Está operativa en temporada de baño. Fuera de temporada escríbeme por WhatsApp y te digo cómo está en esas fechas."
+      }
+    ]
   }
 }

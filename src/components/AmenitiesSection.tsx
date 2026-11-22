@@ -11,6 +11,7 @@ import {
   PawPrint,
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const AmenitiesSection = () => {
   const { t } = useTranslation();
@@ -102,6 +103,15 @@ const AmenitiesSection = () => {
             </div>
           ))}
         </div>
+
+        <p className="mt-12 text-center text-sm font-light text-muted-foreground">
+          <Link
+            to="/casa-rural-con-piscina-y-barbacoa"
+            className="text-primary underline-offset-4 hover:underline"
+          >
+            {t("amenities.poolBbqLink")}
+          </Link>
+        </p>
       </div>
     </section>
   );

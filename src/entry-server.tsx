@@ -5,6 +5,7 @@ import { AppProviders, AppRoutes } from "./App";
 import ScrollToTop from "./components/ScrollToTop";
 import { blogPosts } from "./data/blogPosts";
 import { nearbyTowns } from "./data/nearbyTowns";
+import { POOL_BBQ_SLUG } from "./pages/PoolAndBarbecue";
 import "./index.css";
 import "./i18n/config";
 
@@ -15,6 +16,7 @@ export const prerenderRoutes = [
   "/pricing",
   ...blogPosts.map((post) => `/blog/${post.slug}`),
   ...nearbyTowns.map((town) => `/${town.slug}`),
+  `/${POOL_BBQ_SLUG}`,
 ];
 
 export const render = (url: string) => {

@@ -57,7 +57,8 @@
     "bathroomsTitle": "Two bathrooms",
     "bathroomsDesc": "One full indoor bathroom and an additional outdoor bathroom in the patio.",
     "petsTitle": "Pet friendly",
-    "petsDesc": "Pets are welcome by prior arrangement; an additional supplement may apply."
+    "petsDesc": "Pets are welcome by prior arrangement; an additional supplement may apply.",
+    "poolBbqLink": "See the pool, the barbecue and the wood oven"
   },
   "gallery": {
     "title": "Gallery",
@@ -351,5 +352,49 @@
         }
       ]
     }
+  },
+  "poolBbq": {
+    "breadcrumb": "Country house with pool and barbecue",
+    "seoTitle": "Country house with pool and barbecue in Ciudad Real",
+    "seoDescription": "Whole house with a private pool, barbecue and wood oven under a covered porch. Up to 8 guests, in La Mancha. Courtyard, garden and equipped kitchen.",
+    "seoKeywords": "country house with pool and barbecue, rural house barbecue Ciudad Real, private pool rural house La Mancha, house with wood oven, house for 8 guests with pool",
+    "h1": "Country house with a private pool and barbecue, for eating outdoors all day",
+    "lead": "The pool is for your group alone and the barbecue sits under a covered porch, so it works whether it rains or the sun beats down. In Arenales de San Gregorio, in the heart of La Mancha.",
+    "intro": "Let me tell you about the outside, which is where the day actually happens. The house has a La Mancha courtyard with stone tables, a garden, a covered porch with a barbecue and a wood oven, and the pool, shared with nobody but your group. Plenty of people book us for exactly this: being able to eat outside without clearing up at midday.",
+    "poolTitle": "The pool",
+    "pool": "It is private and used only by whoever has the house. It sits in the garden, in view from the porch, so you can have the children in the water without leaving the table. It is open during swimming season; if you are coming in winter, ask me and I will tell you how we keep it.",
+    "bbqTitle": "The barbecue and the wood oven",
+    "bbq": "The barbecue is under the porch rather than out in the open, with the wood oven beside it. That changes things: you can light it in wind or rain, and the dining table is right there, under cover. There is firewood, tools and plenty of room to prepare. If you are coming for a long lunch, this is the place.",
+    "bullets": [
+      "Private pool, not shared with other guests.",
+      "Barbecue and wood oven under a covered porch.",
+      "La Mancha courtyard with stone tables, garden all around.",
+      "Equipped kitchen indoors for whatever does not go on the coals.",
+      "The whole house for one group, up to 8 guests, all on one floor.",
+      "Free parking at the door and a quiet village."
+    ],
+    "tip": "If you are coming for a barbecue, buy the meat in Tomelloso or Campo de Criptana, ten minutes away, and keep the afternoon for the pool. I leave the firewood ready; just tell me when you book.",
+    "faqs": [
+      {
+        "question": "Is the pool private or shared?",
+        "answer": "Private and for your use only. The house is rented whole to a single group, so the pool is yours alone."
+      },
+      {
+        "question": "Can the barbecue be used if it rains?",
+        "answer": "Yes. It is under a covered porch, next to the wood oven, and the dining table is under cover too."
+      },
+      {
+        "question": "Is there a wood oven as well as the barbecue?",
+        "answer": "Yes, both are on the porch. If you have never used one, I will show you how when you arrive."
+      },
+      {
+        "question": "How many people does it sleep?",
+        "answer": "Up to 8, in three bedrooms and with two bathrooms. The house is all on one floor."
+      },
+      {
+        "question": "Is the pool open all year?",
+        "answer": "It is open during swimming season. Outside that, message me on WhatsApp and I will tell you how it stands for your dates."
+      }
+    ]
   }
 }
