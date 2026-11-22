@@ -52,7 +52,9 @@ const Navbar = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
-  const isWhiteBackgroundPage = location.pathname !== "/";
+  // Desde que la portada lleva la foto al lado del texto, todas las páginas
+  // tienen fondo claro: la barra va siempre en sólido, nunca en blanco sobre foto.
+  const isWhiteBackgroundPage = true;
   const shouldShowSolidBackground = isMobileMenuOpen || isScrolled || isWhiteBackgroundPage;
 
   return (

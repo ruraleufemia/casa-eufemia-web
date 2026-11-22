@@ -1,82 +1,51 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import heroImage from "@/assets/hero-house.jpg";
 
-interface HeroProps {
-  videoUrl?: string;
-  useVideo?: boolean;
-  isYouTube?: boolean;
-}
+const FOTO = "/silvia-maya-bienvenida-casa-rural-eufemia.jpg";
 
-/** Degradado en añil, para que el texto se lea sin apagar la foto. */
-const VELO =
-  "linear-gradient(to top, rgba(22,36,79,0.84) 0%, rgba(22,36,79,0.46) 38%, rgba(22,36,79,0.06) 72%, rgba(22,36,79,0.22) 100%)";
-
-const Hero = ({ videoUrl, useVideo = false, isYouTube = false }: HeroProps) => {
+/**
+ * Portada: Silvia y Maya al lado del texto.
+ * La foto es vertical, así que va completa en su columna en lugar de
+ * recortada de fondo. En móvil se apila: primero la foto, luego el texto.
+ */
+const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="relative h-screen min-h-[600px] overflow-hidden">
-      {/* Foto o vídeo de fondo */}
-      <div className="absolute inset-0 bg-black">
-        {useVideo && videoUrl ? (
-          isYouTube ? (
-            <iframe
-              src={videoUrl}
-              title="Vídeo de Casa Rural Eufemia"
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] border-0"
-              allow="autoplay; encrypted-media; picture-in-picture"
-              referrerPolicy="strict-origin-when-cross-origin"
-              tabIndex={-1}
-            />
-          ) : (
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover"
-              poster={heroImage}
-            >
-              <source src={videoUrl} type="video/mp4" />
-              <img
-                src={heroImage}
-                alt="Casa Rural Eufemia en Arenales de San Gregorio"
-                className="w-full h-full object-cover"
-              />
-            </video>
-          )
-        ) : (
+    <section className="bg-muted/40 pt-20 md:pt-24">
+      <div className="mx-auto grid max-w-7xl items-center gap-8 px-5 py-10 sm:px-6 sm:gap-12 sm:py-14 lg:grid-cols-2 lg:gap-16 lg:px-12 lg:py-20">
+        <div className="relative order-first lg:order-last">
           <img
-            src={heroImage}
-            alt="Casa Rural Eufemia en Arenales de San Gregorio"
-            className="w-full h-full object-cover"
+            src={FOTO}
+            alt={t("hero.imageAlt")}
+            width={1016}
+            height={1548}
+            className="mx-auto w-full max-w-md rounded-xl object-cover shadow-sm lg:max-w-none"
             loading="eager"
             decoding="async"
           />
-        )}
-        <div className="absolute inset-0" style={{ backgroundImage: VELO }} />
-      </div>
+          <p className="mt-3 text-center text-sm font-light text-muted-foreground lg:text-left">
+            {t("hero.imageCaption")}
+          </p>
+        </div>
 
-      {/* Texto sobre la foto */}
-      <div className="relative z-10 flex h-full flex-col justify-end">
-        <div className="mx-auto w-full max-w-7xl px-5 pb-16 pt-28 sm:px-6 sm:pb-20 lg:px-12 lg:pb-24">
-          <h1 className="max-w-[20ch] font-display text-[2rem] font-light leading-[1.12] tracking-tight text-white sm:text-5xl sm:leading-[1.08] lg:text-[3.4rem]">
+        <div>
+          <h1 className="font-display text-[1.9rem] font-light leading-[1.14] tracking-tight text-foreground sm:text-4xl lg:text-5xl lg:leading-[1.1]">
             {t("hero.title")}
           </h1>
-          <p className="mt-5 max-w-[52ch] text-base font-light leading-relaxed text-white/85 sm:mt-6 sm:text-lg">
+          <p className="mt-5 max-w-[52ch] text-base font-light leading-relaxed text-muted-foreground sm:mt-6 sm:text-lg">
             {t("hero.lead")}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
             <Link
               to="/pricing"
-              className="inline-flex items-center justify-center rounded-md bg-background px-7 py-3.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+              className="inline-flex items-center justify-center rounded-md bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
             >
               {t("hero.ctaAvailability")}
             </Link>
             <Link
               to="/gallery"
-              className="inline-flex items-center justify-center rounded-md border border-white/55 px-7 py-3.5 text-sm font-light text-white transition-colors hover:border-white hover:bg-white/10"
+              className="inline-flex items-center justify-center rounded-md border border-border px-7 py-3.5 text-sm font-light text-foreground transition-colors hover:bg-background"
             >
               {t("hero.ctaGallery")}
             </Link>

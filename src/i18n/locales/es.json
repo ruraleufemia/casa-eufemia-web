@@ -10,7 +10,9 @@
     "title": "Mi casa rural con piscina, a diez minutos de Campo de Criptana",
     "lead": "Soy Silvia. Alquilo entera la casa de mi abuela Eufemia, en Arenales de San Gregorio: tres dormitorios, hasta ocho personas, patio, barbacoa y una piscina que no vais a compartir con nadie. Tomelloso queda a un cuarto de hora.",
     "ctaAvailability": "Ver disponibilidad",
-    "ctaGallery": "Ver la casa"
+    "ctaGallery": "Ver la casa",
+    "imageAlt": "Silvia, anfitriona de Casa Rural Eufemia, con su perra Maya en el patio",
+    "imageCaption": "Silvia y Maya te dan la bienvenida"
   },
   "about": {
     "title": "Te doy la bienvenida",
@@ -19,9 +21,9 @@
     "welcomeP2": "Está todo en una sola planta: tres dormitorios, dos baños, salón manchego y una cocina en la que de verdad se puede cocinar. Fuera tenéis el patio con sus mesas de piedra, el jardín, la barbacoa con horno de leña y la piscina.",
     "welcomeP3": "Estamos en Arenales de San Gregorio, a diez minutos de Campo de Criptana y a un cuarto de hora de Tomelloso. Escríbeme por WhatsApp y te ayudo a cuadrar las fechas y a decidir qué merece la pena según cuándo vengáis.",
     "welcomeSignoff": "Casa Eufemia. Donde nacen los recuerdos.",
-    "welcomeImage": "/silvia-maya-bienvenida-casa-rural-eufemia.jpg",
-    "welcomeImageAlt": "Silvia, anfitriona de Casa Rural Eufemia, con su perra Maya en el patio",
-    "welcomeImageCaption": "Silvia y Maya te dan la bienvenida",
+    "welcomeImage": "/5.%20Picoteo.jpg",
+    "welcomeImageAlt": "Patio de Casa Rural Eufemia con la mesa preparada junto a la piscina",
+    "welcomeImageCaption": "El patio, donde se acaba pasando el día",
     "subtitle": "Una casa entera para los tuyos en el corazón de La Mancha, con piscina privada y sitio de sobra para no tener prisa.",
     "space": "De espacio acogedor",
     "capacity": "Hasta 8 personas",
@@ -396,5 +398,10 @@
         "answer": "Está operativa en temporada de baño. Fuera de temporada escríbeme por WhatsApp y te digo cómo está en esas fechas."
       }
     ]
+  },
+  "video": {
+    "title": "Un paseo por la casa",
+    "lead": "Poco más de un minuto para ver la casa, el patio y la piscina antes de decidir.",
+    "play": "Ver el vídeo"
   }
 }

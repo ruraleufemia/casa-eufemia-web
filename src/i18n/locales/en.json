@@ -10,7 +10,9 @@
     "title": "My country house with a pool, ten minutes from Campo de Criptana",
     "lead": "I'm Silvia. I rent out my grandmother Eufemia's house whole, in Arenales de San Gregorio: three bedrooms, up to eight guests, a courtyard, a barbecue and a pool you will not be sharing with anyone. Tomelloso is fifteen minutes away.",
     "ctaAvailability": "See availability",
-    "ctaGallery": "See the house"
+    "ctaGallery": "See the house",
+    "imageAlt": "Silvia, your host at Casa Rural Eufemia, with her dog Maya in the courtyard",
+    "imageCaption": "Silvia and Maya welcome you"
   },
   "about": {
     "title": "Welcome",
@@ -19,9 +21,9 @@
     "welcomeP2": "Everything is on one floor: three bedrooms, two bathrooms, a La Mancha sitting room and a kitchen you can really cook in. Outside there is the courtyard with its stone tables, the garden, the barbecue with a wood oven, and the pool.",
     "welcomeP3": "We are in Arenales de San Gregorio, ten minutes from Campo de Criptana and fifteen from Tomelloso. Message me on WhatsApp and I will help you settle the dates and work out what is worth seeing depending on when you come.",
     "welcomeSignoff": "Casa Rural Eufemia. Where memories begin.",
-    "welcomeImage": "/silvia-maya-bienvenida-casa-rural-eufemia.jpg",
-    "welcomeImageAlt": "Silvia, host of Casa Rural Eufemia, holding her dog Maya in the patio",
-    "welcomeImageCaption": "Silvia and Maya welcome you",
+    "welcomeImage": "/5.%20Picoteo.jpg",
+    "welcomeImageAlt": "Courtyard at Casa Rural Eufemia with the table set beside the pool",
+    "welcomeImageCaption": "The courtyard, where the day ends up happening",
     "subtitle": "A whole house for your group in the heart of La Mancha, with a private pool and room enough to take your time.",
     "space": "Of cozy space",
     "capacity": "Up to 8 people",
@@ -396,5 +398,10 @@
         "answer": "It is open during swimming season. Outside that, message me on WhatsApp and I will tell you how it stands for your dates."
       }
     ]
+  },
+  "video": {
+    "title": "A walk through the house",
+    "lead": "Just over a minute to see the house, the courtyard and the pool before you decide.",
+    "play": "Play the video"
   }
 }
