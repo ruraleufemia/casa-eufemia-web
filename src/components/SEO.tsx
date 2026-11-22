@@ -90,8 +90,8 @@ const SEO = ({
       {/* Geo Tags */}
       <meta name="geo.region" content="ES-CM" />
       <meta name="geo.placename" content="Arenales de San Gregorio, Ciudad Real" />
-      <meta name="geo.position" content="39.3598;-3.7321" />
-      <meta name="ICBM" content="39.3598, -3.7321" />
+      <meta name="geo.position" content="39.3097;-3.0270" />
+      <meta name="ICBM" content="39.3097, -3.0270" />
 
       {/* Additional SEO */}
       <meta name="robots" content={robots} />
