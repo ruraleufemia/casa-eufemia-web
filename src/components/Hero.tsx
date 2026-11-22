@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-const FOTO = "/silvia-maya-bienvenida-casa-rural-eufemia.jpg";
+const FOTO = "/silvia-maya-bienvenida-casa-rural-eufemia.webp";
 
 /**
  * Portada: Silvia y Maya al lado del texto.
@@ -18,11 +18,12 @@ const Hero = () => {
           <img
             src={FOTO}
             alt={t("hero.imageAlt")}
-            width={1016}
-            height={1548}
+            width={1000}
+            height={1524}
             className="mx-auto w-full max-w-md rounded-xl object-cover shadow-sm lg:max-w-none"
             loading="eager"
             decoding="async"
+            fetchpriority="high"
           />
           <p className="mt-3 text-center text-sm font-light text-muted-foreground lg:text-left">
             {t("hero.imageCaption")}

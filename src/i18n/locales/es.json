@@ -21,7 +21,7 @@
     "welcomeP2": "Está todo en una sola planta: tres dormitorios, dos baños, salón manchego y una cocina en la que de verdad se puede cocinar. Fuera tenéis el patio con sus mesas de piedra, el jardín, la barbacoa con horno de leña y la piscina.",
     "welcomeP3": "Estamos en Arenales de San Gregorio, a diez minutos de Campo de Criptana y a un cuarto de hora de Tomelloso. Escríbeme por WhatsApp y te ayudo a cuadrar las fechas y a decidir qué merece la pena según cuándo vengáis.",
     "welcomeSignoff": "Casa Eufemia. Donde nacen los recuerdos.",
-    "welcomeImage": "/5.%20Picoteo.jpg",
+    "welcomeImage": "/patio-piscina-casa-rural-eufemia.webp",
     "welcomeImageAlt": "Patio de Casa Rural Eufemia con la mesa preparada junto a la piscina",
     "welcomeImageCaption": "El patio, donde se acaba pasando el día",
     "subtitle": "Una casa entera para los tuyos en el corazón de La Mancha, con piscina privada y sitio de sobra para no tener prisa.",
@@ -128,7 +128,8 @@
     "contact": "Contacto",
     "followUs": "Síguenos",
     "reviewUs": "Valóranos",
-    "rights": "Todos los derechos reservados."
+    "rights": "Todos los derechos reservados.",
+    "theHouse": "La casa"
   },
   "pricing": {
     "title": "Tarifas y Precios",

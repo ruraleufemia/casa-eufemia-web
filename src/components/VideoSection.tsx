@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Play } from "lucide-react";
 
-const POSTER = "/1.%20Fachada.jpg";
+const POSTER = "/fachada-casa-rural-eufemia.webp";
 const VIDEO_ID = "iUC5-n8IP-Q";
 
 /**

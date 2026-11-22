@@ -21,7 +21,7 @@
     "welcomeP2": "Everything is on one floor: three bedrooms, two bathrooms, a La Mancha sitting room and a kitchen you can really cook in. Outside there is the courtyard with its stone tables, the garden, the barbecue with a wood oven, and the pool.",
     "welcomeP3": "We are in Arenales de San Gregorio, ten minutes from Campo de Criptana and fifteen from Tomelloso. Message me on WhatsApp and I will help you settle the dates and work out what is worth seeing depending on when you come.",
     "welcomeSignoff": "Casa Rural Eufemia. Where memories begin.",
-    "welcomeImage": "/5.%20Picoteo.jpg",
+    "welcomeImage": "/patio-piscina-casa-rural-eufemia.webp",
     "welcomeImageAlt": "Courtyard at Casa Rural Eufemia with the table set beside the pool",
     "welcomeImageCaption": "The courtyard, where the day ends up happening",
     "subtitle": "A whole house for your group in the heart of La Mancha, with a private pool and room enough to take your time.",
@@ -128,7 +128,8 @@
     "contact": "Contact",
     "followUs": "Follow Us",
     "reviewUs": "Rate us",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "theHouse": "The house"
   },
   "pricing": {
     "title": "Rates and Pricing",

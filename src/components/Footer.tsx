@@ -45,6 +45,14 @@ const Footer = () => {
     { to: "/pricing", label: t("nav.pricing"), icon: CalendarCheck2 },
   ];
 
+  // Enlaces a las páginas de búsqueda, en todas las páginas del sitio:
+  // es lo que hace que Google las rastree y las indexe.
+  const landingLinks = [
+    { to: "/casa-rural-con-piscina-y-barbacoa", label: t("poolBbq.breadcrumb") },
+    { to: "/casa-rural-cerca-de-campo-de-criptana", label: t("nearby.campoDeCriptana.breadcrumb") },
+    { to: "/casa-rural-cerca-de-tomelloso", label: t("nearby.tomelloso.breadcrumb") },
+  ];
+
   return (
     <footer className="overflow-hidden bg-foreground text-background">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
@@ -97,6 +105,25 @@ const Footer = () => {
                       {Icon && <Icon className="h-4 w-4 text-primary" />}
                       <span>{label}</span>
                       <ArrowUpRight className="h-3.5 w-3.5 opacity-0 transition-opacity group-hover:opacity-100" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            <h3 className="mb-5 mt-10 text-sm font-medium uppercase tracking-[0.16em] text-background/70">
+              {t("footer.theHouse")}
+            </h3>
+            <nav aria-label={t("footer.theHouse")}>
+              <ul className="space-y-3">
+                {landingLinks.map(({ to, label }) => (
+                  <li key={to}>
+                    <Link
+                      to={to}
+                      className="group inline-flex items-start gap-2 text-sm text-background/75 transition-colors hover:text-background"
+                    >
+                      <span>{label}</span>
+                      <ArrowUpRight className="mt-1 h-3.5 w-3.5 shrink-0 opacity-0 transition-opacity group-hover:opacity-100" />
                     </Link>
                   </li>
                 ))}
