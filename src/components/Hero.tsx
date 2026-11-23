@@ -19,7 +19,7 @@ const Hero = () => {
             src={FOTO}
             alt={t("hero.imageAlt")}
             width={1000}
-            height={1524}
+            height={1235}
             className="mx-auto w-full max-w-md rounded-xl object-cover shadow-sm lg:max-w-none"
             loading="eager"
             decoding="async"
