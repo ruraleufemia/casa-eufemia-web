@@ -188,16 +188,13 @@
     "seoTitle": "Gallery - Photos of Casa Eufemia",
     "seoDescription": "Explore the gallery of Casa Eufemia. See photos of our bedrooms, pool, gardens and all the facilities of our rural house in Ciudad Real.",
     "title": "Casa Eufemia gallery",
-    "subtitle": "Photos of the rural house, private pool, garden and experiences in La Mancha.",
+    "subtitle": "The house inside, the courtyard with the pool and barbecue, and what lies around in La Mancha.",
     "filterLabel": "Filter gallery photographs",
     "filters": {
       "all": "All",
-      "exterior": "Outdoor areas",
-      "pool": "Pool",
-      "interior": "Indoors",
-      "rooms": "Bedrooms",
-      "experiences": "Surroundings",
-      "details": "Details"
+      "casa": "The house",
+      "patio": "Courtyard and pool",
+      "alrededores": "Around us"
     },
     "photoCount": "{{count}} photographs",
     "openImage": "Open image: {{description}}",

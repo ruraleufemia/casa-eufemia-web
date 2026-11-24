@@ -63,7 +63,7 @@ const PoolAndBarbecue = () => {
         description={copy.seoDescription}
         keywords={copy.seoKeywords}
         url={url}
-        image="/patio-piscina-casa-rural-eufemia.webp"
+        image="/cena-noche-piscina-casa-rural-eufemia.webp"
       />
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
@@ -75,10 +75,10 @@ const PoolAndBarbecue = () => {
 
         <header className="relative">
           <img
-            src="/patio-piscina-casa-rural-eufemia.webp"
-            alt="Mesa preparada junto a la piscina privada de Casa Rural Eufemia"
+            src="/cena-noche-piscina-casa-rural-eufemia.webp"
+            alt="Cena de noche junto a la piscina privada de Casa Rural Eufemia"
             width={1400}
-            height={933}
+            height={1501}
             fetchpriority="high"
             className="h-[52vh] max-h-[560px] w-full object-cover"
           />

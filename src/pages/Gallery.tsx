@@ -11,12 +11,9 @@ type GalleryFilter = "all" | GalleryCategory;
 
 const galleryFilters: { translationKey: string; value: GalleryFilter }[] = [
   { value: "all", translationKey: "all" },
-  { value: "exterior", translationKey: "exterior" },
-  { value: "pool", translationKey: "pool" },
-  { value: "interior", translationKey: "interior" },
-  { value: "rooms", translationKey: "rooms" },
-  { value: "experiences", translationKey: "experiences" },
-  { value: "details", translationKey: "details" },
+  { value: "casa", translationKey: "casa" },
+  { value: "patio", translationKey: "patio" },
+  { value: "alrededores", translationKey: "alrededores" },
 ];
 
 const Gallery = () => {

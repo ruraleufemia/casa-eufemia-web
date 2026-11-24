@@ -188,16 +188,13 @@
     "seoTitle": "Galería - Fotos de Casa Eufemia",
     "seoDescription": "Explora la galería de Casa Eufemia. Ve fotos de nuestras habitaciones, piscina, jardines y todas las instalaciones de nuestra casa rural en Ciudad Real.",
     "title": "Galería de Casa Eufemia",
-    "subtitle": "Fotos de la casa rural, la piscina privada, el jardín y los planes de La Mancha.",
+    "subtitle": "La casa por dentro, el patio con la piscina y la barbacoa, y lo que hay alrededor en La Mancha.",
     "filterLabel": "Filtrar fotografías de la galería",
     "filters": {
       "all": "Todas",
-      "exterior": "Exterior y jardín",
-      "pool": "Piscina",
-      "interior": "Interiores",
-      "rooms": "Dormitorios",
-      "experiences": "Entorno y planes",
-      "details": "Detalles"
+      "casa": "La casa",
+      "patio": "El patio y la piscina",
+      "alrededores": "Los alrededores"
     },
     "photoCount": "{{count}} fotografías",
     "openImage": "Abrir imagen: {{description}}",
