@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import GoogleRatingBar from "@/components/GoogleRatingBar";
 import AboutSection from "@/components/AboutSection";
 import LocalSeoSection from "@/components/LocalSeoSection";
 import GalleryPreview from "@/components/GalleryPreview";
@@ -26,6 +27,7 @@ const Index = () => {
       <div className="min-h-screen">
         <Navbar />
         <main>
+        <GoogleRatingBar />
         <Hero />
         <AboutSection />
         <LocalSeoSection />

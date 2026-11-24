@@ -404,5 +404,9 @@
     "title": "Un paseo por la casa",
     "lead": "Poco más de un minuto para ver la casa, el patio y la piscina antes de decidir.",
     "play": "Ver el vídeo"
+  },
+  "ratingBar": {
+    "generic": "Reseñas en Google",
+    "count": "{{total}} reseñas en Google"
   }
 }

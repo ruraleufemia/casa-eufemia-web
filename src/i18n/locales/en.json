@@ -404,5 +404,9 @@
     "title": "A walk through the house",
     "lead": "Just over a minute to see the house, the courtyard and the pool before you decide.",
     "play": "Play the video"
+  },
+  "ratingBar": {
+    "generic": "Google reviews",
+    "count": "{{total}} Google reviews"
   }
 }
