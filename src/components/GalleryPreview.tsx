@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { galleryImages } from "@/data/galleryImages";
+import { altFor, galleryImages } from "@/data/galleryImages";
 import { useLocalePath } from "@/hooks/useLocalePath";
 
 const GalleryPreview = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const ruta = useLocalePath();
   const images = galleryImages.slice(0, 6);
 
@@ -33,7 +33,7 @@ const GalleryPreview = () => {
                 <img
                   src={image.src}
                   srcSet={image.srcSmall ? `${image.srcSmall} 800w, ${image.src} ${image.width}w` : undefined}
-                  alt={image.alt}
+                  alt={altFor(image, i18n.language)}
                   loading="lazy"
                   decoding="async"
                   sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
@@ -43,7 +43,7 @@ const GalleryPreview = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                 <div className="p-6">
                   <h3 className="text-primary-foreground text-lg font-display font-light tracking-wide">
-                    {image.alt}
+                    {altFor(image, i18n.language)}
                   </h3>
                 </div>
               </div>

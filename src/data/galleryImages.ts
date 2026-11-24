@@ -1,7 +1,10 @@
 export type GalleryCategory = "casa" | "patio" | "alrededores";
 
 export interface GalleryImage {
+  /** Pie de foto en español. También es el texto alternativo. */
   alt: string;
+  /** El mismo pie en inglés, para las páginas de /en. */
+  altEn: string;
   category: GalleryCategory;
   height: number;
   /** Foto a tamaño completo: la que abre el visor. */
@@ -13,8 +16,7 @@ export interface GalleryImage {
 
 /**
  * Las fotos de la casa, en tres secciones: la casa, el patio y la piscina, y
- * los alrededores. Son las mismas de la maqueta original, ya en WebP y con
- * nombres que Google Imágenes entiende.
+ * los alrededores. Ya en WebP y con nombres que Google Imágenes entiende.
  *
  * Reparto: patio 10, casa 11, alrededores 12.
  * Las seis primeras son las que se ven en la portada, así que van las que venden.
@@ -26,6 +28,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1200,
     height: 800,
     alt: "Piscina privada de Casa Rural Eufemia, con jardín y paredes encaladas",
+    altEn: "Private pool at Casa Rural Eufemia, with the garden and whitewashed walls",
     category: "patio",
   },
   {
@@ -34,6 +37,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1400,
     height: 1501,
     alt: "Cena de noche junto a la piscina privada de la casa rural",
+    altEn: "Dinner at night beside the private pool",
     category: "patio",
   },
   {
@@ -42,6 +46,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1200,
     height: 800,
     alt: "Porche con barbacoa y horno de leña para comer al aire libre",
+    altEn: "Porch with the barbecue and wood-fired oven for eating outdoors",
     category: "patio",
   },
   {
@@ -50,7 +55,17 @@ export const galleryImages: GalleryImage[] = [
     width: 1600,
     height: 1067,
     alt: "Comida de grupo en el patio manchego de la casa rural",
+    altEn: "A group lunch in the La Mancha courtyard",
     category: "patio",
+  },
+  {
+    src: "/fotos/juegos-de-mesa-familia-casa-rural.webp",
+    srcSmall: "/fotos/juegos-de-mesa-familia-casa-rural-800.webp",
+    width: 1600,
+    height: 1066,
+    alt: "Tarde de juegos de mesa en el comedor de la casa rural",
+    altEn: "An afternoon of board games in the dining room",
+    category: "casa",
   },
   {
     src: "/fotos/salon-chimenea-casa-rural.webp",
@@ -58,6 +73,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1200,
     height: 800,
     alt: "Salón de la casa rural con chimenea encendida y vigas de madera",
+    altEn: "Living room with the fire lit and wooden beams",
     category: "casa",
   },
   {
@@ -66,6 +82,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1200,
     height: 800,
     alt: "Mesa de piedra junto a la piscina, a la sombra",
+    altEn: "Stone table beside the pool, in the shade",
     category: "patio",
   },
   {
@@ -74,6 +91,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1200,
     height: 800,
     alt: "Patio con árbol y mesa de piedra, donde se alargan las sobremesas",
+    altEn: "Courtyard with a tree and a stone table, where lunches run long",
     category: "patio",
   },
   {
@@ -82,6 +100,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1600,
     height: 1032,
     alt: "Patio de la casa rural con rosales y plantas",
+    altEn: "The courtyard with its roses and plants",
     category: "patio",
   },
   {
@@ -90,6 +109,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1067,
     height: 1600,
     alt: "Parrilla de la barbacoa, lista para una comida en el porche",
+    altEn: "The barbecue grill, ready for lunch on the porch",
     category: "patio",
   },
   {
@@ -98,6 +118,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1200,
     height: 800,
     alt: "Rincón del patio con una rueda de carro antigua",
+    altEn: "A corner of the courtyard with an old cart wheel",
     category: "patio",
   },
   {
@@ -106,6 +127,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1086,
     height: 1448,
     alt: "Aseo junto a la piscina, para no entrar mojado en casa",
+    altEn: "A toilet by the pool, so nobody walks through the house wet",
     category: "patio",
   },
   {
@@ -114,6 +136,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1200,
     height: 800,
     alt: "Recibidor de la casa manchega, con zócalo de azulejo",
+    altEn: "The hallway of the old La Mancha house, with its tiled skirting",
     category: "casa",
   },
   {
@@ -122,6 +145,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1448,
     height: 1086,
     alt: "Cocina equipada de la casa rural, con todo para cocinar en familia",
+    altEn: "A fully equipped kitchen, with everything for cooking together",
     category: "casa",
   },
   {
@@ -130,6 +154,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1200,
     height: 800,
     alt: "Comedor de la casa con mesa grande para ocho personas",
+    altEn: "The dining room, with a big table that seats eight",
     category: "casa",
   },
   {
@@ -138,6 +163,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1067,
     height: 1600,
     alt: "Mesa con queso manchego, embutido y vino en el comedor",
+    altEn: "A table of manchego cheese, cured meats and wine",
     category: "casa",
   },
   {
@@ -146,6 +172,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1200,
     height: 800,
     alt: "Dormitorio de matrimonio de la casa rural",
+    altEn: "The double bedroom",
     category: "casa",
   },
   {
@@ -154,6 +181,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1600,
     height: 1200,
     alt: "Dormitorio con dos camas individuales",
+    altEn: "A bedroom with two single beds",
     category: "casa",
   },
   {
@@ -162,6 +190,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1200,
     height: 1600,
     alt: "Dormitorio abuhardillado, con las vigas de madera a la vista",
+    altEn: "The attic bedroom, with its wooden beams on show",
     category: "casa",
   },
   {
@@ -170,6 +199,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1448,
     height: 1086,
     alt: "Baño completo de la casa rural",
+    altEn: "One of the two full bathrooms",
     category: "casa",
   },
   {
@@ -178,14 +208,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1204,
     height: 1600,
     alt: "Alacena azul antigua, de las de siempre, en la casa",
-    category: "casa",
-  },
-  {
-    src: "/fotos/juegos-de-mesa.webp",
-    srcSmall: "/fotos/juegos-de-mesa-800.webp",
-    width: 1067,
-    height: 1600,
-    alt: "Juegos de mesa para las tardes en familia",
+    altEn: "An old blue dresser, the kind these houses have always had",
     category: "casa",
   },
   {
@@ -194,6 +217,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1600,
     height: 1066,
     alt: "Molinos de viento de Campo de Criptana, a 13 km de la casa rural",
+    altEn: "The Campo de Criptana windmills, 13 km from the house",
     category: "alrededores",
   },
   {
@@ -202,6 +226,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1204,
     height: 1600,
     alt: "Molino de Campo de Criptana al atardecer",
+    altEn: "A Campo de Criptana windmill at sunset",
     category: "alrededores",
   },
   {
@@ -210,6 +235,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1600,
     height: 1200,
     alt: "Mural del Quijote en las calles de Campo de Criptana",
+    altEn: "A Don Quixote mural in the streets of Campo de Criptana",
     category: "alrededores",
   },
   {
@@ -218,6 +244,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1600,
     height: 1066,
     alt: "Lagunas de Ruidera, agua turquesa en plena Mancha",
+    altEn: "The Lagunas de Ruidera, turquoise water in the middle of La Mancha",
     category: "alrededores",
   },
   {
@@ -226,6 +253,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1200,
     height: 800,
     alt: "Las Lagunas de Ruidera vistas entre las ramas",
+    altEn: "The Lagunas de Ruidera seen through the branches",
     category: "alrededores",
   },
   {
@@ -234,6 +262,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1200,
     height: 1600,
     alt: "Castillo de Peñarroya, junto a las Lagunas de Ruidera",
+    altEn: "Peñarroya castle, beside the Lagunas de Ruidera",
     category: "alrededores",
   },
   {
@@ -242,6 +271,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1200,
     height: 800,
     alt: "Cueva de Medrano en Argamasilla de Alba, ligada al Quijote",
+    altEn: "The Cueva de Medrano in Argamasilla de Alba, tied to Don Quixote",
     category: "alrededores",
   },
   {
@@ -250,6 +280,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1067,
     height: 1600,
     alt: "Cueva con tinajas de vino en Tomelloso",
+    altEn: "A wine cave with its clay jars in Tomelloso",
     category: "alrededores",
   },
   {
@@ -258,6 +289,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1200,
     height: 800,
     alt: "Tinajas pintadas en las calles de Tomelloso",
+    altEn: "Painted wine jars in the streets of Tomelloso",
     category: "alrededores",
   },
   {
@@ -266,6 +298,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1600,
     height: 1200,
     alt: "Pinar de Arenales de San Gregorio, para pasear con los niños",
+    altEn: "The pine wood at Arenales de San Gregorio, for a walk with the children",
     category: "alrededores",
   },
   {
@@ -274,6 +307,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1600,
     height: 1200,
     alt: "Parque infantil de Arenales de San Gregorio",
+    altEn: "The playground in Arenales de San Gregorio",
     category: "alrededores",
   },
   {
@@ -282,6 +316,11 @@ export const galleryImages: GalleryImage[] = [
     width: 1200,
     height: 1600,
     alt: "Fuente con el escudo de Arenales de San Gregorio",
+    altEn: "The fountain bearing the village coat of arms",
     category: "alrededores",
   },
 ];
+
+/** El pie de foto en el idioma de la página. */
+export const altFor = (image: GalleryImage, language?: string) =>
+  language?.startsWith("en") ? image.altEn : image.alt;

@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Lightbox from "@/components/Lightbox";
 import SEO from "@/components/SEO";
-import { galleryImages, type GalleryCategory } from "@/data/galleryImages";
+import { altFor, galleryImages, type GalleryCategory } from "@/data/galleryImages";
 import { usePageSeo } from "@/hooks/usePageSeo";
 
 type GalleryFilter = "all" | GalleryCategory;
@@ -17,7 +17,7 @@ const galleryFilters: { translationKey: string; value: GalleryFilter }[] = [
 ];
 
 const Gallery = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const seo = usePageSeo("gallery");
   const [activeFilter, setActiveFilter] = useState<GalleryFilter>("all");
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -90,7 +90,7 @@ const Gallery = () => {
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {images.map((image, index) => (
                   <button
-                    aria-label={t("galleryPage.openImage", { description: image.alt })}
+                    aria-label={t("galleryPage.openImage", { description: altFor(image, i18n.language) })}
                     className="group relative overflow-hidden rounded-xl text-left shadow-lg transition-all duration-300 hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                     key={image.src}
                     onClick={() => openLightbox(index)}
@@ -98,7 +98,7 @@ const Gallery = () => {
                   >
                     <div className="aspect-[4/3] overflow-hidden">
                       <img
-                        alt={image.alt}
+                        alt={altFor(image, i18n.language)}
                         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                         decoding="async"
                         loading="lazy"
@@ -109,7 +109,7 @@ const Gallery = () => {
                     </div>
                     <div className="absolute inset-0 flex items-end bg-gradient-to-t from-foreground/60 via-foreground/10 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
                       <p className="p-4 text-sm font-light text-primary-foreground">
-                        {image.alt}
+                        {altFor(image, i18n.language)}
                       </p>
                     </div>
                   </button>
@@ -124,7 +124,10 @@ const Gallery = () => {
         {lightboxOpen && (
           <Lightbox
             currentIndex={currentImageIndex}
-            images={images}
+            images={images.map((image) => ({
+              src: image.src,
+              alt: altFor(image, i18n.language),
+            }))}
             onClose={() => setLightboxOpen(false)}
             onNavigate={setCurrentImageIndex}
           />
