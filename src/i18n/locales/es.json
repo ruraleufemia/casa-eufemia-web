@@ -19,7 +19,7 @@
     "welcomeHeading": "La casa de mi abuela, para que la disfrutéis vosotros",
     "welcomeP1": "Esta casa era de mi abuela Eufemia, y aquí pasé todos los veranos de mi infancia. Ahora la alquilo entera: durante unos días es vuestra, sin compartir la piscina ni la mesa del patio con nadie.",
     "welcomeP2": "Está todo en una sola planta: tres dormitorios, dos baños, salón manchego y una cocina en la que de verdad se puede cocinar. Fuera tenéis el patio con sus mesas de piedra, el jardín, la barbacoa con horno de leña y la piscina.",
-    "welcomeP3": "Estamos en Arenales de San Gregorio, a diez minutos de Campo de Criptana y a un cuarto de hora de Tomelloso. Escríbeme por WhatsApp y te ayudo a cuadrar las fechas y a decidir qué merece la pena según cuándo vengáis.",
+    "welcomeP3": "Estamos en Arenales de San Gregorio, a 13 km de Campo de Criptana, menos de diez minutos en coche, y a un cuarto de hora de Tomelloso. Escríbeme por WhatsApp y te ayudo a cuadrar las fechas y a decidir qué merece la pena según cuándo vengáis.",
     "welcomeSignoff": "Casa Eufemia. Donde nacen los recuerdos.",
     "welcomeImage": "/patio-piscina-casa-rural-eufemia.webp",
     "welcomeImageAlt": "Patio de Casa Rural Eufemia con la mesa preparada junto a la piscina",
@@ -269,11 +269,11 @@
     "campoDeCriptana": {
       "breadcrumb": "Casa rural cerca de Campo de Criptana",
       "seoTitle": "Casa rural cerca de Campo de Criptana con piscina",
-      "seoDescription": "Casa entera para 8 personas con piscina privada a unos 10 minutos de los molinos de Campo de Criptana. Jardín, barbacoa, dos baños y mascotas bajo consulta.",
+      "seoDescription": "Casa entera para 8 personas con piscina privada a 13 km de los molinos de Campo de Criptana. Jardín, barbacoa, dos baños y mascotas bajo consulta.",
       "seoKeywords": "casa rural cerca de Campo de Criptana, alojamiento Campo de Criptana, casa rural molinos de viento, casa rural con piscina Ciudad Real, casa rural para 8 personas La Mancha",
       "h1": "Casa rural cerca de Campo de Criptana, con piscina y barbacoa",
-      "lead": "A unos 10 minutos de los molinos de Don Quijote. Casa entera para 8 personas, con piscina privada, en Arenales de San Gregorio.",
-      "intro": "Estamos en Arenales de San Gregorio, a unos 10 minutos en coche de Campo de Criptana. Es una buena base si quieres ver los molinos y volver a dormir a una casa entera, con piscina privada, barbacoa y sitio para aparcar en la puerta. Sin vecinos de pared, sin pasillos de hotel: la casa es toda para tu grupo.",
+      "lead": "A 13 km de los molinos, menos de diez minutos de Don Quijote. Casa entera para 8 personas, con piscina privada, en Arenales de San Gregorio.",
+      "intro": "Estamos en Arenales de San Gregorio, a 13 km de Campo de Criptana, menos de diez minutos en coche. Es una buena base si quieres ver los molinos y volver a dormir a una casa entera, con piscina privada, barbacoa y sitio para aparcar en la puerta. Sin vecinos de pared, sin pasillos de hotel: la casa es toda para tu grupo.",
       "whyTitle": "Por qué alojarte aquí y no en el casco urbano",
       "bullets": [
         "Casa completa para tu grupo: 290 m² en una sola planta, 3 dormitorios, 2 baños y hasta 8 personas.",
@@ -289,7 +289,7 @@
       "faqs": [
         {
           "question": "¿A cuánto está la casa de Campo de Criptana?",
-          "answer": "A unos 10 minutos en coche. Se va por carretera, sin complicación, y se puede aparcar cerca de los molinos."
+          "answer": "Son 13 km, menos de diez minutos en coche. Se va por carretera, sin complicación, y se puede aparcar cerca de los molinos."
         },
         {
           "question": "¿Se alquila la casa entera o por habitaciones?",
@@ -373,7 +373,7 @@
       "Casa entera para un solo grupo, hasta 8 personas, todo en una planta.",
       "Aparcamiento gratis en la puerta y pueblo tranquilo."
     ],
-    "tip": "Si venís a hacer barbacoa, traed la carne de Tomelloso o de Campo de Criptana, que está a diez minutos, y dejad la tarde libre para la piscina. Yo dejo la leña preparada; avisadme al reservar.",
+    "tip": "Si venís a hacer barbacoa, traed la carne de Tomelloso o de Campo de Criptana, que está a 13 km, y dejad la tarde libre para la piscina. Yo dejo la leña preparada; avisadme al reservar.",
     "faqs": [
       {
         "question": "¿La piscina es privada o se comparte?",
@@ -405,5 +405,48 @@
   "ratingBar": {
     "generic": "Reseñas en Google",
     "count": "{{total}} reseñas en Google"
+  },
+  "dogs": {
+    "breadcrumb": "Casa rural que admite perros",
+    "seoTitle": "Casa rural que admite perros en Ciudad Real",
+    "seoDescription": "Casa entera con patio y jardín cerrados donde tu perro entra sin suplemento si reservas directamente. Hasta 8 personas, piscina privada, en La Mancha.",
+    "seoKeywords": "casa rural que admite perros, casa rural pet friendly Ciudad Real, casa rural con perros La Mancha, alojamiento que admite mascotas Campo de Criptana, casa rural perros Tomelloso",
+    "h1": "Casa rural que admite perros, con patio y jardín cerrados",
+    "lead": "Aquí vive Maya, así que sé lo que es buscar sitio con perro. Si reservas directamente conmigo, tu perro no paga suplemento.",
+    "intro": "Buscar casa rural con perro suele ser un lío: o no los admiten, o te cobran un suplemento por noche, o te dicen que sí y luego resulta que el animal no puede pasar de la puerta. Aquí no. Maya es mi perra y esta es su casa también, así que está pensada para que vengáis los dos tranquilos.",
+    "rulesTitle": "Cómo funciona, sin letra pequeña",
+    "bullets": [
+      "Sin suplemento por mascota si reservas directamente conmigo, por WhatsApp o por el formulario.",
+      "El patio y el jardín están cerrados, así que puede andar suelto sin que se escape.",
+      "La casa entera es vuestra: no se cruza con otros huéspedes ni con otros animales.",
+      "Todo está en una planta, sin escaleras, que para perros mayores se agradece.",
+      "Césped artificial en la zona de la piscina, que no se llena de barro.",
+      "Avísame al reservar y te dejo preparado el rincón con su manta y sus cuencos."
+    ],
+    "walksTitle": "Dónde sacarlo",
+    "walks": "Arenales es un pueblo de 700 habitantes, así que se sale a pasear sin coches. A las afueras tienes el pinar municipal y el sendero de los Pinares, que es un paseo cómodo entre pinos y perfecto a primera hora. Y si vais a los molinos de Campo de Criptana, el cerro se recorre al aire libre y los perros van bien con correa.",
+    "tip": "Si tu perro no ha estado nunca en el campo manchego, sácalo al pinar al amanecer. En verano el suelo quema a mediodía, así que mejor pronto o al atardecer. Y pregúntame por la piscina antes de dejarle bañarse, que lo hablamos.",
+    "faqs": [
+      {
+        "question": "¿Cuánto cuesta traer al perro?",
+        "answer": "Nada, si reservas directamente conmigo. En los portales de reserva sí puede haber suplemento, porque lo aplican ellos."
+      },
+      {
+        "question": "¿Hay límite de tamaño o de número de perros?",
+        "answer": "No tengo una norma rígida: escríbeme por WhatsApp, cuéntame cómo es tu perro y cuántos venís, y lo organizamos."
+      },
+      {
+        "question": "¿Puede andar suelto?",
+        "answer": "Sí, el patio y el jardín están cerrados. Fuera de la casa, por el pueblo, mejor con correa."
+      },
+      {
+        "question": "¿Puede entrar en la casa?",
+        "answer": "Sí. Lo único que te pido es que no se suba a las camas y que si se moja en la piscina lo seques antes de entrar."
+      },
+      {
+        "question": "¿Puedo dejarlo solo en la casa si salgo a cenar?",
+        "answer": "Si tu perro está acostumbrado a quedarse solo y tranquilo, sí. Si ladra o lo pasa mal, dímelo y buscamos una solución."
+      }
+    ]
   }
 }

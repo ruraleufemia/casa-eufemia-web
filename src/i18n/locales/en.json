@@ -19,7 +19,7 @@
     "welcomeHeading": "My grandmother's house, for you to enjoy",
     "welcomeP1": "This was my grandmother Eufemia's house, and I spent every summer of my childhood here. Now I rent it out whole: for a few days it is yours, with no sharing the pool or the courtyard table with anyone.",
     "welcomeP2": "Everything is on one floor: three bedrooms, two bathrooms, a La Mancha sitting room and a kitchen you can really cook in. Outside there is the courtyard with its stone tables, the garden, the barbecue with a wood oven, and the pool.",
-    "welcomeP3": "We are in Arenales de San Gregorio, ten minutes from Campo de Criptana and fifteen from Tomelloso. Message me on WhatsApp and I will help you settle the dates and work out what is worth seeing depending on when you come.",
+    "welcomeP3": "We are in Arenales de San Gregorio, 13 km from Campo de Criptana, under ten minutes by car, and fifteen from Tomelloso. Message me on WhatsApp and I will help you settle the dates and work out what is worth seeing depending on when you come.",
     "welcomeSignoff": "Casa Rural Eufemia. Where memories begin.",
     "welcomeImage": "/patio-piscina-casa-rural-eufemia.webp",
     "welcomeImageAlt": "Courtyard at Casa Rural Eufemia with the table set beside the pool",
@@ -269,10 +269,10 @@
     "campoDeCriptana": {
       "breadcrumb": "Country house near Campo de Criptana",
       "seoTitle": "Country house near Campo de Criptana with pool",
-      "seoDescription": "Whole house for 8 guests with a private pool, about 10 minutes from the Campo de Criptana windmills. Garden, barbecue, two bathrooms and pets by prior arrangement.",
+      "seoDescription": "Whole house for 8 guests with a private pool, 13 km from the Campo de Criptana windmills. Garden, barbecue, two bathrooms and pets by prior arrangement.",
       "seoKeywords": "country house near Campo de Criptana, accommodation Campo de Criptana, windmills rural house, rural house private pool Ciudad Real, rural house for 8 people La Mancha",
       "h1": "Country house near Campo de Criptana, with pool and barbecue",
-      "lead": "About 10 minutes from Don Quixote's windmills. Whole house for 8 guests with a private pool, in Arenales de San Gregorio.",
+      "lead": "13 km from Don Quixote's windmills. Whole house for 8 guests with a private pool, in Arenales de San Gregorio.",
       "intro": "We are in Arenales de San Gregorio, about a 10-minute drive from Campo de Criptana. It is a good base if you want to see the windmills and come back to a whole house, with a private pool, a barbecue and parking at the door. No shared walls, no hotel corridors: the house is yours alone.",
       "whyTitle": "Why stay here instead of in town",
       "bullets": [
@@ -289,7 +289,7 @@
       "faqs": [
         {
           "question": "How far is the house from Campo de Criptana?",
-          "answer": "About a 10-minute drive on an easy road, and you can park near the windmills."
+          "answer": "It is 13 km, under a ten-minute drive on an easy road, and you can park near the windmills."
         },
         {
           "question": "Do you rent the whole house or single rooms?",
@@ -373,7 +373,7 @@
       "The whole house for one group, up to 8 guests, all on one floor.",
       "Free parking at the door and a quiet village."
     ],
-    "tip": "If you are coming for a barbecue, buy the meat in Tomelloso or Campo de Criptana, ten minutes away, and keep the afternoon for the pool. I leave the firewood ready; just tell me when you book.",
+    "tip": "If you are coming for a barbecue, buy the meat in Tomelloso or Campo de Criptana, 13 km away, and keep the afternoon for the pool. I leave the firewood ready; just tell me when you book.",
     "faqs": [
       {
         "question": "Is the pool private or shared?",
@@ -405,5 +405,48 @@
   "ratingBar": {
     "generic": "Google reviews",
     "count": "{{total}} Google reviews"
+  },
+  "dogs": {
+    "breadcrumb": "Dog-friendly country house",
+    "seoTitle": "Dog-friendly country house in Ciudad Real",
+    "seoDescription": "Whole house with an enclosed courtyard and garden where your dog stays at no extra charge when you book directly. Up to 8 guests, private pool, in La Mancha.",
+    "seoKeywords": "dog friendly country house Spain, pet friendly rural house Ciudad Real, rural house with dogs La Mancha, pet friendly accommodation Campo de Criptana",
+    "h1": "A country house that welcomes dogs, with an enclosed courtyard and garden",
+    "lead": "Maya lives here, so I know what it is to look for somewhere with a dog. Book directly with me and your dog pays no surcharge.",
+    "intro": "Finding a country house with a dog is usually a mess: either they do not take them, or they charge per night, or they say yes and then the animal cannot get past the door. Not here. Maya is my dog and this is her house too, so it is set up for the two of you to arrive and relax.",
+    "rulesTitle": "How it works, no small print",
+    "bullets": [
+      "No pet surcharge when you book directly with me, by WhatsApp or through the form.",
+      "The courtyard and garden are enclosed, so your dog can be off the lead without escaping.",
+      "The whole house is yours: no crossing paths with other guests or other animals.",
+      "Everything is on one floor, no stairs, which older dogs appreciate.",
+      "Artificial grass around the pool, so it does not turn to mud.",
+      "Tell me when you book and I will have a corner ready with a blanket and bowls."
+    ],
+    "walksTitle": "Where to walk",
+    "walks": "Arenales is a village of 700 people, so you can walk without traffic. On the edge of the village there is the municipal pine wood and the Pinares trail, an easy walk among pines and perfect first thing. And if you go to the Campo de Criptana windmills, the hill is all open air and dogs do fine on the lead.",
+    "tip": "If your dog has never been in the La Mancha countryside, take them to the pine wood at dawn. In summer the ground burns at midday, so go early or at dusk. And ask me about the pool before letting them swim; we will sort it out.",
+    "faqs": [
+      {
+        "question": "How much does it cost to bring the dog?",
+        "answer": "Nothing, if you book directly with me. The booking portals may add a surcharge, because that is theirs."
+      },
+      {
+        "question": "Is there a size or number limit?",
+        "answer": "I have no rigid rule: message me on WhatsApp, tell me about your dog and how many of you are coming, and we will work it out."
+      },
+      {
+        "question": "Can the dog be off the lead?",
+        "answer": "Yes, the courtyard and garden are enclosed. Out in the village, better on the lead."
+      },
+      {
+        "question": "Can the dog come inside the house?",
+        "answer": "Yes. All I ask is no getting on the beds, and that you dry them off after the pool before coming in."
+      },
+      {
+        "question": "Can I leave the dog alone if I go out for dinner?",
+        "answer": "If your dog is used to staying alone and calm, yes. If they bark or get anxious, tell me and we will find a way."
+      }
+    ]
   }
 }
