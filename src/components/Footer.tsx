@@ -58,6 +58,15 @@ const Footer = () => {
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-4">
+            <img
+              src="/logo-casa-eufemia.webp"
+              alt="Sello de Casa Rural Eufemia, Arenales de San Gregorio"
+              width={600}
+              height={600}
+              loading="lazy"
+              decoding="async"
+              className="mb-6 h-28 w-28 sm:h-32 sm:w-32"
+            />
             <p className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-primary-foreground/70">
               {copy.eyebrow}
             </p>
