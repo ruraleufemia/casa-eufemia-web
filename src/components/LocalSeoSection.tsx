@@ -17,7 +17,7 @@ const LocalSeoSection = () => {
     {
       title: t("localSeo.tomelloso.title"),
       description: t("localSeo.tomelloso.description"),
-      image: "/IMG_4389.JPG",
+      image: "/fotos/cueva-tinajas-tomelloso.webp",
       imageAlt: t("localSeo.tomelloso.imageAlt"),
       href: "/blog/cooperativa-virgen-de-las-vinas",
       nearbyHref: "/casa-rural-cerca-de-tomelloso",
@@ -25,7 +25,7 @@ const LocalSeoSection = () => {
     {
       title: t("localSeo.quijote.title"),
       description: t("localSeo.quijote.description"),
-      image: "/IMG_4765.JPG",
+      image: "/fotos/molinos-campo-de-criptana.webp",
       imageAlt: t("localSeo.quijote.imageAlt"),
       href: "/blog/campo-de-criptana-molinos-de-viento",
       nearbyHref: "/casa-rural-cerca-de-campo-de-criptana",
@@ -33,7 +33,7 @@ const LocalSeoSection = () => {
     {
       title: t("localSeo.ruidera.title"),
       description: t("localSeo.ruidera.description"),
-      image: "/Ruidera1.jpg",
+      image: "/fotos/lagunas-de-ruidera.webp",
       imageAlt: t("localSeo.ruidera.imageAlt"),
       href: "/blog/lagunas-de-ruidera",
     },

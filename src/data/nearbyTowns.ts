@@ -15,7 +15,7 @@ export const nearbyTowns: NearbyTown[] = [
   {
     slug: "casa-rural-cerca-de-campo-de-criptana",
     key: "campoDeCriptana",
-    image: "/IMG_4765.JPG",
+    image: "/fotos/molinos-campo-de-criptana.webp",
     imageAlt: "Molinos de viento de Campo de Criptana al atardecer",
     guideSlug: "campo-de-criptana-molinos-de-viento",
     minutes: "10",
@@ -23,7 +23,7 @@ export const nearbyTowns: NearbyTown[] = [
   {
     slug: "casa-rural-cerca-de-tomelloso",
     key: "tomelloso",
-    image: "/IMG_4389.JPG",
+    image: "/fotos/cueva-tinajas-tomelloso.webp",
     imageAlt: "Bodega Virgen de las Viñas en Tomelloso",
     guideSlug: "cooperativa-virgen-de-las-vinas",
     minutes: "15-20",

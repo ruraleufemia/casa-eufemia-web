@@ -30,6 +30,7 @@ const GalleryPreview = () => {
               <div className="aspect-[4/3] overflow-hidden">
                 <img
                   src={image.src}
+                  srcSet={image.srcSmall ? `${image.srcSmall} 800w, ${image.src} ${image.width}w` : undefined}
                   alt={image.alt}
                   loading="lazy"
                   decoding="async"

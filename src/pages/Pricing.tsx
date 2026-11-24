@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import { usePageSeo } from "@/hooks/usePageSeo";
 import AvailabilityCalendar from "@/components/AvailabilityCalendar";
 import RatesSection from "@/components/RatesSection";
+import DirectBooking from "@/components/DirectBooking";
 
 const Pricing = () => {
   const { t } = useTranslation();
@@ -59,6 +60,7 @@ const Pricing = () => {
           </div>
         </section>
 
+        <DirectBooking />
         <RatesSection />
         <AvailabilityCalendar />
 

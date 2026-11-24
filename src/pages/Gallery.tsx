@@ -104,6 +104,7 @@ const Gallery = () => {
                         loading="lazy"
                         sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                         src={image.src}
+                        srcSet={image.srcSmall ? `${image.srcSmall} 800w, ${image.src} ${image.width}w` : undefined}
                       />
                     </div>
                     <div className="absolute inset-0 flex items-end bg-gradient-to-t from-foreground/60 via-foreground/10 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">

@@ -15,8 +15,8 @@ export const blogPosts: BlogPost[] = [
     titleKey: "posts.cooperativaVinas.title",
     excerptKey: "posts.cooperativaVinas.excerpt",
     contentKey: "posts.cooperativaVinas.content",
-    image: "/IMG_4389.JPG",
-    images: ["/IMG_4398.JPG", "/IMG_4469.JPG"]
+    image: "/fotos/cueva-tinajas-tomelloso.webp",
+    images: ["/fotos/tinajas-pintadas-tomelloso.webp"]
   },
   {
     id: 1,
@@ -24,8 +24,8 @@ export const blogPosts: BlogPost[] = [
     titleKey: "posts.campoCriptana.title",
     excerptKey: "posts.campoCriptana.excerpt",
     contentKey: "posts.campoCriptana.content",
-    image: "/IMG_4765.JPG",
-    images: ["/IMG_4770.JPG"]
+    image: "/fotos/molinos-campo-de-criptana.webp",
+    images: ["/fotos/molino-atardecer-campo-de-criptana.webp", "/fotos/mural-quijote-campo-de-criptana.webp"]
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ export const blogPosts: BlogPost[] = [
     titleKey: "posts.casaMedrano.title",
     excerptKey: "posts.casaMedrano.excerpt",
     contentKey: "posts.casaMedrano.content",
-    image: "/IMG_4586.JPG"
+    image: "/fotos/cueva-de-medrano.webp"
   },
   {
     id: 3,
@@ -41,7 +41,7 @@ export const blogPosts: BlogPost[] = [
     titleKey: "posts.lagunasRuidera.title",
     excerptKey: "posts.lagunasRuidera.excerpt",
     contentKey: "posts.lagunasRuidera.content",
-    image: "/Ruidera1.jpg",
-    images: ["/Ruidera2.jpg", "/Ruidera3.jpg", "/Ruidera4.jpg", "/Ruidera5.jpg"]
+    image: "/fotos/lagunas-de-ruidera.webp",
+    images: ["/fotos/lagunas-de-ruidera-entre-ramas.webp", "/fotos/castillo-de-penarroya.webp"]
   }
 ];

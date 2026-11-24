@@ -7,12 +7,13 @@
   },
   "hero": {
     "scrollDown": "Scroll down",
-    "title": "My country house with a pool, ten minutes from Campo de Criptana",
-    "lead": "I'm Silvia. I rent out my grandmother Eufemia's house whole, in Arenales de San Gregorio: three bedrooms, up to eight guests, a courtyard, a barbecue and a pool you will not be sharing with anyone. Tomelloso is fifteen minutes away.",
-    "ctaAvailability": "See availability",
+    "title": "Holiday home with a private pool and barbecue, 13 km from Campo de Criptana",
+    "lead": "I'm Silvia, and I rent out my grandmother Eufemia's house in Arenales de San Gregorio, all of it just for you. Three bedrooms, sleeps up to eight, a La Mancha courtyard, a wood-fired oven and a pool you won't be sharing with anyone. Just over two hours' drive from Madrid.",
+    "ctaAvailability": "See free dates",
     "ctaGallery": "See the house",
-    "imageAlt": "Silvia, your host at Casa Rural Eufemia, with her dog Maya in the courtyard",
-    "imageCaption": "Silvia and Maya welcome you"
+    "imageAlt": "Private pool at Casa Rural Eufemia, with the garden and whitewashed walls, in Arenales de San Gregorio (Ciudad Real)",
+    "imageCaption": "Silvia and Maya welcome you",
+    "tagline": "Where memories are made"
   },
   "about": {
     "title": "Welcome",
@@ -21,9 +22,9 @@
     "welcomeP2": "Everything is on one floor: three bedrooms, two bathrooms, a La Mancha sitting room and a kitchen you can really cook in. Outside there is the courtyard with its stone tables, the garden, the barbecue with a wood oven, and the pool.",
     "welcomeP3": "We are in Arenales de San Gregorio, 13 km from Campo de Criptana, under ten minutes by car, and fifteen from Tomelloso. Message me on WhatsApp and I will help you settle the dates and work out what is worth seeing depending on when you come.",
     "welcomeSignoff": "Casa Rural Eufemia. Where memories begin.",
-    "welcomeImage": "/patio-piscina-casa-rural-eufemia.webp",
-    "welcomeImageAlt": "Courtyard at Casa Rural Eufemia with the table set beside the pool",
-    "welcomeImageCaption": "The courtyard, where the day ends up happening",
+    "welcomeImage": "/silvia-maya-bienvenida-casa-rural-eufemia.webp",
+    "welcomeImageAlt": "Silvia, your host at Casa Rural Eufemia, with her dog Maya in the courtyard",
+    "welcomeImageCaption": "Silvia and Maya welcome you",
     "subtitle": "A whole house for your group in the heart of La Mancha, with a private pool and room enough to take your time.",
     "space": "Of cozy space",
     "capacity": "Up to 8 people",
@@ -449,5 +450,53 @@
         "answer": "If your dog is used to staying alone and calm, yes. If they bark or get anxious, tell me and we will find a way."
       }
     ]
+  },
+  "facts": {
+    "heading": "The house in numbers",
+    "people": {
+      "value": "8",
+      "label": "guests"
+    },
+    "bedrooms": {
+      "value": "3",
+      "label": "bedrooms"
+    },
+    "bathrooms": {
+      "value": "2",
+      "label": "bathrooms"
+    },
+    "surface": {
+      "value": "290 m²",
+      "label": "all on one floor"
+    },
+    "pool": {
+      "value": "Pool",
+      "label": "private, not shared"
+    },
+    "bbq": {
+      "value": "Barbecue",
+      "label": "and a wood-fired oven"
+    },
+    "stepFree": {
+      "value": "Step-free",
+      "label": "walker accessible"
+    },
+    "pets": {
+      "value": "Dogs",
+      "label": "welcome"
+    }
+  },
+  "direct": {
+    "eyebrow": "Book direct with me",
+    "priceFrom": "From €180",
+    "priceUnit": "per night, the whole house",
+    "perks": {
+      "flexible": "Flexible check-in and check-out",
+      "pets": "Your dog stays free",
+      "experience": "A free La Mancha experience from 5 nights"
+    },
+    "note": "No booking-site commission: book with me and what you save stays in your trip.",
+    "cta": "Message me on WhatsApp",
+    "whatsappMessage": "Hi Silvia, I'd like to ask about dates and prices at Casa Rural Eufemia."
   }
 }
