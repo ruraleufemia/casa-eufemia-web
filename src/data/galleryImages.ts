@@ -18,7 +18,7 @@ export interface GalleryImage {
  * Las fotos de la casa, en tres secciones: la casa, el patio y la piscina, y
  * los alrededores. Ya en WebP y con nombres que Google Imágenes entiende.
  *
- * Reparto: patio 10, casa 11, alrededores 12.
+ * Reparto: patio 10, casa 11, alrededores 13.
  * Las seis primeras son las que se ven en la portada, así que van las que venden.
  */
 export const galleryImages: GalleryImage[] = [
@@ -272,6 +272,15 @@ export const galleryImages: GalleryImage[] = [
     height: 800,
     alt: "Cueva de Medrano en Argamasilla de Alba, ligada al Quijote",
     altEn: "The Cueva de Medrano in Argamasilla de Alba, tied to Don Quixote",
+    category: "alrededores",
+  },
+  {
+    src: "/fotos/bombo-tomelloso.webp",
+    srcSmall: "/fotos/bombo-tomelloso-800.webp",
+    width: 800,
+    height: 600,
+    alt: "Bombo de Tomelloso, una construcción de piedra seca típica de La Mancha",
+    altEn: "A bombo in Tomelloso, the dry-stone shelters that are typical of La Mancha",
     category: "alrededores",
   },
   {
