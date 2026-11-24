@@ -59,7 +59,7 @@
     "bathroomsTitle": "Dos baños",
     "bathroomsDesc": "Un baño completo interior y un baño exterior adicional en el patio.",
     "petsTitle": "Pet friendly",
-    "petsDesc": "Se aceptan mascotas bajo consulta; puede aplicarse un suplemento adicional.",
+    "petsDesc": "Se aceptan mascotas bajo consulta, sin suplemento si reservas directamente.",
     "poolBbqLink": "Ver la piscina, la barbacoa y el horno de leña"
   },
   "gallery": {
@@ -404,7 +404,8 @@
   },
   "ratingBar": {
     "generic": "Reseñas en Google",
-    "count": "{{total}} reseñas en Google"
+    "count": "{{total}} reseñas en Google",
+    "aria": "{{nota}} sobre 5 en Google, según {{total}} reseñas. Abrir la ficha de Google Maps."
   },
   "dogs": {
     "breadcrumb": "Casa rural que admite perros",

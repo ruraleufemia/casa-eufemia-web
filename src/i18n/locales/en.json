@@ -404,7 +404,8 @@
   },
   "ratingBar": {
     "generic": "Google reviews",
-    "count": "{{total}} Google reviews"
+    "count": "{{total}} Google reviews",
+    "aria": "{{nota}} out of 5 on Google, from {{total}} reviews. Open the Google Maps listing."
   },
   "dogs": {
     "breadcrumb": "Dog-friendly country house",

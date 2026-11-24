@@ -64,10 +64,15 @@ const GoogleRatingBar = () => {
           href={enlace}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label={t("ratingBar.aria", { nota: notaTexto, total })}
           className="flex items-center justify-center gap-3 py-4 text-secondary-foreground transition-opacity hover:opacity-80 sm:gap-4"
         >
           <span className="font-display text-4xl font-light leading-none sm:text-5xl">
             {notaTexto}
+          </span>
+          {/* Separador: sin él, "5,0" y "78 reseñas" se leen pegados: "5,078 reseñas". */}
+          <span aria-hidden="true" className="text-xl font-light opacity-40">
+            |
           </span>
           <span className="flex flex-col items-start gap-1.5">
             <span className="flex items-center gap-0.5" aria-hidden="true">
