@@ -3,9 +3,11 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { galleryImages } from "@/data/galleryImages";
+import { useLocalePath } from "@/hooks/useLocalePath";
 
 const GalleryPreview = () => {
   const { t } = useTranslation();
+  const ruta = useLocalePath();
   const images = galleryImages.slice(0, 6);
 
   return (
@@ -50,7 +52,7 @@ const GalleryPreview = () => {
         </div>
 
         <div className="text-center">
-          <Link to="/gallery">
+          <Link to={ruta("/gallery")}>
             <Button
               size="lg"
               variant="outline"

@@ -8,11 +8,12 @@ import SEO from "@/components/SEO";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ContactForm from "@/components/ContactForm";
 import { Button } from "@/components/ui/button";
+import { POOL_BBQ_SLUG } from "@/lib/slugs";
 import esLocale from "@/i18n/locales/es.json";
 import enLocale from "@/i18n/locales/en.json";
+import { useLocalePath } from "@/hooks/useLocalePath";
 
 const SITE_URL = "https://www.casaeufemia.com";
-export const POOL_BBQ_SLUG = "casa-rural-con-piscina-y-barbacoa";
 
 interface PoolBbqCopy {
   breadcrumb: string;
@@ -32,6 +33,7 @@ interface PoolBbqCopy {
 }
 
 const PoolAndBarbecue = () => {
+  const ruta = useLocalePath();
   const { t, i18n } = useTranslation();
   const isEnglish = i18n.language?.startsWith("en");
   const copy = ((isEnglish ? enLocale : esLocale) as unknown as { poolBbq: PoolBbqCopy }).poolBbq;
@@ -86,7 +88,7 @@ const PoolAndBarbecue = () => {
           <div className="absolute inset-x-0 bottom-0">
             <div className="mx-auto max-w-5xl px-4 pb-10 sm:px-6 sm:pb-14 lg:px-8">
               <nav aria-label="breadcrumb" className="mb-3 text-sm text-white/80">
-                <Link to="/" className="underline-offset-4 hover:underline">
+                <Link to={ruta("/")} className="underline-offset-4 hover:underline">
                   {t("nav.home")}
                 </Link>
                 <span className="mx-2">›</span>
@@ -137,10 +139,10 @@ const PoolAndBarbecue = () => {
               </aside>
 
               <div className="mt-10 flex flex-wrap gap-3">
-                <Link to="/pricing">
+                <Link to={ruta("/pricing")}>
                   <Button className="font-light">{t("nearby.checkAvailability")}</Button>
                 </Link>
-                <Link to="/gallery">
+                <Link to={ruta("/gallery")}>
                   <Button variant="outline" className="font-light">
                     {t("nearby.seeHouse")}
                   </Button>
@@ -166,14 +168,14 @@ const PoolAndBarbecue = () => {
               <p className="mt-12 text-sm font-light text-muted-foreground">
                 {isEnglish ? "Also nearby: " : "También cerca: "}
                 <Link
-                  to="/casa-rural-cerca-de-campo-de-criptana"
+                  to={ruta("/casa-rural-cerca-de-campo-de-criptana")}
                   className="text-primary underline-offset-4 hover:underline"
                 >
                   {isEnglish ? "Campo de Criptana" : "Campo de Criptana"}
                 </Link>
                 {" · "}
                 <Link
-                  to="/casa-rural-cerca-de-tomelloso"
+                  to={ruta("/casa-rural-cerca-de-tomelloso")}
                   className="text-primary underline-offset-4 hover:underline"
                 >
                   Tomelloso

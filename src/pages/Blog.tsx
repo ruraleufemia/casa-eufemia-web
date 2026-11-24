@@ -6,8 +6,10 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { useBlogPosts } from "@/hooks/useBlogPosts";
 import { usePageSeo } from "@/hooks/usePageSeo";
+import { useLocalePath } from "@/hooks/useLocalePath";
 
 const Blog = () => {
+  const ruta = useLocalePath();
   const { t } = useTranslation();
   const { posts } = useBlogPosts();
   const seo = usePageSeo("blog");
@@ -26,7 +28,7 @@ const Blog = () => {
       
         <section className="pt-32 pb-16 bg-muted/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8 font-light">
+            <Link to={ruta("/")} className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8 font-light">
               <ArrowLeft size={20} strokeWidth={1.5} />
               {t('blogPage.backToHome')}
             </Link>
@@ -46,7 +48,7 @@ const Blog = () => {
               {posts.map((post) => (
                 <Link
                   key={post.id}
-                  to={`/blog/${post.id}`}
+                  to={ruta(`/blog/${post.id}`)}
                   className="group bg-card rounded-lg overflow-hidden border border-border hover:shadow-lg transition-all duration-300 block"
                 >
                   <div className="relative h-64 overflow-hidden">

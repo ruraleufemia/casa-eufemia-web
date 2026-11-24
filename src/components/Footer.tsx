@@ -10,8 +10,9 @@ import {
   Phone,
   Star,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { langOf, localizedPath } from "@/lib/locales";
 
 const GOOGLE_MAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=Casa+Rural+Eufemia,+Calle+Juan+Jos%C3%A9+Jim%C3%A9nez+4,+13619+Arenales+de+San+Gregorio,+Ciudad+Real,+Espa%C3%B1a";
@@ -38,21 +39,26 @@ const Footer = () => {
         availability: "Ver precios",
       };
 
+  // Todos los enlaces del pie en el idioma de la página en la que estamos.
+  const { pathname } = useLocation();
+  const lang = langOf(pathname);
+  const ruta = (path: string) => localizedPath(path, lang);
+
   const quickLinks = [
-    { to: "/", label: t("nav.home") },
-    { to: "/gallery", label: t("nav.gallery"), icon: ImageIcon },
-    { to: "/blog", label: t("nav.experiences") },
-    { to: "/pricing", label: t("nav.pricing"), icon: CalendarCheck2 },
+    { to: ruta("/"), label: t("nav.home") },
+    { to: ruta("/gallery"), label: t("nav.gallery"), icon: ImageIcon },
+    { to: ruta("/blog"), label: t("nav.experiences") },
+    { to: ruta("/pricing"), label: t("nav.pricing"), icon: CalendarCheck2 },
   ];
 
   // Enlaces a las páginas de búsqueda, en todas las páginas del sitio:
   // es lo que hace que Google las rastree y las indexe.
   const landingLinks = [
-    { to: "/casa-rural-con-piscina-y-barbacoa", label: t("poolBbq.breadcrumb") },
-    { to: "/escapada-rural-desde-madrid", label: t("madrid.breadcrumb") },
-    { to: "/casa-rural-que-admite-perros", label: t("dogs.breadcrumb") },
-    { to: "/casa-rural-cerca-de-campo-de-criptana", label: t("nearby.campoDeCriptana.breadcrumb") },
-    { to: "/casa-rural-cerca-de-tomelloso", label: t("nearby.tomelloso.breadcrumb") },
+    { to: ruta("/casa-rural-con-piscina-y-barbacoa"), label: t("poolBbq.breadcrumb") },
+    { to: ruta("/escapada-rural-desde-madrid"), label: t("madrid.breadcrumb") },
+    { to: ruta("/casa-rural-que-admite-perros"), label: t("dogs.breadcrumb") },
+    { to: ruta("/casa-rural-cerca-de-campo-de-criptana"), label: t("nearby.campoDeCriptana.breadcrumb") },
+    { to: ruta("/casa-rural-cerca-de-tomelloso"), label: t("nearby.tomelloso.breadcrumb") },
   ];
 
   return (
@@ -92,7 +98,7 @@ const Footer = () => {
                 {copy.whatsapp}
               </a>
               <Link
-                to="/pricing"
+                to={ruta("/pricing")}
                 className="inline-flex items-center gap-2 rounded-full border border-background/25 px-5 py-3 text-sm font-medium text-background transition-colors hover:border-background/50 hover:bg-background/10"
               >
                 <CalendarCheck2 className="h-4 w-4" />

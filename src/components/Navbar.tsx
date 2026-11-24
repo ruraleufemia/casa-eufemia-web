@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Home, ImageIcon, Compass, Euro } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { langOf, localizedPath } from "@/lib/locales";
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -43,11 +44,16 @@ const Navbar = () => {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [isMobileMenuOpen]);
 
+  // Los enlaces apuntan al idioma de la página en la que estamos. Sin esto,
+  // pinchar en "Gallery" desde la web inglesa te devolvía al español.
+  const lang = langOf(location.pathname);
+  const ruta = (path: string) => localizedPath(path, lang);
+
   const navLinks = [
-    { name: t('nav.home'), path: "/", icon: Home },
-    { name: t('nav.gallery'), path: "/gallery", icon: ImageIcon },
-    { name: t('nav.experiences'), path: "/blog", icon: Compass },
-    { name: t('nav.pricing'), path: "/pricing", icon: Euro },
+    { name: t('nav.home'), path: ruta("/"), icon: Home },
+    { name: t('nav.gallery'), path: ruta("/gallery"), icon: ImageIcon },
+    { name: t('nav.experiences'), path: ruta("/blog"), icon: Compass },
+    { name: t('nav.pricing'), path: ruta("/pricing"), icon: Euro },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -69,7 +75,7 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="flex items-center justify-between h-20 md:h-24">
             <Link
-              to="/"
+              to={ruta("/")}
               className={`text-xl sm:text-2xl md:text-3xl font-display font-light tracking-wide transition-all duration-300 ${
                 shouldShowSolidBackground ? "text-foreground" : "text-white drop-shadow-lg"
               } hover:opacity-70`}

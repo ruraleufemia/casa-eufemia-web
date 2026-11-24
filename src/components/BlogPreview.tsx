@@ -3,8 +3,10 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { useBlogPosts } from "@/hooks/useBlogPosts";
 import { useTranslation } from "react-i18next";
+import { useLocalePath } from "@/hooks/useLocalePath";
 
 const BlogPreview = () => {
+  const ruta = useLocalePath();
   const { t } = useTranslation();
   const { posts } = useBlogPosts();
   return (
@@ -23,7 +25,7 @@ const BlogPreview = () => {
           {posts.slice(0, 3).map((post) => (
             <Link
               key={post.id}
-              to={`/blog/${post.id}`}
+              to={ruta(`/blog/${post.id}`)}
               className="group bg-card rounded-lg overflow-hidden border border-border hover:shadow-lg transition-all duration-300"
             >
               <div className="relative h-64 overflow-hidden">
@@ -55,7 +57,7 @@ const BlogPreview = () => {
 
 
         <div className="text-center">
-          <Link to="/blog">
+          <Link to={ruta("/blog")}>
             <Button variant="outline" size="lg" className="font-light">
               {t('blog.viewAll')}
             </Button>

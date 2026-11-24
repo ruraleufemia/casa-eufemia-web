@@ -8,11 +8,12 @@ import SEO from "@/components/SEO";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ContactForm from "@/components/ContactForm";
 import { Button } from "@/components/ui/button";
+import { MADRID_SLUG } from "@/lib/slugs";
 import esLocale from "@/i18n/locales/es.json";
 import enLocale from "@/i18n/locales/en.json";
+import { useLocalePath } from "@/hooks/useLocalePath";
 
 const SITE_URL = "https://www.casaeufemia.com";
-export const MADRID_SLUG = "escapada-rural-desde-madrid";
 
 const FOTO = "/fotos/piscina-mesa-de-piedra.webp";
 const FOTO_800 = "/fotos/piscina-mesa-de-piedra-800.webp";
@@ -43,6 +44,7 @@ interface MadridCopy {
  */
 const MadridGetaway = () => {
   const { t, i18n } = useTranslation();
+  const ruta = useLocalePath();
   const isEnglish = i18n.language?.startsWith("en");
   const copy = ((isEnglish ? enLocale : esLocale) as unknown as { madrid: MadridCopy }).madrid;
   const url = `/${MADRID_SLUG}`;
@@ -97,7 +99,7 @@ const MadridGetaway = () => {
           <div className="absolute inset-x-0 bottom-0">
             <div className="mx-auto max-w-5xl px-4 pb-10 sm:px-6 sm:pb-14 lg:px-8">
               <nav aria-label="breadcrumb" className="mb-3 text-sm text-white/80">
-                <Link to="/" className="underline-offset-4 hover:underline">
+                <Link to={ruta("/")} className="underline-offset-4 hover:underline">
                   {t("nav.home")}
                 </Link>
                 <span className="mx-2">›</span>
@@ -173,10 +175,10 @@ const MadridGetaway = () => {
               </aside>
 
               <div className="mt-10 flex flex-wrap gap-3">
-                <Link to="/pricing">
+                <Link to={ruta("/pricing")}>
                   <Button className="font-light">{t("nearby.checkAvailability")}</Button>
                 </Link>
-                <Link to="/gallery">
+                <Link to={ruta("/gallery")}>
                   <Button variant="outline" className="font-light">
                     {t("nearby.seeHouse")}
                   </Button>

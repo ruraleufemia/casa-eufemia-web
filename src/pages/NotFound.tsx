@@ -2,8 +2,10 @@ import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import SEO from "@/components/SEO";
+import { useLocalePath } from "@/hooks/useLocalePath";
 
 const NotFound = () => {
+  const ruta = useLocalePath();
   const { t } = useTranslation();
   const location = useLocation();
 
@@ -23,7 +25,7 @@ const NotFound = () => {
         <div className="text-center">
           <h1 className="mb-4 text-4xl font-bold">{t('notFound.title')}</h1>
           <p className="mb-4 text-xl text-gray-600">{t('notFound.message')}</p>
-          <Link to="/" className="text-blue-500 underline hover:text-blue-700">
+          <Link to={ruta("/")} className="text-blue-500 underline hover:text-blue-700">
             {t('notFound.returnHome')}
           </Link>
         </div>

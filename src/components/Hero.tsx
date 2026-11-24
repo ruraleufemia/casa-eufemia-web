@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useLocalePath } from "@/hooks/useLocalePath";
 
 const FOTO = "/fotos/piscina-privada-casa-rural-eufemia.webp";
 const FOTO_800 = "/fotos/piscina-privada-casa-rural-eufemia-800.webp";
@@ -19,6 +20,7 @@ const FOTO_800 = "/fotos/piscina-privada-casa-rural-eufemia-800.webp";
  */
 const Hero = () => {
   const { t } = useTranslation();
+  const ruta = useLocalePath();
 
   return (
     <section className="relative isolate overflow-hidden lg:flex lg:min-h-[76vh] lg:items-end">
@@ -53,13 +55,13 @@ const Hero = () => {
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
           <Link
-            to="/pricing"
+            to={ruta("/pricing")}
             className="inline-flex items-center justify-center rounded-md bg-secondary px-7 py-3.5 text-sm font-medium text-secondary-foreground transition-colors hover:bg-secondary/90"
           >
             {t("hero.ctaAvailability")}
           </Link>
           <Link
-            to="/gallery"
+            to={ruta("/gallery")}
             className="inline-flex items-center justify-center rounded-md border border-primary-foreground/40 px-7 py-3.5 text-sm font-light text-primary-foreground transition-colors hover:bg-primary-foreground/10"
           >
             {t("hero.ctaGallery")}

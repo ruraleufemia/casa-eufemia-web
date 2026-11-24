@@ -2,8 +2,10 @@ import { ArrowRight, MapPin, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
+import { useLocalePath } from "@/hooks/useLocalePath";
 
 const LocalSeoSection = () => {
+  const ruta = useLocalePath();
   const { t } = useTranslation();
 
   const guides: {
@@ -60,7 +62,7 @@ const LocalSeoSection = () => {
               key={guide.href}
               className="group overflow-hidden bg-card border border-border rounded-xl flex flex-col transition-shadow duration-300 hover:shadow-lg"
             >
-              <Link to={guide.href} className="relative block overflow-hidden" aria-label={guide.title}>
+              <Link to={ruta(guide.href)} className="relative block overflow-hidden" aria-label={guide.title}>
                 <img
                   src={guide.image}
                   alt={guide.imageAlt}
@@ -81,7 +83,7 @@ const LocalSeoSection = () => {
                 </p>
                 <div className="flex flex-col gap-2">
                   <Link
-                    to={guide.href}
+                    to={ruta(guide.href)}
                     className="inline-flex items-center gap-2 text-sm text-primary hover:underline underline-offset-4"
                   >
                     {t("localSeo.readGuide")}
@@ -89,7 +91,7 @@ const LocalSeoSection = () => {
                   </Link>
                   {guide.nearbyHref && (
                     <Link
-                      to={guide.nearbyHref}
+                      to={ruta(guide.nearbyHref)}
                       className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary hover:underline underline-offset-4"
                     >
                       {t("localSeo.stayNearby")}
@@ -112,7 +114,7 @@ const LocalSeoSection = () => {
               {t("localSeo.groups.description")}
             </p>
           </div>
-          <Link to="/pricing" className="shrink-0">
+          <Link to={ruta("/pricing")} className="shrink-0">
             <Button variant="outline" className="font-light">
               {t("localSeo.groups.cta")}
             </Button>

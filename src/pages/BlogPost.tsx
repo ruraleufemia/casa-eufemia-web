@@ -6,9 +6,11 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { useBlogPosts } from "@/hooks/useBlogPosts";
 import NotFound from "@/pages/NotFound";
+import { useLocalePath } from "@/hooks/useLocalePath";
 
 
 const BlogPost = () => {
+  const ruta = useLocalePath();
   const { t } = useTranslation();
   const { id } = useParams();
   const { posts, loading } = useBlogPosts();
@@ -17,7 +19,7 @@ const BlogPost = () => {
   const legacyPost = !post ? posts.find((p) => p.legacyId === String(id)) : undefined;
 
   if (legacyPost) {
-    return <Navigate to={`/blog/${legacyPost.id}`} replace />;
+    return <Navigate to={ruta(`/blog/${legacyPost.id}`)} replace />;
   }
 
   if (loading && !post) {
@@ -171,7 +173,7 @@ const BlogPost = () => {
         <div className="absolute inset-0 flex items-end">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12">
             <Link 
-              to="/blog" 
+              to={ruta("/blog")} 
               className="inline-flex items-center gap-2 text-white/90 hover:text-white transition-colors mb-6 font-light"
             >
               <ArrowLeft size={20} strokeWidth={1.5} />
@@ -234,7 +236,7 @@ const BlogPost = () => {
               .map((relatedPost) => (
                 <Link
                   key={relatedPost.id}
-                  to={`/blog/${relatedPost.id}`}
+                  to={ruta(`/blog/${relatedPost.id}`)}
                   className="group bg-card rounded-lg overflow-hidden border border-border hover:shadow-lg transition-all duration-300"
                 >
                   <div className="relative h-48 overflow-hidden">

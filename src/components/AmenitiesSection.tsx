@@ -12,8 +12,10 @@ import {
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { useLocalePath } from "@/hooks/useLocalePath";
 
 const AmenitiesSection = () => {
+  const ruta = useLocalePath();
   const { t } = useTranslation();
   const amenities = [
     {
@@ -106,7 +108,7 @@ const AmenitiesSection = () => {
 
         <p className="mt-12 text-center text-sm font-light text-muted-foreground">
           <Link
-            to="/casa-rural-con-piscina-y-barbacoa"
+            to={ruta("/casa-rural-con-piscina-y-barbacoa")}
             className="text-primary underline-offset-4 hover:underline"
           >
             {t("amenities.poolBbqLink")}

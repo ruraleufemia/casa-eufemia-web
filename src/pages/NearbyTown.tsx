@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { nearbyTowns, type NearbyTown as Town } from "@/data/nearbyTowns";
 import esLocale from "@/i18n/locales/es.json";
 import enLocale from "@/i18n/locales/en.json";
+import { useLocalePath } from "@/hooks/useLocalePath";
 
 interface NearbyCopy {
   breadcrumb: string;
@@ -32,6 +33,7 @@ const SITE_URL = "https://www.casaeufemia.com";
 
 const NearbyTown = ({ town }: { town: Town }) => {
   const { t, i18n } = useTranslation();
+  const ruta = useLocalePath();
   const url = `/${town.slug}`;
   const isEnglish = i18n.language?.startsWith("en");
   const otherTowns = nearbyTowns.filter((other) => other.slug !== town.slug);
@@ -89,7 +91,7 @@ const NearbyTown = ({ town }: { town: Town }) => {
           <div className="absolute inset-x-0 bottom-0">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 sm:pb-14">
               <nav aria-label="breadcrumb" className="mb-3 text-sm text-white/80">
-                <Link to="/" className="hover:underline underline-offset-4">
+                <Link to={ruta("/")} className="hover:underline underline-offset-4">
                   {t("nav.home")}
                 </Link>
                 <span className="mx-2">›</span>
@@ -131,7 +133,7 @@ const NearbyTown = ({ town }: { town: Town }) => {
                 {copy.whatToSee}
               </p>
               <Link
-                to={`/blog/${town.guideSlug}`}
+                to={ruta(`/blog/${town.guideSlug}`)}
                 className="mt-4 inline-flex items-center gap-2 text-sm text-primary hover:underline underline-offset-4"
               >
                 {t("nearby.readGuide")}
@@ -148,10 +150,10 @@ const NearbyTown = ({ town }: { town: Town }) => {
               </aside>
 
               <div className="mt-10 flex flex-wrap gap-3">
-                <Link to="/pricing">
+                <Link to={ruta("/pricing")}>
                   <Button className="font-light">{t("nearby.checkAvailability")}</Button>
                 </Link>
-                <Link to="/gallery">
+                <Link to={ruta("/gallery")}>
                   <Button variant="outline" className="font-light">
                     {t("nearby.seeHouse")}
                   </Button>
@@ -182,7 +184,7 @@ const NearbyTown = ({ town }: { town: Town }) => {
                 {otherTowns.map((other, index) => (
                   <span key={other.slug}>
                     {index > 0 && " · "}
-                    <Link to={`/${other.slug}`} className="text-primary hover:underline underline-offset-4">
+                    <Link to={ruta(`/${other.slug}`)} className="text-primary hover:underline underline-offset-4">
                       {allCopy[other.key]?.breadcrumb}
                     </Link>
                   </span>

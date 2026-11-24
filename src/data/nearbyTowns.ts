@@ -1,7 +1,9 @@
 /** Páginas de cercanía: una por pueblo, pensadas para las búsquedas locales. */
 export interface NearbyTown {
-  /** Dirección de la página, sin barra final. */
+  /** Dirección de la página en español, sin barra final. */
   slug: string;
+  /** Dirección en inglés, sin el prefijo /en ni barra final. */
+  slugEn: string;
   /** Prefijo de las claves de traducción en los archivos de idioma. */
   key: string;
   image: string;
@@ -14,6 +16,7 @@ export interface NearbyTown {
 export const nearbyTowns: NearbyTown[] = [
   {
     slug: "casa-rural-cerca-de-campo-de-criptana",
+    slugEn: "rural-house-near-campo-de-criptana",
     key: "campoDeCriptana",
     image: "/fotos/molinos-campo-de-criptana.webp",
     imageAlt: "Molinos de viento de Campo de Criptana al atardecer",
@@ -22,6 +25,7 @@ export const nearbyTowns: NearbyTown[] = [
   },
   {
     slug: "casa-rural-cerca-de-tomelloso",
+    slugEn: "rural-house-near-tomelloso",
     key: "tomelloso",
     image: "/fotos/cueva-tinajas-tomelloso.webp",
     imageAlt: "Bodega Virgen de las Viñas en Tomelloso",

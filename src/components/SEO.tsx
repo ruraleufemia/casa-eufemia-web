@@ -1,4 +1,6 @@
 import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
+import { absoluteUrl, alternatePath, langOf } from "@/lib/locales";
 
 interface SEOProps {
   title?: string;
@@ -42,20 +44,34 @@ const SEO = ({
     ? keywords
     : `${brandKeyword}, ${keywords}`;
   const siteUrl = "https://www.casaeufemia.com";
-  const fullUrl = new URL(url, siteUrl).toString();
+  // El canónico sale de la dirección real, no de la que pasa cada página:
+  // así /gallery y /en/gallery, que comparten componente, no se declaran
+  // la misma página y no se canibalizan.
+  const { pathname } = useLocation();
+  const lang = langOf(pathname);
+  const otherPath = alternatePath(pathname);
+  const esUrl = lang === "es" ? absoluteUrl(pathname) : otherPath ? absoluteUrl(otherPath) : null;
+  const enUrl = lang === "en" ? absoluteUrl(pathname) : otherPath ? absoluteUrl(otherPath) : null;
+  const fullUrl = pathname && pathname !== "/" ? absoluteUrl(pathname) : new URL(url, siteUrl).toString();
   const fullImage = new URL(image, siteUrl).toString();
   const robots = noindex
     ? "noindex, nofollow"
     : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
 
   return (
-    <Helmet>
+    <Helmet htmlAttributes={{ lang }}>
       {/* Primary Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="title" content={fullTitle} />
       <meta name="description" content={fullDescription} />
       <meta name="keywords" content={fullKeywords} />
       <link rel="canonical" href={fullUrl} />
+
+      {/* Cada idioma en su dirección: así Google indexa las dos y le enseña
+          a cada uno la que le toca. x-default apunta al español. */}
+      {esUrl && <link rel="alternate" hrefLang="es" href={esUrl} />}
+      {enUrl && <link rel="alternate" hrefLang="en" href={enUrl} />}
+      {esUrl && <link rel="alternate" hrefLang="x-default" href={esUrl} />}
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
@@ -64,7 +80,7 @@ const SEO = ({
       <meta property="og:description" content={fullDescription} />
       <meta property="og:image" content={fullImage} />
       <meta property="og:site_name" content={brandName} />
-      <meta property="og:locale" content="es_ES" />
+      <meta property="og:locale" content={lang === "en" ? "en_GB" : "es_ES"} />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -96,7 +112,7 @@ const SEO = ({
       {/* Additional SEO */}
       <meta name="robots" content={robots} />
       <meta name="googlebot" content={robots} />
-      <meta name="language" content="Spanish" />
+      <meta name="language" content={lang === "en" ? "English" : "Spanish"} />
       <meta name="author" content={brandName} />
     </Helmet>
   );
