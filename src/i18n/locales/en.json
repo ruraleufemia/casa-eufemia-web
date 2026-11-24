@@ -498,5 +498,43 @@
     "note": "No booking-site commission: book with me and what you save stays in your trip.",
     "cta": "Message me on WhatsApp",
     "whatsappMessage": "Hi Silvia, I'd like to ask about dates and prices at Casa Rural Eufemia."
+  },
+  "madrid": {
+    "breadcrumb": "Getaway from Madrid",
+    "seoTitle": "Rural getaway from Madrid with a pool",
+    "seoDescription": "Whole holiday home with a private pool 176 km from Madrid, just over two hours by car. Sleeps 8, all on one floor and shared with nobody.",
+    "seoKeywords": "rural getaway from Madrid, holiday home two hours from Madrid, country house near Madrid with pool, family getaway from Madrid, whole house with private pool Spain, weekend break from Madrid, La Mancha house from Madrid",
+    "h1": "A rural getaway from Madrid: the whole house, with a pool, just over two hours away",
+    "lead": "If you live in Madrid and want somewhere the children can run around without bothering anyone, this house is 176 kilometres away. Leave after lunch and arrive in daylight.",
+    "intro": "Most of the families who come here are from Madrid, and nearly all of them say the same thing when they arrive: they expected a longer drive. Arenales de San Gregorio sits right in the middle of La Mancha, on the natural route south, so the trip is short and boring in the best sense: no mountain passes, no hairpins, no Sunday-evening jams.",
+    "tripTitle": "How long it really takes",
+    "bullets": [
+      "176 kilometres from Madrid and just over two hours by car, with no mountain driving.",
+      "You can also come by train: there are direct services between Madrid-Atocha and Alcázar de San Juan in about an hour and a half, around ten times a day. Message me and we'll sort out the last stretch.",
+      "The Campo de Criptana windmills are 13 kilometres away, under ten minutes.",
+      "Tomelloso, with its wine caves and bodegas, is a quarter of an hour away.",
+      "The Lagunas de Ruidera, for a full day by the water, are the classic day trip from the house."
+    ],
+    "familiesTitle": "Why it works with children",
+    "families": "The whole house is on one floor, with no stairs and no steps, so small children can move around on their own and you are not following them with your heart in your mouth. The pool is private and shared with nobody: no timetables, no other people's towels, no waiting your turn. There is a free cot on request, board games for the long siesta, and a playground a short walk away in the village. At night you hear the countryside, which when you come from Madrid is half the holiday already.",
+    "tip": "My tip: come Thursday to Sunday rather than just for the weekend if you can. Thursday is an easier drive, the house works out better per night, and you get time for a day trip without the journey eating into it.",
+    "faqs": [
+      {
+        "question": "How long is the drive from Madrid?",
+        "answer": "It is 176 kilometres and just over two hours by car, on flat, direct roads with no mountain passes."
+      },
+      {
+        "question": "Can I get there by train from Madrid?",
+        "answer": "Yes. There are direct trains from Madrid-Atocha to Alcázar de San Juan in about an hour and a half, with around ten services a day. There is a short final stretch from the station to the house: message me on WhatsApp and we'll arrange it."
+      },
+      {
+        "question": "Is the house good for young children?",
+        "answer": "Yes. Everything is on one floor with no steps, there is a free cot on request, and the pool is private, so you share it with nobody. The village is quiet and has a playground."
+      },
+      {
+        "question": "How many nights are worth it from Madrid?",
+        "answer": "Two nights work well, but from three the journey matters far less and you have time for the windmills, Tomelloso and Ruidera without rushing. From five nights I include a free La Mancha experience."
+      }
+    ]
   }
 }

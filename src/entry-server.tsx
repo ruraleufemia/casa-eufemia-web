@@ -7,6 +7,7 @@ import { blogPosts } from "./data/blogPosts";
 import { nearbyTowns } from "./data/nearbyTowns";
 import { POOL_BBQ_SLUG } from "./pages/PoolAndBarbecue";
 import { DOGS_SLUG } from "./pages/DogFriendly";
+import { MADRID_SLUG } from "./pages/MadridGetaway";
 import "./index.css";
 import "./i18n/config";
 
@@ -19,6 +20,7 @@ export const prerenderRoutes = [
   ...nearbyTowns.map((town) => `/${town.slug}`),
   `/${POOL_BBQ_SLUG}`,
   `/${DOGS_SLUG}`,
+  `/${MADRID_SLUG}`,
 ];
 
 export const render = (url: string) => {

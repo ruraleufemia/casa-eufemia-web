@@ -49,6 +49,7 @@ const Footer = () => {
   // es lo que hace que Google las rastree y las indexe.
   const landingLinks = [
     { to: "/casa-rural-con-piscina-y-barbacoa", label: t("poolBbq.breadcrumb") },
+    { to: "/escapada-rural-desde-madrid", label: t("madrid.breadcrumb") },
     { to: "/casa-rural-que-admite-perros", label: t("dogs.breadcrumb") },
     { to: "/casa-rural-cerca-de-campo-de-criptana", label: t("nearby.campoDeCriptana.breadcrumb") },
     { to: "/casa-rural-cerca-de-tomelloso", label: t("nearby.tomelloso.breadcrumb") },

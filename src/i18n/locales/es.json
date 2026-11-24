@@ -498,5 +498,43 @@
     "note": "Sin comisión de portales: reservas conmigo y lo que te ahorras se queda en tu viaje.",
     "cta": "Escríbeme por WhatsApp",
     "whatsappMessage": "Hola Silvia, quería consultar fechas y precio en Casa Rural Eufemia."
+  },
+  "madrid": {
+    "breadcrumb": "Escapada desde Madrid",
+    "seoTitle": "Escapada rural desde Madrid con piscina",
+    "seoDescription": "Casa rural entera con piscina privada a 176 km de Madrid, poco más de dos horas en coche. Hasta 8 personas, todo en una planta y sin compartir con nadie.",
+    "seoKeywords": "escapada rural desde Madrid, casa rural a dos horas de Madrid, casa rural cerca de Madrid con piscina, escapada en familia desde Madrid, casa rural con piscina para familias, casa rural entera cerca de Madrid, fin de semana rural desde Madrid, casa rural La Mancha desde Madrid",
+    "h1": "Escapada rural desde Madrid: la casa entera, con piscina, a poco más de dos horas",
+    "lead": "Si vives en Madrid y buscáis un sitio donde los niños puedan corretear sin molestar a nadie, esta casa está a 176 kilómetros. Se sale después de comer y se llega con luz.",
+    "intro": "La mayoría de las familias que vienen son de Madrid. Y casi todas me dicen lo mismo al llegar: que esperaban más viaje. Arenales de San Gregorio está en pleno centro de La Mancha, en la salida natural hacia el sur, así que el trayecto es corto y aburrido en el buen sentido: sin puertos, sin curvas y sin atascos de sierra un domingo por la tarde.",
+    "tripTitle": "Cuánto se tarda de verdad",
+    "bullets": [
+      "176 kilómetros desde Madrid y poco más de dos horas en coche, sin pasar por montaña.",
+      "También se puede venir en tren: hay directos entre Madrid-Atocha y Alcázar de San Juan en hora y media, unas diez veces al día. Si venís así, escríbeme y organizamos el último tramo.",
+      "Los molinos de Campo de Criptana quedan a 13 kilómetros, menos de diez minutos.",
+      "Tomelloso, con sus cuevas y sus bodegas, a un cuarto de hora.",
+      "Las Lagunas de Ruidera, para pasar el día en el agua, son la excursión clásica desde la casa."
+    ],
+    "familiesTitle": "Por qué funciona bien con niños",
+    "families": "La casa está entera en una sola planta, sin escaleras ni escalones, así que los peques se mueven solos y tú no vas detrás con el alma en vilo. La piscina es privada y no la comparte nadie más: ni horarios, ni toallas de otros, ni esperar para bañarse. Hay cuna gratis si la pedís, juegos de mesa para la siesta larga y un parque en el pueblo a un paseo corto. Y por la noche se oye el campo, que para quien viene de Madrid es media escapada.",
+    "tip": "Mi consejo: si podéis, veníos de jueves a domingo en vez de solo el fin de semana. El jueves se conduce mejor, la casa sale más a cuenta por noche y da tiempo a hacer una excursión sin que el viaje se coma el día.",
+    "faqs": [
+      {
+        "question": "¿Cuánto se tarda desde Madrid a la casa?",
+        "answer": "Son 176 kilómetros y poco más de dos horas en coche. Es un trayecto llano y directo, sin puertos de montaña."
+      },
+      {
+        "question": "¿Se puede llegar en tren desde Madrid?",
+        "answer": "Sí. Hay trenes directos de Madrid-Atocha a Alcázar de San Juan en hora y media, con unos diez servicios al día. Desde la estación hasta la casa queda un último tramo corto: escríbeme por WhatsApp y lo cuadramos."
+      },
+      {
+        "question": "¿Es una casa buena para niños pequeños?",
+        "answer": "Sí. Está todo en una planta, sin escalones, hay cuna gratis bajo petición y la piscina es privada, así que no la compartís con nadie. El pueblo es tranquilo y tiene parque infantil."
+      },
+      {
+        "question": "¿Cuántas noches merece la pena desde Madrid?",
+        "answer": "Con dos noches se disfruta, pero desde tres el viaje se nota mucho menos y da tiempo a ver los molinos, Tomelloso y Ruidera sin prisa. Desde cinco noches incluyo una experiencia manchega gratis."
+      }
+    ]
   }
 }
