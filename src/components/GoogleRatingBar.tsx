@@ -58,14 +58,14 @@ const GoogleRatingBar = () => {
     : nota.toFixed(1).replace(".", ",");
 
   return (
-    <section className="bg-secondary pt-20 md:pt-24">
+    <section className="bg-accent pt-20 md:pt-24">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
         <a
           href={enlace}
           target="_blank"
           rel="noopener noreferrer"
           aria-label={t("ratingBar.aria", { nota: notaTexto, total })}
-          className="flex items-center justify-center gap-3 py-4 text-secondary-foreground transition-opacity hover:opacity-80 sm:gap-4"
+          className="flex items-center justify-center gap-3 py-4 text-accent-foreground transition-opacity hover:opacity-80 sm:gap-4"
         >
           <span className="font-display text-4xl font-light leading-none sm:text-5xl">
             {notaTexto}

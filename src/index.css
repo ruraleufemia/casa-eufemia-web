@@ -8,55 +8,62 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Paleta de casa manchega encalada: cal blanca, añil de la carpintería
-       y el oro del llano en verano. Todos los colores en HSL. */
+    /* Colores de marca de Casa Rural Eufemia. Los cuatro, en HSL:
+         crema pergamino  #FDF7E6  -> 44 85% 95%   (fondos)
+         azul añil        #23407A  -> 220 55% 31%  (color principal)
+         ocre trigo       #E8B63C  -> 43 79% 57%   (reservar y llamar)
+         marrón sepia     #3B2314  -> 23 49% 15%   (texto)
+       El ocre se reserva para los botones de reservar y llamar: si se usa
+       en todas partes deja de llamar la atención, que es justo su trabajo. */
 
-    /* Cal: la pared blanca. El blanco puro es lo que da luz a la página. */
-    --background: 0 0% 100%;
-    /* Añil noche: el texto, en azul profundo en vez de gris */
-    --foreground: 225 56% 20%;
+    /* Crema pergamino: el fondo de toda la web */
+    --background: 44 85% 95%;
+    /* Marrón sepia: el texto */
+    --foreground: 23 49% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 225 56% 20%;
+    /* Las tarjetas y la barra de arriba, un punto más claras que el fondo
+       para que se despeguen sin recurrir al blanco puro, que corta. */
+    --card: 44 60% 98%;
+    --card-foreground: 23 49% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 225 56% 20%;
+    --popover: 44 60% 98%;
+    --popover-foreground: 23 49% 15%;
 
-    /* Añil: la carpintería pintada. Enlaces y botones principales. */
-    --primary: 223 62% 35%;
-    --primary-foreground: 0 0% 100%;
+    /* Azul añil: enlaces, cabeceras y fondos de sección */
+    --primary: 220 55% 31%;
+    --primary-foreground: 44 85% 95%;
 
-    /* Oro: el calor. Para destacar sin perder luz. */
-    --secondary: 33 79% 75%;
-    --secondary-foreground: 225 56% 20%;
+    /* Ocre trigo: reservar y llamar. Encima va texto sepia, nunca blanco:
+       sobre este ocre el blanco no se lee. */
+    --secondary: 43 79% 57%;
+    --secondary-foreground: 23 49% 15%;
 
-    /* Cal a la sombra: las franjas que separan secciones */
-    --muted: 222 42% 95%;
-    --muted-foreground: 223 22% 42%;
+    /* Crema a la sombra: las franjas que separan secciones */
+    --muted: 44 45% 91%;
+    --muted-foreground: 23 22% 38%;
 
-    /* Oro muy claro, para estados al pasar el ratón */
-    --accent: 34 73% 93%;
-    --accent-foreground: 225 56% 20%;
+    /* Ocre muy rebajado: avisos, consejos y estados al pasar el ratón */
+    --accent: 43 70% 88%;
+    --accent-foreground: 23 49% 15%;
 
     --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 44 85% 95%;
 
-    --border: 222 28% 89%;
-    --input: 222 28% 89%;
-    --ring: 223 62% 35%;
+    --border: 40 32% 85%;
+    --input: 40 32% 85%;
+    --ring: 220 55% 31%;
 
-    /* Esquinas algo más vivas que antes, como el canto de una pared */
     --radius: 0.5rem;
 
     /* Sidebar */
-    --sidebar-background: 222 42% 97%;
-    --sidebar-foreground: 225 56% 20%;
-    --sidebar-primary: 223 62% 35%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 222 42% 93%;
-    --sidebar-accent-foreground: 225 56% 20%;
-    --sidebar-border: 222 28% 89%;
-    --sidebar-ring: 223 62% 35%;
+    --sidebar-background: 44 60% 97%;
+    --sidebar-foreground: 23 49% 15%;
+    --sidebar-primary: 220 55% 31%;
+    --sidebar-primary-foreground: 44 85% 95%;
+    --sidebar-accent: 44 45% 92%;
+    --sidebar-accent-foreground: 23 49% 15%;
+    --sidebar-border: 40 32% 85%;
+    --sidebar-ring: 220 55% 31%;
   }
 
   .dark {

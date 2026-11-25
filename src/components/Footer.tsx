@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { langOf, localizedPath } from "@/lib/locales";
+import { alternatePath, langOf, localizedPath } from "@/lib/locales";
 
 const GOOGLE_MAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=Casa+Rural+Eufemia,+Calle+Juan+Jos%C3%A9+Jim%C3%A9nez+4,+13619+Arenales+de+San+Gregorio,+Ciudad+Real,+Espa%C3%B1a";
@@ -53,6 +53,11 @@ const Footer = () => {
 
   // Enlaces a las páginas de búsqueda, en todas las páginas del sitio:
   // es lo que hace que Google las rastree y las indexe.
+  const otroIdioma =
+    lang === "es"
+      ? { href: alternatePath(pathname) ?? "/en", lang: "en", etiqueta: "English version" }
+      : { href: alternatePath(pathname) ?? "/", lang: "es", etiqueta: "Versión en español" };
+
   const landingLinks = [
     { to: ruta("/casa-rural-con-piscina-y-barbacoa"), label: t("poolBbq.breadcrumb") },
     { to: ruta("/escapada-rural-desde-madrid"), label: t("madrid.breadcrumb") },
@@ -220,6 +225,17 @@ const Footer = () => {
             © {new Date().getFullYear()} Casa Rural Eufemia. {t("footer.rights")}
           </p>
           <p>{t("footer.tagline")}</p>
+          {/* El otro idioma, también aquí abajo: mucha gente baja al pie a
+              buscar precisamente esto, y a Google le da un enlace más por
+              el que llegar a la otra versión. */}
+          <a
+            className="underline-offset-4 transition-colors hover:text-background/90 hover:underline"
+            href={otroIdioma.href}
+            hrefLang={otroIdioma.lang}
+            lang={otroIdioma.lang}
+          >
+            {otroIdioma.etiqueta}
+          </a>
         </div>
       </div>
     </footer>

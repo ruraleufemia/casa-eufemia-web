@@ -40,7 +40,7 @@ const Hero = () => {
       {/* Velo solo en escritorio, que es donde el texto va encima de la foto. */}
       <div
         aria-hidden="true"
-        className="hidden bg-gradient-to-t from-[hsl(225_56%_12%/0.9)] via-[hsl(225_56%_12%/0.5)] to-transparent lg:absolute lg:inset-0 lg:block"
+        className="hidden bg-gradient-to-t from-[hsl(220_55%_12%/0.9)] via-[hsl(220_55%_12%/0.5)] to-transparent lg:absolute lg:inset-0 lg:block"
       />
 
       <div className="relative bg-primary px-5 py-10 text-primary-foreground sm:px-8 sm:py-12 lg:mx-auto lg:w-full lg:max-w-7xl lg:bg-transparent lg:px-12 lg:pb-20 lg:pt-44">

@@ -52,7 +52,7 @@ const DirectBooking = () => {
           </div>
 
           <a
-            className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-4 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="inline-flex items-center justify-center rounded-md bg-secondary px-8 py-4 text-sm font-medium text-secondary-foreground transition-colors hover:bg-secondary/85"
             href={url}
             rel="noopener noreferrer"
             target="_blank"

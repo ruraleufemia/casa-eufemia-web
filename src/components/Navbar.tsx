@@ -68,7 +68,7 @@ const Navbar = () => {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           shouldShowSolidBackground
-            ? "bg-white backdrop-blur-lg shadow-sm border-b border-border/50"
+            ? "bg-card backdrop-blur-lg shadow-sm border-b border-border/50"
             : "bg-transparent"
         }`}
       >
@@ -140,7 +140,7 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div 
           id="mobile-menu" 
-          className="fixed inset-0 md:hidden bg-white dark:bg-background z-[60] animate-fade-in"
+          className="fixed inset-0 md:hidden bg-card dark:bg-background z-[60] animate-fade-in"
         >
           <div className="flex flex-col items-center justify-center h-full gap-12 px-6">
             {navLinks.map((link) => {

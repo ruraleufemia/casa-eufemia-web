@@ -48,7 +48,7 @@ const VideoSection = () => {
                   loading="lazy"
                   decoding="async"
                 />
-                <span className="absolute inset-0 bg-[rgba(22,36,79,0.35)] transition-colors group-hover:bg-[rgba(22,36,79,0.25)]" />
+                <span className="absolute inset-0 bg-[rgba(35,64,122,0.35)] transition-colors group-hover:bg-[rgba(35,64,122,0.25)]" />
                 <span className="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-background/95 shadow-sm transition-transform group-hover:scale-105">
                   <Play className="ml-1 h-6 w-6 text-primary" strokeWidth={1.5} />
                 </span>
