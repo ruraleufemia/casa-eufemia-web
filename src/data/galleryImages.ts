@@ -18,7 +18,7 @@ export interface GalleryImage {
  * Las fotos de la casa, en tres secciones: la casa, el patio y la piscina, y
  * los alrededores. Ya en WebP y con nombres que Google Imágenes entiende.
  *
- * Reparto: patio 10, casa 11, alrededores 13.
+ * Reparto: patio 9, casa 11, alrededores 13.
  * Las seis primeras son las que se ven en la portada, así que van las que venden.
  */
 export const galleryImages: GalleryImage[] = [
@@ -47,15 +47,6 @@ export const galleryImages: GalleryImage[] = [
     height: 800,
     alt: "Porche con barbacoa y horno de leña para comer al aire libre",
     altEn: "Porch with the barbecue and wood-fired oven for eating outdoors",
-    category: "patio",
-  },
-  {
-    src: "/comida-grupo-patio-casa-rural-eufemia.webp",
-    srcSmall: "/comida-grupo-patio-casa-rural-eufemia-800.webp",
-    width: 1600,
-    height: 1067,
-    alt: "Comida de grupo en el patio manchego de la casa rural",
-    altEn: "A group lunch in the La Mancha courtyard",
     category: "patio",
   },
   {
