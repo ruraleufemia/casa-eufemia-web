@@ -24,14 +24,14 @@ const SEO_DEFAULTS: Record<"es" | "en", SeoDefaults> = {
       keywords: "turismo Ciudad Real, experiencias rurales, gastronomía La Mancha, que hacer en Ciudad Real, rutas turísticas, actividades rurales España",
     },
     pricing: {
-      title: "Precios y disponibilidad | Casa Rural Eufemia",
-      description: "Consulta precio y disponibilidad de Casa Rural Eufemia por WhatsApp. Mejoramos precios y condiciones en reservas directas.",
+      title: "Precios: desde 180 € la casa entera",
+      description: "La casa completa para 8 personas desde 180 € la noche, con piscina privada y barbacoa. Mira qué fechas quedan libres y reserva directa, sin comisiones.",
       keywords: "precios Casa Rural Eufemia, tarifas casa rural, alojamiento Ciudad Real, casa rural pet friendly, casa rural con dos baños, reservar casa rural",
     },
   },
   en: {
     home: {
-      title: "Country house in Arenales de San Gregorio",
+      title: "Private pool holiday home in La Mancha",
       description: "Whole holiday home for 8 with a private pool, garden and barbecue 13 km from the Campo de Criptana windmills, just over two hours from Madrid.",
       keywords: "Casa Rural Eufemia, holiday home near Madrid with pool, country house two hours from Madrid, country house near Campo de Criptana, country house near Tomelloso, rural house Ciudad Real, rural house Arenales de San Gregorio, rural house for 8 people, private pool rural house Ciudad Real, pet friendly rural house, rural house two bathrooms",
     },
@@ -46,8 +46,8 @@ const SEO_DEFAULTS: Record<"es" | "en", SeoDefaults> = {
       keywords: "tourism Ciudad Real, rural experiences, La Mancha gastronomy, what to do in Ciudad Real, tourist routes, rural activities Spain",
     },
     pricing: {
-      title: "Rates and availability | Casa Rural Eufemia",
-      description: "Check Casa Rural Eufemia prices and availability via WhatsApp. We improve prices and conditions for direct bookings.",
+      title: "Prices: from €180 for the whole house",
+      description: "The whole house for 8 guests from €180 a night, with a private pool and barbecue. See which dates are free and book direct, with no booking-site fees.",
       keywords: "Casa Rural Eufemia rates, rural house prices, Ciudad Real accommodation, pet friendly rural house, rural house two bathrooms, book rural house",
     },
   },
