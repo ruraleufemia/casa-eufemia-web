@@ -37,9 +37,9 @@ const AvailabilityCalendar = () => {
 
   const copy = isEnglish
     ? {
-        eyebrow: "Booking availability",
+        eyebrow: "Availability",
         title: "Choose the dates for your stay",
-        description: "This calendar is synchronised with Booking. Green dates are available and red dates are occupied.",
+        description: "The calendar is synchronised with all the sites I take bookings through, so it shows the real picture. Green dates are free, red ones are taken.",
         loading: "Loading availability…",
         unavailable: "We cannot load the calendar at the moment. Please contact us on WhatsApp to confirm your dates.",
         available: "Available",
@@ -58,7 +58,7 @@ const AvailabilityCalendar = () => {
     : {
         eyebrow: "Disponibilidad",
         title: "Consulta las fechas de tu estancia",
-        description: "Este calendario se sincroniza con Booking. Las fechas en verde están disponibles y las rojas están ocupadas.",
+        description: "El calendario se sincroniza con todas las plataformas donde tengo la casa, así que enseña la ocupación real. En verde lo libre y en rojo lo ocupado.",
         loading: "Cargando disponibilidad…",
         unavailable: "No podemos cargar el calendario en este momento. Consúltanos por WhatsApp para confirmar tus fechas.",
         available: "Disponible",

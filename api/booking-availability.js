@@ -49,7 +49,12 @@ export const parseBookingRanges = (calendar) => {
     if (property === "STATUS") event.status = value.trim().toUpperCase();
   }
 
-  return ranges
+  return mergeRanges(ranges);
+};
+
+/** Ordena los periodos ocupados y junta los que se solapan o se tocan. */
+export const mergeRanges = (ranges) =>
+  [...ranges]
     .sort((a, b) => a.start.localeCompare(b.start))
     .reduce((merged, range) => {
       const previous = merged[merged.length - 1];
@@ -62,11 +67,37 @@ export const parseBookingRanges = (calendar) => {
 
       return merged;
     }, []);
+
+/**
+ * Lee las direcciones de calendario configuradas.
+ *
+ * Vale cualquier fuente que exporte iCal: un channel manager como Holidu,
+ * que ya trae junta la ocupación de todas las plataformas, o varias
+ * direcciones sueltas (Airbnb, Booking) separadas por comas.
+ *
+ * CALENDAR_ICAL_URLS es el nombre nuevo; BOOKING_ICAL_URL se mantiene para
+ * no romper la configuración que ya estuviera puesta.
+ */
+const calendarUrls = () =>
+  (process.env.CALENDAR_ICAL_URLS || process.env.BOOKING_ICAL_URL || "")
+    .split(",")
+    .map((url) => url.trim())
+    .filter(Boolean);
+
+const fetchCalendar = async (url) => {
+  const calendarResponse = await fetch(url, { headers: { Accept: "text/calendar" } });
+
+  if (!calendarResponse.ok) {
+    throw new Error(`iCal request failed: ${calendarResponse.status}`);
+  }
+
+  return parseBookingRanges(await calendarResponse.text());
 };
 
 /**
- * Private Booking iCal proxy. Keep BOOKING_ICAL_URL in Vercel environment
- * variables so the export token is never sent to the browser.
+ * Proxy privado de los calendarios. Las direcciones viven en las variables
+ * de entorno de Vercel y nunca llegan al navegador: llevan un token y quien
+ * la tenga puede ver la ocupación de la casa.
  */
 export default async function handler(request, response) {
   if (request.method && request.method !== "GET") {
@@ -74,23 +105,15 @@ export default async function handler(request, response) {
     return response.status(405).json({ error: "Method not allowed" });
   }
 
-  const calendarUrl = process.env.BOOKING_ICAL_URL;
+  const urls = calendarUrls();
 
-  if (!calendarUrl) {
+  if (urls.length === 0) {
     return response.status(200).json({ configured: false, ranges: [] });
   }
 
   try {
-    const calendarResponse = await fetch(calendarUrl, {
-      headers: { Accept: "text/calendar" },
-    });
-
-    if (!calendarResponse.ok) {
-      throw new Error("Booking iCal request failed");
-    }
-
-    const calendar = await calendarResponse.text();
-    const ranges = parseBookingRanges(calendar);
+    const resultados = await Promise.all(urls.map(fetchCalendar));
+    const ranges = mergeRanges(resultados.flat());
 
     response.setHeader(
       "Cache-Control",
@@ -99,10 +122,13 @@ export default async function handler(request, response) {
 
     return response.status(200).json({
       configured: true,
+      calendars: urls.length,
       ranges,
       updatedAt: new Date().toISOString(),
     });
   } catch {
+    // Si falla una sola fuente se cae todo a propósito: enseñar media
+    // ocupación es peor que no enseñar nada, porque genera dobles reservas.
     return response.status(502).json({
       configured: false,
       ranges: [],
