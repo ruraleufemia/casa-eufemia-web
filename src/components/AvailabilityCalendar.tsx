@@ -54,6 +54,8 @@ const AvailabilityCalendar = () => {
         whatsapp: "Ask about these dates on WhatsApp",
         whatsappLabel: "Ask availability for the selected dates on WhatsApp",
         note: "Availability is indicative until we confirm your booking.",
+        notConnected: "I am still connecting the calendar to the sites I take bookings through. In the meantime, message me and I will tell you straight away which dates are free.",
+        askDates: "Ask about dates on WhatsApp",
       }
     : {
         eyebrow: "Disponibilidad",
@@ -73,6 +75,8 @@ const AvailabilityCalendar = () => {
         whatsapp: "Consultar estas fechas por WhatsApp",
         whatsappLabel: "Consultar por WhatsApp la disponibilidad de las fechas seleccionadas",
         note: "La disponibilidad es orientativa hasta confirmar la reserva.",
+        notConnected: "Estoy terminando de conectar el calendario con mis plataformas de reserva. Mientras tanto, escríbeme y te digo al momento qué fechas tengo libres.",
+        askDates: "Preguntar fechas por WhatsApp",
       };
 
   const today = new Date();
@@ -91,6 +95,11 @@ const AvailabilityCalendar = () => {
       : `¡Hola! Me gustaría consultar disponibilidad en Casa Rural Eufemia del ${formattedDate(selectedRange.from!)} al ${formattedDate(selectedRange.to!)}.`
     : "";
   const whatsappUrl = `https://wa.me/34638014458?text=${encodeURIComponent(whatsappMessage)}`;
+  const askUrl = `https://wa.me/34638014458?text=${encodeURIComponent(
+    isEnglish
+      ? "Hello! Which dates do you have free at Casa Rural Eufemia?"
+      : "¡Hola! ¿Qué fechas tienes libres en Casa Rural Eufemia?",
+  )}`;
 
   const handleSelect = (range: DateRange | undefined) => {
     if (range && hasUnavailableDateInRange(range, ranges)) {
@@ -197,10 +206,27 @@ const AvailabilityCalendar = () => {
             </div>
             <p className="mt-5 text-center text-xs text-muted-foreground">{copy.note}</p>
           </>
-        ) : (
+        ) : isError ? (
           <div className="mx-auto flex max-w-2xl items-start gap-3 rounded-xl border border-amber-500/30 bg-amber-50 p-5 text-sm text-amber-950" role="status">
             <CircleAlert className="mt-0.5 h-5 w-5 shrink-0 text-amber-700" aria-hidden="true" />
             <p>{copy.unavailable}</p>
+          </div>
+        ) : (
+          /* Todavía no hay calendario conectado. Eso no es una avería, así que
+             en vez de un aviso en ámbar que parece que la web está rota, se
+             invita a preguntar: una consulta por WhatsApp vale más que un
+             calendario vacío. */
+          <div className="mx-auto max-w-2xl rounded-xl border border-border bg-muted/40 p-6 text-center" role="status">
+            <p className="font-light leading-relaxed text-muted-foreground">{copy.notConnected}</p>
+            <a
+              href={askUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-sm font-medium text-white shadow-sm transition-colors hover:bg-[#20BA5A]"
+            >
+              <MessageCircle className="h-4 w-4" aria-hidden="true" />
+              {copy.askDates}
+            </a>
           </div>
         )}
       </div>
